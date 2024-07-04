@@ -27,6 +27,11 @@
   - [**23. 基于深度学习研发了一种自动化、高速、多维的单粒子追踪系统**](#23-基于深度学习研发了一种自动化高速多维的单粒子追踪系统)
   - [**24. ProEnsemble 机器学习框架：优化进化通路启动子组合**](#24-proensemble-机器学习框架优化进化通路启动子组合)
   - [**25. 微环境感知图神经网络 ProtLGN 指导蛋白质定向进化**](#25-微环境感知图神经网络-protlgn-指导蛋白质定向进化)
+  - [**26. 韩国版 AlphaFold？深度学习模型 AlphaPPIMd：用于蛋白质-蛋白质复合物构象集合探索**](#26-韩国版-alphafold深度学习模型-alphappimd用于蛋白质-蛋白质复合物构象集合探索)
+  - [**27. 可抑制癌细胞增殖！研发新型肿瘤抑制蛋白降解剂 dp53m**](#27-可抑制癌细胞增殖研发新型肿瘤抑制蛋白降解剂-dp53m)
+  - [**28. CVPR 最佳学生论文！多模态模型 BioCLIP 实现零样本学习**](#28-cvpr-最佳学生论文多模态模型-bioclip-实现零样本学习)
+  - [**29. 1 亿参数！细胞大模型 scFoundation 可对 2 万基因同时建模**](#29-1-亿参数细胞大模型-scfoundation-可对-2-万基因同时建模)
+  - [**30. 入选顶会 ICML，蛋白质语言模型 ESM-AA 超越传统 SOTA**](#30-入选顶会-icml蛋白质语言模型-esm-aa-超越传统-sota)
 - [**AI+   医疗健康：AI+Healthcare**](#ai---医疗健康aihealthcare)
   - [**1. 深度学习系统 DeepDR Plus 用眼底图像预测糖尿病视网膜病变**](#1-深度学习系统-deepdr-plus-用眼底图像预测糖尿病视网膜病变)
   - [**2. 逻辑回归模型分析高绿色景观指数可降低 MetS 风险**](#2-逻辑回归模型分析高绿色景观指数可降低-mets-风险)
@@ -48,6 +53,7 @@
   - [**18. 借鉴语义分割，开发空间转录组语义注释工具 Pianno**](#18-借鉴语义分割开发空间转录组语义注释工具-pianno)
   - [**19. AI 模型 UniFMIR，突破现有荧光显微成像极限**](#19-ai-模型-unifmir突破现有荧光显微成像极限)
   - [**20. 深度学习系统，提高癌症生存预测准确性**](#20-深度学习系统提高癌症生存预测准确性)
+  - [**21. 候选 CVPR 2024 最佳论文！MemSAM 将「分割一切」模型用于医学视频分割**](#21-候选-cvpr-2024-最佳论文memsam-将分割一切模型用于医学视频分割)
 - [**AI+ 材料化学：AI+Materials Chemistry**](#ai-材料化学aimaterials-chemistry)
   - [**1. 高通量计算框架 33 分钟生成 12 万种新型 MOFs 候选材料**](#1-高通量计算框架-33-分钟生成-12-万种新型-mofs-候选材料)
   - [**2. 机器学习算法模型筛选 P-SOC 电极材料**](#2-机器学习算法模型筛选-p-soc-电极材料)
@@ -63,6 +69,9 @@
   - [**12. 半监督学习提取无标签数据中的隐藏信息**](#12-半监督学习提取无标签数据中的隐藏信息)
   - [**13. 基于自动机器学习进行知识自动提取**](#13-基于自动机器学习进行知识自动提取)
   - [**14. 一种三维 MOF 材料吸附行为预测的机器学习模型 Uni-MOF**](#14-一种三维-mof-材料吸附行为预测的机器学习模型-uni-mof)
+  - [**15. 微电子加速迈向后摩尔时代！集成 DNN 与纳米薄膜技术，精准分析入射光角度**](#15-微电子加速迈向后摩尔时代集成-dnn-与纳米薄膜技术精准分析入射光角度)
+  - [**16. 重塑锂电池性能边界，基于集成学习提出简化电化学模型**](#16-重塑锂电池性能边界基于集成学习提出简化电化学模型)
+  - [**17. 最强铁基超导磁体诞生！基于机器学习，磁场强度超过先前记录 2.7 倍**](#17-最强铁基超导磁体诞生基于机器学习磁场强度超过先前记录-27-倍)
 - [**AI+动植物科学：AI+Zoology-Botany**](#ai动植物科学aizoology-botany)
   - [**1. SBeA 基于少样本学习框架进行动物社会行为分析**](#1-sbea-基于少样本学习框架进行动物社会行为分析)
   - [**2. 基于孪生网络的深度学习方法，自动捕捉胚胎发育过程**](#2-基于孪生网络的深度学习方法自动捕捉胚胎发育过程)
@@ -90,7 +99,7 @@
   - [**2. 利用模拟数据训练计算机视觉算法，对天文图像进行锐化「还原」**](#2-利用模拟数据训练计算机视觉算法对天文图像进行锐化还原)
   - [**3. 利用无监督机器学习算法 Astronomaly ，找到了之前为人忽视的异常现象**](#3-利用无监督机器学习算法-astronomaly-找到了之前为人忽视的异常现象)
   - [**4. 基于机器学习的 CME 识别与参数获取方法**](#4-基于机器学习的-cme-识别与参数获取方法)
-  - [**5. 深度学习发现107例中性碳吸收线**](#5-深度学习发现107例中性碳吸收线)
+  - [**5. 深度学习发现 107 例中性碳吸收线**](#5-深度学习发现-107-例中性碳吸收线)
 - [**AI+ 自然灾害：AI+Natural Disaster**](#ai-自然灾害ainatural-disaster)
   - [**1. 机器学习预测未来 40 年的地面沉降风险**](#1-机器学习预测未来-40-年的地面沉降风险)
   - [**2. 语义分割模型 SCDUNet++ 用于滑坡测绘**](#2-语义分割模型-scdunet-用于滑坡测绘)
@@ -117,6 +126,9 @@
   - [**12. 一种新的地理空间人工智能方法：地理神经网络加权逻辑回归**](#12-一种新的地理空间人工智能方法地理神经网络加权逻辑回归)
   - [**13. 利用扩散模型生成神经网络参数，将时空少样本学习转变为扩散模型的预训练问题**](#13-利用扩散模型生成神经网络参数将时空少样本学习转变为扩散模型的预训练问题)
   - [**14. 李飞飞团队 AI4S 最新洞察：16 项创新技术汇总，覆盖生物/材料/医疗/问诊**](#14-李飞飞团队-ai4s-最新洞察16-项创新技术汇总覆盖生物材料医疗问诊)
+  - [**15. 精准预测武汉房价！osp-GNNWR 模型准确描述复杂空间过程和地理现象**](#15-精准预测武汉房价osp-gnnwr-模型准确描述复杂空间过程和地理现象)
+
+
 
 ## **前言**
 
@@ -128,7 +140,7 @@
 
 作为最早一批关注到 AI for Science 的社区，「HyperAI超神经」在陪伴行业成长的同时，也乐于将最新的研究进展与成果进行普适化分享，我们希望通过解读前沿论文与政策的方式，令更多团队看到 AI 对于科研的帮助，为 AI for Science 的发展贡献力量。
 
-目前，HyperAI超神经已经解读分享了近百篇论文，为了便于大家检索，我们将文章根据学科进行分类，并展示了发表期刊及时间，提取了关键词（研究团队、相关研究、数据集等），**大家可以点击题目获取解读文章（内含完整论文下载链接），或者直接点击论文标题查看原文。**
+目前，HyperAI超神经已经解读分享了百余篇论文，为了便于大家检索，我们将文章根据学科进行分类，并展示了发表期刊及时间，提取了关键词（研究团队、相关研究、数据集等），**大家可以点击题目获取论文解读文章（内含完整论文下载链接），或者直接点击论文标题查看原文。**
 
 本文档将以开源项目的形式呈现，我们将持续更新解读文章，同时也欢迎大家投稿优秀研究成果，**如果您所在的团队/课题组有报道需求，可添加微信：神经星星（微信号：Hyperai01）。**
 
@@ -384,6 +396,56 @@
 
 * **论文链接：** [Protein Engineering with Lightweight Graph Denoising Neural Networks](https://pubs.acs.org/doi/10.1021/acs.jcim.4c00036)
 
+### **26. [韩国版 AlphaFold？深度学习模型 AlphaPPIMd：用于蛋白质-蛋白质复合物构象集合探索](https://hyper.ai/news/32435)**
+
+* **科研团队：** 延世大学王建民团队
+
+* **相关研究：** 深度学习、生成式 AI、Transformer、生成神经网络学习、分子动力学、barnase-barstar 复合物轨迹集、蛋白质数据库 Protein Data Bank、AlphaPPIMd 模型、自注意力机制、特征优化模块、注意力分数、全原子模型、模型的平均训练精度为 0.995、平均验证精度为 0.999 
+
+* **发布期刊：** Journal of Chemical Theory and Computation, 2024.05
+
+* **论文链接：** [Exploring the conformational ensembles of protein-protein complex with transformer-based generative model](https://pubs.acs.org/doi/10.1021/acs.jctc.4c00255)
+
+### **27. [可抑制癌细胞增殖！研发新型肿瘤抑制蛋白降解剂 dp53m](https://hyper.ai/news/32527)**
+
+* **科研团队：** 西交利物浦大学慧湖药学院吴思晋教授、天津医科大学总医院谢松波教授、钟殿胜教授团队
+
+* **相关研究：** MD 模拟、迭代分子对接引导 post-SELEX 法、dp53m 可特异性识别 p53-R175H 蛋白，并对其进行降解
+
+* **发布期刊：** Science Bulletin, 2024.05
+
+* **论文链接：** [An engineered DNA aptamer-based PROTAC for precise therapy of p53-R175H hotspot mutant-driven cancer](https://www.sciencedirect.com/science/article/pii/S2095927324003517)
+
+### **28. [CVPR 最佳学生论文！多模态模型 BioCLIP 实现零样本学习](https://hyper.ai/news/32544)**
+
+* **科研团队：** 俄亥俄州立大学 Jiaman Wu 团队
+
+* **相关研究：** 生物图像数据集 TreeOfLife-10M、多模态模型、计算机视觉、视觉编码器、文本编码器、自回归语言模型、模型在零样本和少样本任务中均表现出色
+
+* **发布期刊：** CVPR 2024, 2024.02
+
+* **论文链接：** [BIoCLIP: A Vision Foundation Model for the Tree of Life](https://openaccess.thecvf.com/content/CVPR2024/html/Stevens_BioCLIP_A_Vision_Foundation_Model_for_the_Tree_of_Life_CVPR_2024_paper.html)
+
+### **29. [1 亿参数！细胞大模型 scFoundation 可对 2 万基因同时建模](https://hyper.ai/news/32623)**
+
+* **科研团队：** 清华大学自动化系生命基础模型实验室主任张学工教授、电子系/AIR 马剑竹教授和百图生科宋乐博士
+
+* **相关研究：** 人工智能细胞大模型、人类单细胞组学数据 DISCO，欧洲分子生物学实验室-欧洲生物信息学研究所数据库 EMBL-EBI、GEO 数据集，Single Cell Portal 数据集，HCA 数据集，hECA 数据集、Transformer、非对称的编码器-解码器结构、向量模块、RDA 建模
+
+* **发布期刊：** Nature Methods, 2024.06
+
+* **论文链接：** [Large-scale foundation model on single-cell transcriptomics](https://www.nature.com/articles/s41592-024-02305-7)
+
+### **30. [入选顶会 ICML，蛋白质语言模型 ESM-AA 超越传统 SOTA](https://hyper.ai/news/32674)**
+
+* **科研团队：** 清华大学周浩教授联合北京大学、南京大学和水木分子团队
+
+* **相关研究：** 蛋白质数据集 AlphaFold DB、蛋白质数据集 Dp 和一个分子数据集 Dm、解压缩、多尺度掩码语言建模
+
+* **发布期刊：** ICML 2024, 2024.06
+
+* **论文链接：** [ESM All-Atom: Multi-scale Protein Language Model for Unified Molecular Modeling](https://icml.cc/virtual/2024/poster/35119)
+
 ## **AI+   医疗健康：AI+Healthcare**
 
 ### **1. [深度学习系统 DeepDR Plus 用眼底图像预测糖尿病视网膜病变](https://hyper.ai/news/29769)**
@@ -569,7 +631,7 @@
 
 * **相关研究：** UniFMIR 模型、多头模块、特征增强模块、多尾模块、Swin Transformer、自适应矩估计、深度学习、SR 模型、单图像超分辨率模型、U-Net
 
-* **发布期刊：**Nature Methods, 2024.04
+* **发布期刊：** Nature Methods, 2024.04
 
 * **论文链接：** [Pretraining a foundation model for generalizable fluorescence microscopy-based image restoration](https://www.nature.com/articles/s41592-024-02244-3)
 
@@ -579,9 +641,19 @@
 
 * **相关研究：** 深度学习系统、ST 数据集、integrated graph 和图深度学习的模型、卷积神经网络和图神经网络、外部测试集 MCO-CRC、空间基因表达预测模型、super-patch graph 生存模型、H&E 染色组织学图像 (H&E-stained histological image) 预处理、IGI-DL 模型
 
-* **发布期刊：**Cell Reports Medicine, 2024.05
+* **发布期刊：** Cell Reports Medicine, 2024.05
 
 * **论文链接：** [Harnessing TME depicted by histological images to improve cancer prognosis through a deep learning system](https://www.cell.com/cell-reports-medicine/fulltext/S2666-3791(24)00205-2 )
+
+### **21. [候选 CVPR 2024 最佳论文！MemSAM 将「分割一切」模型用于医学视频分割](https://hyper.ai/news/32372)**
+
+* **科研团队：** 深圳大学吴惠思
+
+* **相关研究：** 视觉模型、医学视频分割、超声心动图视频分割模型、记忆强化机制、超声心动图数据集 CAMUS  和 EchoNet-Dynamic、图像编码器、提示编码器、掩码解码器、Softmax 函数、基于 CNN 的 UNet 、基于 Transformer 的 SwinUNet、CNN-Transformer 混合的 H2Former、SonoSAM 模型、SAMUS 模型
+
+* **发布期刊：** CVPR 2024, 2024.05
+
+* **论文链接：** [MemSAM: Taming Segment Anything Model forEchocardiography Video Segmentation](https://github.com/dengxl0520/MemSAM)
 
 ## **AI+ 材料化学：AI+Materials Chemistry**
 
@@ -725,7 +797,35 @@
 
 * **论文链接：** [A comprehensive transformer-based approach for high-accuracy gas adsorption predictions in metal-organic frameworks](https://www.nature.com/articles/s41467-024-46276-x)
 
+### **15. [微电子加速迈向后摩尔时代！集成 DNN 与纳米薄膜技术，精准分析入射光角度](https://hyper.ai/news/32326)**
 
+* **科研团队：** 复旦大学梅永丰课题组
+
+* **相关研究：** 有限元模型、应变纳米膜释放模型、菲克定律、深度神经网络、三维光探测器、角度敏感检测模型
+
+* **发布期刊：** Nature Communications, 2024.04
+
+* **论文链接：** [Multilevel design and construction in nanomembrane rolling for three-dimensional angle-sensitive photodetection](https://www.nature.com/articles/s41467-024-47405-2)
+
+### **16. [重塑锂电池性能边界，基于集成学习提出简化电化学模型](https://hyper.ai/news/32323)**
+
+* **科研团队：** 武汉理工大学康健强团队
+
+* **相关研究：** 简化电化学模型、集成学习模型、机器学习、一阶惯性元件 FIE、离散时间实现算法 DRA、分数阶帕德逼近 FOM、三参数抛物线近似 TPM
+
+* **发布期刊：** iScience, 2024.05
+
+* **论文链接：** [A simplified electrochemical model forlithium-ion batteries based on ensemblelearning](https://www.sciencedirect.com/science/article/pii/S2589004224009076)
+
+### **17. [最强铁基超导磁体诞生！基于机器学习，磁场强度超过先前记录 2.7 倍](https://hyper.ai/news/32556)**
+
+* **科研团队：** 东京农工大学研究团队
+
+* **相关研究：** BOXVIA 机器学习、数据驱动循环、数值模拟、铁基超导永磁体 Ba122、场冷磁化 (FCM) 模型
+
+* **发布期刊：** NPG Asia Materials, 2024.06
+
+* **论文链接：** [Superstrength permanent magnets with iron-based superconductors by data- and researcher-driven process design](https://www.nature.com/articles/s41427-024-00549-5)
 
 ## **AI+动植物科学：AI+Zoology-Botany**
 
@@ -879,8 +979,6 @@
 
 * **主要内容：** 数值天气预报是天气预报的主流方法。它通过数值积分，对地球系统的状态进行逐网格的求解，是一个演绎推理的过程。 2022 年以来，天气预报领域的机器学习模型取得了一系列突破，部分成果可以与欧洲中期天气预报中心的高精度预测匹敌。
 
-
-
 ### **2. [综述：从雹暴中心收集数据，利用大模型预测极端天气](https://hyper.ai/news/25874)**
 
 * **主要内容：** 2021 年，达摩院与国家气象中心联合研发了 AI 算法用于天气预测，并成功预测了多次强对流天气。同年 9 月，Deepmind 在《Nature》上发表文章，利用深度生成模型进行降雨量的实时预报。
@@ -952,7 +1050,7 @@
 
 * **论文链接：** [An Algorithm for the Determination of Coronal Mass Ejection Kinematic Parameters Based on Machine Learning](https://iopscience.iop.org/article/10.3847/1538-4365/ad2dea)
 
-### **5. [深度学习发现107例中性碳吸收线](https://hyper.ai/news/32210)**
+### **5. [深度学习发现 107 例中性碳吸收线](https://hyper.ai/news/32210)**
 
 * **科研团队：** 中国科学院上海天文台研究员葛健带领的国际团队
 
@@ -1181,4 +1279,12 @@ An Empirical Study on Werewolf](https://arxiv.org/pdf/2309.04658.pdf)
 
 * **主要内容：** 斯坦福大学 HAI 研究中心发布《2024 年人工智能指数报告》。这份报告全面追踪了 2023 年全球人工智能的发展趋势。还探讨人工智能在科学和医学领域的深远影响。报告中展示了 2023 年 AI 在科学领域的辉煌成就，以及 AI 在医疗领域取得的重要创新成果，包括 SynthSR 和 ImmunoSEIRA 等突破性技术。此外，还分析了 FDA 对 AI 医疗设备审批的趋势，为行业提供了宝贵的参考。
 
+### **15. [精准预测武汉房价！osp-GNNWR 模型准确描述复杂空间过程和地理现象](https://hyper.ai/news/32453)**
 
+* **科研团队：** 浙大 GIS 实验室吴森森团队
+
+* **相关研究：** 神经网络、空间邻近性度量、地理神经网络加权回归方法、安居客 968 个不同房地产样本的数据集、空间回归模型、梯度下降算法
+
+* **发布期刊：** International Journal of Geographical Information Science, 2024.04
+
+* **论文链接：** [A neural network model to optimize the measure of spatial proximity in geographically weighted regression approach: a case study on house price in Wuhan](https://www.tandfonline.com/doi/abs/10.1080/13658816.2024.2343771)
