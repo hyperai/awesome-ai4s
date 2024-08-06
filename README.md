@@ -32,6 +32,12 @@
   - [**28. CVPR 最佳学生论文！多模态模型 BioCLIP 实现零样本学习**](#28-cvpr-最佳学生论文多模态模型-bioclip-实现零样本学习)
   - [**29. 1 亿参数！细胞大模型 scFoundation 可对 2 万基因同时建模**](#29-1-亿参数细胞大模型-scfoundation-可对-2-万基因同时建模)
   - [**30. 入选顶会 ICML，蛋白质语言模型 ESM-AA 超越传统 SOTA**](#30-入选顶会-icml蛋白质语言模型-esm-aa-超越传统-sota)
+  - [**31. SPACE 算法登 Cell 子刊！组织模块发现能力领先同类工具**](#31-space-算法登-cell-子刊组织模块发现能力领先同类工具)
+  - [**32. 基于 AlphaFold 实现新突破，揭示蛋白质动态多样性**](#32-基于-alphafold-实现新突破揭示蛋白质动态多样性)
+  - [**33. 基于扩散模型开发 P450 酶从头设计方法 P450Diffusion**](#33-基于扩散模型开发-p450-酶从头设计方法-p450diffusion)
+  - [**34. 将等变图神经网络用于靶蛋白结合位点预测，性能提升 20%**](#34-将等变图神经网络用于靶蛋白结合位点预测性能提升-20)
+  - [**35. 20 个实验数据创造 AI 蛋白质里程碑！FSFP 有效优化蛋白质预训练模型**](#35-20-个实验数据创造-ai-蛋白质里程碑fsfp-有效优化蛋白质预训练模型)
+  - [**36. 可迁移深度学习模型鉴定多类型 RNA 修饰、显著减少计算成本**](#36-可迁移深度学习模型鉴定多类型-rna-修饰显著减少计算成本)
 - [**AI+   医疗健康：AI+Healthcare**](#ai---医疗健康aihealthcare)
   - [**1. 深度学习系统 DeepDR Plus 用眼底图像预测糖尿病视网膜病变**](#1-深度学习系统-deepdr-plus-用眼底图像预测糖尿病视网膜病变)
   - [**2. 逻辑回归模型分析高绿色景观指数可降低 MetS 风险**](#2-逻辑回归模型分析高绿色景观指数可降低-mets-风险)
@@ -72,6 +78,7 @@
   - [**15. 微电子加速迈向后摩尔时代！集成 DNN 与纳米薄膜技术，精准分析入射光角度**](#15-微电子加速迈向后摩尔时代集成-dnn-与纳米薄膜技术精准分析入射光角度)
   - [**16. 重塑锂电池性能边界，基于集成学习提出简化电化学模型**](#16-重塑锂电池性能边界基于集成学习提出简化电化学模型)
   - [**17. 最强铁基超导磁体诞生！基于机器学习，磁场强度超过先前记录 2.7 倍**](#17-最强铁基超导磁体诞生基于机器学习磁场强度超过先前记录-27-倍)
+  - [**18. 神经网络替代密度泛函理论！通用材料模型实现超精准预测**](#18-神经网络替代密度泛函理论通用材料模型实现超精准预测)
 - [**AI+动植物科学：AI+Zoology-Botany**](#ai动植物科学aizoology-botany)
   - [**1. SBeA 基于少样本学习框架进行动物社会行为分析**](#1-sbea-基于少样本学习框架进行动物社会行为分析)
   - [**2. 基于孪生网络的深度学习方法，自动捕捉胚胎发育过程**](#2-基于孪生网络的深度学习方法自动捕捉胚胎发育过程)
@@ -127,7 +134,10 @@
   - [**13. 利用扩散模型生成神经网络参数，将时空少样本学习转变为扩散模型的预训练问题**](#13-利用扩散模型生成神经网络参数将时空少样本学习转变为扩散模型的预训练问题)
   - [**14. 李飞飞团队 AI4S 最新洞察：16 项创新技术汇总，覆盖生物/材料/医疗/问诊**](#14-李飞飞团队-ai4s-最新洞察16-项创新技术汇总覆盖生物材料医疗问诊)
   - [**15. 精准预测武汉房价！osp-GNNWR 模型准确描述复杂空间过程和地理现象**](#15-精准预测武汉房价osp-gnnwr-模型准确描述复杂空间过程和地理现象)
-
+  - [**16. 首个海洋大语言模型 OceanGPT 入选 ACL 2024！水下具身智能成现实**](#16-首个海洋大语言模型-oceangpt-入选-acl-2024水下具身智能成现实)
+  - [**17. 引入零样本学习，发布针对甲骨文破译优化的条件扩散模型**](#17-引入零样本学习发布针对甲骨文破译优化的条件扩散模型)
+  - [**18. 斯坦福/苹果等 23 所机构发布 DCLM 基准测试，基础模型与 Llama3 8B 表现相当**](#18-斯坦福苹果等-23-所机构发布-dclm-基准测试基础模型与-llama3-8b-表现相当)
+  - [**19. PoCo 解决数据源异构难题，实现机器人多任务灵活执行**](#19-poco-解决数据源异构难题实现机器人多任务灵活执行)
 
 
 ## **前言**
@@ -140,7 +150,7 @@
 
 作为最早一批关注到 AI for Science 的社区，「HyperAI超神经」在陪伴行业成长的同时，也乐于将最新的研究进展与成果进行普适化分享，我们希望通过解读前沿论文与政策的方式，令更多团队看到 AI 对于科研的帮助，为 AI for Science 的发展贡献力量。
 
-目前，HyperAI超神经已经解读分享了百余篇论文，为了便于大家检索，我们将文章根据学科进行分类，并展示了发表期刊及时间，提取了关键词（研究团队、相关研究、数据集等），**大家可以点击题目获取论文解读文章（内含完整论文下载链接），或者直接点击论文标题查看原文。**
+目前，HyperAI超神经已经解读分享了近百篇论文，为了便于大家检索，我们将文章根据学科进行分类，并展示了发表期刊及时间，提取了关键词（研究团队、相关研究、数据集等），**大家可以点击题目获取解读文章（内含完整论文下载链接），或者直接点击论文标题查看原文。**
 
 本文档将以开源项目的形式呈现，我们将持续更新解读文章，同时也欢迎大家投稿优秀研究成果，**如果您所在的团队/课题组有报道需求，可添加微信：神经星星（微信号：Hyperai01）。**
 
@@ -446,6 +456,66 @@
 
 * **论文链接：** [ESM All-Atom: Multi-scale Protein Language Model for Unified Molecular Modeling](https://icml.cc/virtual/2024/poster/35119)
 
+### **31. [SPACE 算法登 Cell 子刊！组织模块发现能力领先同类工具](https://hyper.ai/news/32738)**
+
+* **科研团队：** 清华大学张强锋课题组
+
+* **相关研究：** 空间转录组学、STARmap 小鼠 PLA 数据集、MERFISH 小鼠 AB 数据集、MERFISH 小鼠 WB 数据集、Xenium 人类 BC 数据集、CosMx 人类 NSCLC 数据集、Visium 人脑数据集、编码器、邻近图解码器、基因表达解码器、空间邻近性、自监督学习
+
+* **发布期刊：** Cell Systems, 2024.06
+
+* **论文链接：** [Tissue module discovery in single-cell resolution spatial transcriptomics data via cell-cell interaction-aware cell embedding](https://www.cell.com/cell-systems/fulltext/S2405-4712(24)00124-8)
+
+### **32. [基于 AlphaFold 实现新突破，揭示蛋白质动态多样性](https://hyper.ai/news/33075)**
+
+* **科研团队：** 麻省理工学院研究团队
+
+* **相关研究：** 流匹配技术、蛋白质语言模型、神经网络、AlphaFold、ESMFold
+
+* **发布期刊：** ICML 2024, 2024.06
+
+* **论文链接：** [AlphaFold Meets Flow Matching for Generating Protein Ensembles](https://openreview.net/forum?id=rs8Sh2UASt)
+
+### **33. [基于扩散模型开发 P450 酶从头设计方法 P450Diffusion](https://hyper.ai/news/33057)**
+
+* **科研团队：** 中国科学院天津工业生物技术研究所江会锋、程健团队
+
+* **相关研究：** 定向进化、扩散模型、深度学习、去噪扩散概率模型、三点固定、微调扩散模型 、预训练、催化能力提高 3.5 倍
+
+* **发布期刊：** Research, 2024.07
+
+* **论文链接：** [Cytochrome P450 Enzyme Design by Constraining the Catalytic Pocket in a Diffusion Model](https://spj.science.org/doi/10.34133/research.0413)
+
+### **34. [将等变图神经网络用于靶蛋白结合位点预测，性能提升 20%](https://hyper.ai/news/32957)**
+
+* **科研团队：** 中国人民大学高瓴人工智能学院的研究团队
+
+* **相关研究：** E(3) 等变图神经网络、卷积神经网络、EquiPocket 框架、scPDB 数据集、PDBbind 数据集、COACH 420 数据集、HOLO4K 数据集、局部几何建模模块、全局结构建模模块 、表面信息传递模块
+
+* **发布期刊：** ICML 2024, 2024.07
+
+* **论文链接：** [EquiPocket: an E(3)-Equivariant Geometric Graph Neural Network for Ligand Binding Site Prediction](https://openreview.net/forum?id=1vGN3CSxVs)
+
+### **35. [20 个实验数据创造 AI 蛋白质里程碑！FSFP 有效优化蛋白质预训练模型](https://hyper.ai/news/32822)**
+
+* **科研团队：** 上海交通大学自然科学研究院/物理天文学院/张江高研院/药学院洪亮教授课题组，联合上海人工智能实验室青年研究员谈攀团队
+
+* **相关研究：** 蛋白质突变数据集 ProteinGym、预训练蛋白质语言模型、元迁移学习、排序学习、参数高效微调、LTR 技术、有效优化蛋白质语言模型的训练策略 FSFP、模型无关元学习方法
+
+* **发布期刊：** Nature Communications, 2024.07
+
+* **论文链接：** [Enhancing efficiency of protein language models with minimal wet-lab data through few-shot learning](https://doi.org/10.1038/s41467-024-49798-6)
+
+### **36. [可迁移深度学习模型鉴定多类型 RNA 修饰、显著减少计算成本](https://hyper.ai/news/32745)**
+
+* **科研团队：** 上海交通大学生命科学技术学院长聘教轨副教授余祥课题组，联合上海辰山植物园杨俊 / 王红霞团队
+
+* **相关研究：** 可迁移深度学习模型 TandemMod、体外转录数据集 ELIGOS、Curlcake 数据集、体外表观转录组数据集 IVET、一维卷积神经网络、双向长短期记忆模块、注意力机制、全连接层 (full-connected layers) 的分类器
+
+* **发布期刊：** Nature Communications, 2024.05
+
+* **论文链接：** [Transfer learning enables identification of multiple types of RNA modifications using nanopore direct RNA sequencing](https://www.nature.com/articles/s41467-024-48437-4)
+
 ## **AI+   医疗健康：AI+Healthcare**
 
 ### **1. [深度学习系统 DeepDR Plus 用眼底图像预测糖尿病视网膜病变](https://hyper.ai/news/29769)**
@@ -631,7 +701,7 @@
 
 * **相关研究：** UniFMIR 模型、多头模块、特征增强模块、多尾模块、Swin Transformer、自适应矩估计、深度学习、SR 模型、单图像超分辨率模型、U-Net
 
-* **发布期刊：** Nature Methods, 2024.04
+* **发布期刊：**Nature Methods, 2024.04
 
 * **论文链接：** [Pretraining a foundation model for generalizable fluorescence microscopy-based image restoration](https://www.nature.com/articles/s41592-024-02244-3)
 
@@ -641,7 +711,7 @@
 
 * **相关研究：** 深度学习系统、ST 数据集、integrated graph 和图深度学习的模型、卷积神经网络和图神经网络、外部测试集 MCO-CRC、空间基因表达预测模型、super-patch graph 生存模型、H&E 染色组织学图像 (H&E-stained histological image) 预处理、IGI-DL 模型
 
-* **发布期刊：** Cell Reports Medicine, 2024.05
+* **发布期刊：**Cell Reports Medicine, 2024.05
 
 * **论文链接：** [Harnessing TME depicted by histological images to improve cancer prognosis through a deep learning system](https://www.cell.com/cell-reports-medicine/fulltext/S2666-3791(24)00205-2 )
 
@@ -826,6 +896,16 @@
 * **发布期刊：** NPG Asia Materials, 2024.06
 
 * **论文链接：** [Superstrength permanent magnets with iron-based superconductors by data- and researcher-driven process design](https://www.nature.com/articles/s41427-024-00549-5)
+
+### **18. [神经网络替代密度泛函理论！通用材料模型实现超精准预测](https://hyper.ai/news/32891)**
+
+* **科研团队：** 清华大学物理系的徐勇、段文晖团队
+
+* **相关研究：** Materials Project 数据库、深度学习密度泛函理论哈密顿量 (DeepH) 方法、通用材料模型、神经网络、等变神经网络、自动化交互式基础设施和数据库 (AiiDA) 框架
+
+* **发布期刊：** Science Bulletin, 2024.06
+
+* **论文链接：** [Universal materials model of deep-learning density functional theory Hamiltonian](https://doi.org/10.1016/j.scib.2024.06.011)
 
 ## **AI+动植物科学：AI+Zoology-Botany**
 
@@ -1288,3 +1368,43 @@ An Empirical Study on Werewolf](https://arxiv.org/pdf/2309.04658.pdf)
 * **发布期刊：** International Journal of Geographical Information Science, 2024.04
 
 * **论文链接：** [A neural network model to optimize the measure of spatial proximity in geographically weighted regression approach: a case study on house price in Wuhan](https://www.tandfonline.com/doi/abs/10.1080/13658816.2024.2343771)
+
+### **16. [首个海洋大语言模型 OceanGPT 入选 ACL 2024！水下具身智能成现实](https://hyper.ai/news/33044)**
+
+* **科研团队：** 浙江大学计算机科学与技术学院张宁豫、陈华钧团队
+
+* **相关研究：** 海洋领域大语言模型、正则表达式、哈希算法海洋科学指令生成框架 DoInstruct、多 Agent 协作、gpt-3.5-turbo、BM25 算法、LLaMA-2、Vicuna-7b-1.5、具身智能
+
+* **发布期刊：** ACL 2024, 2024.05
+
+* **论文链接：** [OceanGPT: A Large Language Model for Ocean Science Tasks](https://arxiv.org/abs/2310.02031)
+
+### **17. [引入零样本学习，发布针对甲骨文破译优化的条件扩散模型](https://hyper.ai/news/33010)**
+
+* **科研团队：** 华中科技大学白翔、刘禹良研究团队联合阿德莱德大学、安阳师范学院、华南理工大学团队
+
+* **相关研究：** 条件扩散模型、图像生成技术、局部分析采样技术、HUST-OBS 数据集、EVOBC 数据集、ResNet-101 骨干网络、OCR 技术、零样本学习策略、风格编码器、内容编码器
+
+* **发布期刊：** ACL 2024, 2024.06
+
+* **论文链接：** [Deciphering Oracle Bone Language with Diffusion Models](https://doi.org/10.48550/arXiv.2406.00684)
+
+### **18. [斯坦福/苹果等 23 所机构发布 DCLM 基准测试，基础模型与 Llama3 8B 表现相当](https://hyper.ai/news/33001)**
+
+* **科研团队：** 华盛顿大学、斯坦福大学、苹果等 23 所机构联手
+
+* **相关研究：** 语言模型、DCLM 基准测试、Transformer、MMLU
+
+* **发布期刊：** arXiv, 2024.06
+
+* **论文链接：** [DataComp-LM: In search of the next generation of training sets for language models](https://arxiv.org/abs/2406.11794)
+
+### **19. [PoCo 解决数据源异构难题，实现机器人多任务灵活执行](https://hyper.ai/news/32765)**
+
+* **科研团队：** 麻省理工研究人员
+
+* **相关研究：** 去噪扩散概率模型、去噪扩散隐式模型、扩散模型的概率合成、机器人策略组合框架 PoCo
+
+* **发布期刊：** arXiv, 2024.05
+
+* **论文链接：** [PoCo: Policy Composition from and for Heterogeneous Robot Learning](https://arxiv.org/abs/2402.02511)
