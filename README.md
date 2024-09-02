@@ -38,6 +38,8 @@
   - [**34. 将等变图神经网络用于靶蛋白结合位点预测，性能提升 20%**](#34-将等变图神经网络用于靶蛋白结合位点预测性能提升-20)
   - [**35. 20 个实验数据创造 AI 蛋白质里程碑！FSFP 有效优化蛋白质预训练模型**](#35-20-个实验数据创造-ai-蛋白质里程碑fsfp-有效优化蛋白质预训练模型)
   - [**36. 可迁移深度学习模型鉴定多类型 RNA 修饰、显著减少计算成本**](#36-可迁移深度学习模型鉴定多类型-rna-修饰显著减少计算成本)
+  - [**37. InstructProtein：利用知识指令对齐蛋白质语言与人类语言**](#37-instructprotein利用知识指令对齐蛋白质语言与人类语言)
+  - [**38. 蛋白质-文本生成框架 ProtT3 实现蛋白质数据与文本信息跨模态解读**](#38-蛋白质-文本生成框架-prott3-实现蛋白质数据与文本信息跨模态解读)
 - [**AI+   医疗健康：AI+Healthcare**](#ai---医疗健康aihealthcare)
   - [**1. 深度学习系统 DeepDR Plus 用眼底图像预测糖尿病视网膜病变**](#1-深度学习系统-deepdr-plus-用眼底图像预测糖尿病视网膜病变)
   - [**2. 逻辑回归模型分析高绿色景观指数可降低 MetS 风险**](#2-逻辑回归模型分析高绿色景观指数可降低-mets-风险)
@@ -59,7 +61,11 @@
   - [**18. 借鉴语义分割，开发空间转录组语义注释工具 Pianno**](#18-借鉴语义分割开发空间转录组语义注释工具-pianno)
   - [**19. AI 模型 UniFMIR，突破现有荧光显微成像极限**](#19-ai-模型-unifmir突破现有荧光显微成像极限)
   - [**20. 深度学习系统，提高癌症生存预测准确性**](#20-深度学习系统提高癌症生存预测准确性)
-  - [**21. 候选 CVPR 2024 最佳论文！MemSAM 将「分割一切」模型用于医学视频分割**](#21-候选-cvpr-2024-最佳论文memsam-将分割一切模型用于医学视频分割)
+  - [**21. MemSAM 将「分割一切」模型用于医学视频分割**](#21-memsam-将分割一切模型用于医学视频分割)
+  - [**22. 医学图像分割模型 Medical SAM 2 刷新医学图像分割 SOTA 榜**](#22-医学图像分割模型-medical-sam-2-刷新医学图像分割-sota-榜)
+  - [**23. 机器学习抗击化疗耐药性与肿瘤复发，构筑乳腺癌干细胞的有力防线**](#23-机器学习抗击化疗耐药性与肿瘤复发构筑乳腺癌干细胞的有力防线)
+  - [**24. 糖尿病诊疗的视觉-大语言模型 DeepDR-LLM 登 Nature 子刊**](#24-糖尿病诊疗的视觉-大语言模型-deepdr-llm-登-nature-子刊)
+  - [**25. 水平直逼高级病理学家！清华团队提出 AI 基础模型 ROAM，实现胶质瘤精准诊断**](#25-水平直逼高级病理学家清华团队提出-ai-基础模型-roam实现胶质瘤精准诊断)
 - [**AI+ 材料化学：AI+Materials Chemistry**](#ai-材料化学aimaterials-chemistry)
   - [**1. 高通量计算框架 33 分钟生成 12 万种新型 MOFs 候选材料**](#1-高通量计算框架-33-分钟生成-12-万种新型-mofs-候选材料)
   - [**2. 机器学习算法模型筛选 P-SOC 电极材料**](#2-机器学习算法模型筛选-p-soc-电极材料)
@@ -79,6 +85,8 @@
   - [**16. 重塑锂电池性能边界，基于集成学习提出简化电化学模型**](#16-重塑锂电池性能边界基于集成学习提出简化电化学模型)
   - [**17. 最强铁基超导磁体诞生！基于机器学习，磁场强度超过先前记录 2.7 倍**](#17-最强铁基超导磁体诞生基于机器学习磁场强度超过先前记录-27-倍)
   - [**18. 神经网络替代密度泛函理论！通用材料模型实现超精准预测**](#18-神经网络替代密度泛函理论通用材料模型实现超精准预测)
+  - [**19. 神经网络密度泛函框架打开物质电子结构预测的黑箱**](#19-神经网络密度泛函框架打开物质电子结构预测的黑箱)
+  - [**20. 用神经网络首创全前向智能光计算训练架构，国产光芯片实现重大突破**](#20-用神经网络首创全前向智能光计算训练架构国产光芯片实现重大突破)
 - [**AI+动植物科学：AI+Zoology-Botany**](#ai动植物科学aizoology-botany)
   - [**1. SBeA 基于少样本学习框架进行动物社会行为分析**](#1-sbea-基于少样本学习框架进行动物社会行为分析)
   - [**2. 基于孪生网络的深度学习方法，自动捕捉胚胎发育过程**](#2-基于孪生网络的深度学习方法自动捕捉胚胎发育过程)
@@ -138,6 +146,9 @@
   - [**17. 引入零样本学习，发布针对甲骨文破译优化的条件扩散模型**](#17-引入零样本学习发布针对甲骨文破译优化的条件扩散模型)
   - [**18. 斯坦福/苹果等 23 所机构发布 DCLM 基准测试，基础模型与 Llama3 8B 表现相当**](#18-斯坦福苹果等-23-所机构发布-dclm-基准测试基础模型与-llama3-8b-表现相当)
   - [**19. PoCo 解决数据源异构难题，实现机器人多任务灵活执行**](#19-poco-解决数据源异构难题实现机器人多任务灵活执行)
+  - [**20. 含 14 万张图像！甲骨文数据集助力团队摘冠 ACL 最佳论文**](#20-含-14-万张图像甲骨文数据集助力团队摘冠-acl-最佳论文)
+  - [**21. 用机器学习分离抹香鲸发音字母表，高度类似人类语言，信息承载能力更强**](#21-用机器学习分离抹香鲸发音字母表高度类似人类语言信息承载能力更强)
+  - [**22. 基于预训练 LLM 提出信道预测方案，GPT-2 赋能无线通信物理层**](#22-基于预训练-llm-提出信道预测方案gpt-2-赋能无线通信物理层)
 
 
 ## **前言**
@@ -516,6 +527,26 @@
 
 * **论文链接：** [Transfer learning enables identification of multiple types of RNA modifications using nanopore direct RNA sequencing](https://www.nature.com/articles/s41467-024-48437-4)
 
+### **37. [InstructProtein：利用知识指令对齐蛋白质语言与人类语言](https://hyper.ai/news/33697)**
+
+* **科研团队：** 浙江大学陈华钧、张强团队
+
+* **相关研究：** 大语言模型、蛋白质知识指令数据集、Gene Ontology (GO) 数据集、InstructProtein、知识图谱、蛋白质位置预测、蛋白质功能预测 、蛋白质金属离子结合能力预测
+
+* **发布期刊：** ACL 2024, 2023.10
+
+* **论文链接：** [InstructProtein: Aligning Human and Protein Language via Knowledge Instruction](https://arxiv.org/abs/2310.03269)
+
+### **38. [蛋白质-文本生成框架 ProtT3 实现蛋白质数据与文本信息跨模态解读](https://hyper.ai/news/33546)**
+
+* **科研团队：** 中国科学技术大学王翔，联合新加坡国立大学刘致远团队、北海道大学研究团队
+
+* **相关研究：** 跨模态投影器、蛋白质语言模型、Swiss-Prot 和 ProteinKG25 数据集、PDB-QA 数据集
+
+* **发布期刊：** ACL 2024, 2023.05
+
+* **论文链接：** [ProtT3: Protein-to-Text Generation for Text-based Protein Understanding](https://arxiv.org/abs/2405.12564)
+
 ## **AI+   医疗健康：AI+Healthcare**
 
 ### **1. [深度学习系统 DeepDR Plus 用眼底图像预测糖尿病视网膜病变](https://hyper.ai/news/29769)**
@@ -715,7 +746,7 @@
 
 * **论文链接：** [Harnessing TME depicted by histological images to improve cancer prognosis through a deep learning system](https://www.cell.com/cell-reports-medicine/fulltext/S2666-3791(24)00205-2 )
 
-### **21. [候选 CVPR 2024 最佳论文！MemSAM 将「分割一切」模型用于医学视频分割](https://hyper.ai/news/32372)**
+### **21. [MemSAM 将「分割一切」模型用于医学视频分割](https://hyper.ai/news/32372)**
 
 * **科研团队：** 深圳大学吴惠思
 
@@ -724,6 +755,46 @@
 * **发布期刊：** CVPR 2024, 2024.05
 
 * **论文链接：** [MemSAM: Taming Segment Anything Model forEchocardiography Video Segmentation](https://github.com/dengxl0520/MemSAM)
+
+### **22. [医学图像分割模型 Medical SAM 2 刷新医学图像分割 SOTA 榜](https://hyper.ai/news/33738)**
+
+* **科研团队：** 牛津大学团队
+
+* **相关研究：** 医学图像分割模型、SAM 2、SA-V 视频分割数据集、Medical SAM 2 示例医学分割数据集、 图像编码器、记忆编码器、记忆注意力机制
+
+* **发布期刊：** arXiv, 2024.08
+
+* **论文链接：** [Medical SAM 2: Segment medical images as video via Segment Anything Model 2](https://arxiv.org/abs/2408.00874)
+
+### **23. [机器学习抗击化疗耐药性与肿瘤复发，构筑乳腺癌干细胞的有力防线](https://hyper.ai/news/33566)**
+
+* **科研团队：** 山东大学吕海泉、孙蓉、张凯及山西医科大学梅齐，联合螺旋矩阵公司等研究团队
+
+* **相关研究：** 机器学习、乳腺浸润性癌 (BRCA) 数据集、皮尔逊相关系数分析、基因集富集分析、评估乳腺癌患者样本中的癌症干细胞特征
+
+* **发布期刊：** Advanced Science, 2024.07
+
+* **论文链接：** [Polyamine Anabolism Promotes Chemotherapy-Induced Breast Cancer Stem Cell Enrichment](https://onlinelibrary.wiley.com/doi/10.1002/advs.202404853)
+
+### **24. [糖尿病诊疗的视觉-大语言模型 DeepDR-LLM 登 Nature 子刊](https://hyper.ai/news/33292)**
+
+* **科研团队：** 清华大学副教务长、医学院主任黄天荫教授团队，上海交通大学电院计算机系/教育部人工智能重点实验室盛斌教授团队，上海交通大学医学院附属第六人民医院贾伟平教授及李华婷教授团队，新加坡国立大学及新加坡国家眼科中心覃宇宗教授团队
+
+* **相关研究：** 大语言模型、基于眼底图像的深度学习技术、融合适配器 (Adaptor) 和低秩自适应、Transformer 模型架构、监督微调方法、可提高基层 DR 筛查能力和糖尿病诊疗水平
+
+* **发布期刊：** Nature Medicine, 2024.07
+
+* **论文链接：** [Integrated image-based deep learning and language models for primary diabetes care](https://www.nature.com/articles/s41591-024-03139-8)
+
+### **25. [水平直逼高级病理学家！清华团队提出 AI 基础模型 ROAM，实现胶质瘤精准诊断](https://hyper.ai/news/33136)**
+
+* **科研团队：** 清华大学自动化系生命基础模型实验室闾海荣副研究员、江瑞教授、张学工教授与中南大学湘雅医院胡忠良教授团队
+
+* **相关研究：** 基于大区域兴趣 (large regions of interest) 和金字塔 Transformer (pyramid transformer) 、精准病理诊断 AI 基础模型 ROAM、大尺寸图像块和多尺度特征学习模块、湘雅胶质瘤 WSI 数据集、TCGA 胶质瘤 WSI 数据集、弱监督计算病理学方法、卷积神经网络
+
+* **发布期刊：** Nature Machine Intelligence, 2024.06
+
+* **论文链接：** [A transformer-based weakly supervised computational pathology method for clinical-grade diagnosis and molecular marker discovery of gliomas](https://www.nature.com/articles/s42256-024-00868-w)
 
 ## **AI+ 材料化学：AI+Materials Chemistry**
 
@@ -906,6 +977,26 @@
 * **发布期刊：** Science Bulletin, 2024.06
 
 * **论文链接：** [Universal materials model of deep-learning density functional theory Hamiltonian](https://doi.org/10.1016/j.scib.2024.06.011)
+
+### **19. [神经网络密度泛函框架打开物质电子结构预测的黑箱](https://hyper.ai/news/33525)**
+
+* **科研团队：** 清华大学徐勇、段文晖课题组
+
+* **相关研究：** 神经网络密度泛函理论、变分密度泛函理论、等价神经网络、Julia 语言、Zygote 自动微分框架、深度学习、无监督学习、DFT
+
+* **发布期刊：** Phys. Rev. Lett., 2024.08
+
+* **论文链接：** [Neural-network density functional theory based on variational energy minimization](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.133.076401)
+
+### **20. [用神经网络首创全前向智能光计算训练架构，国产光芯片实现重大突破](https://hyper.ai/news/33440)**
+
+* **科研团队：** 清华大学戴琼海院士、方璐教授研究团队
+
+* **相关研究：** 神经网络、全前向模式、机器学习、MNIST 数据集、Fashion-MNIST 数据集、CIFAR-10 数据集、ImageNet 数据集、MWD 数据集、鸢尾花数据集、Chromium target 数据集
+
+* **发布期刊：** Nature, 2024.08
+
+* **论文链接：** [Fully forward mode training for optical neural networks](https://www.nature.com/articles/s41586-024-07687-4)
 
 ## **AI+动植物科学：AI+Zoology-Botany**
 
@@ -1408,3 +1499,33 @@ An Empirical Study on Werewolf](https://arxiv.org/pdf/2309.04658.pdf)
 * **发布期刊：** arXiv, 2024.05
 
 * **论文链接：** [PoCo: Policy Composition from and for Heterogeneous Robot Learning](https://arxiv.org/abs/2402.02511)
+
+### **20. [含 14 万张图像！甲骨文数据集助力团队摘冠 ACL 最佳论文](https://hyper.ai/news/33826)**
+
+* **科研团队：** 华中科技大学白翔教授研究团队
+
+* **相关研究：** HUST-OBC 数据集、无监督的视觉对比学习模型
+
+* **发布期刊：** Scientific Data, 2024.06
+
+* **论文链接：** [An open dataset for oracle bone script recognition and decipherment](https://arxiv.org/abs/2401.15365)
+
+### **21. [用机器学习分离抹香鲸发音字母表，高度类似人类语言，信息承载能力更强](https://hyper.ai/news/33433)**
+
+* **科研团队：** 麻省理工学院 Pratyusha Sharma 以及 CETI 的研究团队
+
+* **相关研究：**  DSWP 数据集、机器学习、抹香鲸声音具有结构性
+
+* **发布期刊：** Nature Communications, 2024.05
+
+* **论文链接：** [Contextual and combinatorial structure in sperm whale vocalisations](https://www.nature.com/articles/s41467-024-47221-8)
+
+### **22. [基于预训练 LLM 提出信道预测方案，GPT-2 赋能无线通信物理层](https://hyper.ai/news/33195)**
+
+* **科研团队：** 北京大学电子学院程翔团队
+
+* **相关研究：**  QuaDRiGa 仿真器、大语言模型、信道预测神经网络、预处理模块、嵌入模块、预训练 LLM 模块、输出模块
+
+* **发布期刊：** Journal of Communications and Information Networks, 2024.06
+
+* **论文链接：** [LLM4CP: Adapting Large Language Models for Channel Prediction](https://ieeexplore.ieee.org/document/10582829)
