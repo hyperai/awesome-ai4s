@@ -40,6 +40,9 @@
   - [**36. 可迁移深度学习模型鉴定多类型 RNA 修饰、显著减少计算成本**](#36-可迁移深度学习模型鉴定多类型-rna-修饰显著减少计算成本)
   - [**37. InstructProtein：利用知识指令对齐蛋白质语言与人类语言**](#37-instructprotein利用知识指令对齐蛋白质语言与人类语言)
   - [**38. 蛋白质-文本生成框架 ProtT3 实现蛋白质数据与文本信息跨模态解读**](#38-蛋白质-文本生成框架-prott3-实现蛋白质数据与文本信息跨模态解读)
+  - [**39. CPDiffusion 模型，超低成本、全自动设计功能型蛋白质**](#39-cpdiffusion-模型超低成本全自动设计功能型蛋白质)
+  - [**40. 基于蛋白质语言模型和密集检索技术，一种全新的蛋白质同源物检测方法**](#40-基于蛋白质语言模型和密集检索技术一种全新的蛋白质同源物检测方法)
+  - [**41. AlphaProteo 可高效设计靶蛋白结合物，亲和力提高 300 倍**](#41-alphaproteo-可高效设计靶蛋白结合物亲和力提高-300-倍)
 - [**AI+   医疗健康：AI+Healthcare**](#ai---医疗健康aihealthcare)
   - [**1. 深度学习系统 DeepDR Plus 用眼底图像预测糖尿病视网膜病变**](#1-深度学习系统-deepdr-plus-用眼底图像预测糖尿病视网膜病变)
   - [**2. 逻辑回归模型分析高绿色景观指数可降低 MetS 风险**](#2-逻辑回归模型分析高绿色景观指数可降低-mets-风险)
@@ -66,6 +69,8 @@
   - [**23. 机器学习抗击化疗耐药性与肿瘤复发，构筑乳腺癌干细胞的有力防线**](#23-机器学习抗击化疗耐药性与肿瘤复发构筑乳腺癌干细胞的有力防线)
   - [**24. 糖尿病诊疗的视觉-大语言模型 DeepDR-LLM 登 Nature 子刊**](#24-糖尿病诊疗的视觉-大语言模型-deepdr-llm-登-nature-子刊)
   - [**25. 水平直逼高级病理学家！清华团队提出 AI 基础模型 ROAM，实现胶质瘤精准诊断**](#25-水平直逼高级病理学家清华团队提出-ai-基础模型-roam实现胶质瘤精准诊断)
+  - [**26. 医学图像分割通用模型 ScribblePrompt，性能优于 SAM**](#26-医学图像分割通用模型-scribbleprompt性能优于-sam)
+  - [**27. 数字孪生脑平台，展现出类似人脑中观测的临界现象与相似认知功能**](#27-数字孪生脑平台展现出类似人脑中观测的临界现象与相似认知功能)
 - [**AI+ 材料化学：AI+Materials Chemistry**](#ai-材料化学aimaterials-chemistry)
   - [**1. 高通量计算框架 33 分钟生成 12 万种新型 MOFs 候选材料**](#1-高通量计算框架-33-分钟生成-12-万种新型-mofs-候选材料)
   - [**2. 机器学习算法模型筛选 P-SOC 电极材料**](#2-机器学习算法模型筛选-p-soc-电极材料)
@@ -87,6 +92,8 @@
   - [**18. 神经网络替代密度泛函理论！通用材料模型实现超精准预测**](#18-神经网络替代密度泛函理论通用材料模型实现超精准预测)
   - [**19. 神经网络密度泛函框架打开物质电子结构预测的黑箱**](#19-神经网络密度泛函框架打开物质电子结构预测的黑箱)
   - [**20. 用神经网络首创全前向智能光计算训练架构，国产光芯片实现重大突破**](#20-用神经网络首创全前向智能光计算训练架构国产光芯片实现重大突破)
+  - [**21. 化学大语言模型 ChemLLM 覆盖 7 百万问答数据，专业能力比肩 GPT-4**](#21-化学大语言模型-chemllm-覆盖-7-百万问答数据专业能力比肩-gpt-4)
+  - [**22. 可晶圆级生产的人工智能自适应微型光谱仪**](#22-可晶圆级生产的人工智能自适应微型光谱仪)
 - [**AI+动植物科学：AI+Zoology-Botany**](#ai动植物科学aizoology-botany)
   - [**1. SBeA 基于少样本学习框架进行动物社会行为分析**](#1-sbea-基于少样本学习框架进行动物社会行为分析)
   - [**2. 基于孪生网络的深度学习方法，自动捕捉胚胎发育过程**](#2-基于孪生网络的深度学习方法自动捕捉胚胎发育过程)
@@ -115,6 +122,7 @@
   - [**3. 利用无监督机器学习算法 Astronomaly ，找到了之前为人忽视的异常现象**](#3-利用无监督机器学习算法-astronomaly-找到了之前为人忽视的异常现象)
   - [**4. 基于机器学习的 CME 识别与参数获取方法**](#4-基于机器学习的-cme-识别与参数获取方法)
   - [**5. 深度学习发现 107 例中性碳吸收线**](#5-深度学习发现-107-例中性碳吸收线)
+  - [**6. StarFusion 模型实现高空间分辨率图像的预测**](#6-starfusion-模型实现高空间分辨率图像的预测)
 - [**AI+ 自然灾害：AI+Natural Disaster**](#ai-自然灾害ainatural-disaster)
   - [**1. 机器学习预测未来 40 年的地面沉降风险**](#1-机器学习预测未来-40-年的地面沉降风险)
   - [**2. 语义分割模型 SCDUNet++ 用于滑坡测绘**](#2-语义分割模型-scdunet-用于滑坡测绘)
@@ -123,6 +131,7 @@
   - [**5. 利用可解释性 AI ，分析澳大利亚吉普斯兰市的不同地理因素**](#5-利用可解释性-ai-分析澳大利亚吉普斯兰市的不同地理因素)
   - [**6. 基于机器学习的洪水预报模型**](#6-基于机器学习的洪水预报模型)
   - [**7. ED-DLSTM实现无监测数据地区洪水预测**](#7-ed-dlstm实现无监测数据地区洪水预测)
+  - [**8. ChloroFormer 模型提前预警海洋藻类爆发**](#8-chloroformer-模型提前预警海洋藻类爆发)
 - [**AI4S 政策解读：AI4S Policy**](#ai4s-政策解读ai4s-policy)
   - [**1. 科技部出台政策防范学术界 AI 枪手**](#1-科技部出台政策防范学术界-ai-枪手)
   - [**2. 政策：科技部会同自然科学基金委启动「人工智能驱动的科学研究」( AI for Science ) 专项部署工作**](#2-政策科技部会同自然科学基金委启动人工智能驱动的科学研究-ai-for-science--专项部署工作)
@@ -149,6 +158,7 @@
   - [**20. 含 14 万张图像！甲骨文数据集助力团队摘冠 ACL 最佳论文**](#20-含-14-万张图像甲骨文数据集助力团队摘冠-acl-最佳论文)
   - [**21. 用机器学习分离抹香鲸发音字母表，高度类似人类语言，信息承载能力更强**](#21-用机器学习分离抹香鲸发音字母表高度类似人类语言信息承载能力更强)
   - [**22. 基于预训练 LLM 提出信道预测方案，GPT-2 赋能无线通信物理层**](#22-基于预训练-llm-提出信道预测方案gpt-2-赋能无线通信物理层)
+  - [**23. 首个多缝线刺绣生成对抗网络模型**](#23-首个多缝线刺绣生成对抗网络模型)
 
 
 ## **前言**
@@ -606,6 +616,36 @@
 
 * **论文链接：** [ProtT3: Protein-to-Text Generation for Text-based Protein Understanding](https://arxiv.org/abs/2405.12564)
 
+### **39. [CPDiffusion 模型，超低成本、全自动设计功能型蛋白质](https://hyper.ai/news/34692)**
+* **中文解读：** [https://hyper.ai/news/34692](https://hyper.ai/news/34692)
+
+* **科研团队：** 上海交通大学自然科学研究院、物理与天文学院、张江高等研究院、药学院洪亮课题组
+
+* **相关研究：** 蛋白质工程、扩散概率模型框架 CPDiffusion、氨基酸、图神经网络、辅助药物设计、蛋白质语言模型、 CATH 4.2 数据集
+
+* **发布期刊：** Cell Discovery,  2024.09
+
+* **论文链接：** [A conditional protein diffusion model generates artificial programmable endonuclease sequences with enhanced activity](https://www.nature.com/articles/s41421-024-00728-2)
+### **40. [基于蛋白质语言模型和密集检索技术，一种全新的蛋白质同源物检测方法](https://hyper.ai/news/34225)**
+* **中文解读：** [https://hyper.ai/news/34225](https://hyper.ai/news/34225)
+
+* **科研团队：** 香港中文大学李煜、复旦大学智能复杂体系实验室、上海人工智能实验室青年研究员孙思琦、耶鲁大学 Mark Gerstein 
+
+* **相关研究：** 蛋白质工程、蛋白质语言模型、密集检索技术、密集同源物检索器 、混合模型 DHR-meta、UR90 数据集、JackHMMER 算法、BFD/MGnify 数据集、DHR 方法、蛋白质同源物检测灵敏度提高 56%
+
+* **发布期刊：** Nature Biotechnology, 2024.08
+
+* **论文链接：** [Fast, sensitive detection of protein homologs using deep dense retrieval](https://doi.org/10.1038/s41587-024-02353-6)
+### **41. [AlphaProteo 可高效设计靶蛋白结合物，亲和力提高 300 倍](https://hyper.ai/news/34214)**
+* **中文解读：** [https://hyper.ai/news/34214](https://hyper.ai/news/34214)
+
+* **科研团队：** DeepMind、弗朗西斯·克里克研究所
+
+* **相关研究：** 蛋白质工程、蛋白质语言模型、AI 药物设计、靶蛋白 、AI 工具、机器学习模型 AlphaProteo、VEGF-A 蛋白结合体设计、生成模型 (Generator) 、过滤器 (Filter)、候选结合物与靶蛋白结合数量高出 5-100 倍
+
+* **发布期刊：** DeepMind, 2024.09
+
+* **论文链接：** [AlphaProteo generates novel proteins for biology and health research](https://deepmind.google/discover/blog/alphaproteo-generates-novel-proteins-for-biology-and-health-research/) 
 ## **AI+   医疗健康：AI+Healthcare**
 
 ### **1. [深度学习系统 DeepDR Plus 用眼底图像预测糖尿病视网膜病变](https://hyper.ai/news/29769)**
@@ -881,6 +921,28 @@
 
 * **论文链接：** [A transformer-based weakly supervised computational pathology method for clinical-grade diagnosis and molecular marker discovery of gliomas](https://www.nature.com/articles/s42256-024-00868-w)
 
+### **26. [医学图像分割通用模型 ScribblePrompt，性能优于 SAM](https://hyper.ai/news/34720)**
+* **中文解读：** [https://hyper.ai/news/34720](https://hyper.ai/news/34720)
+
+* **科研团队：** 美国麻省理工学院计算机科学与人工智能实验室团队、麻省总医院、哈佛医学院
+
+* **相关研究：** 深度学习、医学图像分割、MegaMedical 数据集、交互式分割方法、生物医学成像数据集、生物医学图像分割的通用模型 ScribblePrompt、生成合成标签机制、全卷积架构、ScribblePrompt 架构、CNN-Transformer 混合解决方案
+* **发布期刊：** ECCV 2024, 2024.07
+
+* **论文链接：** [ScribblePrompt: Fast and Flexible Interactive Segmentation for Any Biomedical Image](https://arxiv.org/pdf/2312.07381)
+### **27. [数字孪生脑平台，展现出类似人脑中观测的临界现象与相似认知功能](https://hyper.ai/news/34573)**
+* **中文解读：** [https://hyper.ai/news/34573](https://hyper.ai/news/34573)
+
+* **科研团队：** 复旦大学类脑智能科学与技术研究院冯建峰教授团队
+
+* **相关研究：**  神经元网络、数字孪生大脑、逆向工程技术、脑科学、全脑范围内的尖峰神经元网络、磁共振成像技术、快速梯度回波序列、cortico-subcortical 模型、DTB 模型、分析了神经元数量和平均突触连接度对模型与生物数据相似度的影响、同化模型
+
+* **发布期刊：** National Science Review, 2024.5
+
+* **论文链接：** [Imitating and exploring human brain’s resting and task-performing states via resembling brain computing: scaling and architecture](https://doi.org/10.1093/nsr/nwae080)
+
+
+
 ## **AI+ 材料化学：AI+Materials Chemistry**
 
 ### **1. [高通量计算框架 33 分钟生成 12 万种新型 MOFs 候选材料](https://hyper.ai/news/30269)**
@@ -1102,6 +1164,26 @@
 * **发布期刊：** Nature, 2024.08
 
 * **论文链接：** [Fully forward mode training for optical neural networks](https://www.nature.com/articles/s41586-024-07687-4)
+### **21. [化学大语言模型 ChemLLM 覆盖 7 百万问答数据，专业能力比肩 GPT-4](https://hyper.ai/news/34170)**
+* **中文解读：** [https://hyper.ai/news/34170](https://hyper.ai/news/34170)
+
+* **科研团队：** 上海人工智能实验室
+
+* **相关研究：**  大规模化学数据集 ChemData 、ChemPref-10K 的中英文版本数据集、C- MHChem 数据集、ChemBench4K 化学能力评测基准数据集、大规模化学基准测试 ChemBench、Multi-Corpus 综合语料库、NLP 任务、化学大语言模型
+
+* **发布期刊：** arXiv, 2024.02
+
+* **论文链接：** [ChemLLM: A Chemical Large Language Model](https://arxiv.org/abs/2402.06852)
+### **22. [可晶圆级生产的人工智能自适应微型光谱仪](https://hyper.ai/news/34075)**
+* **中文解读：** [https://hyper.ai/news/34075](https://hyper.ai/news/34075)
+
+* **科研团队：** 复旦大学材料科学系、智慧纳米机器人与纳米系统国际研究院梅永丰教授课题组
+
+* **相关研究：**  光学光谱仪、微型化重构光谱仪、CMOS 集成电路工艺、窄带通道电流数据集 、全部通道电流数据集、在整个可见光波段表现出准确的光谱重构能力
+
+* **发布期刊：** PNAS,  2024.08
+
+* **论文链接：** [CMOS-Compatible Reconstructive Spectrometers with Self-Referencing Integrated Fabry-Perot Resonatorsl](https://www.pnas.org/doi/10.1073/pnas.2403950121)
 
 ## **AI+动植物科学：AI+Zoology-Botany**
 
@@ -1359,6 +1441,16 @@
 * **发布期刊：** MNRAS, 2024.05
 
 * **论文链接：** [Detecting rare neutral atomic-carbon absorbers with a deep neuralnetwork](https://doi.org/10.1093/mnras/stae799)
+### **6. [StarFusion 模型实现高空间分辨率图像的预测](https://hyper.ai/news/34254)**
+* **中文解读：** [https://hyper.ai/news/34254](https://hyper.ai/news/34254)
+
+* **科研团队：** 北京师范大学地表过程与资源生态国家重点实验室陈晋团队
+
+* **相关研究：** 深度学习方法、遥感影像、高空间分辨率图像的预测、提出了双流时空解耦融合架构模型 StarFusion、Gaofen-1 数据集、Sentinel-2 卫星数据集、SRGAN-STF 模型、线性回归模型、多变量回归关系模型
+
+* **发布期刊：** Journal of Remote Sensing, 2024.07
+
+* **论文链接：** [A Hybrid Spatiotemporal Fusion Method for High Spatial Resolution Imagery: Fusion of Gaofen-1 and Sentinel-2 over Agricultural Landscapes](https://spj.science.org/doi/10.34133/remotesensing.0159)
 
 ## **AI+ 自然灾害：AI+Natural Disaster**
 ### **1. [机器学习预测未来 40 年的地面沉降风险](https://hyper.ai/news/30173)**
@@ -1437,6 +1529,15 @@
 * **发布期刊：** The Innovation, 2024.04
 
 * **论文链接：** [Deep learning for cross-region streamflow and flood forecasting at a global scale](https://doi.org/10.1016/j.xinn.2024.100617)
+### **8. [ChloroFormer 模型提前预警海洋藻类爆发](https://hyper.ai/news/34544)**
+* **中文解读：** [https://hyper.ai/news/34544](https://hyper.ai/news/34544)
+
+* **科研团队：** 浙江大学 GIS 实验室
+
+* **相关研究：** TZ02 数据集、深度学习模型 ChloroFormer、Transformer 神经网络、频率滤波器机制、频率注意力机制、ChloroFormer 在叶绿素 a 的短期和中期预测上，都超越了基线
+* **发布期刊：** Water Research, 2024.10
+
+* **论文链接：** [Enhanced forecasting of chlorophyll-a concentration in coastal waters through integration of Fourier analysis and Transformer networks](https://doi.org/10.1016/j.watres.2024.122160 )
 
 ## **AI4S 政策解读：AI4S Policy**
 ### **1. [科技部出台政策防范学术界 AI 枪手](https://hyper.ai/news/29228)**
@@ -1690,3 +1791,14 @@ An Empirical Study on Werewolf](https://arxiv.org/pdf/2309.04658.pdf)
 * **发布期刊：** Journal of Communications and Information Networks, 2024.06
 
 * **论文链接：** [LLM4CP: Adapting Large Language Models for Channel Prediction](https://ieeexplore.ieee.org/document/10582829)
+
+### **23. [首个多缝线刺绣生成对抗网络模型](https://hyper.ai/news/34669)**
+* **中文解读：** [https://hyper.ai/news/34669](https://hyper.ai/news/34669)
+
+* **科研团队：** 复武汉纺织大学计算机与人工智能学院可视计算与数字纺织团队
+
+* **相关研究：**  多针刺绣数据集、生成对抗网络模型、卷积神经网络、CNN、多缝线刺绣生成对抗网络模型 MSEmbGAN、区域感知纹理生成网络、着色网络、可提高刺绣中纹理真实度和色彩保真度等关键方面的精度
+
+* **发布期刊：** IEEE Transactions on Visualization and Computer Graphics, 2024
+
+* **论文链接：** [MSEmbGAN: Multi-Stitch Embroidery Synthesis via Region-Aware Texture Generation](https://csai.wtu.edu.cn/TVCG01/index.html)
