@@ -993,7 +993,7 @@
 
 * **科研团队：** 浙江大学胡浩基团队、微软亚洲研究院邱锂力团队
 
-* **相关研究：**  「伪配对」(Pseudo-Pairs) 技术、MIMIC-CXR 2.0.0 数据集、BIMCV 数据集、预训练 UniMedI 框架、ViT-B/16 视觉编码器 、BioClinicalBERT 文本编码器 、VL (Vision-Language) 对比学习、辅助任务设计、UniMiss 医学自我监督表达学习框架
+* **相关研究：** 「伪配对」(Pseudo-Pairs) 技术、MIMIC-CXR 2.0.0 数据集、BIMCV 数据集、预训练 UniMedI 框架、ViT-B/16 视觉编码器 、BioClinicalBERT 文本编码器 、VL (Vision-Language) 对比学习、辅助任务设计、UniMiss 医学自我监督表达学习框架
 
 * **发布期刊：** ECCV 2024
 
