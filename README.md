@@ -1,6 +1,6 @@
 # Awesome AI for Science
 
-- [**前言**](#前言)
+ [**前言**](#前言)
 - [**AI+   生物医药：AI+Biopharmaceutical**](#ai---生物医药aibiopharmaceutical)
   - [**1. AdaDR 在药物重定位方面的性能优于多个基准方法**](#1-adadr-在药物重定位方面的性能优于多个基准方法)
   - [**2. IMN4NPD 加快分子网络中广泛集群的去复制，对自循环与成对节点提供标注**](#2-imn4npd-加快分子网络中广泛集群的去复制对自循环与成对节点提供标注)
@@ -43,6 +43,8 @@
   - [**39. CPDiffusion 模型，超低成本、全自动设计功能型蛋白质**](#39-cpdiffusion-模型超低成本全自动设计功能型蛋白质)
   - [**40. 基于蛋白质语言模型和密集检索技术，一种全新的蛋白质同源物检测方法**](#40-基于蛋白质语言模型和密集检索技术一种全新的蛋白质同源物检测方法)
   - [**41. AlphaProteo 可高效设计靶蛋白结合物，亲和力提高 300 倍**](#41-alphaproteo-可高效设计靶蛋白结合物亲和力提高-300-倍)
+  - [**42. 全新去噪蛋白质语言模型 DePLM，突变效应预测优于 SOTA 模型**](#42-全新去噪蛋白质语言模型-deplm突变效应预测优于-sota-模型)
+  - [**43. 几何深度生成模型 DynamicBind，实现蛋白质动态对接预测**](#43-几何深度生成模型-dynamicbind实现蛋白质动态对接预测)
 - [**AI+   医疗健康：AI+Healthcare**](#ai---医疗健康aihealthcare)
   - [**1. 深度学习系统 DeepDR Plus 用眼底图像预测糖尿病视网膜病变**](#1-深度学习系统-deepdr-plus-用眼底图像预测糖尿病视网膜病变)
   - [**2. 逻辑回归模型分析高绿色景观指数可降低 MetS 风险**](#2-逻辑回归模型分析高绿色景观指数可降低-mets-风险)
@@ -71,6 +73,11 @@
   - [**25. 水平直逼高级病理学家！清华团队提出 AI 基础模型 ROAM，实现胶质瘤精准诊断**](#25-水平直逼高级病理学家清华团队提出-ai-基础模型-roam实现胶质瘤精准诊断)
   - [**26. 医学图像分割通用模型 ScribblePrompt，性能优于 SAM**](#26-医学图像分割通用模型-scribbleprompt性能优于-sam)
   - [**27. 数字孪生脑平台，展现出类似人脑中观测的临界现象与相似认知功能**](#27-数字孪生脑平台展现出类似人脑中观测的临界现象与相似认知功能)
+  - [**28. 自动化大模型对话 Agent 模拟系统，可初诊抑郁症**](#28-自动化大模型对话-agent-模拟系统可初诊抑郁症)
+  - [**29. 深度学习模型 LucaProt，助力 RNA 病毒识别**](#29-深度学习模型-lucaprot助力-rna-病毒识别)
+  - [**30. 医学图像预训练框架 UniMedI，打破医学数据异构化藩篱**](#30-医学图像预训练框架-unimedi打破医学数据异构化藩篱)
+  - [**31. 多语言医学大模型 MMed-Llama 3，更加适配医疗应用场景**](#31-多语言医学大模型-mmed-llama-3更加适配医疗应用场景)
+  - [**32. 胶囊内窥镜图像拼接方法 S2P-Matching，助力胶囊内窥镜图像拼接**](#32-胶囊内窥镜图像拼接方法-s2p-matching助力胶囊内窥镜图像拼接)
 - [**AI+ 材料化学：AI+Materials Chemistry**](#ai-材料化学aimaterials-chemistry)
   - [**1. 高通量计算框架 33 分钟生成 12 万种新型 MOFs 候选材料**](#1-高通量计算框架-33-分钟生成-12-万种新型-mofs-候选材料)
   - [**2. 机器学习算法模型筛选 P-SOC 电极材料**](#2-机器学习算法模型筛选-p-soc-电极材料)
@@ -94,6 +101,7 @@
   - [**20. 用神经网络首创全前向智能光计算训练架构，国产光芯片实现重大突破**](#20-用神经网络首创全前向智能光计算训练架构国产光芯片实现重大突破)
   - [**21. 化学大语言模型 ChemLLM 覆盖 7 百万问答数据，专业能力比肩 GPT-4**](#21-化学大语言模型-chemllm-覆盖-7-百万问答数据专业能力比肩-gpt-4)
   - [**22. 可晶圆级生产的人工智能自适应微型光谱仪**](#22-可晶圆级生产的人工智能自适应微型光谱仪)
+  - [**23. GNNOpt 模型，识别数百种太阳能电池和量子候选材料**](#23-gnnopt-模型识别数百种太阳能电池和量子候选材料)
 - [**AI+动植物科学：AI+Zoology-Botany**](#ai动植物科学aizoology-botany)
   - [**1. SBeA 基于少样本学习框架进行动物社会行为分析**](#1-sbea-基于少样本学习框架进行动物社会行为分析)
   - [**2. 基于孪生网络的深度学习方法，自动捕捉胚胎发育过程**](#2-基于孪生网络的深度学习方法自动捕捉胚胎发育过程)
@@ -105,6 +113,7 @@
   - [**8. 基于机器学习的群体遗传方法，揭示葡萄风味的形成机制**](#8-基于机器学习的群体遗传方法揭示葡萄风味的形成机制)
   - [**9. 综述：借助 AI 更高效地开启生物信息学研究**](#9-综述借助-ai-更高效地开启生物信息学研究)
   - [**10. BirdFlow 模型准确预测候鸟的飞行路径**](#10-birdflow-模型准确预测候鸟的飞行路径)
+  - [**11. 新的鲸鱼生物声学模型，可识别 8 种鲸类**](#11-新的鲸鱼生物声学模型可识别-8-种鲸类)
 - [**AI+农林畜牧业：AI+Agriculture-Forestry-Animal husbandry**](#ai农林畜牧业aiagriculture-forestry-animal-husbandry)
   - [**1. 利用卷积神经网络，对水稻产量进行迅速、准确的统计**](#1-利用卷积神经网络对水稻产量进行迅速准确的统计)
   - [**2. 通过 YOLOv5 算法，设计监测母猪姿势与猪仔出生的模型**](#2-通过-yolov5-算法设计监测母猪姿势与猪仔出生的模型)
@@ -159,8 +168,6 @@
   - [**21. 用机器学习分离抹香鲸发音字母表，高度类似人类语言，信息承载能力更强**](#21-用机器学习分离抹香鲸发音字母表高度类似人类语言信息承载能力更强)
   - [**22. 基于预训练 LLM 提出信道预测方案，GPT-2 赋能无线通信物理层**](#22-基于预训练-llm-提出信道预测方案gpt-2-赋能无线通信物理层)
   - [**23. 首个多缝线刺绣生成对抗网络模型**](#23-首个多缝线刺绣生成对抗网络模型)
-
-
 ## **前言**
 
 从 2020 年开始，以 AlphaFold 为代表的科研项目将 AI for Science (AI4S) 推向了 AI 应用的主舞台。近年来，从生物医药到天文气象、再到材料化学等基础学科，都成为了 AI 的新战场。
@@ -645,7 +652,27 @@
 
 * **发布期刊：** DeepMind, 2024.09
 
-* **论文链接：** [AlphaProteo generates novel proteins for biology and health research](https://deepmind.google/discover/blog/alphaproteo-generates-novel-proteins-for-biology-and-health-research/) 
+* **论文链接：** [AlphaProteo 为生物学和健康研究生成新型蛋白质](https://deepmind.google/discover/blog/alphaproteo-generates-novel-proteins-for-biology-and-health-research/) 
+### **42. [全新去噪蛋白质语言模型 DePLM，突变效应预测优于 SOTA 模型](https://hyper.ai/cn/news/34954)**
+* **中文解读：** [https://hyper.ai/cn/news/34954](https://hyper.ai/cn/news/34954)
+
+* **科研团队：** 浙江大学计算机科学与技术学院、浙江大学国际联合学院、浙江大学杭州国际科创中心陈华钧教授、张强博士
+
+* **相关研究：** 去噪蛋白质语言模型 (DePLM)、ProteinGym 深度突变筛选 (DMS) 实验集合、DMS 数据集、随机交叉验证方法、泛化能力实验、基于排序信息的前向过程来扩展扩散模型以去噪进化信息、基于排序的去噪扩散过程、排序算法 (sorting algorithm) 生成轨迹、PromptProtein 模型
+
+* **发布期刊：** NeurIPS 2024
+
+* **论文链接：** [DePLM: Denoising Protein Language Models for Property Optimization](https://neurips.cc/virtual/2024/poster/95517 ) 
+### **43. [几何深度生成模型 DynamicBind，实现蛋白质动态对接预测](https://hyper.ai/cn/news/34894)**
+* **中文解读：** [https://hyper.ai/cn/news/34894](https://hyper.ai/cn/news/34894)
+
+* **科研团队：** 上海交通大学郑双佳课题组、星药科技、中山大学药学院、美国莱斯大学
+
+* **相关研究：** PDBbind 数据集、MDT 测试集、深度扩散模型、等变几何神经网络技术、PDB 格式的类结构、小分子配体格式、contact-LDDT (cLDDT) 评分模块、AlphaFold 结构、亲和力预测模块、生成式人工智能技术
+
+* **发布期刊：** Nature Communications, 2024.2
+
+* **论文链接：** [DynamicBind: predicting ligand-specific protein-ligand complex structure with a deep equivariant generative model](https://www.nature.com/articles/s41467-024-45461-2)
 ## **AI+   医疗健康：AI+Healthcare**
 
 ### **1. [深度学习系统 DeepDR Plus 用眼底图像预测糖尿病视网膜病变](https://hyper.ai/news/29769)**
@@ -940,8 +967,57 @@
 * **发布期刊：** National Science Review, 2024.5
 
 * **论文链接：** [Imitating and exploring human brain’s resting and task-performing states via resembling brain computing: scaling and architecture](https://doi.org/10.1093/nsr/nwae080)
+### **28. [自动化大模型对话 Agent 模拟系统，可初诊抑郁症](https://hyper.ai/cn/news/34845)**
+* **中文解读：** [https://hyper.ai/cn/news/34845](https://hyper.ai/cn/news/34845)
 
+* **科研团队：** 上海交通大学 X-LANCE 实验室吴梦玥老师团队、德克萨斯大学阿灵顿分校 UTA 、天桥脑科学研究院 (TCCI) 和 ThetaAI 公司
 
+* **相关研究：**  搭建了一个新型的对话 Agent 模拟系统、D4 数据集、三层记忆存储结构和全新的记忆检索机制、患者 Agent、精神科医生 Agent、指导员 Agent，提升抑郁症与自杀倾向诊断准确率
+
+* **发布期刊：** arXiv, 2024.9
+
+* **论文链接：** [Depression Diagnosis Dialogue Simulation: Self-improving Psychiatrist with Tertiary Memory](https://arxiv.org/abs/2409.15084)
+
+### **29. [深度学习模型 LucaProt，助力 RNA 病毒识别](https://hyper.ai/cn/news/34968)**
+* **中文解读：** [https://hyper.ai/cn/news/34968](https://hyper.ai/cn/news/34968)
+
+* **科研团队：** 中山大学医学院的施莽教授、浙江大学、复旦大学、中国农业大学、香港城市大学、广州大学、悉尼大学、阿里云飞天实验室
+
+* **相关研究：**  云计算与 AI 技术、宏基因组挖掘技术、NCBI SRA 数据库、CNGBdb 数据库、基于数据驱动的深度学习模型 LucaProt、Transformer 框架、大模型表征技术、揭露了 161,979 种潜在 RNA 病毒物种和 180 个病毒超群的存在
+
+* **发布期刊：** Cell, 2024.9
+
+* **论文链接：** [Using artificial intelligence to document the hidden RNA virosphere](https://doi.org/10.1016/j.cell.2024.09.027)
+### **30. [医学图像预训练框架 UniMedI，打破医学数据异构化藩篱](https://hyper.ai/cn/news/35128)**
+* **中文解读：** [https://hyper.ai/cn/news/35128](https://hyper.ai/cn/news/35128)
+
+* **科研团队：** 浙江大学胡浩基团队、微软亚洲研究院邱锂力团队
+
+* **相关研究：** 「伪配对」(Pseudo-Pairs) 技术、MIMIC-CXR 2.0.0 数据集、BIMCV 数据集、预训练 UniMedI 框架、ViT-B/16 视觉编码器 、BioClinicalBERT 文本编码器 、VL (Vision-Language) 对比学习、辅助任务设计、UniMiss 医学自我监督表达学习框架
+
+* **发布期刊：** ECCV 2024
+
+* **论文链接：** [Unified Medical Image Pre-training in Language-Guided Common Semantic Space](https://eccv.ecva.net/virtual/2024/poster/1165)
+### **31. [多语言医学大模型 MMed-Llama 3，更加适配医疗应用场景](https://hyper.ai/cn/news/35242)**
+* **中文解读：** [https://hyper.ai/cn/news/35242](https://hyper.ai/cn/news/35242)
+
+* **科研团队：** 上海交通大学王延峰教授与谢伟迪教授团队
+
+* **相关研究：** 多语言医疗语料库 MMedC、多语言医疗问答评测标准 MMedBench、基座模型 MMed-Llama 3、MMedLM 多语言模型、MMedLM 2 多语言模型、 MMed-Llama 3 多语言模型
+
+* **发布期刊：** Nature Communications, 2024.9
+
+* **论文链接：** [Towards building multilingual language model for medicine](https://www.nature.com/articles/s41467-024-52417-z)
+### **32. [胶囊内窥镜图像拼接方法 S2P-Matching，助力胶囊内窥镜图像拼接](https://hyper.ai/cn/news/35313)**
+* **中文解读：** [https://hyper.ai/cn/news/35313](https://hyper.ai/cn/news/35313)
+
+* **科研团队：** 华中科技大学陆枫团队、上海交通大学盛斌、中南民族大学、香港科技大学（广州）分校、香港理工大学、悉尼大学、匹配正确率提升 187.9%
+
+* **相关研究：** 胶囊内窥镜图像拼接方法 S2P-Matching、自监督对比学习方法、双分支编码器提取局部特征、Transformer 模型、结合数据增强、对比学习、像素级匹配
+
+* **发布期刊：** IEEE Transactions on Biomedical Engineering, 2024.9
+
+* **论文链接：** [S2P-Matching: Self-supervised Patch-based Matching Using Transformer for Capsule Endoscopic Images Stitching](http://dx.doi.org/10.1109/TBME.2024.3462502)
 
 ## **AI+ 材料化学：AI+Materials Chemistry**
 
@@ -1184,6 +1260,15 @@
 * **发布期刊：** PNAS,  2024.08
 
 * **论文链接：** [CMOS-Compatible Reconstructive Spectrometers with Self-Referencing Integrated Fabry-Perot Resonatorsl](https://www.pnas.org/doi/10.1073/pnas.2403950121)
+### **23. [GNNOpt 模型，识别数百种太阳能电池和量子候选材料](https://hyper.ai/cn/news/35009)**
+* **中文解读：** [https://hyper.ai/cn/news/35009](https://hyper.ai/cn/news/35009)
+
+* **科研团队：** 日本东北大学、麻省理工学院
+* **相关研究：** DFT 计算、人工智能工具 GNNOpt、「集成嵌入」技术、集成等变神经网络、Materials Project 数据库、自动嵌入优化的集成嵌入层、成功识别出 246 种太阳能转换效率超过 32% 的材料、以及 296 种具有高量子权重的量子材料
+
+* **发布期刊：** Advanced Materials, 2024.6
+
+* **论文链接：** [Universal Ensemble-Embedding Graph Neural Network for Direct Prediction of Optical Spectra from Crystal Structures](https://onlinelibrary.wiley.com/doi/epdf/10.1002/adma.202409175)
 
 ## **AI+动植物科学：AI+Zoology-Botany**
 
@@ -1279,7 +1364,7 @@
 
 * **主要内容：** AI 在同源搜索、多重比对及系统发育构建、基因组序列分析、基因发现等生物学领域中，都有丰富的应用案例。作为一名生物学研究人员，能熟练地将机器学习工具整合到数据分析中，必将加速科学发现、提升科研效率。
 
-### **10. [BirdFlow 模型准确预测候鸟的飞行路径](https://hyper.ai/news/33942)**
+### **10. [BirdFlow 模型准确预测候鸟的飞行路径](https://hyper.ai/cn/news/34781)**
 * **中文解读：** [https://hyper.ai/news/33942](https://hyper.ai/news/33942)
 
 * **科研团队：** 马萨诸塞州立大学、康奈尔大学的研究团队
@@ -1289,6 +1374,16 @@
 * **发布期刊：** Methods in Ecology and Evolution, 2023.01
 
 * **论文链接：** [BirdFlow: Learning seasonal bird movements from eBird data](https://besjournals.onlinelibrary.wiley.com/doi/full/10.1111/2041-210X.14052)
+### **11. [新的鲸鱼生物声学模型，可识别 8 种鲸类](https://hyper.ai/cn/news/34781)**
+* **中文解读：** [https://hyper.ai/cn/news/34781](https://hyper.ai/cn/news/34781)
+
+* **科研团队：** Google Research 团队
+
+* **相关研究：** 梅尔尺度的频率轴 、压缩数振幅、可通过 TensorFlow 的 SavedModel API 独立调用、卷积神经网络、用于检测座头鲸叫声的分类模型、互动可视化工具「Pattern Radio」、专门用于识别蓝鲸和长须鲸的模型、可识别目前已知 94 种鲸鱼种类中的 8 个不同物种
+
+* **发布期刊：** Google Research, 2024.9
+
+* **论文链接：** [Whistles, songs, boings, and biotwangs: Recognizing whale vocalizations with AI](https://research.google/blog/whistles-songs-boings-and-biotwangs-recognizing-whale-vocalizations-with-ai)
 
 ## **AI+农林畜牧业：AI+Agriculture-Forestry-Animal husbandry**
 
@@ -1802,3 +1897,4 @@ An Empirical Study on Werewolf](https://arxiv.org/pdf/2309.04658.pdf)
 * **发布期刊：** IEEE Transactions on Visualization and Computer Graphics, 2024
 
 * **论文链接：** [MSEmbGAN: Multi-Stitch Embroidery Synthesis via Region-Aware Texture Generation](https://csai.wtu.edu.cn/TVCG01/index.html)
+
