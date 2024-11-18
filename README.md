@@ -663,7 +663,7 @@
 * **发布期刊：** NeurIPS 2024
 
 * **论文链接：** [DePLM: Denoising Protein Language Models for Property Optimization](https://neurips.cc/virtual/2024/poster/95517 ) 
-### **43                                                      . [几何深度生成模型 DynamicBind，实现蛋白质动态对接预测](https://hyper.ai/cn/news/34894)**
+### **43. [几何深度生成模型 DynamicBind，实现蛋白质动态对接预测](https://hyper.ai/cn/news/34894)**
 * **中文解读：** [https://hyper.ai/cn/news/34894](https://hyper.ai/cn/news/34894)
 
 * **科研团队：** 上海交通大学郑双佳课题组、星药科技、中山大学药学院、美国莱斯大学
