@@ -1003,7 +1003,7 @@
 
 * **科研团队：** 上海交通大学王延峰教授与谢伟迪教授团队
 
-* **相关研究：**  多语言医疗语料库 MMedC、多语言医疗问答评测标准 MMedBench、基座模型 MMed-Llama 3、MMedLM 多语言模型、MMedLM 2 多语言模型、 MMed-Llama 3 多语言模型
+* **相关研究：** 多语言医疗语料库 MMedC、多语言医疗问答评测标准 MMedBench、基座模型 MMed-Llama 3、MMedLM 多语言模型、MMedLM 2 多语言模型、 MMed-Llama 3 多语言模型
 
 * **发布期刊：** Nature Communications, 2024.9
 
