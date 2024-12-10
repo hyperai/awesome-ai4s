@@ -1,6 +1,6 @@
 # Awesome AI for Science
 
- [**前言**](#前言)
+- [**前言**](#前言)
 - [**AI+   生物医药：AI+Biopharmaceutical**](#ai---生物医药aibiopharmaceutical)
   - [**1. AdaDR 在药物重定位方面的性能优于多个基准方法**](#1-adadr-在药物重定位方面的性能优于多个基准方法)
   - [**2. IMN4NPD 加快分子网络中广泛集群的去复制，对自循环与成对节点提供标注**](#2-imn4npd-加快分子网络中广泛集群的去复制对自循环与成对节点提供标注)
@@ -45,6 +45,12 @@
   - [**41. AlphaProteo 可高效设计靶蛋白结合物，亲和力提高 300 倍**](#41-alphaproteo-可高效设计靶蛋白结合物亲和力提高-300-倍)
   - [**42. 全新去噪蛋白质语言模型 DePLM，突变效应预测优于 SOTA 模型**](#42-全新去噪蛋白质语言模型-deplm突变效应预测优于-sota-模型)
   - [**43. 几何深度生成模型 DynamicBind，实现蛋白质动态对接预测**](#43-几何深度生成模型-dynamicbind实现蛋白质动态对接预测)
+  - [**44. 药物研发大语言模型 Y-Mol，性能全面领先 LLaMA2**](#44-药物研发大语言模型-y-mol性能全面领先-llama2)
+  - [**45. 通用分子逆折叠模型 UniIF，对 AlphaFold 3 形成进一步补充**](#45-通用分子逆折叠模型-uniif对-alphafold-3-形成进一步补充)
+  - [**46. 预训练蛋白质语言模型 ProSST，更有效地整合蛋白质结构信息**](#46-预训练蛋白质语言模型-prosst更有效地整合蛋白质结构信息)
+  - [**47. 非侵入式大脑解码新框架 fMRI，为脑机接口和认知模型发展奠定基础**](#47-非侵入式大脑解码新框架-fmri为脑机接口和认知模型发展奠定基础)
+  - [**48. 大环肽结合物框架 RFpeptides，为不可成药蛋白质提供新可能性**](#48-大环肽结合物框架-rfpeptides为不可成药蛋白质提供新可能性)
+  - [**49. 基因组基础模型 Evo，实现从分子到基因组尺度的预测与生成**](#49-基因组基础模型-evo实现从分子到基因组尺度的预测与生成)
 - [**AI+   医疗健康：AI+Healthcare**](#ai---医疗健康aihealthcare)
   - [**1. 深度学习系统 DeepDR Plus 用眼底图像预测糖尿病视网膜病变**](#1-深度学习系统-deepdr-plus-用眼底图像预测糖尿病视网膜病变)
   - [**2. 逻辑回归模型分析高绿色景观指数可降低 MetS 风险**](#2-逻辑回归模型分析高绿色景观指数可降低-mets-风险)
@@ -78,6 +84,8 @@
   - [**30. 医学图像预训练框架 UniMedI，打破医学数据异构化藩篱**](#30-医学图像预训练框架-unimedi打破医学数据异构化藩篱)
   - [**31. 多语言医学大模型 MMed-Llama 3，更加适配医疗应用场景**](#31-多语言医学大模型-mmed-llama-3更加适配医疗应用场景)
   - [**32. 胶囊内窥镜图像拼接方法 S2P-Matching，助力胶囊内窥镜图像拼接**](#32-胶囊内窥镜图像拼接方法-s2p-matching助力胶囊内窥镜图像拼接)
+  - [**33. 多模态医疗基准 GMAI-MMBench，含 284 个数据集，覆盖 18 项临床任务**](#33-多模态医疗基准-gmai-mmbench含-284-个数据集覆盖-18-项临床任务)
+  - [**34. 新型时间序列预测方法 CGS-Mask，揭秘患者存活率关键指标**](#34-新型时间序列预测方法-cgs-mask揭秘患者存活率关键指标)
 - [**AI+ 材料化学：AI+Materials Chemistry**](#ai-材料化学aimaterials-chemistry)
   - [**1. 高通量计算框架 33 分钟生成 12 万种新型 MOFs 候选材料**](#1-高通量计算框架-33-分钟生成-12-万种新型-mofs-候选材料)
   - [**2. 机器学习算法模型筛选 P-SOC 电极材料**](#2-机器学习算法模型筛选-p-soc-电极材料)
@@ -95,13 +103,16 @@
   - [**14. 一种三维 MOF 材料吸附行为预测的机器学习模型 Uni-MOF**](#14-一种三维-mof-材料吸附行为预测的机器学习模型-uni-mof)
   - [**15. 微电子加速迈向后摩尔时代！集成 DNN 与纳米薄膜技术，精准分析入射光角度**](#15-微电子加速迈向后摩尔时代集成-dnn-与纳米薄膜技术精准分析入射光角度)
   - [**16. 重塑锂电池性能边界，基于集成学习提出简化电化学模型**](#16-重塑锂电池性能边界基于集成学习提出简化电化学模型)
-  - [**17. 最强铁基超导磁体诞生！基于机器学习，磁场强度超过先前记录 2.7 倍**](#17-最强铁基超导磁体诞生基于机器学习磁场强度超过先前记录-27-倍)
+  - [**17. 基于机器学习，最强铁基超导磁体诞生**](#17-基于机器学习最强铁基超导磁体诞生)
   - [**18. 神经网络替代密度泛函理论！通用材料模型实现超精准预测**](#18-神经网络替代密度泛函理论通用材料模型实现超精准预测)
   - [**19. 神经网络密度泛函框架打开物质电子结构预测的黑箱**](#19-神经网络密度泛函框架打开物质电子结构预测的黑箱)
   - [**20. 用神经网络首创全前向智能光计算训练架构，国产光芯片实现重大突破**](#20-用神经网络首创全前向智能光计算训练架构国产光芯片实现重大突破)
   - [**21. 化学大语言模型 ChemLLM 覆盖 7 百万问答数据，专业能力比肩 GPT-4**](#21-化学大语言模型-chemllm-覆盖-7-百万问答数据专业能力比肩-gpt-4)
   - [**22. 可晶圆级生产的人工智能自适应微型光谱仪**](#22-可晶圆级生产的人工智能自适应微型光谱仪)
   - [**23. GNNOpt 模型，识别数百种太阳能电池和量子候选材料**](#23-gnnopt-模型识别数百种太阳能电池和量子候选材料)
+  - [**24. 开源 OMat24 数据集，含 1.1 亿 DFT 计算结果**](#24-开源-omat24-数据集含-11-亿-dft-计算结果)
+  - [**25. 通过机器学习合成的新型耐火高熵合金，室温延展性极佳**](#25-通过机器学习合成的新型耐火高熵合金室温延展性极佳)
+  - [**26. 材料生成模型 FlowLLM，数据集覆盖超 4.5w 种材料**](#26-材料生成模型-flowllm数据集覆盖超-45w-种材料)
 - [**AI+动植物科学：AI+Zoology-Botany**](#ai动植物科学aizoology-botany)
   - [**1. SBeA 基于少样本学习框架进行动物社会行为分析**](#1-sbea-基于少样本学习框架进行动物社会行为分析)
   - [**2. 基于孪生网络的深度学习方法，自动捕捉胚胎发育过程**](#2-基于孪生网络的深度学习方法自动捕捉胚胎发育过程)
@@ -114,6 +125,7 @@
   - [**9. 综述：借助 AI 更高效地开启生物信息学研究**](#9-综述借助-ai-更高效地开启生物信息学研究)
   - [**10. BirdFlow 模型准确预测候鸟的飞行路径**](#10-birdflow-模型准确预测候鸟的飞行路径)
   - [**11. 新的鲸鱼生物声学模型，可识别 8 种鲸类**](#11-新的鲸鱼生物声学模型可识别-8-种鲸类)
+  - [**12. 用机器学习分离抹香鲸发音字母表，高度类似人类语言，信息承载能力更强**](#12-用机器学习分离抹香鲸发音字母表高度类似人类语言信息承载能力更强)
 - [**AI+农林畜牧业：AI+Agriculture-Forestry-Animal husbandry**](#ai农林畜牧业aiagriculture-forestry-animal-husbandry)
   - [**1. 利用卷积神经网络，对水稻产量进行迅速、准确的统计**](#1-利用卷积神经网络对水稻产量进行迅速准确的统计)
   - [**2. 通过 YOLOv5 算法，设计监测母猪姿势与猪仔出生的模型**](#2-通过-yolov5-算法设计监测母猪姿势与猪仔出生的模型)
@@ -141,6 +153,7 @@
   - [**6. 基于机器学习的洪水预报模型**](#6-基于机器学习的洪水预报模型)
   - [**7. ED-DLSTM实现无监测数据地区洪水预测**](#7-ed-dlstm实现无监测数据地区洪水预测)
   - [**8. ChloroFormer 模型提前预警海洋藻类爆发**](#8-chloroformer-模型提前预警海洋藻类爆发)
+  - [**9. 首个海洋大语言模型 OceanGPT 入选 ACL 2024！水下具身智能成现实**](#9-首个海洋大语言模型-oceangpt-入选-acl-2024水下具身智能成现实)
 - [**AI4S 政策解读：AI4S Policy**](#ai4s-政策解读ai4s-policy)
   - [**1. 科技部出台政策防范学术界 AI 枪手**](#1-科技部出台政策防范学术界-ai-枪手)
   - [**2. 政策：科技部会同自然科学基金委启动「人工智能驱动的科学研究」( AI for Science ) 专项部署工作**](#2-政策科技部会同自然科学基金委启动人工智能驱动的科学研究-ai-for-science--专项部署工作)
@@ -160,14 +173,14 @@
   - [**13. 利用扩散模型生成神经网络参数，将时空少样本学习转变为扩散模型的预训练问题**](#13-利用扩散模型生成神经网络参数将时空少样本学习转变为扩散模型的预训练问题)
   - [**14. 李飞飞团队 AI4S 最新洞察：16 项创新技术汇总，覆盖生物/材料/医疗/问诊**](#14-李飞飞团队-ai4s-最新洞察16-项创新技术汇总覆盖生物材料医疗问诊)
   - [**15. 精准预测武汉房价！osp-GNNWR 模型准确描述复杂空间过程和地理现象**](#15-精准预测武汉房价osp-gnnwr-模型准确描述复杂空间过程和地理现象)
-  - [**16. 首个海洋大语言模型 OceanGPT 入选 ACL 2024！水下具身智能成现实**](#16-首个海洋大语言模型-oceangpt-入选-acl-2024水下具身智能成现实)
-  - [**17. 引入零样本学习，发布针对甲骨文破译优化的条件扩散模型**](#17-引入零样本学习发布针对甲骨文破译优化的条件扩散模型)
-  - [**18. 斯坦福/苹果等 23 所机构发布 DCLM 基准测试，基础模型与 Llama3 8B 表现相当**](#18-斯坦福苹果等-23-所机构发布-dclm-基准测试基础模型与-llama3-8b-表现相当)
-  - [**19. PoCo 解决数据源异构难题，实现机器人多任务灵活执行**](#19-poco-解决数据源异构难题实现机器人多任务灵活执行)
-  - [**20. 含 14 万张图像！甲骨文数据集助力团队摘冠 ACL 最佳论文**](#20-含-14-万张图像甲骨文数据集助力团队摘冠-acl-最佳论文)
-  - [**21. 用机器学习分离抹香鲸发音字母表，高度类似人类语言，信息承载能力更强**](#21-用机器学习分离抹香鲸发音字母表高度类似人类语言信息承载能力更强)
-  - [**22. 基于预训练 LLM 提出信道预测方案，GPT-2 赋能无线通信物理层**](#22-基于预训练-llm-提出信道预测方案gpt-2-赋能无线通信物理层)
-  - [**23. 首个多缝线刺绣生成对抗网络模型**](#23-首个多缝线刺绣生成对抗网络模型)
+  - [**16. 引入零样本学习，发布针对甲骨文破译优化的条件扩散模型**](#16-引入零样本学习发布针对甲骨文破译优化的条件扩散模型)
+  - [**17. 斯坦福/苹果等 23 所机构发布 DCLM 基准测试，基础模型与 Llama3 8B 表现相当**](#17-斯坦福苹果等-23-所机构发布-dclm-基准测试基础模型与-llama3-8b-表现相当)
+  - [**18. PoCo 解决数据源异构难题，实现机器人多任务灵活执行**](#18-poco-解决数据源异构难题实现机器人多任务灵活执行)
+  - [**19. 含 14 万张图像！甲骨文数据集助力团队摘冠 ACL 最佳论文**](#19-含-14-万张图像甲骨文数据集助力团队摘冠-acl-最佳论文)
+  - [**20. 基于预训练 LLM 提出信道预测方案，GPT-2 赋能无线通信物理层**](#20-基于预训练-llm-提出信道预测方案gpt-2-赋能无线通信物理层)
+  - [**21. 首个多缝线刺绣生成对抗网络模型**](#21-首个多缝线刺绣生成对抗网络模型)
+
+
 ## **前言**
 
 从 2020 年开始，以 AlphaFold 为代表的科研项目将 AI for Science (AI4S) 推向了 AI 应用的主舞台。近年来，从生物医药到天文气象、再到材料化学等基础学科，都成为了 AI 的新战场。
@@ -178,7 +191,7 @@
 
 作为最早一批关注到 AI for Science 的社区，「HyperAI超神经」在陪伴行业成长的同时，也乐于将最新的研究进展与成果进行普适化分享，我们希望通过解读前沿论文与政策的方式，令更多团队看到 AI 对于科研的帮助，为 AI for Science 的发展贡献力量。
 
-目前，HyperAI超神经已经解读分享了近百篇论文，为了便于大家检索，我们将文章根据学科进行分类，并展示了发表期刊及时间，提取了关键词（研究团队、相关研究、数据集等），大家可以点击题目获取解读文章（内含完整论文下载链接），或者直接点击论文标题查看原文。
+目前，HyperAI超神经已经解读分享了近 200 篇论文，为了便于大家检索，我们将文章根据学科进行分类，并展示了发表期刊及时间，提取了关键词（研究团队、相关研究、数据集等），大家可以点击题目跳转论文中文解读页面（内含完整论文下载链接）。
 
 本文档将以开源项目的形式呈现，我们将持续更新解读文章，同时也欢迎大家投稿优秀研究成果，如果您所在的团队/课题组有报道需求，可添加微信：神经星星（微信号：Hyperai01）。
 
@@ -439,7 +452,7 @@
 
 * **科研团队：** 麦马、斯坦福团队
 
-* **相关研究：** Pharmakon-1760 库、药物再利用中心数据库、合成小分子筛选集、蒙特卡洛树搜索 、生成式人工智能模型 SyntheMol、生成 24,335 个完整分子、设计出易于合成的新型化合物
+* **相关研究：** Pharmakon-1760 库、药物再利用中心数据库、合成小分子筛选集、蒙特卡洛树搜索 、生成式人工智能模型 SyntheMol。生成 24,335 个完整分子、设计出易于合成的新型化合物
 
 * **发布期刊：** Nature Machine Intelligence, 2024.03
 
@@ -472,7 +485,7 @@
 
 * **科研团队：** 上海交通大学洪亮课题组
 
-* **相关研究：** 微环境感知图神经网络、轻量级图神经去噪网络、自监督预训练、等变图神经网络、超过 40% 的 PROTLGN 设计单点突变体蛋白质优于其野生型对应物
+* **相关研究：** 微环境感知图神经网络、轻量级图神经去噪网络、自监督预训练、等变图神经网络。超过 40% 的 PROTLGN 设计单点突变体蛋白质优于其野生型对应物
 
 * **发布期刊：** JOURNAL OF CHEMICAL INFORMATION AND MODELING, 2024.04
 
@@ -483,7 +496,7 @@
 
 * **科研团队：** 延世大学王建民团队
 
-* **相关研究：** 深度学习、生成式 AI、Transformer、生成神经网络学习、分子动力学、barnase-barstar 复合物轨迹集、蛋白质数据库 Protein Data Bank、AlphaPPIMd 模型、自注意力机制、特征优化模块、注意力分数、全原子模型、模型的平均训练精度为 0.995、平均验证精度为 0.999 
+* **相关研究：** 深度学习、生成式 AI、Transformer、生成神经网络学习、分子动力学、barnase-barstar 复合物轨迹集、蛋白质数据库 Protein Data Bank、AlphaPPIMd 模型、自注意力机制、特征优化模块、注意力分数、全原子模型。模型的平均训练精度为 0.995、平均验证精度为 0.999 
 
 * **发布期刊：** Journal of Chemical Theory and Computation, 2024.05
 
@@ -494,7 +507,7 @@
 
 * **科研团队：** 西交利物浦大学慧湖药学院吴思晋教授、天津医科大学总医院谢松波教授、钟殿胜教授团队
 
-* **相关研究：** MD 模拟、迭代分子对接引导 post-SELEX 法、dp53m 可特异性识别 p53-R175H 蛋白，并对其进行降解
+* **相关研究：** MD 模拟、迭代分子对接引导 post-SELEX 法。dp53m 可特异性识别 p53-R175H 蛋白，并对其进行降解
 
 * **发布期刊：** Science Bulletin, 2024.05
 
@@ -562,7 +575,7 @@
 
 * **科研团队：** 中国科学院天津工业生物技术研究所江会锋、程健团队
 
-* **相关研究：** 定向进化、扩散模型、深度学习、去噪扩散概率模型、三点固定、微调扩散模型 、预训练、催化能力提高 3.5 倍
+* **相关研究：** 定向进化、扩散模型、深度学习、去噪扩散概率模型、三点固定、微调扩散模型 、预训练。催化能力提高 3.5 倍
 
 * **发布期刊：** Research, 2024.07
 
@@ -638,7 +651,7 @@
 
 * **科研团队：** 香港中文大学李煜、复旦大学智能复杂体系实验室、上海人工智能实验室青年研究员孙思琦、耶鲁大学 Mark Gerstein 
 
-* **相关研究：** 蛋白质工程、蛋白质语言模型、密集检索技术、密集同源物检索器 、混合模型 DHR-meta、UR90 数据集、JackHMMER 算法、BFD/MGnify 数据集、DHR 方法、蛋白质同源物检测灵敏度提高 56%
+* **相关研究：** 蛋白质工程、蛋白质语言模型、密集检索技术、密集同源物检索器 、混合模型 DHR-meta、UR90 数据集、JackHMMER 算法、BFD/MGnify 数据集、DHR 方法。蛋白质同源物检测灵敏度提高 56%
 
 * **发布期刊：** Nature Biotechnology, 2024.08
 
@@ -648,7 +661,7 @@
 
 * **科研团队：** DeepMind、弗朗西斯·克里克研究所
 
-* **相关研究：** 蛋白质工程、蛋白质语言模型、AI 药物设计、靶蛋白 、AI 工具、机器学习模型 AlphaProteo、VEGF-A 蛋白结合体设计、生成模型 (Generator) 、过滤器 (Filter)、候选结合物与靶蛋白结合数量高出 5-100 倍
+* **相关研究：** 蛋白质工程、蛋白质语言模型、AI 药物设计、靶蛋白 、AI 工具、机器学习模型 AlphaProteo、VEGF-A 蛋白结合体设计、生成模型 (Generator) 、过滤器 (Filter)。候选结合物与靶蛋白结合数量高出 5-100 倍
 
 * **发布期刊：** DeepMind, 2024.09
 
@@ -660,7 +673,7 @@
 
 * **相关研究：** 去噪蛋白质语言模型 (DePLM)、ProteinGym 深度突变筛选 (DMS) 实验集合、DMS 数据集、随机交叉验证方法、泛化能力实验、基于排序信息的前向过程来扩展扩散模型以去噪进化信息、基于排序的去噪扩散过程、排序算法 (sorting algorithm) 生成轨迹、PromptProtein 模型
 
-* **发布期刊：** NeurIPS 2024
+* **发布期刊：** NeurIPS 2024, 2024.11
 
 * **论文链接：** [DePLM: Denoising Protein Language Models for Property Optimization](https://neurips.cc/virtual/2024/poster/95517 ) 
 ### **43. [几何深度生成模型 DynamicBind，实现蛋白质动态对接预测](https://hyper.ai/cn/news/34894)**
@@ -673,6 +686,60 @@
 * **发布期刊：** Nature Communications, 2024.2
 
 * **论文链接：** [DynamicBind: predicting ligand-specific protein-ligand complex structure with a deep equivariant generative model](https://www.nature.com/articles/s41467-024-45461-2)
+### **44. [药物研发大语言模型 Y-Mol，性能全面领先 LLaMA2](https://hyper.ai/cn/news/35572)**
+* **中文解读：** [https://hyper.ai/cn/news/35572](https://hyper.ai/cn/news/35572)
+
+* **科研团队：** 湖南大学、中南大学、湖南师范大学、湘潭大学的研究团队
+
+* **相关研究：**  多尺度生物医学知识指导的大语言模型 Y-Mol 、生物医学 PubMed 出版物的文本语料库、DrugBank 基准数据集、DrugCentral 基准数据集、LLaMA2-7b 大语言模型
+
+* **发布期刊：**  arxiv, 2024.10
+
+* **论文链接：** [Y-Mol: A Multiscale Biomedical Knowledge-Guided Large Language Model for Drug Development](https://doi.org/10.48550/arXiv.2410.11550)
+### **45. [通用分子逆折叠模型 UniIF，对 AlphaFold 3 形成进一步补充](https://hyper.ai/cn/news/35781)**
+* **中文解读：** [https://hyper.ai/cn/news/35781](https://hyper.ai/cn/news/35781)
+
+* **科研团队：** 西湖大学未来产业研究中心团队
+* **相关研究：**   CATH4.3 数据集、ESM2 模型、CASP15 数据集、新晶体结构、NovelPro 数据集、RDesign 收集的数据集、CHILI-3K 数据集、基于氨基酸和核苷酸的预定义框架、GNN、几何特征提取器 (Geometric Featurizer) 、块图注意力层 (Block Graph Attention)。在蛋白质设计、 RNA 设计、材料设计上都优于其他对比的先进方法
+
+* **发布期刊：**  NeurIPS 2024, 2024.5
+
+* **论文链接：** [UniIF: Unified Molecule Inverse Folding](https://arxiv.org/abs/2405.18968 )
+### **46. [预训练蛋白质语言模型 ProSST，更有效地整合蛋白质结构信息](https://hyper.ai/cn/news/35874)**
+* **中文解读：** [https://hyper.ai/cn/news/35874](https://hyper.ai/cn/news/35874)
+
+* **科研团队：** 海交通大学自然科学研究院/物理天文学院/张江高研院/药学院洪亮教授课题组，上海交大助理研究员周冰心，联合上海人工智能实验室青年研究员谈攀
+* **相关研究：**  预训练蛋白质语言模型 ProSST、Transformer、解耦注意力机制、蛋白质结构量化器、AlphaFoldDB 数据集、CATH43-S40 数据集、CATH43-S40 局部结构数据集、ProteinGYM 基准数据集。在热稳定性预测、金属离子结合预测、蛋白质定位预测、 GO 注释预测等任务中优于现有模型
+
+* **发布期刊：**  NeurIPS 2024, 2024.05
+
+* **论文链接：** [ProSST: Protein Language Modeling with Quantized Structure and Disentangled Attention](https://neurips.cc/virtual/2024/poster/96656)
+### **47. [非侵入式大脑解码新框架 fMRI，为脑机接口和认知模型发展奠定基础](https://hyper.ai/cn/news/36023)**
+* **中文解读：** [https://hyper.ai/cn/news/36023](https://hyper.ai/cn/news/36023)
+
+* **科研团队：** 中国科学院自动化研究所曾毅教授团队
+* **相关研究：**  多模态集成框架、Natural Scenes Dataset 数据集、COCO 数据集、Variational Autoencoder (VAE) 和 CLIP 嵌入进行特征对齐、3D fMRI 预处理器、fMRI 特征提取器、多模态 LLMs。解决大脑活动的视觉重建问题
+* **发布期刊：**  NeurIPS 2024, 2024.10
+
+* **论文链接：** [Neuro-Vision to Language: Enhancing Brain Recording-based Visual Reconstruction and Language Interaction](https://nips.cc/virtual/2024/poster/93607)
+### **48. [大环肽结合物框架 RFpeptides，为不可成药蛋白质提供新可能性](https://hyper.ai/cn/news/36150)**
+* **中文解读：** [https://hyper.ai/cn/news/36150](https://hyper.ai/cn/news/36150)
+
+* **科研团队：** 华盛顿蛋白质研究所所长 David Baker 团队
+* **相关研究：** 基于扩散模型的技术 RFpeptides、利用修饰的 RoseTTAFold 和具有循环相对位置编码的 RFdiffusion 来生成精确的大环骨架、药物开发、AlphaFold、循环相对位置编码机制、ProteinMPNN、Rosetta Relax。可实现靶向和高效的大环设计
+* **发布期刊：** bioRxiv, 2024.11
+
+* **论文链接：** [Accurate de novo design of high-affinity protein binding macrocycles using deep learning](https://doi.org/10.1101/2024.11.18.622547)
+### **49. [基因组基础模型 Evo，实现从分子到基因组尺度的预测与生成](https://hyper.ai/cn/news/36266)**
+* **中文解读：** [https://hyper.ai/cn/news/36266](https://hyper.ai/cn/news/36266)
+
+* **科研团队：** 斯坦福大学联合美国 Arc 研究所 (Arc Institute) 的研究团队
+* **相关研究：** 基因组基础模型 Evo、StripedHyena 架构。Evo 具有预测、生成和设计整个基因组序列的能力
+
+* **发布期刊：** Science, 2024.11
+
+* **论文链接：** [Sequence modeling and design from molecular to genome scale with Evo](https://www.science.org/doi/10.1126/science.ado9336)
+
 ## **AI+   医疗健康：AI+Healthcare**
 
 ### **1. [深度学习系统 DeepDR Plus 用眼底图像预测糖尿病视网膜病变](https://hyper.ai/news/29769)**
@@ -1018,7 +1085,25 @@
 * **发布期刊：** IEEE Transactions on Biomedical Engineering, 2024.9
 
 * **论文链接：** [S2P-Matching: Self-supervised Patch-based Matching Using Transformer for Capsule Endoscopic Images Stitching](http://dx.doi.org/10.1109/TBME.2024.3462502)
+### **33. [多模态医疗基准 GMAI-MMBench，含 284 个数据集，覆盖 18 项临床任务](https://hyper.ai/cn/news/35938)**
+* **中文解读：** [https://hyper.ai/cn/news/35938](https://hyper.ai/cn/news/35938)
 
+* **科研团队：** 上海人工智能实验室、华盛顿大学、莫纳什大学、华东师范大学
+
+* **相关研究：**  GMAI-MMBench 基准、迄今为止最全面的且开源的通用医疗 AI 基准。评估医疗领域大型视觉语言模型的有效性
+* **发布期刊：** arXiv, 2024.8
+
+* **论文链接：** [GMAI-MMBench: A Comprehensive Multimodal Evaluation Benchmark Towards General Medical AI](https://arxiv.org/abs/2408.03361v7)
+### **34. [新型时间序列预测方法 CGS-Mask，揭秘患者存活率关键指标](https://hyper.ai/cn/news/36192)**
+* **中文解读：** [https://hyper.ai/cn/news/36192](https://hyper.ai/cn/news/36192)
+
+* **科研团队：** 华中科技大学陆枫团队、悉尼大学 Zomaya 院士团队、同济医院
+
+* **相关研究：**  MIMIC-III 数据集、 LSST 数据集、 NATOPS 数据集、 AE 数据集。将时间序列预测与可解释性结合，CGS-Mask 既能提高模型预测精度，又能使预测结果更加直观和可解释
+
+* **发布期刊：** Proceedings of the 38th AAAI Conference on Artificial Intelligence (AAAI’24), 2024.3
+
+* **论文链接：** [CGS-Mask: Making Time Series Predictions Intuitive for All](https://ojs.aaai.org/index.php/AAAI/article/view/29325)
 ## **AI+ 材料化学：AI+Materials Chemistry**
 
 ### **1. [高通量计算框架 33 分钟生成 12 万种新型 MOFs 候选材料](https://hyper.ai/news/30269)**
@@ -1147,7 +1232,7 @@
 
 * **科研团队：** 上海交大万佳雨研究团队研究团队
 
-* **相关研究：** 半监督学习、无标签数据、贝叶斯协同训练、部分视图模型、完整视图模型、锂电池寿命预测精度提升 20%
+* **相关研究：** 半监督学习、无标签数据、贝叶斯协同训练、部分视图模型、完整视图模型。锂电池寿命预测精度提升 20%
 
 * **发布期刊：** Joule, 2024.03
 
@@ -1158,7 +1243,7 @@
 
 * **科研团队：** 上海交大贺玉莲研究团队
 
-* **相关研究：** 自动机器学习AutoML、催化剂、化学吸附能、Eads  值、特征删除实验、神经网络、高通量密度泛函理论
+* **相关研究：** 自动机器学习 AutoML、催化剂、化学吸附能、Eads  值、特征删除实验、神经网络、高通量密度泛函理论
 
 * **发布期刊：** PNAS, 2024.03
 
@@ -1169,7 +1254,7 @@
 
 * **科研团队：** 清华大学化工系卢滇楠研究团队
 
-* **相关研究：** hMOFs50 数据库、MOF/COF 数据库、微调 Uni-MOF、在识别超过 63 万个三维空间构型及其原子间连接关系上的有效性
+* **相关研究：** hMOFs50 数据库、MOF/COF 数据库、微调 Uni-MOF。在识别超过 63 万个三维空间构型及其原子间连接关系上的有效性
 
 * **发布期刊：** Nature Communications, 2024.03
 
@@ -1197,12 +1282,12 @@
 
 * **论文链接：** [A simplified electrochemical model forlithium-ion batteries based on ensemblelearning](https://www.sciencedirect.com/science/article/pii/S2589004224009076)
 
-### **17. [最强铁基超导磁体诞生！基于机器学习，磁场强度超过先前记录 2.7 倍](https://hyper.ai/news/32556)**
+### **17. [基于机器学习，最强铁基超导磁体诞生](https://hyper.ai/news/32556)**
 * **中文解读：** [https://hyper.ai/news/32556](https://hyper.ai/news/32556)
 
 * **科研团队：** 东京农工大学研究团队
 
-* **相关研究：** BOXVIA 机器学习、数据驱动循环、数值模拟、铁基超导永磁体 Ba122、场冷磁化 (FCM) 模型
+* **相关研究：** BOXVIA 机器学习、数据驱动循环、数值模拟、铁基超导永磁体 Ba122、场冷磁化 (FCM) 模型。磁场强度超过先前记录 2.7 倍
 
 * **发布期刊：** NPG Asia Materials, 2024.06
 
@@ -1255,21 +1340,46 @@
 
 * **科研团队：** 复旦大学材料科学系、智慧纳米机器人与纳米系统国际研究院梅永丰教授课题组
 
-* **相关研究：**  光学光谱仪、微型化重构光谱仪、CMOS 集成电路工艺、窄带通道电流数据集 、全部通道电流数据集、在整个可见光波段表现出准确的光谱重构能力
+* **相关研究：**  光学光谱仪、微型化重构光谱仪、CMOS 集成电路工艺、窄带通道电流数据集 、全部通道电流数据集。在整个可见光波段表现出准确的光谱重构能力
 
-* **发布期刊：** PNAS,  2024.08
+* **发布期刊：** PNAS, 2024.08
 
 * **论文链接：** [CMOS-Compatible Reconstructive Spectrometers with Self-Referencing Integrated Fabry-Perot Resonatorsl](https://www.pnas.org/doi/10.1073/pnas.2403950121)
 ### **23. [GNNOpt 模型，识别数百种太阳能电池和量子候选材料](https://hyper.ai/cn/news/35009)**
 * **中文解读：** [https://hyper.ai/cn/news/35009](https://hyper.ai/cn/news/35009)
 
 * **科研团队：** 日本东北大学、麻省理工学院
-* **相关研究：** DFT 计算、人工智能工具 GNNOpt、「集成嵌入」技术、集成等变神经网络、Materials Project 数据库、自动嵌入优化的集成嵌入层、成功识别出 246 种太阳能转换效率超过 32% 的材料、以及 296 种具有高量子权重的量子材料
+* **相关研究：** DFT 计算、人工智能工具 GNNOpt、「集成嵌入」技术、集成等变神经网络、Materials Project 数据库、自动嵌入优化的集成嵌入层。成功识别出 246 种太阳能转换效率超过 32% 的材料、以及 296 种具有高量子权重的量子材料
 
-* **发布期刊：** Advanced Materials, 2024.6
+* **发布期刊：** Advanced Materials, 2024.06
 
 * **论文链接：** [Universal Ensemble-Embedding Graph Neural Network for Direct Prediction of Optical Spectra from Crystal Structures](https://onlinelibrary.wiley.com/doi/epdf/10.1002/adma.202409175)
+### **24. [开源 OMat24 数据集，含 1.1 亿 DFT 计算结果](https://hyper.ai/cn/news/35515)**
+* **中文解读：** [https://hyper.ai/cn/news/35515](https://hyper.ai/cn/news/35515)
 
+* **科研团队：** Meta
+* **相关研究：**  Open Materials 2024 (OMat24) 大规模开源数据集、EquformerV2 (eqV2) 模型、从头算分子动力学。数据集包含的元素几乎覆盖整个元素周期表，用于材料训练 DFT 替代模型
+
+* **发布期刊：** arxiv, 2024.10
+
+* **论文链接：** [Open Materials 2024 (OMat24) Inorganic Materials Dataset and Models](https://arxiv.org/pdf/2410.12771)
+### **25. [通过机器学习合成的新型耐火高熵合金，室温延展性极佳](https://hyper.ai/cn/news/35536)**
+* **中文解读：** [https://hyper.ai/cn/news/35536](https://hyper.ai/cn/news/35536)
+
+* **科研团队：** 北京科技大学宿彦京团队
+* **相关研究：**  结合 ML ，遗传搜索，聚类分析和实验反馈的多目标优化 (MOO) 框架、机器学习模型。耐火高熵合金突破 1200°C 高温性能极限
+
+* **发布期刊：** Engineering, 2024.09
+
+* **论文链接：** [Machine-Learning-Assisted Compositional Design of Refractory High-Entropy Alloys with Optimal Strength and Ductility](https://www.sciencedirect.com/science/article/pii/S2095809924005113 )
+### **26. [材料生成模型 FlowLLM，数据集覆盖超 4.5w 种材料](https://hyper.ai/cn/news/35846)**
+* **中文解读：** [https://hyper.ai/cn/news/35846](https://hyper.ai/cn/news/35846)
+
+* **科研团队：** Meta FAIR 实验室、阿姆斯特丹大学
+* **相关研究：**  材料生成模型 FlowLLM、S.U.N. 材料生成、大语言模型（LLM）、黎曼流匹配（RFM）、 MP-20 数据集、LoRA 方法。稳定性材料生成效率提升 300%，S.U.N. 材料生成效率提高 50%
+* **发布期刊：** NeurIPS 2024, 2024.10
+
+* **论文链接：** [FlowLLM: Flow Matching for Material Generation with Large Language Models as Base Distributions](https://arxiv.org/pdf/2410.23405)
 ## **AI+动植物科学：AI+Zoology-Botany**
 
 ### **1. [SBeA 基于少样本学习框架进行动物社会行为分析](https://hyper.ai/news/29353)**
@@ -1379,11 +1489,22 @@
 
 * **科研团队：** Google Research 团队
 
-* **相关研究：** 梅尔尺度的频率轴 、压缩数振幅、可通过 TensorFlow 的 SavedModel API 独立调用、卷积神经网络、用于检测座头鲸叫声的分类模型、互动可视化工具「Pattern Radio」、专门用于识别蓝鲸和长须鲸的模型、可识别目前已知 94 种鲸鱼种类中的 8 个不同物种
+* **相关研究：** 梅尔尺度的频率轴 、压缩数振幅、可通过 TensorFlow 的 SavedModel API 独立调用、卷积神经网络、用于检测座头鲸叫声的分类模型、互动可视化工具「Pattern Radio」。专门用于识别蓝鲸和长须鲸的模型、可识别目前已知 94 种鲸鱼种类中的 8 个不同物种
 
 * **发布期刊：** Google Research, 2024.9
 
 * **论文链接：** [Whistles, songs, boings, and biotwangs: Recognizing whale vocalizations with AI](https://research.google/blog/whistles-songs-boings-and-biotwangs-recognizing-whale-vocalizations-with-ai)
+
+### **12. [用机器学习分离抹香鲸发音字母表，高度类似人类语言，信息承载能力更强](https://hyper.ai/news/33433)**
+* **中文解读：** [https://hyper.ai/news/33433](https://hyper.ai/news/33433)
+
+* **科研团队：** 麻省理工学院 Pratyusha Sharma 以及 CETI 的研究团队
+
+* **相关研究：**  DSWP 数据集、机器学习、抹香鲸声音具有结构性
+
+* **发布期刊：** Nature Communications, 2024.05
+
+* **论文链接：** [Contextual and combinatorial structure in sperm whale vocalisations](https://www.nature.com/articles/s41467-024-47221-8)
 
 ## **AI+农林畜牧业：AI+Agriculture-Forestry-Animal husbandry**
 
@@ -1416,7 +1537,7 @@
 
 * **相关研究：** 机器学习模型、SVM、Basic、MFCC、Scattering network、神经网络模型、留一法交叉验证。识别准确率高达 99.7%、4-6 天时番茄尖叫声最大
 
-* **发布期刊：** Cell，2023.03
+* **发布期刊：** Cell, 2023.03
 
 * **论文链接：** [Sounds emitted by plants under stress are airborne and informative](https://doi.org/10.1016/j.cell.2023.03.009)
 
@@ -1480,6 +1601,7 @@
 
 * **论文链接：** [A new paradigm for medium-range severe weather forecasts: probabilistic random forest-based predictions](https://arxiv.org/abs/2208.02383)
 
+
 ## **AI+ 天文学：AI+Astronomy**
 ### **1. [PRIMO 算法学习黑洞周围的光线传播规律，重建出更清晰的黑洞图像](https://hyper.ai/news/23698)**
 * **中文解读：** [https://hyper.ai/news/23698](https://hyper.ai/news/23698)
@@ -1531,7 +1653,7 @@
 
 * **科研团队：** 中国科学院上海天文台研究员葛健带领的国际团队
 
-* **相关研究：** 深度学习方法、SDSS DR12、卷积神经网络模型、发现了 107 例宇宙早期中性碳吸收线，探测精度达 99.8%
+* **相关研究：** 深度学习方法、SDSS DR12、卷积神经网络模型。发现了 107 例宇宙早期中性碳吸收线，探测精度达 99.8%
 
 * **发布期刊：** MNRAS, 2024.05
 
@@ -1610,7 +1732,7 @@
 
 * **相关研究：** HydroATLAS project、长短期记忆网络LSTM、编码器-解码器、交叉验证、性能优于最先进 GloFAS 预报模型
 
-* **发布期刊：** nature, 2024.03
+* **发布期刊：** Nature, 2024.03
 
 * **论文链接：** [Global prediction of extreme floods in ungauged watersheds](https://www.nature.com/articles/s41586-024-07145-1)
 
@@ -1633,6 +1755,17 @@
 * **发布期刊：** Water Research, 2024.10
 
 * **论文链接：** [Enhanced forecasting of chlorophyll-a concentration in coastal waters through integration of Fourier analysis and Transformer networks](https://doi.org/10.1016/j.watres.2024.122160 )
+
+### **9. [首个海洋大语言模型 OceanGPT 入选 ACL 2024！水下具身智能成现实](https://hyper.ai/news/33044)**
+* **中文解读：** [https://hyper.ai/news/33044](https://hyper.ai/news/33044)
+
+* **科研团队：** 浙江大学计算机科学与技术学院张宁豫、陈华钧团队
+
+* **相关研究：** 海洋领域大语言模型、正则表达式、哈希算法海洋科学指令生成框架 DoInstruct、多 Agent 协作、gpt-3.5-turbo、BM25 算法、LLaMA-2、Vicuna-7b-1.5、具身智能
+
+* **发布期刊：** ACL 2024, 2024.05
+
+* **论文链接：** [OceanGPT: A Large Language Model for Ocean Science Tasks](https://arxiv.org/abs/2310.02031)
 
 ## **AI4S 政策解读：AI4S Policy**
 ### **1. [科技部出台政策防范学术界 AI 枪手](https://hyper.ai/news/29228)**
@@ -1777,7 +1910,7 @@ An Empirical Study on Werewolf](https://arxiv.org/pdf/2309.04658.pdf)
 
 * **科研团队：** 浙江大学杜震洪研究团队
 
-* **相关研究：** 空间模式、神经网络、Shapley 加性解释、反距离加权插值、二元交叉熵损失函数、五折交叉验证、在矿产资源预测评价方面优于其他先进模型
+* **相关研究：** 空间模式、神经网络、Shapley 加性解释、反距离加权插值、二元交叉熵损失函数、五折交叉验证。在矿产资源预测评价方面优于其他先进模型
 
 * **发布期刊：** International Journal of Applied Earth Observation and Geoinformation, 2024.04
 
@@ -1810,18 +1943,8 @@ An Empirical Study on Werewolf](https://arxiv.org/pdf/2309.04658.pdf)
 
 * **论文链接：** [A neural network model to optimize the measure of spatial proximity in geographically weighted regression approach: a case study on house price in Wuhan](https://www.tandfonline.com/doi/abs/10.1080/13658816.2024.2343771)
 
-### **16. [首个海洋大语言模型 OceanGPT 入选 ACL 2024！水下具身智能成现实](https://hyper.ai/news/33044)**
-* **中文解读：** [https://hyper.ai/news/33044](https://hyper.ai/news/33044)
 
-* **科研团队：** 浙江大学计算机科学与技术学院张宁豫、陈华钧团队
-
-* **相关研究：** 海洋领域大语言模型、正则表达式、哈希算法海洋科学指令生成框架 DoInstruct、多 Agent 协作、gpt-3.5-turbo、BM25 算法、LLaMA-2、Vicuna-7b-1.5、具身智能
-
-* **发布期刊：** ACL 2024, 2024.05
-
-* **论文链接：** [OceanGPT: A Large Language Model for Ocean Science Tasks](https://arxiv.org/abs/2310.02031)
-
-### **17. [引入零样本学习，发布针对甲骨文破译优化的条件扩散模型](https://hyper.ai/news/33010)**
+### **16. [引入零样本学习，发布针对甲骨文破译优化的条件扩散模型](https://hyper.ai/news/33010)**
 * **中文解读：** [https://hyper.ai/news/33010](https://hyper.ai/news/33010)
 
 * **科研团队：** 华中科技大学白翔、刘禹良研究团队联合阿德莱德大学、安阳师范学院、华南理工大学团队
@@ -1832,7 +1955,7 @@ An Empirical Study on Werewolf](https://arxiv.org/pdf/2309.04658.pdf)
 
 * **论文链接：** [Deciphering Oracle Bone Language with Diffusion Models](https://doi.org/10.48550/arXiv.2406.00684)
 
-### **18. [斯坦福/苹果等 23 所机构发布 DCLM 基准测试，基础模型与 Llama3 8B 表现相当](https://hyper.ai/news/33001)**
+### **17. [斯坦福/苹果等 23 所机构发布 DCLM 基准测试，基础模型与 Llama3 8B 表现相当](https://hyper.ai/news/33001)**
 * **中文解读：** [https://hyper.ai/news/33001](https://hyper.ai/news/33001)
 
 * **科研团队：** 华盛顿大学、斯坦福大学、苹果等 23 所机构联手
@@ -1843,7 +1966,7 @@ An Empirical Study on Werewolf](https://arxiv.org/pdf/2309.04658.pdf)
 
 * **论文链接：** [DataComp-LM: In search of the next generation of training sets for language models](https://arxiv.org/abs/2406.11794)
 
-### **19. [PoCo 解决数据源异构难题，实现机器人多任务灵活执行](https://hyper.ai/news/32765)**
+### **18. [PoCo 解决数据源异构难题，实现机器人多任务灵活执行](https://hyper.ai/news/32765)**
 * **中文解读：** [https://hyper.ai/news/32765](https://hyper.ai/news/32765)
 
 * **科研团队：** 麻省理工研究人员
@@ -1854,7 +1977,7 @@ An Empirical Study on Werewolf](https://arxiv.org/pdf/2309.04658.pdf)
 
 * **论文链接：** [PoCo: Policy Composition from and for Heterogeneous Robot Learning](https://arxiv.org/abs/2402.02511)
 
-### **20. [含 14 万张图像！甲骨文数据集助力团队摘冠 ACL 最佳论文](https://hyper.ai/news/33826)**
+### **19. [含 14 万张图像！甲骨文数据集助力团队摘冠 ACL 最佳论文](https://hyper.ai/news/33826)**
 * **中文解读：** [https://hyper.ai/news/33826](https://hyper.ai/news/33826)
 
 * **科研团队：** 华中科技大学白翔教授研究团队
@@ -1865,18 +1988,8 @@ An Empirical Study on Werewolf](https://arxiv.org/pdf/2309.04658.pdf)
 
 * **论文链接：** [An open dataset for oracle bone script recognition and decipherment](https://arxiv.org/abs/2401.15365)
 
-### **21. [用机器学习分离抹香鲸发音字母表，高度类似人类语言，信息承载能力更强](https://hyper.ai/news/33433)**
-* **中文解读：** [https://hyper.ai/news/33433](https://hyper.ai/news/33433)
 
-* **科研团队：** 麻省理工学院 Pratyusha Sharma 以及 CETI 的研究团队
-
-* **相关研究：**  DSWP 数据集、机器学习、抹香鲸声音具有结构性
-
-* **发布期刊：** Nature Communications, 2024.05
-
-* **论文链接：** [Contextual and combinatorial structure in sperm whale vocalisations](https://www.nature.com/articles/s41467-024-47221-8)
-
-### **22. [基于预训练 LLM 提出信道预测方案，GPT-2 赋能无线通信物理层](https://hyper.ai/news/33195)**
+### **20. [基于预训练 LLM 提出信道预测方案，GPT-2 赋能无线通信物理层](https://hyper.ai/news/33195)**
 * **中文解读：** [https://hyper.ai/news/33195](https://hyper.ai/news/33195)
 
 * **科研团队：** 北京大学电子学院程翔团队
@@ -1887,7 +2000,7 @@ An Empirical Study on Werewolf](https://arxiv.org/pdf/2309.04658.pdf)
 
 * **论文链接：** [LLM4CP: Adapting Large Language Models for Channel Prediction](https://ieeexplore.ieee.org/document/10582829)
 
-### **23. [首个多缝线刺绣生成对抗网络模型](https://hyper.ai/news/34669)**
+### **21. [首个多缝线刺绣生成对抗网络模型](https://hyper.ai/news/34669)**
 * **中文解读：** [https://hyper.ai/news/34669](https://hyper.ai/news/34669)
 
 * **科研团队：** 复武汉纺织大学计算机与人工智能学院可视计算与数字纺织团队
@@ -1897,4 +2010,3 @@ An Empirical Study on Werewolf](https://arxiv.org/pdf/2309.04658.pdf)
 * **发布期刊：** IEEE Transactions on Visualization and Computer Graphics, 2024
 
 * **论文链接：** [MSEmbGAN: Multi-Stitch Embroidery Synthesis via Region-Aware Texture Generation](https://csai.wtu.edu.cn/TVCG01/index.html)
-
