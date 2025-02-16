@@ -10,47 +10,51 @@
   - [**6. MIT 利用深度学习发现新型抗生素**](#6-mit-利用深度学习发现新型抗生素)
   - [**7. 神经网络解密 GPCR-G 蛋白偶联选择性**](#7-神经网络解密-gpcr-g-蛋白偶联选择性)
   - [**8. Macformer 将无环药物菲卓替尼大环化**](#8-macformer-将无环药物菲卓替尼大环化)
-  - [**9. 快速自动扫描套件 FAST 高效获取样本信息**](#9-快速自动扫描套件-fast-高效获取样本信息)
-  - [**10. 回归网络 + CGMD，预测百亿种多肽的自组装特性**](#10-回归网络--cgmd预测百亿种多肽的自组装特性)
-  - [**11. 无监督学习预测 7100 万种基因突变**](#11-无监督学习预测-7100-万种基因突变)
-  - [**12. 基于图神经网络 (GNN) 开发气味分析 AI**](#12-基于图神经网络-gnn-开发气味分析-ai)
-  - [**13. 图神经网络筛选安全高效的抗衰老成分**](#13-图神经网络筛选安全高效的抗衰老成分)
-  - [**14. 机器学习量化分析多巴胺的释放量和释放位置**](#14-机器学习量化分析多巴胺的释放量和释放位置)
-  - [**15. 机器学习发现三种抗衰老药物**](#15-机器学习发现三种抗衰老药物)
-  - [**16. 深度学习筛选抑制鲍曼不动杆菌的新型抗生素**](#16-深度学习筛选抑制鲍曼不动杆菌的新型抗生素)
-  - [**17. 机器学习模型应用于预测生物墨水可打印性**](#17-机器学习模型应用于预测生物墨水可打印性)
-  - [**18. 机器学习分化多能干细胞**](#18-机器学习分化多能干细胞)
-  - [**19. 机器学习模型预测长效注射剂药物释放速率**](#19-机器学习模型预测长效注射剂药物释放速率)
-  - [**20. 机器学习算法有效预测植物抗疟性**](#20-机器学习算法有效预测植物抗疟性)
-  - [**21. 机器学习集成方法预测病毒蛋白片段免疫原性**](#21-机器学习集成方法预测病毒蛋白片段免疫原性)
-  - [**22. 用生成式 AI 开发新型抗生素**](#22-用生成式-ai-开发新型抗生素)
-  - [**23. 基于深度学习研发一种自动化、高速、多维的单粒子追踪系统**](#23-基于深度学习研发一种自动化高速多维的单粒子追踪系统)
-  - [**24. ProEnsemble 机器学习框架：优化进化通路启动子组合**](#24-proensemble-机器学习框架优化进化通路启动子组合)
-  - [**25. 微环境感知图神经网络 ProtLGN 指导蛋白质定向进化**](#25-微环境感知图神经网络-protlgn-指导蛋白质定向进化)
-  - [**26. 深度学习模型 AlphaPPIMd：用于蛋白质-蛋白质复合物构象集合探索**](#26-深度学习模型-alphappimd用于蛋白质-蛋白质复合物构象集合探索)
-  - [**27. 新型肿瘤抑制蛋白降解剂 dp53m 可抑制癌细胞增殖**](#27-新型肿瘤抑制蛋白降解剂-dp53m-可抑制癌细胞增殖)
-  - [**28. CVPR 最佳学生论文！多模态模型 BioCLIP 实现零样本学习**](#28-cvpr-最佳学生论文多模态模型-bioclip-实现零样本学习)
-  - [**29. 1 亿参数！细胞大模型 scFoundation 可对 2 万基因同时建模**](#29-1-亿参数细胞大模型-scfoundation-可对-2-万基因同时建模)
-  - [**30. 入选顶会 ICML，蛋白质语言模型 ESM-AA 超越传统 SOTA**](#30-入选顶会-icml蛋白质语言模型-esm-aa-超越传统-sota)
-  - [**31. SPACE 算法登 Cell 子刊！组织模块发现能力领先同类工具**](#31-space-算法登-cell-子刊组织模块发现能力领先同类工具)
-  - [**32. 基于 AlphaFold 实现新突破，揭示蛋白质动态多样性**](#32-基于-alphafold-实现新突破揭示蛋白质动态多样性)
-  - [**33. 基于扩散模型开发 P450 酶从头设计方法 P450Diffusion**](#33-基于扩散模型开发-p450-酶从头设计方法-p450diffusion)
-  - [**34. 将等变图神经网络用于靶蛋白结合位点预测，性能提升 20%**](#34-将等变图神经网络用于靶蛋白结合位点预测性能提升-20)
-  - [**35. 20 个实验数据创造 AI 蛋白质里程碑！FSFP 有效优化蛋白质预训练模型**](#35-20-个实验数据创造-ai-蛋白质里程碑fsfp-有效优化蛋白质预训练模型)
-  - [**36. 可迁移深度学习模型鉴定多类型 RNA 修饰、显著减少计算成本**](#36-可迁移深度学习模型鉴定多类型-rna-修饰显著减少计算成本)
-  - [**37. InstructProtein：利用知识指令对齐蛋白质语言与人类语言**](#37-instructprotein利用知识指令对齐蛋白质语言与人类语言)
-  - [**38. 蛋白质-文本生成框架 ProtT3 实现蛋白质数据与文本信息跨模态解读**](#38-蛋白质-文本生成框架-prott3-实现蛋白质数据与文本信息跨模态解读)
-  - [**39. CPDiffusion 模型，超低成本、全自动设计功能型蛋白质**](#39-cpdiffusion-模型超低成本全自动设计功能型蛋白质)
-  - [**40. 基于蛋白质语言模型和密集检索技术，一种全新的蛋白质同源物检测方法**](#40-基于蛋白质语言模型和密集检索技术一种全新的蛋白质同源物检测方法)
-  - [**41. AlphaProteo 可高效设计靶蛋白结合物，亲和力提高 300 倍**](#41-alphaproteo-可高效设计靶蛋白结合物亲和力提高-300-倍)
-  - [**42. 全新去噪蛋白质语言模型 DePLM，突变效应预测优于 SOTA 模型**](#42-全新去噪蛋白质语言模型-deplm突变效应预测优于-sota-模型)
-  - [**43. 几何深度生成模型 DynamicBind，实现蛋白质动态对接预测**](#43-几何深度生成模型-dynamicbind实现蛋白质动态对接预测)
-  - [**44. 药物研发大语言模型 Y-Mol，性能全面领先 LLaMA2**](#44-药物研发大语言模型-y-mol性能全面领先-llama2)
-  - [**45. 通用分子逆折叠模型 UniIF，对 AlphaFold 3 形成进一步补充**](#45-通用分子逆折叠模型-uniif对-alphafold-3-形成进一步补充)
-  - [**46. 预训练蛋白质语言模型 ProSST，更有效地整合蛋白质结构信息**](#46-预训练蛋白质语言模型-prosst更有效地整合蛋白质结构信息)
-  - [**47. 非侵入式大脑解码新框架 fMRI，为脑机接口和认知模型发展奠定基础**](#47-非侵入式大脑解码新框架-fmri为脑机接口和认知模型发展奠定基础)
-  - [**48. 大环肽结合物框架 RFpeptides，为不可成药蛋白质提供新可能性**](#48-大环肽结合物框架-rfpeptides为不可成药蛋白质提供新可能性)
-  - [**49. 基因组基础模型 Evo，实现从分子到基因组尺度的预测与生成**](#49-基因组基础模型-evo实现从分子到基因组尺度的预测与生成)
+  - [**9. 回归网络 + CGMD，预测百亿种多肽的自组装特性**](#9-回归网络--cgmd预测百亿种多肽的自组装特性)
+  - [**10. 无监督学习预测 7100 万种基因突变**](#10-无监督学习预测-7100-万种基因突变)
+  - [**11. 基于图神经网络 (GNN) 开发气味分析 AI**](#11-基于图神经网络-gnn-开发气味分析-ai)
+  - [**12. 图神经网络筛选安全高效的抗衰老成分**](#12-图神经网络筛选安全高效的抗衰老成分)
+  - [**13. 机器学习量化分析多巴胺的释放量和释放位置**](#13-机器学习量化分析多巴胺的释放量和释放位置)
+  - [**14. 机器学习发现三种抗衰老药物**](#14-机器学习发现三种抗衰老药物)
+  - [**15. 深度学习筛选抑制鲍曼不动杆菌的新型抗生素**](#15-深度学习筛选抑制鲍曼不动杆菌的新型抗生素)
+  - [**16. 机器学习模型应用于预测生物墨水可打印性**](#16-机器学习模型应用于预测生物墨水可打印性)
+  - [**17. 机器学习分化多能干细胞**](#17-机器学习分化多能干细胞)
+  - [**18. 机器学习模型预测长效注射剂药物释放速率**](#18-机器学习模型预测长效注射剂药物释放速率)
+  - [**19. 机器学习算法有效预测植物抗疟性**](#19-机器学习算法有效预测植物抗疟性)
+  - [**20. 机器学习集成方法预测病毒蛋白片段免疫原性**](#20-机器学习集成方法预测病毒蛋白片段免疫原性)
+  - [**21. 用生成式 AI 开发新型抗生素**](#21-用生成式-ai-开发新型抗生素)
+  - [**22. 基于深度学习研发一种自动化、高速、多维的单粒子追踪系统**](#22-基于深度学习研发一种自动化高速多维的单粒子追踪系统)
+  - [**23. ProEnsemble 机器学习框架：优化进化通路启动子组合**](#23-proensemble-机器学习框架优化进化通路启动子组合)
+  - [**24. 微环境感知图神经网络 ProtLGN 指导蛋白质定向进化**](#24-微环境感知图神经网络-protlgn-指导蛋白质定向进化)
+  - [**25. 深度学习模型 AlphaPPIMd：用于蛋白质-蛋白质复合物构象集合探索**](#25-深度学习模型-alphappimd用于蛋白质-蛋白质复合物构象集合探索)
+  - [**26. 新型肿瘤抑制蛋白降解剂 dp53m 可抑制癌细胞增殖**](#26-新型肿瘤抑制蛋白降解剂-dp53m-可抑制癌细胞增殖)
+  - [**27. CVPR 最佳学生论文！多模态模型 BioCLIP 实现零样本学习**](#27-cvpr-最佳学生论文多模态模型-bioclip-实现零样本学习)
+  - [**28. 1 亿参数！细胞大模型 scFoundation 可对 2 万基因同时建模**](#28-1-亿参数细胞大模型-scfoundation-可对-2-万基因同时建模)
+  - [**29. 入选顶会 ICML，蛋白质语言模型 ESM-AA 超越传统 SOTA**](#29-入选顶会-icml蛋白质语言模型-esm-aa-超越传统-sota)
+  - [**30. SPACE 算法登 Cell 子刊！组织模块发现能力领先同类工具**](#30-space-算法登-cell-子刊组织模块发现能力领先同类工具)
+  - [**31. 基于 AlphaFold 实现新突破，揭示蛋白质动态多样性**](#31-基于-alphafold-实现新突破揭示蛋白质动态多样性)
+  - [**32. 基于扩散模型开发 P450 酶从头设计方法 P450Diffusion**](#32-基于扩散模型开发-p450-酶从头设计方法-p450diffusion)
+  - [**33. 将等变图神经网络用于靶蛋白结合位点预测，性能提升 20%**](#33-将等变图神经网络用于靶蛋白结合位点预测性能提升-20)
+  - [**34. 20 个实验数据创造 AI 蛋白质里程碑！FSFP 有效优化蛋白质预训练模型**](#34-20-个实验数据创造-ai-蛋白质里程碑fsfp-有效优化蛋白质预训练模型)
+  - [**35. 可迁移深度学习模型鉴定多类型 RNA 修饰、显著减少计算成本**](#35-可迁移深度学习模型鉴定多类型-rna-修饰显著减少计算成本)
+  - [**36. InstructProtein：利用知识指令对齐蛋白质语言与人类语言**](#36-instructprotein利用知识指令对齐蛋白质语言与人类语言)
+  - [**37. 蛋白质-文本生成框架 ProtT3 实现蛋白质数据与文本信息跨模态解读**](#37-蛋白质-文本生成框架-prott3-实现蛋白质数据与文本信息跨模态解读)
+  - [**38. CPDiffusion 模型，超低成本、全自动设计功能型蛋白质**](#38-cpdiffusion-模型超低成本全自动设计功能型蛋白质)
+  - [**39. 基于蛋白质语言模型和密集检索技术，一种全新的蛋白质同源物检测方法**](#39-基于蛋白质语言模型和密集检索技术一种全新的蛋白质同源物检测方法)
+  - [**40. AlphaProteo 可高效设计靶蛋白结合物，亲和力提高 300 倍**](#40-alphaproteo-可高效设计靶蛋白结合物亲和力提高-300-倍)
+  - [**41. 全新去噪蛋白质语言模型 DePLM，突变效应预测优于 SOTA 模型**](#41-全新去噪蛋白质语言模型-deplm突变效应预测优于-sota-模型)
+  - [**42. 几何深度生成模型 DynamicBind，实现蛋白质动态对接预测**](#42-几何深度生成模型-dynamicbind实现蛋白质动态对接预测)
+  - [**43. 药物研发大语言模型 Y-Mol，性能全面领先 LLaMA2**](#43-药物研发大语言模型-y-mol性能全面领先-llama2)
+  - [**44. 通用分子逆折叠模型 UniIF，对 AlphaFold 3 形成进一步补充**](#44-通用分子逆折叠模型-uniif对-alphafold-3-形成进一步补充)
+  - [**45. 预训练蛋白质语言模型 ProSST，更有效地整合蛋白质结构信息**](#45-预训练蛋白质语言模型-prosst更有效地整合蛋白质结构信息)
+  - [**46. 大环肽结合物框架 RFpeptides，为不可成药蛋白质提供新可能性**](#46-大环肽结合物框架-rfpeptides为不可成药蛋白质提供新可能性)
+  - [**47. 基因组基础模型 Evo，实现从分子到基因组尺度的预测与生成**](#47-基因组基础模型-evo实现从分子到基因组尺度的预测与生成)
+  - [**48. DigFrag 用 AI 精准分割分子片段，并生成 44 个药物/农药分子**](#48-digfrag-用-ai-精准分割分子片段并生成-44-个药物农药分子)
+  - [**49. 蛋白质序列大语言模型预训练方法 PRIME**](#49-蛋白质序列大语言模型预训练方法-prime)
+  - [**50. 自监督深度学习方法革新冷冻电镜三维重建**](#50-自监督深度学习方法革新冷冻电镜三维重建)
+  - [**51. 多模态蛋白质生成方法 PLAID，同时生成序列和全原子蛋白结构**](#51-多模态蛋白质生成方法-plaid同时生成序列和全原子蛋白结构)
+  - [**52. 基于潜在强化学习的靶向分子优化方法 MOLRL**](#52-基于潜在强化学习的靶向分子优化方法-molrl)
+  - [**53. 病毒变异驱动力预测框架 E2VD，预测新冠/艾滋病/流感病毒进化方向**](#53-病毒变异驱动力预测框架-e2vd预测新冠艾滋病流感病毒进化方向)
 - [**AI+   医疗健康：AI+Healthcare**](#ai---医疗健康aihealthcare)
   - [**1. 深度学习系统 DeepDR Plus 用眼底图像预测糖尿病视网膜病变**](#1-深度学习系统-deepdr-plus-用眼底图像预测糖尿病视网膜病变)
   - [**2. 逻辑回归模型分析高绿色景观指数可降低 MetS 风险**](#2-逻辑回归模型分析高绿色景观指数可降低-mets-风险)
@@ -86,6 +90,10 @@
   - [**32. 胶囊内窥镜图像拼接方法 S2P-Matching，助力胶囊内窥镜图像拼接**](#32-胶囊内窥镜图像拼接方法-s2p-matching助力胶囊内窥镜图像拼接)
   - [**33. 多模态医疗基准 GMAI-MMBench，含 284 个数据集，覆盖 18 项临床任务**](#33-多模态医疗基准-gmai-mmbench含-284-个数据集覆盖-18-项临床任务)
   - [**34. 新型时间序列预测方法 CGS-Mask，揭秘患者存活率关键指标**](#34-新型时间序列预测方法-cgs-mask揭秘患者存活率关键指标)
+  - [**35. 非侵入式大脑解码新框架 fMRI，为脑机接口和认知模型发展奠定基础**](#35-非侵入式大脑解码新框架-fmri为脑机接口和认知模型发展奠定基础)
+  - [**36. 医学图像分割模型 M2CF-Net，提高干燥综合征诊断准确性**](#36-医学图像分割模型-m2cf-net提高干燥综合征诊断准确性)
+  - [**37. BSAFusion 可实现多模态医学图像对齐与融合**](#37-bsafusion-可实现多模态医学图像对齐与融合)
+  - [**38. 多 Agent 大语言模型框架 KG4Diagnosis 助力诊断 362 种常见疾病**](#38-多-agent-大语言模型框架-kg4diagnosis-助力诊断-362-种常见疾病)
 - [**AI+ 材料化学：AI+Materials Chemistry**](#ai-材料化学aimaterials-chemistry)
   - [**1. 高通量计算框架 33 分钟生成 12 万种新型 MOFs 候选材料**](#1-高通量计算框架-33-分钟生成-12-万种新型-mofs-候选材料)
   - [**2. 机器学习算法模型筛选 P-SOC 电极材料**](#2-机器学习算法模型筛选-p-soc-电极材料)
@@ -113,6 +121,7 @@
   - [**24. 开源 OMat24 数据集，含 1.1 亿 DFT 计算结果**](#24-开源-omat24-数据集含-11-亿-dft-计算结果)
   - [**25. 通过机器学习合成的新型耐火高熵合金，室温延展性极佳**](#25-通过机器学习合成的新型耐火高熵合金室温延展性极佳)
   - [**26. 材料生成模型 FlowLLM，数据集覆盖超 4.5w 种材料**](#26-材料生成模型-flowllm数据集覆盖超-45w-种材料)
+  - [**27. 用主动学习识别 1.4 万个高熵氧化物，成功筛选 4 种高活性析氢催化剂**](#27-用主动学习识别-14-万个高熵氧化物成功筛选-4-种高活性析氢催化剂)
 - [**AI+动植物科学：AI+Zoology-Botany**](#ai动植物科学aizoology-botany)
   - [**1. SBeA 基于少样本学习框架进行动物社会行为分析**](#1-sbea-基于少样本学习框架进行动物社会行为分析)
   - [**2. 基于孪生网络的深度学习方法，自动捕捉胚胎发育过程**](#2-基于孪生网络的深度学习方法自动捕捉胚胎发育过程)
@@ -154,6 +163,8 @@
   - [**7. ED-DLSTM实现无监测数据地区洪水预测**](#7-ed-dlstm实现无监测数据地区洪水预测)
   - [**8. ChloroFormer 模型提前预警海洋藻类爆发**](#8-chloroformer-模型提前预警海洋藻类爆发)
   - [**9. 首个海洋大语言模型 OceanGPT 入选 ACL 2024！水下具身智能成现实**](#9-首个海洋大语言模型-oceangpt-入选-acl-2024水下具身智能成现实)
+  - [**10. AI 预测预测全球变暖状况**](#10-ai-预测预测全球变暖状况)
+  - [**11. GeoAI 新模型，解释青藏高原地表热流分布**](#11-geoai-新模型解释青藏高原地表热流分布)
 - [**AI4S 政策解读：AI4S Policy**](#ai4s-政策解读ai4s-policy)
   - [**1. 科技部出台政策防范学术界 AI 枪手**](#1-科技部出台政策防范学术界-ai-枪手)
   - [**2. 政策：科技部会同自然科学基金委启动「人工智能驱动的科学研究」( AI for Science ) 专项部署工作**](#2-政策科技部会同自然科学基金委启动人工智能驱动的科学研究-ai-for-science--专项部署工作)
@@ -179,7 +190,8 @@
   - [**19. 含 14 万张图像！甲骨文数据集助力团队摘冠 ACL 最佳论文**](#19-含-14-万张图像甲骨文数据集助力团队摘冠-acl-最佳论文)
   - [**20. 基于预训练 LLM 提出信道预测方案，GPT-2 赋能无线通信物理层**](#20-基于预训练-llm-提出信道预测方案gpt-2-赋能无线通信物理层)
   - [**21. 首个多缝线刺绣生成对抗网络模型**](#21-首个多缝线刺绣生成对抗网络模型)
-
+  - [**22. 快速自动扫描套件 FAST 高效获取样本信息**](#22-快速自动扫描套件-fast-高效获取样本信息)
+  - [**23. 人口动态基础模型 PDFM 已开源，精准预测美国失业率和贫困率**](#23-人口动态基础模型-pdfm-已开源精准预测美国失业率和贫困率)
 
 ## **前言**
 
@@ -292,19 +304,9 @@
 
 * **论文链接：** [Macrocyclization of linear molecules by deep learning to facilitate macrocyclic drug candidates discovery](https://www.nature.com/articles/s41467-023-40219-8)
 
-### **9. [快速自动扫描套件 FAST 高效获取样本信息](https://hyper.ai/news/28100)**
 
-* **中文解读：** [https://hyper.ai/news/28100](https://hyper.ai/news/28100)
 
-* **科研团队：** 美国阿贡国家实验室的研究团队
-
-* **相关研究：** SLADS-Net 方法、路径优化技术。优先识别异质性区域、准确复制全扫描图像中所有主要特征
-
-* **发布期刊：** Nature Communications, 2023.09
-
-* **论文链接：** [Demonstration of an AI-driven workflow for autonomous high-resolution scanning microscopy](https://www.nature.com/articles/s41467-023-40339-1)
-
-### **10. [回归网络 + CGMD，预测百亿种多肽的自组装特性](https://hyper.ai/news/26408)**
+### **9. [回归网络 + CGMD，预测百亿种多肽的自组装特性](https://hyper.ai/news/26408)**
 
 * **中文解读：** [https://hyper.ai/news/26408](https://hyper.ai/news/26408)
 
@@ -316,7 +318,7 @@
 
 * **论文链接：** [Deep Learning Empowers the Discovery of Self-Assembling Peptides with Over 10 Trillion Sequences](https://onlinelibrary.wiley.com/doi/full/10.1002/advs.202301544)
 
-### **11. [无监督学习预测 7100 万种基因突变](https://hyper.ai/news/26154)**
+### **10. [无监督学习预测 7100 万种基因突变](https://hyper.ai/news/26154)**
 
 * **中文解读：** [https://hyper.ai/news/26154](https://hyper.ai/news/26154)
 
@@ -328,7 +330,7 @@
 
 * **论文链接：** [Accurate proteome-wide missense variant effect prediction with AlphaMissense](https://www.science.org/doi/10.1126/science.adg7492)
 
-### **12. [基于图神经网络 (GNN) 开发气味分析 AI](https://hyper.ai/news/25952)**
+### **11. [基于图神经网络 (GNN) 开发气味分析 AI](https://hyper.ai/news/25952)**
 
 * **中文解读：** [https://hyper.ai/news/25952](https://hyper.ai/news/25952)
 
@@ -340,7 +342,7 @@
 
 * **论文链接：** [A principal odor map unifies diverse tasks in olfactory perception](https://www.science.org/doi/full/10.1126/science.ade4401)
 
-### **13. [图神经网络筛选安全高效的抗衰老成分](https://hyper.ai/news/25822)**
+### **12. [图神经网络筛选安全高效的抗衰老成分](https://hyper.ai/news/25822)**
 
 * **中文解读：** [https://hyper.ai/news/25822](https://hyper.ai/news/25822)
 
@@ -348,11 +350,11 @@
 
 * **相关研究：** 深度学习、GNN、卷积神经网络。Chemprop 模型的正预测率为 11.6%，高于人工筛选的 1.9%
 
-* **发布期刊：** Nature Aging, 2023.05
+* **发布期刊：** Nature Communications, 2023.05
 
 * **论文链接：** [Discovering small-molecule senolytics with deep neural networks](https://www.nature.com/articles/s43587-023-00415-z)
 
-### **14. [机器学习量化分析多巴胺的释放量和释放位置](https://hyper.ai/news/25153)**
+### **13. [机器学习量化分析多巴胺的释放量和释放位置](https://hyper.ai/news/25153)**
 
 * **中文解读：** [https://hyper.ai/news/25153](https://hyper.ai/news/25153)
 
@@ -364,7 +366,7 @@
 
 * **论文链接：** [Identifying Neural Signatures of Dopamine Signaling with Machine Learning](https://pubs.acs.org/doi/full/10.1021/acschemneuro.3c00001)
 
-### **15. [机器学习发现三种抗衰老药物](https://hyper.ai/news/24578)**
+### **14. [机器学习发现三种抗衰老药物](https://hyper.ai/news/24578)**
 
 * **中文解读：** [https://hyper.ai/news/24578](https://hyper.ai/news/24578)
 
@@ -376,7 +378,7 @@
 
 * **论文链接：** [Discovery of Senolytics using machine learning](https://www.nature.com/articles/s41467-023-39120-1)
 
-### **16. [深度学习筛选抑制鲍曼不动杆菌的新型抗生素](https://hyper.ai/news/24499)**
+### **15. [深度学习筛选抑制鲍曼不动杆菌的新型抗生素](https://hyper.ai/news/24499)**
 
 * **中文解读：** [https://hyper.ai/news/24499](https://hyper.ai/news/24499)
 
@@ -388,7 +390,7 @@
 
 * **论文链接：** [Deep learning-guided discovery of an antibiotic targeting Acinetobacter baumannii](https://www.nature.com/articles/s41589-023-01349-8#access-options)
 
-### **17. [机器学习模型应用于预测生物墨水可打印性](https://hyper.ai/news/24237)**
+### **16. [机器学习模型应用于预测生物墨水可打印性](https://hyper.ai/news/24237)**
 
 * **中文解读：** [https://hyper.ai/news/24237](https://hyper.ai/news/24237)
 
@@ -400,7 +402,7 @@
 
 * **论文链接：** [Predicting pharmaceutical inkjet printing outcomes using machine learning](https://www.sciencedirect.com/science/article/pii/S2590156723000257)
 
-### **18. [机器学习分化多能干细胞](https://hyper.ai/news/23940)**
+### **17. [机器学习分化多能干细胞](https://hyper.ai/news/23940)**
 
 * **中文解读：** [https://hyper.ai/news/23940](https://hyper.ai/news/23940)
 
@@ -412,7 +414,7 @@
 
 * **论文链接：** [A live-cell image-based machine learning strategy for reducing variability in PSC differentiation systems](https://www.nature.com/articles/s41421-023-00543-1)
 
-### **19. [机器学习模型预测长效注射剂药物释放速率](https://hyper.ai/news/33892)**
+### **18. [机器学习模型预测长效注射剂药物释放速率](https://hyper.ai/news/33892)**
 * **中文解读：** [https://hyper.ai/news/33892](https://hyper.ai/news/33892)
 
 * **科研团队：** 多伦多大学研究团队
@@ -424,7 +426,7 @@
 * **论文链接：** [Machine learning models to accelerate the design of polymeric long-acting injectables](https://www.nature.com/articles/s41467-022-35343-w)
 
 
-### **20. [机器学习算法有效预测植物抗疟性](https://hyper.ai/news/33883)**
+### **19. [机器学习算法有效预测植物抗疟性](https://hyper.ai/news/33883)**
 
 * **中文解读：** [https://hyper.ai/news/33883](https://hyper.ai/news/33883)
 
@@ -436,7 +438,7 @@
 
 * **论文链接：** [Machine learning enhances prediction of plants as potential sources of antimalarials](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10248027)
 
-### **21. [机器学习集成方法预测病毒蛋白片段免疫原性](https://hyper.ai/news/30786)**
+### **20. [机器学习集成方法预测病毒蛋白片段免疫原性](https://hyper.ai/news/30786)**
 * **中文解读：** [https://hyper.ai/news/30786](https://hyper.ai/news/30786)
 
 * **科研团队：** 北京航空航天大学李静研究团队
@@ -447,7 +449,7 @@
 
 * **论文链接：** [VirusImmu: a novel ensemble machine learning approach for viral immunogenicity prediction](https://www.biorxiv.org/content/10.1101/2023.11.23.568426v1)
 
-### **22. [用生成式 AI 开发新型抗生素](https://hyper.ai/news/31421)**
+### **21. [用生成式 AI 开发新型抗生素](https://hyper.ai/news/31421)**
 * **中文解读：** [https://hyper.ai/news/31421](https://hyper.ai/news/31421)
 
 * **科研团队：** 麦马、斯坦福团队
@@ -458,7 +460,7 @@
 
 * **论文链接：** [Generative AI for designing and validating easily synthesizable and structurally novel antibiotics](https://www.nature.com/articles/s42256-024-00809-7 )
 
-### **23. [基于深度学习研发一种自动化、高速、多维的单粒子追踪系统](https://hyper.ai/news/31341)**
+### **22. [基于深度学习研发一种自动化、高速、多维的单粒子追踪系统](https://hyper.ai/news/31341)**
 * **中文解读：** [https://hyper.ai/news/31341](https://hyper.ai/news/31341)
 
 * **科研团队：** 厦门大学方宁教授团队
@@ -469,7 +471,7 @@
 
 * **论文链接：** [Deep Learning-Assisted Automated Multidimensional Single Particle Tracking in Living Cells](https://doi.org/10.1021/acs.nanolett.3c04870)
 
-### **24. [ProEnsemble 机器学习框架：优化进化通路启动子组合](https://hyper.ai/news/30594)**
+### **23. [ProEnsemble 机器学习框架：优化进化通路启动子组合](https://hyper.ai/news/30594)**
 * **中文解读：** [https://hyper.ai/news/30594](https://hyper.ai/news/30594)
 
 * **科研团队：** 中科院罗小舟团队
@@ -480,7 +482,7 @@
 
 * **论文链接：** [Pathway Evolution Through a Bottlenecking-Debottlenecking Strategy and Machine Learning-Aided Flux Balancing](https://onlinelibrary.wiley.com/doi/full/10.1002/advs.202306935)
 
-### **25. [微环境感知图神经网络 ProtLGN 指导蛋白质定向进化](https://hyper.ai/news/32246)**
+### **24. [微环境感知图神经网络 ProtLGN 指导蛋白质定向进化](https://hyper.ai/news/32246)**
 * **中文解读：** [https://hyper.ai/news/32246](https://hyper.ai/news/32246)
 
 * **科研团队：** 上海交通大学洪亮课题组
@@ -491,7 +493,7 @@
 
 * **论文链接：** [Protein Engineering with Lightweight Graph Denoising Neural Networks](https://pubs.acs.org/doi/10.1021/acs.jcim.4c00036)
 
-### **26. [深度学习模型 AlphaPPIMd：用于蛋白质-蛋白质复合物构象集合探索](https://hyper.ai/news/32435)**
+### **25. [深度学习模型 AlphaPPIMd：用于蛋白质-蛋白质复合物构象集合探索](https://hyper.ai/news/32435)**
 * **中文解读：** [https://hyper.ai/news/32435](https://hyper.ai/news/32435)
 
 * **科研团队：** 延世大学王建民团队
@@ -502,7 +504,7 @@
 
 * **论文链接：** [Exploring the conformational ensembles of protein-protein complex with transformer-based generative model](https://pubs.acs.org/doi/10.1021/acs.jctc.4c00255)
 
-### **27. [新型肿瘤抑制蛋白降解剂 dp53m 可抑制癌细胞增殖](https://hyper.ai/news/32527)**
+### **26. [新型肿瘤抑制蛋白降解剂 dp53m 可抑制癌细胞增殖](https://hyper.ai/news/32527)**
 * **中文解读：** [https://hyper.ai/news/32527](https://hyper.ai/news/32527)
 
 * **科研团队：** 西交利物浦大学慧湖药学院吴思晋教授、天津医科大学总医院谢松波教授、钟殿胜教授团队
@@ -513,7 +515,7 @@
 
 * **论文链接：** [An engineered DNA aptamer-based PROTAC for precise therapy of p53-R175H hotspot mutant-driven cancer](https://www.sciencedirect.com/science/article/pii/S2095927324003517)
 
-### **28. [CVPR 最佳学生论文！多模态模型 BioCLIP 实现零样本学习](https://hyper.ai/news/32544)**
+### **27. [CVPR 最佳学生论文！多模态模型 BioCLIP 实现零样本学习](https://hyper.ai/news/32544)**
 * **中文解读：** [https://hyper.ai/news/32544](https://hyper.ai/news/32544)
 
 * **科研团队：** 俄亥俄州立大学 Jiaman Wu 团队
@@ -524,7 +526,7 @@
 
 * **论文链接：** [BIoCLIP: A Vision Foundation Model for the Tree of Life](https://openaccess.thecvf.com/content/CVPR2024/html/Stevens_BioCLIP_A_Vision_Foundation_Model_for_the_Tree_of_Life_CVPR_2024_paper.html)
 
-### **29. [1 亿参数！细胞大模型 scFoundation 可对 2 万基因同时建模](https://hyper.ai/news/32623)**
+### **28. [1 亿参数！细胞大模型 scFoundation 可对 2 万基因同时建模](https://hyper.ai/news/32623)**
 * **中文解读：** [https://hyper.ai/news/32623](https://hyper.ai/news/32623)
 
 * **科研团队：** 清华大学自动化系生命基础模型实验室主任张学工教授、电子系/AIR 马剑竹教授和百图生科宋乐博士
@@ -535,7 +537,7 @@
 
 * **论文链接：** [Large-scale foundation model on single-cell transcriptomics](https://www.nature.com/articles/s41592-024-02305-7)
 
-### **30. [入选顶会 ICML，蛋白质语言模型 ESM-AA 超越传统 SOTA](https://hyper.ai/news/32674)**
+### **29. [入选顶会 ICML，蛋白质语言模型 ESM-AA 超越传统 SOTA](https://hyper.ai/news/32674)**
 
 * **中文解读：** [https://hyper.ai/news/32674](https://hyper.ai/news/32674)
 
@@ -547,7 +549,7 @@
 
 * **论文链接：** [ESM All-Atom: Multi-scale Protein Language Model for Unified Molecular Modeling](https://icml.cc/virtual/2024/poster/35119)
 
-### **31. [SPACE 算法登 Cell 子刊！组织模块发现能力领先同类工具](https://hyper.ai/news/32738)**
+### **30. [SPACE 算法登 Cell 子刊！组织模块发现能力领先同类工具](https://hyper.ai/news/32738)**
 * **中文解读：** [https://hyper.ai/news/32738](https://hyper.ai/news/32738)
 
 * **科研团队：** 清华大学张强锋课题组
@@ -558,7 +560,7 @@
 
 * **论文链接：** [Tissue module discovery in single-cell resolution spatial transcriptomics data via cell-cell interaction-aware cell embedding](https://www.cell.com/cell-systems/fulltext/S2405-4712(24)00124-8)
 
-### **32. [基于 AlphaFold 实现新突破，揭示蛋白质动态多样性](https://hyper.ai/news/33075)**
+### **31. [基于 AlphaFold 实现新突破，揭示蛋白质动态多样性](https://hyper.ai/news/33075)**
 * **中文解读：** [https://hyper.ai/news/33075](https://hyper.ai/news/33075)
 
 * **科研团队：** 麻省理工学院研究团队
@@ -569,7 +571,7 @@
 
 * **论文链接：** [AlphaFold Meets Flow Matching for Generating Protein Ensembles](https://openreview.net/forum?id=rs8Sh2UASt)
 
-### **33. [基于扩散模型开发 P450 酶从头设计方法 P450Diffusion](https://hyper.ai/news/33057)**
+### **32. [基于扩散模型开发 P450 酶从头设计方法 P450Diffusion](https://hyper.ai/news/33057)**
 
 * **中文解读：** [https://hyper.ai/news/33057](https://hyper.ai/news/33057)
 
@@ -581,7 +583,7 @@
 
 * **论文链接：** [Cytochrome P450 Enzyme Design by Constraining the Catalytic Pocket in a Diffusion Model](https://spj.science.org/doi/10.34133/research.0413)
 
-### **34. [将等变图神经网络用于靶蛋白结合位点预测，性能提升 20%](https://hyper.ai/news/32957)**
+### **33. [将等变图神经网络用于靶蛋白结合位点预测，性能提升 20%](https://hyper.ai/news/32957)**
 * **中文解读：** [https://hyper.ai/news/32957](https://hyper.ai/news/32957)
 
 * **科研团队：** 中国人民大学高瓴人工智能学院的研究团队
@@ -592,7 +594,7 @@
 
 * **论文链接：** [EquiPocket: an E(3)-Equivariant Geometric Graph Neural Network for Ligand Binding Site Prediction](https://openreview.net/forum?id=1vGN3CSxVs)
 
-### **35. [20 个实验数据创造 AI 蛋白质里程碑！FSFP 有效优化蛋白质预训练模型](https://hyper.ai/news/32822)**
+### **34. [20 个实验数据创造 AI 蛋白质里程碑！FSFP 有效优化蛋白质预训练模型](https://hyper.ai/news/32822)**
 * **中文解读：** [https://hyper.ai/news/32822](https://hyper.ai/news/32822)
 
 * **科研团队：** 上海交通大学自然科学研究院/物理天文学院/张江高研院/药学院洪亮教授课题组，联合上海人工智能实验室青年研究员谈攀团队
@@ -603,7 +605,7 @@
 
 * **论文链接：** [Enhancing efficiency of protein language models with minimal wet-lab data through few-shot learning](https://doi.org/10.1038/s41467-024-49798-6)
 
-### **36. [可迁移深度学习模型鉴定多类型 RNA 修饰、显著减少计算成本](https://hyper.ai/news/32745)**
+### **35. [可迁移深度学习模型鉴定多类型 RNA 修饰、显著减少计算成本](https://hyper.ai/news/32745)**
 * **中文解读：** [https://hyper.ai/news/32745](https://hyper.ai/news/32745)
 
 * **科研团队：** 上海交通大学生命科学技术学院长聘教轨副教授余祥课题组，联合上海辰山植物园杨俊 / 王红霞团队
@@ -614,7 +616,7 @@
 
 * **论文链接：** [Transfer learning enables identification of multiple types of RNA modifications using nanopore direct RNA sequencing](https://www.nature.com/articles/s41467-024-48437-4)
 
-### **37. [InstructProtein：利用知识指令对齐蛋白质语言与人类语言](https://hyper.ai/news/33697)**
+### **36. [InstructProtein：利用知识指令对齐蛋白质语言与人类语言](https://hyper.ai/news/33697)**
 * **中文解读：** [https://hyper.ai/news/33697](https://hyper.ai/news/33697)
 
 * **科研团队：** 浙江大学陈华钧、张强团队
@@ -625,7 +627,7 @@
 
 * **论文链接：** [InstructProtein: Aligning Human and Protein Language via Knowledge Instruction](https://arxiv.org/abs/2310.03269)
 
-### **38. [蛋白质-文本生成框架 ProtT3 实现蛋白质数据与文本信息跨模态解读](https://hyper.ai/news/33546)**
+### **37. [蛋白质-文本生成框架 ProtT3 实现蛋白质数据与文本信息跨模态解读](https://hyper.ai/news/33546)**
 * **中文解读：** [https://hyper.ai/news/33546](https://hyper.ai/news/33546)
 
 * **科研团队：** 中国科学技术大学王翔，联合新加坡国立大学刘致远团队、北海道大学研究团队
@@ -636,7 +638,7 @@
 
 * **论文链接：** [ProtT3: Protein-to-Text Generation for Text-based Protein Understanding](https://arxiv.org/abs/2405.12564)
 
-### **39. [CPDiffusion 模型，超低成本、全自动设计功能型蛋白质](https://hyper.ai/news/34692)**
+### **38. [CPDiffusion 模型，超低成本、全自动设计功能型蛋白质](https://hyper.ai/news/34692)**
 * **中文解读：** [https://hyper.ai/news/34692](https://hyper.ai/news/34692)
 
 * **科研团队：** 上海交通大学自然科学研究院、物理与天文学院、张江高等研究院、药学院洪亮课题组
@@ -646,7 +648,7 @@
 * **发布期刊：** Cell Discovery,  2024.09
 
 * **论文链接：** [A conditional protein diffusion model generates artificial programmable endonuclease sequences with enhanced activity](https://www.nature.com/articles/s41421-024-00728-2)
-### **40. [基于蛋白质语言模型和密集检索技术，一种全新的蛋白质同源物检测方法](https://hyper.ai/news/34225)**
+### **39. [基于蛋白质语言模型和密集检索技术，一种全新的蛋白质同源物检测方法](https://hyper.ai/news/34225)**
 * **中文解读：** [https://hyper.ai/news/34225](https://hyper.ai/news/34225)
 
 * **科研团队：** 香港中文大学李煜、复旦大学智能复杂体系实验室、上海人工智能实验室青年研究员孙思琦、耶鲁大学 Mark Gerstein 
@@ -656,7 +658,7 @@
 * **发布期刊：** Nature Biotechnology, 2024.08
 
 * **论文链接：** [Fast, sensitive detection of protein homologs using deep dense retrieval](https://doi.org/10.1038/s41587-024-02353-6)
-### **41. [AlphaProteo 可高效设计靶蛋白结合物，亲和力提高 300 倍](https://hyper.ai/news/34214)**
+### **40. [AlphaProteo 可高效设计靶蛋白结合物，亲和力提高 300 倍](https://hyper.ai/news/34214)**
 * **中文解读：** [https://hyper.ai/news/34214](https://hyper.ai/news/34214)
 
 * **科研团队：** DeepMind、弗朗西斯·克里克研究所
@@ -666,7 +668,7 @@
 * **发布期刊：** DeepMind, 2024.09
 
 * **论文链接：** [AlphaProteo 为生物学和健康研究生成新型蛋白质](https://deepmind.google/discover/blog/alphaproteo-generates-novel-proteins-for-biology-and-health-research/) 
-### **42. [全新去噪蛋白质语言模型 DePLM，突变效应预测优于 SOTA 模型](https://hyper.ai/cn/news/34954)**
+### **41. [全新去噪蛋白质语言模型 DePLM，突变效应预测优于 SOTA 模型](https://hyper.ai/cn/news/34954)**
 * **中文解读：** [https://hyper.ai/cn/news/34954](https://hyper.ai/cn/news/34954)
 
 * **科研团队：** 浙江大学计算机科学与技术学院、浙江大学国际联合学院、浙江大学杭州国际科创中心陈华钧教授、张强博士
@@ -676,7 +678,7 @@
 * **发布期刊：** NeurIPS 2024, 2024.11
 
 * **论文链接：** [DePLM: Denoising Protein Language Models for Property Optimization](https://neurips.cc/virtual/2024/poster/95517 ) 
-### **43. [几何深度生成模型 DynamicBind，实现蛋白质动态对接预测](https://hyper.ai/cn/news/34894)**
+### **42. [几何深度生成模型 DynamicBind，实现蛋白质动态对接预测](https://hyper.ai/cn/news/34894)**
 * **中文解读：** [https://hyper.ai/cn/news/34894](https://hyper.ai/cn/news/34894)
 
 * **科研团队：** 上海交通大学郑双佳课题组、星药科技、中山大学药学院、美国莱斯大学
@@ -686,7 +688,7 @@
 * **发布期刊：** Nature Communications, 2024.2
 
 * **论文链接：** [DynamicBind: predicting ligand-specific protein-ligand complex structure with a deep equivariant generative model](https://www.nature.com/articles/s41467-024-45461-2)
-### **44. [药物研发大语言模型 Y-Mol，性能全面领先 LLaMA2](https://hyper.ai/cn/news/35572)**
+### **43. [药物研发大语言模型 Y-Mol，性能全面领先 LLaMA2](https://hyper.ai/cn/news/35572)**
 * **中文解读：** [https://hyper.ai/cn/news/35572](https://hyper.ai/cn/news/35572)
 
 * **科研团队：** 湖南大学、中南大学、湖南师范大学、湘潭大学的研究团队
@@ -696,7 +698,7 @@
 * **发布期刊：**  arxiv, 2024.10
 
 * **论文链接：** [Y-Mol: A Multiscale Biomedical Knowledge-Guided Large Language Model for Drug Development](https://doi.org/10.48550/arXiv.2410.11550)
-### **45. [通用分子逆折叠模型 UniIF，对 AlphaFold 3 形成进一步补充](https://hyper.ai/cn/news/35781)**
+### **44. [通用分子逆折叠模型 UniIF，对 AlphaFold 3 形成进一步补充](https://hyper.ai/cn/news/35781)**
 * **中文解读：** [https://hyper.ai/cn/news/35781](https://hyper.ai/cn/news/35781)
 
 * **科研团队：** 西湖大学未来产业研究中心团队
@@ -705,7 +707,7 @@
 * **发布期刊：**  NeurIPS 2024, 2024.5
 
 * **论文链接：** [UniIF: Unified Molecule Inverse Folding](https://arxiv.org/abs/2405.18968 )
-### **46. [预训练蛋白质语言模型 ProSST，更有效地整合蛋白质结构信息](https://hyper.ai/cn/news/35874)**
+### **45. [预训练蛋白质语言模型 ProSST，更有效地整合蛋白质结构信息](https://hyper.ai/cn/news/35874)**
 * **中文解读：** [https://hyper.ai/cn/news/35874](https://hyper.ai/cn/news/35874)
 
 * **科研团队：** 海交通大学自然科学研究院/物理天文学院/张江高研院/药学院洪亮教授课题组，上海交大助理研究员周冰心，联合上海人工智能实验室青年研究员谈攀
@@ -714,15 +716,8 @@
 * **发布期刊：**  NeurIPS 2024, 2024.05
 
 * **论文链接：** [ProSST: Protein Language Modeling with Quantized Structure and Disentangled Attention](https://neurips.cc/virtual/2024/poster/96656)
-### **47. [非侵入式大脑解码新框架 fMRI，为脑机接口和认知模型发展奠定基础](https://hyper.ai/cn/news/36023)**
-* **中文解读：** [https://hyper.ai/cn/news/36023](https://hyper.ai/cn/news/36023)
 
-* **科研团队：** 中国科学院自动化研究所曾毅教授团队
-* **相关研究：**  多模态集成框架、Natural Scenes Dataset 数据集、COCO 数据集、Variational Autoencoder (VAE) 和 CLIP 嵌入进行特征对齐、3D fMRI 预处理器、fMRI 特征提取器、多模态 LLMs。解决大脑活动的视觉重建问题
-* **发布期刊：**  NeurIPS 2024, 2024.10
-
-* **论文链接：** [Neuro-Vision to Language: Enhancing Brain Recording-based Visual Reconstruction and Language Interaction](https://nips.cc/virtual/2024/poster/93607)
-### **48. [大环肽结合物框架 RFpeptides，为不可成药蛋白质提供新可能性](https://hyper.ai/cn/news/36150)**
+### **46. [大环肽结合物框架 RFpeptides，为不可成药蛋白质提供新可能性](https://hyper.ai/cn/news/36150)**
 * **中文解读：** [https://hyper.ai/cn/news/36150](https://hyper.ai/cn/news/36150)
 
 * **科研团队：** 华盛顿蛋白质研究所所长 David Baker 团队
@@ -730,7 +725,7 @@
 * **发布期刊：** bioRxiv, 2024.11
 
 * **论文链接：** [Accurate de novo design of high-affinity protein binding macrocycles using deep learning](https://doi.org/10.1101/2024.11.18.622547)
-### **49. [基因组基础模型 Evo，实现从分子到基因组尺度的预测与生成](https://hyper.ai/cn/news/36266)**
+### **47. [基因组基础模型 Evo，实现从分子到基因组尺度的预测与生成](https://hyper.ai/cn/news/36266)**
 * **中文解读：** [https://hyper.ai/cn/news/36266](https://hyper.ai/cn/news/36266)
 
 * **科研团队：** 斯坦福大学联合美国 Arc 研究所 (Arc Institute) 的研究团队
@@ -739,6 +734,60 @@
 * **发布期刊：** Science, 2024.11
 
 * **论文链接：** [Sequence modeling and design from molecular to genome scale with Evo](https://www.science.org/doi/10.1126/science.ado9336)
+### **48. [DigFrag 用 AI 精准分割分子片段，并生成 44 个药物/农药分子](https://hyper.ai/cn/news/36346)**
+* **中文解读：** [https://hyper.ai/cn/news/36346](https://hyper.ai/cn/news/36346)
+
+* **科研团队：** 华中师范大学杨光富教授和王凡副教授团队
+* **相关研究：** MolFrag 平台、PADFrag 数据库、图注意力机制、DigFrag 数字化分段方法、DeepFMPO 模型框架、图神经网络架构、Actor-Critic 模型框架
+
+* **发布期刊：** nature communications chemistry, 2024.11
+
+* **论文链接：** [DigFrag as a digital fragmentation method used for artificial intelligence-based drug design](https://doi.org/10.1038/s42004-024-01346-5)
+### **49. [蛋白质序列大语言模型预训练方法 PRIME](https://hyper.ai/cn/news/36363)**
+* **中文解读：** [https://hyper.ai/cn/news/36363](https://hyper.ai/cn/news/36363)
+
+* **科研团队：** 上海交通大学自然科学研究院/物理天文学院洪亮教授课题组、上海人工智能实验室青年研究员、上海科技大学、中科院杭州医学院
+* **相关研究：** 蛋白质序列大语言模型预训练方法 PRIME、ProteomeAtlas 数据库、UniProt 数据库、ProteinGym 蛋白质突变数据集、MLM 预训练方法，优于目前最先进方法
+
+* **发布期刊：** Science Advances, 2024.11
+
+* **论文链接：** [A General Temperature-Guided Language Model to Design Proteins of Enhanced Stability and Activity](https://www.science.org/doi/10.1126/sciadv.adr2641)
+### **50. [自监督深度学习方法革新冷冻电镜三维重建](https://hyper.ai/cn/news/36645)**
+* **中文解读：** [https://hyper.ai/cn/news/36645](https://hyper.ai/cn/news/36645)
+
+* **科研团队：** 加州大学洛杉矶分校研究团队
+* **相关研究：** 自监督深度学习方法单粒子 IsoNet (spIsoNet) 、单粒子冷冻电镜、生物大分子重建、β-半乳糖苷酶数据集、HA 三聚体倾斜数据集 (EMPIAR-10097)、非倾斜 HA 三聚体数据集 (EMPIAR-10096) 、非对称核糖体数据集 (EMPIAR-10406)、HIV VLP 断层扫描数据集 (EMPIAR-10164)、U-net 网络架构、各向异性校正驱动的错位校正模块，实现结构生物学重大突破
+
+* **发布期刊：** Nature Methods, 2024.11
+
+* **论文链接：** [Overcoming the preferred-orientation problem in cryo-EM with self-supervised deep learning](https://doi.org/10.1038/s41592-024-02505-1)
+### **51. [多模态蛋白质生成方法 PLAID，同时生成序列和全原子蛋白结构](https://hyper.ai/cn/news/36750)**
+* **中文解读：** [https://hyper.ai/cn/news/36750](https://hyper.ai/cn/news/36750)
+
+* **科研团队：** 加州大学伯克利分校 (UC Berkeley) 、微软研究院、Genentech 公司研究团队
+* **相关研究：** 多模态蛋白质生成方法 PLAID (Protein Latent Induced Diffusion)、Pfam 数据库、ESMFold 潜在空间、潜在扩散训练、DiT 块架构、 Diffusion Transformer (DiT)、ESMFold 模型
+
+* **发布期刊：** ICLR 2025, 2024.12
+
+* **论文链接：** [Generating All-Atom Protein Structure from Sequence-Only Training Data](https://www.biorxiv.org/content/10.1101/2024.12.02.626353v1)
+### **52. [基于潜在强化学习的靶向分子优化方法 MOLRL](https://hyper.ai/cn/news/37285)**
+* **中文解读：** [https://hyper.ai/cn/news/37285](https://hyper.ai/cn/news/37285)
+
+* **科研团队：** 生命科学公司 Cellarity 和英伟达的研究人员
+* **相关研究：** 新颖的基于潜在强化学习的靶向分子优化方法 MOLRL、药物发现相关任务、近端策略优化 (PPO) 方法、变分自编码器 (VAE) 、自编码器 (MolMIM)，成功率可达 100%
+
+* **发布期刊：** ChemRxiv, 2025.1
+
+* **论文链接：** [Targeted Molecular Generation With Latent Reinforcement Learning](https://go.hyper.ai/H4JhR)
+### **53. [病毒变异驱动力预测框架 E2VD，预测新冠/艾滋病/流感病毒进化方向](https://hyper.ai/cn/news/37405)**
+* **中文解读：** [https://hyper.ai/cn/news/37405](https://hyper.ai/cn/news/37405)
+
+* **科研团队：** 北京大学信息工程学院田永鸿教授、陈杰副教授，广州国家实验室周鹏研究员指导博士生聂志伟、硕士生刘旭东
+* **相关研究：** 病毒变异驱动力预测框架 E2VD、 UniRef90 数据集、开源深度突变扫描数据集、蛋白质序列编码、局部-全局相互作用依赖融合 (Local-global dependence coupling) 和多任务焦点学习 (Multi-task focal learning)，预测精度提升 67%
+
+* **发布期刊：** Nature Machine Intelligence, 2025.1
+
+* **论文链接：** [A unified evolution-driven deep learning framework for virus variation driver prediction](https://www.nature.com/articles/s42256-024-00966-9)
 
 ## **AI+   医疗健康：AI+Healthcare**
 
@@ -916,7 +965,7 @@
 
 * **相关研究：** 特征选择方法、机器学习分类器、五倍交叉验证、多准则决策理论、融合 20 个基础分类模型、识别卵巢癌的准确率优于 CA125 和 HE4  等传统生物标志物
 
-* **发布期刊：** ARTICLES, 2024.03
+* **发布期刊：** The Lancet Digital health, 2024.05
 
 * **论文链接：** [Artificial intelligence-based models enabling accurate diagnosis ofovarian cancer using laboratory tests in China: a multicentre,retrospective cohort study](https://www.thelancet.com/journals/landig/article/PIIS2589-7500(23)00245-5/fulltext)
 
@@ -926,6 +975,8 @@
 * **科研团队：** Google 研究团队
 
 * **相关研究：** 机器学习、HEAL (The health equity framework) 框架、逻辑回归分析、交叉性分析、健康公平
+* **发布期刊：** EClinicalMedicine, 2024.04
+* **论文链接：** [Health equity assessment of machine learning performance (HEAL): a framework and dermatology AI model case study](https://www.thelancet.com/journals/eclinm/article/PIIS2589-5370(24)00058-0/fulltext)
 
 ### **18. [借鉴语义分割，开发空间转录组语义注释工具 Pianno](https://hyper.ai/news/31573)**
 * **中文解读：** [https://hyper.ai/news/31573](https://hyper.ai/news/31573)
@@ -945,7 +996,7 @@
 
 * **相关研究：** UniFMIR 模型、多头模块、特征增强模块、多尾模块、Swin Transformer、自适应矩估计、深度学习、SR 模型、单图像超分辨率模型、U-Net
 
-* **发布期刊：**Nature Methods, 2024.04
+* **发布期刊：** Nature Methods, 2024.04
 
 * **论文链接：** [Pretraining a foundation model for generalizable fluorescence microscopy-based image restoration](https://www.nature.com/articles/s41592-024-02244-3)
 
@@ -956,7 +1007,7 @@
 
 * **相关研究：** 深度学习系统、ST 数据集、integrated graph 和图深度学习的模型、卷积神经网络和图神经网络、外部测试集 MCO-CRC、空间基因表达预测模型、super-patch graph 生存模型、H&E 染色组织学图像 (H&E-stained histological image) 预处理、IGI-DL 模型
 
-* **发布期刊：**Cell Reports Medicine, 2024.05
+* **发布期刊：** Cell Reports Medicine, 2024.05
 
 * **论文链接：** [Harnessing TME depicted by histological images to improve cancer prognosis through a deep learning system](https://www.cell.com/cell-reports-medicine/fulltext/S2666-3791(24)00205-2 )
 
@@ -1062,7 +1113,7 @@
 
 * **相关研究：** 「伪配对」(Pseudo-Pairs) 技术、MIMIC-CXR 2.0.0 数据集、BIMCV 数据集、预训练 UniMedI 框架、ViT-B/16 视觉编码器 、BioClinicalBERT 文本编码器 、VL (Vision-Language) 对比学习、辅助任务设计、UniMiss 医学自我监督表达学习框架
 
-* **发布期刊：** ECCV 2024
+* **发布期刊：** ECCV, 2024.7
 
 * **论文链接：** [Unified Medical Image Pre-training in Language-Guided Common Semantic Space](https://eccv.ecva.net/virtual/2024/poster/1165)
 ### **31. [多语言医学大模型 MMed-Llama 3，更加适配医疗应用场景](https://hyper.ai/cn/news/35242)**
@@ -1091,7 +1142,7 @@
 * **科研团队：** 上海人工智能实验室、华盛顿大学、莫纳什大学、华东师范大学
 
 * **相关研究：**  GMAI-MMBench 基准、迄今为止最全面的且开源的通用医疗 AI 基准。评估医疗领域大型视觉语言模型的有效性
-* **发布期刊：** arXiv, 2024.8
+* **发布期刊：** NeurIPS 2024, 2024.8
 
 * **论文链接：** [GMAI-MMBench: A Comprehensive Multimodal Evaluation Benchmark Towards General Medical AI](https://arxiv.org/abs/2408.03361v7)
 ### **34. [新型时间序列预测方法 CGS-Mask，揭秘患者存活率关键指标](https://hyper.ai/cn/news/36192)**
@@ -1104,6 +1155,38 @@
 * **发布期刊：** Proceedings of the 38th AAAI Conference on Artificial Intelligence (AAAI’24), 2024.3
 
 * **论文链接：** [CGS-Mask: Making Time Series Predictions Intuitive for All](https://ojs.aaai.org/index.php/AAAI/article/view/29325)
+### **35. [非侵入式大脑解码新框架 fMRI，为脑机接口和认知模型发展奠定基础](https://hyper.ai/cn/news/36023)**
+* **中文解读：** [https://hyper.ai/cn/news/36023](https://hyper.ai/cn/news/36023)
+
+* **科研团队：** 中国科学院自动化研究所曾毅教授团队
+* **相关研究：**  多模态集成框架、Natural Scenes Dataset 数据集、COCO 数据集、Variational Autoencoder (VAE) 和 CLIP 嵌入进行特征对齐、3D fMRI 预处理器、fMRI 特征提取器、多模态 LLMs。解决大脑活动的视觉重建问题
+* **发布期刊：**  NeurIPS 2024, 2024.10
+
+* **论文链接：** [Neuro-Vision to Language: Enhancing Brain Recording-based Visual Reconstruction and Language Interaction](https://nips.cc/virtual/2024/poster/93607)
+### **36. [医学图像分割模型 M2CF-Net，提高干燥综合征诊断准确性](https://hyper.ai/cn/news/36700)**
+* **中文解读：** [https://hyper.ai/cn/news/36700](https://hyper.ai/cn/news/36700)
+
+* **科研团队：** 华中科技大学凃巍教授、陆枫教授等
+* **相关研究：**  医学图像分割模型 M2CF-Net、小唾液腺病理切片数据集、感兴趣区域 (Regions of Interest, ROI) 提取、染色标准化 (Stain Normalization)、图像分块 (WSl Patching) 、Vahadane 算法、基于 Patch 的训练方法、M2CF-Net 模型，针对超大规模病理图像分析
+* **发布期刊：**  2023 IEEE International Conference on Medical Artificial Intelligence (MedAI), 2023
+
+* **论文链接：** [M2CF-Net: A Multi-Resolution and Multi-Scale Cross Fusion Network for Segmenting Pathology Lesion of the Focal Lymphocytic Sialadenitis](https://doi.ieeecomputersociety.org/10.1109/MedAI59581.2023.00063)
+### **37. [BSAFusion 可实现多模态医学图像对齐与融合](https://hyper.ai/cn/news/37104)**
+* **中文解读：** [https://hyper.ai/cn/news/37104](https://hyper.ai/cn/news/37104)
+
+* **科研团队：** 昆明理工大学信息工程与自动化学院李华锋、张亚飞、苏大勇团队、中国海洋大学信息科学与工程学部计算机科学与技术学院蔡青
+* **相关研究：**  医学影像处理、双向逐步特征对齐 (BSFA) 的未对齐医学图像融合方法、CT-MRI 数据集、 PET-MRI 数据集、SPECT-MRI 数据集、深度学习、计算机视觉、医学图像处理、多模态医学图像融合
+* **发布期刊：** AAAI 2025, 2024.11
+
+* **论文链接：** [BSAFusion: A Bidirectional Stepwise Feature Alignment Network for Unaligned Medical Image Fusion](https://arxiv.org/abs/2412.08050)
+### **38. [多 Agent 大语言模型框架 KG4Diagnosis 助力诊断 362 种常见疾病](https://hyper.ai/cn/news/37208)**
+* **中文解读：** [https://hyper.ai/cn/news/37208](https://hyper.ai/cn/news/37208)
+
+* **科研团队：** 华威大学、克兰菲尔德大学、剑桥大学、牛津大学的研究团队
+* **相关研究：**  KG4Diagnosis、分层多智能体框架、自动化医疗知识图谱的构建，诊断，治疗和推理、全科医生 (general practitioner) 大语言模型 (GPLLM) 、多个领域特定的专家大语言模型 (Consultant-LLMs)，可自动化构建医疗知识图谱
+* **发布期刊：**  AAAI-25 Bridge Program, 2024.12
+
+* **论文链接：** [KG4Diagnosis: A Hierarchical Multi-Agent LLM Framework with Knowledge Graph Enhancement for Medical Diagnosis](https://arxiv.org/abs/2412.16833)
 ## **AI+ 材料化学：AI+Materials Chemistry**
 
 ### **1. [高通量计算框架 33 分钟生成 12 万种新型 MOFs 候选材料](https://hyper.ai/news/30269)**
@@ -1380,6 +1463,15 @@
 * **发布期刊：** NeurIPS 2024, 2024.10
 
 * **论文链接：** [FlowLLM: Flow Matching for Material Generation with Large Language Models as Base Distributions](https://arxiv.org/pdf/2410.23405)
+### **27. [用主动学习识别 1.4 万个高熵氧化物，成功筛选 4 种高活性析氢催化剂](https://hyper.ai/cn/news/36352)**
+* **中文解读：** [https://hyper.ai/cn/news/36352](https://hyper.ai/cn/news/36352)
+
+* **科研团队：** 清华大学化学系王训团队、上海交通大学化学系吴量、中国科学院高能物理研究所储胜启、美国普渡大学数学系林光、美国杜克大学生物工程系向衍等
+* **相关研究：**  主动学习 (AL) 策略、包含 14 种过渡金属的附加库、主动学习方法、Kennard-Stone 采样方法、X 射线衍射 (XRD)、CrMnCoNiCu 催化剂
+* **发布期刊：** Journal of the American Chemical Society, 2024.10
+
+* **论文链接：** [Active Learning Guided Discovery of High Entropy Oxides Featuring High H2‑production](https://pubs.acs.org/doi/10.1021/jacs.4c06272)
+
 ## **AI+动植物科学：AI+Zoology-Botany**
 
 ### **1. [SBeA 基于少样本学习框架进行动物社会行为分析](https://hyper.ai/news/29353)**
@@ -1393,8 +1485,8 @@
 
 * **论文链接：** [Multi-animal 3D social pose estimation, identification and behaviour embedding with a few-shot learning framework](https://www.nature.com/articles/s42256-023-00776-5)
 
-### **2. [基于孪生网络的深度学习方法，自动捕捉胚胎发育过程](https://hyper.ai/news/28787)**
-* **中文解读：** [https://hyper.ai/news/28787](https://hyper.ai/news/28787)
+### **2. [基于孪生网络的深度学习方法，自动捕捉胚胎发育过程](https://hyper.ai/cn/news/28419)**
+* **中文解读：** [https://hyper.ai/news/28787](https://hyper.ai/cn/news/28419)
 
 * **科研团队：** 系统生物学家 Patrick Müller 及康斯坦茨大学研究团队
 
@@ -1766,6 +1858,27 @@
 * **发布期刊：** ACL 2024, 2024.05
 
 * **论文链接：** [OceanGPT: A Large Language Model for Ocean Science Tasks](https://arxiv.org/abs/2310.02031)
+### **10. [AI 预测预测全球变暖状况](https://hyper.ai/cn/news/36778)**
+* **中文解读：** [https://hyper.ai/cn/news/36778](https://hyper.ai/cn/news/36778)
+
+* **科研团队：** 斯坦福大学、科罗拉多州立大学与苏黎世联邦理工学院的联合研究团队
+
+* **相关研究：** 人工智能卷积神经网络系统、全球气候模型、迁移学习、针对碳排放持续增加的情况进行预测、验证不同历史时期预测框架的准确性，AI 预测最高温变化破纪录可能性达 90%
+
+* **发布期刊：** Geophysical Research Letters, 2024.12
+
+* **论文链接：** [Data-Driven Predictions of Peak Warming Under Rapid Decarbonization](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2024GL111832)
+### **11. [GeoAI 新模型，解释青藏高原地表热流分布](https://hyper.ai/cn/news/36501)**
+
+* **中文解读：** [https://hyper.ai/cn/news/36501](https://hyper.ai/cn/news/36501)
+
+* **科研团队：** 浙江大学地球科学学院
+
+* **相关研究：** 空间智能方法—具有增强可解释性的地理神经网络加权回归模型 (EI-GNNWR)、EI-GNNWR 模型、地表热流数据集、NGHF 陆地热流数据集、中国大陆地区地表热流数据集、SHAP 值计算方法、端梯度提升模型、全连接神经网络模型、普通线性回归模型、地理加权回归模型
+
+* **发布期刊：** Journal of Geophysical Research: Solid Earth, 2024.10
+
+* **论文链接：** [The Distribution of Surface Heat Flow on the Tibetan Plateau Revealed by Data‐Driven Methods](https://doi.org/10.1029/2023JB028491)
 
 ## **AI4S 政策解读：AI4S Policy**
 ### **1. [科技部出台政策防范学术界 AI 枪手](https://hyper.ai/news/29228)**
@@ -2010,3 +2123,25 @@ An Empirical Study on Werewolf](https://arxiv.org/pdf/2309.04658.pdf)
 * **发布期刊：** IEEE Transactions on Visualization and Computer Graphics, 2024
 
 * **论文链接：** [MSEmbGAN: Multi-Stitch Embroidery Synthesis via Region-Aware Texture Generation](https://csai.wtu.edu.cn/TVCG01/index.html)
+### **22. [快速自动扫描套件 FAST 高效获取样本信息](https://hyper.ai/news/28100)**
+
+* **中文解读：** [https://hyper.ai/news/28100](https://hyper.ai/news/28100)
+
+* **科研团队：** 美国阿贡国家实验室的研究团队
+
+* **相关研究：** SLADS-Net 方法、路径优化技术。优先识别异质性区域、准确复制全扫描图像中所有主要特征
+
+* **发布期刊：** Nature Communications, 2023.09
+
+* **论文链接：** [Demonstration of an AI-driven workflow for autonomous high-resolution scanning microscopy](https://www.nature.com/articles/s41467-023-40339-1)
+### **23. [人口动态基础模型 PDFM 已开源，精准预测美国失业率和贫困率](https://hyper.ai/cn/news/36380)**
+
+* **中文解读：** [https://hyper.ai/cn/news/36380](https://hyper.ai/cn/news/36380)
+
+* **科研团队：** 谷歌
+
+* **相关研究：** 人口动态基础模型、预测失业率和贫困率、解耦嵌入架构、使用 PDFM 增强最先进的预测基础模型 TimesFM、聚合搜索趋势数据集、地图数据集、繁忙度数据集、天气与空气质量、遥感数据、图神经网络 (GNN)，可增强现有地理空间模型
+
+* **发布期刊：** arXiv, 2024.12
+
+* **论文链接：** [General Geospatial Inference with a Population Dynamics Foundation Model](https://arxiv.org/abs/2411.07207)
