@@ -55,6 +55,9 @@
   - [**51. 多模态蛋白质生成方法 PLAID，同时生成序列和全原子蛋白结构**](#51-多模态蛋白质生成方法-plaid同时生成序列和全原子蛋白结构)
   - [**52. 基于潜在强化学习的靶向分子优化方法 MOLRL**](#52-基于潜在强化学习的靶向分子优化方法-molrl)
   - [**53. 病毒变异驱动力预测框架 E2VD，预测新冠/艾滋病/流感病毒进化方向**](#53-病毒变异驱动力预测框架-e2vd预测新冠艾滋病流感病毒进化方向)
+  - [**54. 医学语言模型 MedFound，推理能力接近专家医师**](#54-医学语言模型-medfound推理能力接近专家医师)
+  - [**55. 4D 扩散模型 AlphaFolding，填补蛋白质动态结构预测空白**](#55-4d-扩散模型-alphafolding填补蛋白质动态结构预测空白)
+  - [**56. 可设计短蛋白质的 PepPrCLIP 流程，有望开发癌症新疗法**](#56-可设计短蛋白质的-pepprclip-流程有望开发癌症新疗法)
 - [**AI+   医疗健康：AI+Healthcare**](#ai---医疗健康aihealthcare)
   - [**1. 深度学习系统 DeepDR Plus 用眼底图像预测糖尿病视网膜病变**](#1-深度学习系统-deepdr-plus-用眼底图像预测糖尿病视网膜病变)
   - [**2. 逻辑回归模型分析高绿色景观指数可降低 MetS 风险**](#2-逻辑回归模型分析高绿色景观指数可降低-mets-风险)
@@ -94,6 +97,9 @@
   - [**36. 医学图像分割模型 M2CF-Net，提高干燥综合征诊断准确性**](#36-医学图像分割模型-m2cf-net提高干燥综合征诊断准确性)
   - [**37. BSAFusion 可实现多模态医学图像对齐与融合**](#37-bsafusion-可实现多模态医学图像对齐与融合)
   - [**38. 多 Agent 大语言模型框架 KG4Diagnosis 助力诊断 362 种常见疾病**](#38-多-agent-大语言模型框架-kg4diagnosis-助力诊断-362-种常见疾病)
+  - [**39. 图像分割模型 ConDSeg，解决医学图像分割软边界与共现难题**](#39-图像分割模型-condseg解决医学图像分割软边界与共现难题)
+  - [**40. 医学模型 M³FM，可用于零样本临床诊断，支持疾病报告和疾病分类**](#40-医学模型-mfm可用于零样本临床诊断支持疾病报告和疾病分类)
+  - [**41. 基于深度学习凭颅骨 CT 鉴定性别，赶超人类法医**](#41-基于深度学习凭颅骨-ct-鉴定性别赶超人类法医)
 - [**AI+ 材料化学：AI+Materials Chemistry**](#ai-材料化学aimaterials-chemistry)
   - [**1. 高通量计算框架 33 分钟生成 12 万种新型 MOFs 候选材料**](#1-高通量计算框架-33-分钟生成-12-万种新型-mofs-候选材料)
   - [**2. 机器学习算法模型筛选 P-SOC 电极材料**](#2-机器学习算法模型筛选-p-soc-电极材料)
@@ -122,6 +128,10 @@
   - [**25. 通过机器学习合成的新型耐火高熵合金，室温延展性极佳**](#25-通过机器学习合成的新型耐火高熵合金室温延展性极佳)
   - [**26. 材料生成模型 FlowLLM，数据集覆盖超 4.5w 种材料**](#26-材料生成模型-flowllm数据集覆盖超-45w-种材料)
   - [**27. 用主动学习识别 1.4 万个高熵氧化物，成功筛选 4 种高活性析氢催化剂**](#27-用主动学习识别-14-万个高熵氧化物成功筛选-4-种高活性析氢催化剂)
+  - [**28. 深度学习模型 BETE-NET，超导材料搜索效率提升 5 倍**](#28-深度学习模型-bete-net超导材料搜索效率提升-5-倍)
+  - [**29. 梯度提升决策树 (GBDT) 技术，进一步提高高熵合金抗氧化性能的高精度预测**](#29-梯度提升决策树-gbdt-技术进一步提高高熵合金抗氧化性能的高精度预测)
+  - [**30. 分子设计 RingFormer 框架，更精准预测有机材料分子光电性能**](#30-分子设计-ringformer-框架更精准预测有机材料分子光电性能)
+  - [**31. 无机逆合成规划方法 Retrieval-Retro，提高无机材料合成的效率和准确性**](#31-无机逆合成规划方法-retrieval-retro提高无机材料合成的效率和准确性)
 - [**AI+动植物科学：AI+Zoology-Botany**](#ai动植物科学aizoology-botany)
   - [**1. SBeA 基于少样本学习框架进行动物社会行为分析**](#1-sbea-基于少样本学习框架进行动物社会行为分析)
   - [**2. 基于孪生网络的深度学习方法，自动捕捉胚胎发育过程**](#2-基于孪生网络的深度学习方法自动捕捉胚胎发育过程)
@@ -192,7 +202,7 @@
   - [**21. 首个多缝线刺绣生成对抗网络模型**](#21-首个多缝线刺绣生成对抗网络模型)
   - [**22. 快速自动扫描套件 FAST 高效获取样本信息**](#22-快速自动扫描套件-fast-高效获取样本信息)
   - [**23. 人口动态基础模型 PDFM 已开源，精准预测美国失业率和贫困率**](#23-人口动态基础模型-pdfm-已开源精准预测美国失业率和贫困率)
-
+  - [**24. 深度学习模型 CatGWR，估计空间非平稳性**](#24-深度学习模型-catgwr估计空间非平稳性)
 ## **前言**
 
 从 2020 年开始，以 AlphaFold 为代表的科研项目将 AI for Science (AI4S) 推向了 AI 应用的主舞台。近年来，从生物医药到天文气象、再到材料化学等基础学科，都成为了 AI 的新战场。
@@ -788,7 +798,32 @@
 * **发布期刊：** Nature Machine Intelligence, 2025.1
 
 * **论文链接：** [A unified evolution-driven deep learning framework for virus variation driver prediction](https://www.nature.com/articles/s42256-024-00966-9)
+### **54. [医学语言模型 MedFound，推理能力接近专家医师](https://hyper.ai/cn/news/37646)**
+* **中文解读：** [https://hyper.ai/cn/news/37646](https://hyper.ai/cn/news/37646)
 
+* **科研团队：** 北京邮电大学王光宇教授、北京大学第三医院宋纯理教授、三峡大学杨简教授组成的医工交叉团队
+* **相关研究：** 大语言模型 BLOOM-176B、医学语料数据集 MedCorpus、大语言模型 MedFound-DX、思维链方法、偏好对齐框架、MedDX-FT 数据集、MedDX-Bench 数据集
+
+* **发布期刊：** Nature Medicine, 2025.1
+
+* **论文链接：** [A generalist medical language model for disease diagnosis assistance](https://www.nature.com/articles/s41591-024-03416-6)
+### **55. [4D 扩散模型 AlphaFolding，填补蛋白质动态结构预测空白](https://hyper.ai/cn/news/37697)**
+* **中文解读：** [https://hyper.ai/cn/news/37697](https://hyper.ai/cn/news/37697)
+
+* **科研团队：** 复旦大学、上海科学智能研究院的朱思语及漆远教授团队、联合南京大学姚遥教授
+* **相关研究：** 4D 扩散模型 AlphaFolding、分子动力学模拟数据、动态蛋白质结构、结构生物学、Distributional Graphformer (DiG) 深度学习框架、ATLAS 数据集
+
+* **发布期刊：** arXiv, 2024.12
+
+* **论文链接：** [4D Diffusion for Dynamic Protein Structure Prediction with Reference and Motion Guidance](https://arxiv.org/abs/2408.12419)
+### **56. [可设计短蛋白质的 PepPrCLIP 流程，有望开发癌症新疗法](https://hyper.ai/cn/news/37912)**
+* **中文解读：** [https://hyper.ai/cn/news/37912](https://hyper.ai/cn/news/37912)
+
+* **科研团队：** 杜克大学生物医学工程系研究团队
+* **相关研究：** ESM-2 蛋白语言模型、ESM-2-650M 模型、PepPrCLIP 流程、高斯分布、氨基酸序列
+* **发布期刊：** Science Advances, 2025.1
+
+* **论文链接：** [De novo design of peptide binders to conformationally diverse targets with contrastive language modeling](https://www.science.org/doi/10.1126/sciadv.adr8638)
 ## **AI+   医疗健康：AI+Healthcare**
 
 ### **1. [深度学习系统 DeepDR Plus 用眼底图像预测糖尿病视网膜病变](https://hyper.ai/news/29769)**
@@ -1187,6 +1222,30 @@
 * **发布期刊：**  AAAI-25 Bridge Program, 2024.12
 
 * **论文链接：** [KG4Diagnosis: A Hierarchical Multi-Agent LLM Framework with Knowledge Graph Enhancement for Medical Diagnosis](https://arxiv.org/abs/2412.16833)
+### **39. [图像分割模型 ConDSeg，解决医学图像分割软边界与共现难题](https://hyper.ai/cn/news/37794)**
+* **中文解读：** [https://hyper.ai/cn/news/37794](https://hyper.ai/cn/news/37794)
+
+* **科研团队：** 中国地质大学团队、百度
+* **相关研究：**  对比度驱动医学图像分割框架 ConDSeg、一致性强化训练策略、语义信息解耦模块、对比度驱动特征聚合模块、尺寸感知解码器、自动化图像分割、边界约束网络 BCNet、Kvasir-SEG 数据集、医学图像分割
+* **发布期刊：** The 39th Annual AAAI Conference on Artificial Intelligence, AAAI 2025, 2024.12
+
+* **论文链接：** [ConDSeg: A General Medical Image Segmentation Framework via Contrast-Driven Feature Enhancement](https://arxiv.org/abs/2412.08345)
+### **40. [医学模型 M³FM，可用于零样本临床诊断，支持疾病报告和疾病分类](https://hyper.ai/cn/news/37924)**
+* **中文解读：** [https://hyper.ai/cn/news/37924](https://hyper.ai/cn/news/37924)
+
+* **科研团队：** 牛津大学、罗切斯特大学、亚马逊团队，西湖大学医学人工智能实验室郑冶枫博士、腾讯优图实验室天衍研究中心负责人吴贤博士
+* **相关研究：**  零样本临床诊断、医学影像、CLIP 模型、M³FM 框架、MultiMedCLIP 模块、MultiMedLM 模块、MIMC-CXR 数据集、COVID-19-CT-CXR 数据集、IU-Xray 、 COVID-19 CT 、 COV-CTR 、深圳结核病数据集、 COVID-CXR 、 NIH ChestX-ray 、 CheXpert 、 RSNA 肺炎、SIIM-ACR 肺气肿
+* **发布期刊：** npj Digital Medicine, 2025.2
+
+* **论文链接：** [A multimodal multidomain multilingual medical foundation model for zero shot clinical diagnosis](https://www.nature.com/articles/s41746-024-01339-7)
+### **41. [基于深度学习凭颅骨 CT 鉴定性别，赶超人类法医](https://hyper.ai/cn/news/38024)**
+* **中文解读：** [https://hyper.ai/cn/news/38024](https://hyper.ai/cn/news/38024)
+
+* **科研团队：** 澳大利亚西澳大学、新南威尔士大学、印度尼西亚哈萨努丁大学团队
+* **相关研究：** 基于深度学习的自动化框架、颅骨性别鉴定、颅骨 CT 扫描、网络配置、法医人类学
+* **发布期刊：** Scientific Reports, 2024.12
+
+* **论文链接：** [Deep learning versus human assessors: forensic sex estimation from three-dimensional computed tomography scans](https://www.nature.com/articles/s41598-024-81718-y)
 ## **AI+ 材料化学：AI+Materials Chemistry**
 
 ### **1. [高通量计算框架 33 分钟生成 12 万种新型 MOFs 候选材料](https://hyper.ai/news/30269)**
@@ -1471,7 +1530,38 @@
 * **发布期刊：** Journal of the American Chemical Society, 2024.10
 
 * **论文链接：** [Active Learning Guided Discovery of High Entropy Oxides Featuring High H2‑production](https://pubs.acs.org/doi/10.1021/jacs.4c06272)
+### **28. [深度学习模型 BETE-NET，超导材料搜索效率提升 5 倍](https://hyper.ai/cn/news/37658)**
+* **中文解读：** [https://hyper.ai/cn/news/37658](https://hyper.ai/cn/news/37658)
 
+* **科研团队：** 美国佛罗里达大学和田纳西大学研究人员
+* **相关研究：**  深度学习模型 BETE-NET、α²F(ω) 数据集、Eliashberg 谱函数数据集、现代深度学习技术、包含 818 种动态稳定材料的高质量电子-声子计算的全面数据库、双重下降
+* **发布期刊：** npj Computational Materials, 2025.1
+
+* **论文链接：** [Accelerating superconductor discovery through tempered deep learning of the electron-phonon spectral function](https://www.nature.com/articles/s41524-024-01475-4)
+### **29. [梯度提升决策树 (GBDT) 技术，进一步提高高熵合金抗氧化性能的高精度预测](https://hyper.ai/cn/news/37723)**
+* **中文解读：** [https://hyper.ai/cn/news/37723](https://hyper.ai/cn/news/37723)
+
+* **科研团队：** 法国波尔多大学、日本国立材料科学研究所、中国台湾国立清华大学、比利时鲁汶大学、比利时 WEL 研究所的联合研究团队
+* **相关研究：**  梯度提升决策树 (GBDT) 技术、对 RHEAs 和 RCCAs 抗氧化性能的高精度预测、XGBoost 算法、高温材料、高熵合金
+* **发布期刊：** Scripta Materialia, 2025.1
+
+* **论文链接：** [Advancing refractory high entropy alloy development with AI-predictive models for high temperature oxidation resistance](https://doi.org/10.1016/j.scriptamat.2024.116394)
+### **30. [分子设计 RingFormer 框架，更精准预测有机材料分子光电性能](https://hyper.ai/cn/news/37870)**
+* **中文解读：** [https://hyper.ai/cn/news/37870](https://hyper.ai/cn/news/37870)
+
+* **科研团队：** 香港理工大学团队
+* **相关研究：**  分子设计、Transformer 架构、分子光电性能、Clean Energy Project Database (CEPDB) 测试集、有机太阳能电池、图神经网络、RingFormer 框架
+* **发布期刊：** AAAI 2025, 2024.12
+
+* **论文链接：** [RingFormer: A Ring-Enhanced Graph Transformer for Organic Solar Cell Property Prediction](https://doi.org/10.48550/arXiv.2412.09030)
+### **31. [无机逆合成规划方法 Retrieval-Retro，提高无机材料合成的效率和准确性](https://hyper.ai/cn/news/37969)**
+* **中文解读：** [https://hyper.ai/cn/news/37969](https://hyper.ai/cn/news/37969)
+
+* **科研团队：** 韩国化学技术研究所、韩国科学技术院
+* **相关研究：**  无机逆合成规划方法 Retrieval-Retro、卷积变分自编码器率、无机材料、掩码前驱体补全检索器、神经反应能检索器、检索技术、自注意力和交叉注意力机制
+* **发布期刊：** NeurIPS 2024, 2024.10
+
+* **论文链接：** [Retrieval-Retro: Retrieval-based Inorganic Retrosynthesis with Expert Knowledge](https://doi.org/10.48550/arXiv.2410.21341)
 ## **AI+动植物科学：AI+Zoology-Botany**
 
 ### **1. [SBeA 基于少样本学习框架进行动物社会行为分析](https://hyper.ai/news/29353)**
@@ -2145,3 +2235,14 @@ An Empirical Study on Werewolf](https://arxiv.org/pdf/2309.04658.pdf)
 * **发布期刊：** arXiv, 2024.12
 
 * **论文链接：** [General Geospatial Inference with a Population Dynamics Foundation Model](https://arxiv.org/abs/2411.07207)
+### **24. [深度学习模型 CatGWR，估计空间非平稳性](https://hyper.ai/cn/news/38055)**
+
+* **中文解读：** [https://hyper.ai/cn/news/38055](https://hyper.ai/cn/news/38055)
+
+* **科研团队：** 浙江省 GIS 重点实验室
+
+* **相关研究：** 深度学习模型 Context-Attention Geographically Weighted Regression、注意力机制、估计空间非平稳性、CatGWR 模型、模拟实验、预处理模块、放大模块、回归模块
+
+* **发布期刊：** International Journal of Geographical Information Science, 2025.2
+
+* **论文链接：** [Using an attention-based architecture to incorporate context similarity into spatial non-stationarity estimation](https://doi.org/10.1080/13658816.2025.2456556)
