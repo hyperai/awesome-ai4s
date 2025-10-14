@@ -58,6 +58,8 @@
   - [**54. 医学语言模型 MedFound，推理能力接近专家医师**](#54-医学语言模型-medfound推理能力接近专家医师)
   - [**55. 4D 扩散模型 AlphaFolding，填补蛋白质动态结构预测空白**](#55-4d-扩散模型-alphafolding填补蛋白质动态结构预测空白)
   - [**56. 可设计短蛋白质的 PepPrCLIP 流程，有望开发癌症新疗法**](#56-可设计短蛋白质的-pepprclip-流程有望开发癌症新疗法)
+  - [**57. LLM Agent 基准数据集 GenoTEX，自动化基因表达数据分析**](#57-llm-agent-基准数据集-genotex自动化基因表达数据分析)
+  - [**58. 多智能体框架 GenoMAS，实现基因表达数据科学发现**](#58-多智能体框架-genomas实现基因表达数据科学发现)
 - [**AI+   医疗健康：AI+Healthcare**](#ai---医疗健康aihealthcare)
   - [**1. 深度学习系统 DeepDR Plus 用眼底图像预测糖尿病视网膜病变**](#1-深度学习系统-deepdr-plus-用眼底图像预测糖尿病视网膜病变)
   - [**2. 逻辑回归模型分析高绿色景观指数可降低 MetS 风险**](#2-逻辑回归模型分析高绿色景观指数可降低-mets-风险)
@@ -824,6 +826,26 @@
 * **发布期刊：** Science Advances, 2025.1
 
 * **论文链接：** [De novo design of peptide binders to conformationally diverse targets with contrastive language modeling](https://www.science.org/doi/10.1126/sciadv.adr8638)
+### **57. [LLM Agent 基准数据集 GenoTEX，自动化基因表达数据分析](https://liu-hy.github.io/GenoTEX/)**
+* **中文解读：** [https://liu-hy.github.io/GenoTEX/](https://liu-hy.github.io/GenoTEX/)
+
+* **科研团队：** 伊利诺伊大学厄巴纳-香槟分校刘浩阳、王浩汉团队
+
+* **相关研究：** 大语言模型 Agent、GenoTEX 基准数据集、基因表达数据分析、GenoAgent 多智能体框架、多步编程工作流、自我纠正机制、GEO 数据库、TCGA 数据库、专家标注。提供 1,384 个基因-性状关联分析问题、911 个数据集、238K 行分析代码
+
+* **发布期刊：** MLCB 2025 (Oral), 2024.06
+
+* **论文链接：** [GenoTEX: An LLM Agent Benchmark for Automated Gene Expression Data Analysis](https://arxiv.org/abs/2406.15341)
+### **58. [多智能体框架 GenoMAS，实现基因表达数据科学发现](https://liu-hy.github.io/GenoMAS/)**
+* **中文解读：** [https://liu-hy.github.io/GenoMAS/](https://liu-hy.github.io/GenoMAS/)
+
+* **科研团队：** 伊利诺伊大学厄巴纳-香槟分校刘浩阳、王浩汉团队，加州大学圣地亚哥分校李一江
+
+* **相关研究：** 多智能体系统、LLM 驱动的科学家团队、GenoMAS 框架、引导规划机制、六个专业化 Agent、异构 LLM 架构（Claude Sonnet 4、OpenAI o3、Gemini 2.5 Pro）、GenoTEX 基准、代码驱动的基因组学分析。数据预处理的 CSC 达到 89.13%、基因识别的 F₁ 达到 60.48%，相比前沿方法分别提升 10.61% 和 16.85%
+
+* **发布期刊：** arXiv, 2025.07
+
+* **论文链接：** [GenoMAS: A Multi-Agent Framework for Scientific Discovery via Code-Driven Gene Expression Analysis](https://arxiv.org/abs/2507.21035)
 ## **AI+   医疗健康：AI+Healthcare**
 
 ### **1. [深度学习系统 DeepDR Plus 用眼底图像预测糖尿病视网膜病变](https://hyper.ai/news/29769)**
