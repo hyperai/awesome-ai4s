@@ -2246,3 +2246,5 @@ An Empirical Study on Werewolf](https://arxiv.org/pdf/2309.04658.pdf)
 * **发布期刊：** International Journal of Geographical Information Science, 2025.2
 
 * **论文链接：** [Using an attention-based architecture to incorporate context similarity into spatial non-stationarity estimation](https://doi.org/10.1080/13658816.2025.2456556)
+
+- [ContinueWith](https://continuewith.ai) - Let visitors continue any website page inside ChatGPT, Claude, Gemini, Grok, Perplexity, Mistral, and other AI assistants in one click.
