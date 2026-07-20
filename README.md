@@ -1,2248 +1,2981 @@
 # Awesome AI for Science
-
-- [**前言**](#前言)
-- [**AI+   生物医药：AI+Biopharmaceutical**](#ai---生物医药aibiopharmaceutical)
-  - [**1. AdaDR 在药物重定位方面的性能优于多个基准方法**](#1-adadr-在药物重定位方面的性能优于多个基准方法)
-  - [**2. IMN4NPD 加快分子网络中广泛集群的去复制，对自循环与成对节点提供标注**](#2-imn4npd-加快分子网络中广泛集群的去复制对自循环与成对节点提供标注)
-  - [**3. 深度生成模型 MIDAS 用于单细胞多组学数据马赛克整合**](#3-深度生成模型-midas-用于单细胞多组学数据马赛克整合)
-  - [**4. 基于蛋白质口袋的 3D 分子生成模型——ResGen**](#4-基于蛋白质口袋的-3d-分子生成模型resgen)
-  - [**5. 大模型 + 机器学习高精度预测酶动力学参数**](#5-大模型--机器学习高精度预测酶动力学参数)
-  - [**6. MIT 利用深度学习发现新型抗生素**](#6-mit-利用深度学习发现新型抗生素)
-  - [**7. 神经网络解密 GPCR-G 蛋白偶联选择性**](#7-神经网络解密-gpcr-g-蛋白偶联选择性)
-  - [**8. Macformer 将无环药物菲卓替尼大环化**](#8-macformer-将无环药物菲卓替尼大环化)
-  - [**9. 回归网络 + CGMD，预测百亿种多肽的自组装特性**](#9-回归网络--cgmd预测百亿种多肽的自组装特性)
-  - [**10. 无监督学习预测 7100 万种基因突变**](#10-无监督学习预测-7100-万种基因突变)
-  - [**11. 基于图神经网络 (GNN) 开发气味分析 AI**](#11-基于图神经网络-gnn-开发气味分析-ai)
-  - [**12. 图神经网络筛选安全高效的抗衰老成分**](#12-图神经网络筛选安全高效的抗衰老成分)
-  - [**13. 机器学习量化分析多巴胺的释放量和释放位置**](#13-机器学习量化分析多巴胺的释放量和释放位置)
-  - [**14. 机器学习发现三种抗衰老药物**](#14-机器学习发现三种抗衰老药物)
-  - [**15. 深度学习筛选抑制鲍曼不动杆菌的新型抗生素**](#15-深度学习筛选抑制鲍曼不动杆菌的新型抗生素)
-  - [**16. 机器学习模型应用于预测生物墨水可打印性**](#16-机器学习模型应用于预测生物墨水可打印性)
-  - [**17. 机器学习分化多能干细胞**](#17-机器学习分化多能干细胞)
-  - [**18. 机器学习模型预测长效注射剂药物释放速率**](#18-机器学习模型预测长效注射剂药物释放速率)
-  - [**19. 机器学习算法有效预测植物抗疟性**](#19-机器学习算法有效预测植物抗疟性)
-  - [**20. 机器学习集成方法预测病毒蛋白片段免疫原性**](#20-机器学习集成方法预测病毒蛋白片段免疫原性)
-  - [**21. 用生成式 AI 开发新型抗生素**](#21-用生成式-ai-开发新型抗生素)
-  - [**22. 基于深度学习研发一种自动化、高速、多维的单粒子追踪系统**](#22-基于深度学习研发一种自动化高速多维的单粒子追踪系统)
-  - [**23. ProEnsemble 机器学习框架：优化进化通路启动子组合**](#23-proensemble-机器学习框架优化进化通路启动子组合)
-  - [**24. 微环境感知图神经网络 ProtLGN 指导蛋白质定向进化**](#24-微环境感知图神经网络-protlgn-指导蛋白质定向进化)
-  - [**25. 深度学习模型 AlphaPPIMd：用于蛋白质-蛋白质复合物构象集合探索**](#25-深度学习模型-alphappimd用于蛋白质-蛋白质复合物构象集合探索)
-  - [**26. 新型肿瘤抑制蛋白降解剂 dp53m 可抑制癌细胞增殖**](#26-新型肿瘤抑制蛋白降解剂-dp53m-可抑制癌细胞增殖)
-  - [**27. CVPR 最佳学生论文！多模态模型 BioCLIP 实现零样本学习**](#27-cvpr-最佳学生论文多模态模型-bioclip-实现零样本学习)
-  - [**28. 1 亿参数！细胞大模型 scFoundation 可对 2 万基因同时建模**](#28-1-亿参数细胞大模型-scfoundation-可对-2-万基因同时建模)
-  - [**29. 入选顶会 ICML，蛋白质语言模型 ESM-AA 超越传统 SOTA**](#29-入选顶会-icml蛋白质语言模型-esm-aa-超越传统-sota)
-  - [**30. SPACE 算法登 Cell 子刊！组织模块发现能力领先同类工具**](#30-space-算法登-cell-子刊组织模块发现能力领先同类工具)
-  - [**31. 基于 AlphaFold 实现新突破，揭示蛋白质动态多样性**](#31-基于-alphafold-实现新突破揭示蛋白质动态多样性)
-  - [**32. 基于扩散模型开发 P450 酶从头设计方法 P450Diffusion**](#32-基于扩散模型开发-p450-酶从头设计方法-p450diffusion)
-  - [**33. 将等变图神经网络用于靶蛋白结合位点预测，性能提升 20%**](#33-将等变图神经网络用于靶蛋白结合位点预测性能提升-20)
-  - [**34. 20 个实验数据创造 AI 蛋白质里程碑！FSFP 有效优化蛋白质预训练模型**](#34-20-个实验数据创造-ai-蛋白质里程碑fsfp-有效优化蛋白质预训练模型)
-  - [**35. 可迁移深度学习模型鉴定多类型 RNA 修饰、显著减少计算成本**](#35-可迁移深度学习模型鉴定多类型-rna-修饰显著减少计算成本)
-  - [**36. InstructProtein：利用知识指令对齐蛋白质语言与人类语言**](#36-instructprotein利用知识指令对齐蛋白质语言与人类语言)
-  - [**37. 蛋白质-文本生成框架 ProtT3 实现蛋白质数据与文本信息跨模态解读**](#37-蛋白质-文本生成框架-prott3-实现蛋白质数据与文本信息跨模态解读)
-  - [**38. CPDiffusion 模型，超低成本、全自动设计功能型蛋白质**](#38-cpdiffusion-模型超低成本全自动设计功能型蛋白质)
-  - [**39. 基于蛋白质语言模型和密集检索技术，一种全新的蛋白质同源物检测方法**](#39-基于蛋白质语言模型和密集检索技术一种全新的蛋白质同源物检测方法)
-  - [**40. AlphaProteo 可高效设计靶蛋白结合物，亲和力提高 300 倍**](#40-alphaproteo-可高效设计靶蛋白结合物亲和力提高-300-倍)
-  - [**41. 全新去噪蛋白质语言模型 DePLM，突变效应预测优于 SOTA 模型**](#41-全新去噪蛋白质语言模型-deplm突变效应预测优于-sota-模型)
-  - [**42. 几何深度生成模型 DynamicBind，实现蛋白质动态对接预测**](#42-几何深度生成模型-dynamicbind实现蛋白质动态对接预测)
-  - [**43. 药物研发大语言模型 Y-Mol，性能全面领先 LLaMA2**](#43-药物研发大语言模型-y-mol性能全面领先-llama2)
-  - [**44. 通用分子逆折叠模型 UniIF，对 AlphaFold 3 形成进一步补充**](#44-通用分子逆折叠模型-uniif对-alphafold-3-形成进一步补充)
-  - [**45. 预训练蛋白质语言模型 ProSST，更有效地整合蛋白质结构信息**](#45-预训练蛋白质语言模型-prosst更有效地整合蛋白质结构信息)
-  - [**46. 大环肽结合物框架 RFpeptides，为不可成药蛋白质提供新可能性**](#46-大环肽结合物框架-rfpeptides为不可成药蛋白质提供新可能性)
-  - [**47. 基因组基础模型 Evo，实现从分子到基因组尺度的预测与生成**](#47-基因组基础模型-evo实现从分子到基因组尺度的预测与生成)
-  - [**48. DigFrag 用 AI 精准分割分子片段，并生成 44 个药物/农药分子**](#48-digfrag-用-ai-精准分割分子片段并生成-44-个药物农药分子)
-  - [**49. 蛋白质序列大语言模型预训练方法 PRIME**](#49-蛋白质序列大语言模型预训练方法-prime)
-  - [**50. 自监督深度学习方法革新冷冻电镜三维重建**](#50-自监督深度学习方法革新冷冻电镜三维重建)
-  - [**51. 多模态蛋白质生成方法 PLAID，同时生成序列和全原子蛋白结构**](#51-多模态蛋白质生成方法-plaid同时生成序列和全原子蛋白结构)
-  - [**52. 基于潜在强化学习的靶向分子优化方法 MOLRL**](#52-基于潜在强化学习的靶向分子优化方法-molrl)
-  - [**53. 病毒变异驱动力预测框架 E2VD，预测新冠/艾滋病/流感病毒进化方向**](#53-病毒变异驱动力预测框架-e2vd预测新冠艾滋病流感病毒进化方向)
-  - [**54. 医学语言模型 MedFound，推理能力接近专家医师**](#54-医学语言模型-medfound推理能力接近专家医师)
-  - [**55. 4D 扩散模型 AlphaFolding，填补蛋白质动态结构预测空白**](#55-4d-扩散模型-alphafolding填补蛋白质动态结构预测空白)
-  - [**56. 可设计短蛋白质的 PepPrCLIP 流程，有望开发癌症新疗法**](#56-可设计短蛋白质的-pepprclip-流程有望开发癌症新疗法)
-- [**AI+   医疗健康：AI+Healthcare**](#ai---医疗健康aihealthcare)
-  - [**1. 深度学习系统 DeepDR Plus 用眼底图像预测糖尿病视网膜病变**](#1-深度学习系统-deepdr-plus-用眼底图像预测糖尿病视网膜病变)
-  - [**2. 逻辑回归模型分析高绿色景观指数可降低 MetS 风险**](#2-逻辑回归模型分析高绿色景观指数可降低-mets-风险)
-  - [**3. 深度学习系统助力初级眼科医生的诊断一致性提高 12%**](#3-深度学习系统助力初级眼科医生的诊断一致性提高-12)
-  - [**4. GSP-GCNs 实现帕金森病诊断准确率高达 90.2%**](#4-gsp-gcns-实现帕金森病诊断准确率高达-902)
-  - [**5. 乳腺癌预后评分系统 MIRS**](#5-乳腺癌预后评分系统-mirs)
-  - [**6. 视网膜图像基础模型 RETFound，预测多种系统性疾病**](#6-视网膜图像基础模型-retfound预测多种系统性疾病)
-  - [**7. SVM 优化触觉传感器，盲文识别率达 96.12%**](#7-svm-优化触觉传感器盲文识别率达-9612)
-  - [**8. 中科院基因组所建立开放生物医学成像档案**](#8-中科院基因组所建立开放生物医学成像档案)
-  - [**9. AI Lunit 阅读乳腺 X 光片的准确率与医生相当**](#9-ai-lunit-阅读乳腺-x-光片的准确率与医生相当)
-  - [**10. 特征选择策略检测乳腺癌生物标志物**](#10-特征选择策略检测乳腺癌生物标志物)
-  - [**11. 梯度提升机模型准确预测 BPSD 亚综合征**](#11-梯度提升机模型准确预测-bpsd-亚综合征)
-  - [**12. 机器学习模型预测患者一年内死亡率**](#12-机器学习模型预测患者一年内死亡率)
-  - [**13. AI 新脑机技术让失语患者「开口说话」**](#13-ai-新脑机技术让失语患者开口说话)
-  - [**14. 基于深度学习的胰腺癌人工智能检测**](#14-基于深度学习的胰腺癌人工智能检测)
-  - [**15. 机器学习辅助肺癌筛查的群体有效性**](#15-机器学习辅助肺癌筛查的群体有效性)
-  - [**16. 卵巢癌诊断人工智能融合模型 MCF，输入常规实验室检验数据和年龄即可计算卵巢癌的患病风险**](#16-卵巢癌诊断人工智能融合模型-mcf输入常规实验室检验数据和年龄即可计算卵巢癌的患病风险)
-  - [**17. 谷歌发布 HEAL 架构，4 步评估医学 AI 工具是否公平**](#17-谷歌发布-heal-架构4-步评估医学-ai-工具是否公平)
-  - [**18. 借鉴语义分割，开发空间转录组语义注释工具 Pianno**](#18-借鉴语义分割开发空间转录组语义注释工具-pianno)
-  - [**19. AI 模型 UniFMIR，突破现有荧光显微成像极限**](#19-ai-模型-unifmir突破现有荧光显微成像极限)
-  - [**20. 深度学习系统，提高癌症生存预测准确性**](#20-深度学习系统提高癌症生存预测准确性)
-  - [**21. MemSAM 将「分割一切」模型用于医学视频分割**](#21-memsam-将分割一切模型用于医学视频分割)
-  - [**22. 医学图像分割模型 Medical SAM 2 刷新医学图像分割 SOTA 榜**](#22-医学图像分割模型-medical-sam-2-刷新医学图像分割-sota-榜)
-  - [**23. 机器学习抗击化疗耐药性与肿瘤复发，构筑乳腺癌干细胞的有力防线**](#23-机器学习抗击化疗耐药性与肿瘤复发构筑乳腺癌干细胞的有力防线)
-  - [**24. 糖尿病诊疗的视觉-大语言模型 DeepDR-LLM 登 Nature 子刊**](#24-糖尿病诊疗的视觉-大语言模型-deepdr-llm-登-nature-子刊)
-  - [**25. 水平直逼高级病理学家！清华团队提出 AI 基础模型 ROAM，实现胶质瘤精准诊断**](#25-水平直逼高级病理学家清华团队提出-ai-基础模型-roam实现胶质瘤精准诊断)
-  - [**26. 医学图像分割通用模型 ScribblePrompt，性能优于 SAM**](#26-医学图像分割通用模型-scribbleprompt性能优于-sam)
-  - [**27. 数字孪生脑平台，展现出类似人脑中观测的临界现象与相似认知功能**](#27-数字孪生脑平台展现出类似人脑中观测的临界现象与相似认知功能)
-  - [**28. 自动化大模型对话 Agent 模拟系统，可初诊抑郁症**](#28-自动化大模型对话-agent-模拟系统可初诊抑郁症)
-  - [**29. 深度学习模型 LucaProt，助力 RNA 病毒识别**](#29-深度学习模型-lucaprot助力-rna-病毒识别)
-  - [**30. 医学图像预训练框架 UniMedI，打破医学数据异构化藩篱**](#30-医学图像预训练框架-unimedi打破医学数据异构化藩篱)
-  - [**31. 多语言医学大模型 MMed-Llama 3，更加适配医疗应用场景**](#31-多语言医学大模型-mmed-llama-3更加适配医疗应用场景)
-  - [**32. 胶囊内窥镜图像拼接方法 S2P-Matching，助力胶囊内窥镜图像拼接**](#32-胶囊内窥镜图像拼接方法-s2p-matching助力胶囊内窥镜图像拼接)
-  - [**33. 多模态医疗基准 GMAI-MMBench，含 284 个数据集，覆盖 18 项临床任务**](#33-多模态医疗基准-gmai-mmbench含-284-个数据集覆盖-18-项临床任务)
-  - [**34. 新型时间序列预测方法 CGS-Mask，揭秘患者存活率关键指标**](#34-新型时间序列预测方法-cgs-mask揭秘患者存活率关键指标)
-  - [**35. 非侵入式大脑解码新框架 fMRI，为脑机接口和认知模型发展奠定基础**](#35-非侵入式大脑解码新框架-fmri为脑机接口和认知模型发展奠定基础)
-  - [**36. 医学图像分割模型 M2CF-Net，提高干燥综合征诊断准确性**](#36-医学图像分割模型-m2cf-net提高干燥综合征诊断准确性)
-  - [**37. BSAFusion 可实现多模态医学图像对齐与融合**](#37-bsafusion-可实现多模态医学图像对齐与融合)
-  - [**38. 多 Agent 大语言模型框架 KG4Diagnosis 助力诊断 362 种常见疾病**](#38-多-agent-大语言模型框架-kg4diagnosis-助力诊断-362-种常见疾病)
-  - [**39. 图像分割模型 ConDSeg，解决医学图像分割软边界与共现难题**](#39-图像分割模型-condseg解决医学图像分割软边界与共现难题)
-  - [**40. 医学模型 M³FM，可用于零样本临床诊断，支持疾病报告和疾病分类**](#40-医学模型-mfm可用于零样本临床诊断支持疾病报告和疾病分类)
-  - [**41. 基于深度学习凭颅骨 CT 鉴定性别，赶超人类法医**](#41-基于深度学习凭颅骨-ct-鉴定性别赶超人类法医)
-- [**AI+ 材料化学：AI+Materials Chemistry**](#ai-材料化学aimaterials-chemistry)
-  - [**1. 高通量计算框架 33 分钟生成 12 万种新型 MOFs 候选材料**](#1-高通量计算框架-33-分钟生成-12-万种新型-mofs-候选材料)
-  - [**2. 机器学习算法模型筛选 P-SOC 电极材料**](#2-机器学习算法模型筛选-p-soc-电极材料)
-  - [**3. SEN 机器学习模型，实现高精度的材料性能预测**](#3-sen-机器学习模型实现高精度的材料性能预测)
-  - [**4. 深度学习工具 GNoME 发现 220 万种新晶体**](#4-深度学习工具-gnome-发现-220-万种新晶体)
-  - [**5. 场诱导递归嵌入原子神经网络可准确描述外场强度、方向变化**](#5-场诱导递归嵌入原子神经网络可准确描述外场强度方向变化)
-  - [**6. 机器学习预测多孔材料水吸附等温线**](#6-机器学习预测多孔材料水吸附等温线)
-  - [**7. 利用机器学习优化 BiVO(4) 光阳极的助催化剂**](#7-利用机器学习优化-bivo4-光阳极的助催化剂)
-  - [**8. RetroExplainer 算法基于深度学习进行逆合成预测**](#8-retroexplainer-算法基于深度学习进行逆合成预测)
-  - [**9. 深度神经网络+自然语言处理，开发抗蚀合金**](#9-深度神经网络自然语言处理开发抗蚀合金)
-  - [**10. 深度学习通过表面观察确定材料的内部结构**](#10-深度学习通过表面观察确定材料的内部结构)
-  - [**11. 利用创新 X 射线闪烁体开发 3 种新材料**](#11-利用创新-x-射线闪烁体开发-3-种新材料)
-  - [**12. 半监督学习提取无标签数据中的隐藏信息**](#12-半监督学习提取无标签数据中的隐藏信息)
-  - [**13. 基于自动机器学习进行知识自动提取**](#13-基于自动机器学习进行知识自动提取)
-  - [**14. 一种三维 MOF 材料吸附行为预测的机器学习模型 Uni-MOF**](#14-一种三维-mof-材料吸附行为预测的机器学习模型-uni-mof)
-  - [**15. 微电子加速迈向后摩尔时代！集成 DNN 与纳米薄膜技术，精准分析入射光角度**](#15-微电子加速迈向后摩尔时代集成-dnn-与纳米薄膜技术精准分析入射光角度)
-  - [**16. 重塑锂电池性能边界，基于集成学习提出简化电化学模型**](#16-重塑锂电池性能边界基于集成学习提出简化电化学模型)
-  - [**17. 基于机器学习，最强铁基超导磁体诞生**](#17-基于机器学习最强铁基超导磁体诞生)
-  - [**18. 神经网络替代密度泛函理论！通用材料模型实现超精准预测**](#18-神经网络替代密度泛函理论通用材料模型实现超精准预测)
-  - [**19. 神经网络密度泛函框架打开物质电子结构预测的黑箱**](#19-神经网络密度泛函框架打开物质电子结构预测的黑箱)
-  - [**20. 用神经网络首创全前向智能光计算训练架构，国产光芯片实现重大突破**](#20-用神经网络首创全前向智能光计算训练架构国产光芯片实现重大突破)
-  - [**21. 化学大语言模型 ChemLLM 覆盖 7 百万问答数据，专业能力比肩 GPT-4**](#21-化学大语言模型-chemllm-覆盖-7-百万问答数据专业能力比肩-gpt-4)
-  - [**22. 可晶圆级生产的人工智能自适应微型光谱仪**](#22-可晶圆级生产的人工智能自适应微型光谱仪)
-  - [**23. GNNOpt 模型，识别数百种太阳能电池和量子候选材料**](#23-gnnopt-模型识别数百种太阳能电池和量子候选材料)
-  - [**24. 开源 OMat24 数据集，含 1.1 亿 DFT 计算结果**](#24-开源-omat24-数据集含-11-亿-dft-计算结果)
-  - [**25. 通过机器学习合成的新型耐火高熵合金，室温延展性极佳**](#25-通过机器学习合成的新型耐火高熵合金室温延展性极佳)
-  - [**26. 材料生成模型 FlowLLM，数据集覆盖超 4.5w 种材料**](#26-材料生成模型-flowllm数据集覆盖超-45w-种材料)
-  - [**27. 用主动学习识别 1.4 万个高熵氧化物，成功筛选 4 种高活性析氢催化剂**](#27-用主动学习识别-14-万个高熵氧化物成功筛选-4-种高活性析氢催化剂)
-  - [**28. 深度学习模型 BETE-NET，超导材料搜索效率提升 5 倍**](#28-深度学习模型-bete-net超导材料搜索效率提升-5-倍)
-  - [**29. 梯度提升决策树 (GBDT) 技术，进一步提高高熵合金抗氧化性能的高精度预测**](#29-梯度提升决策树-gbdt-技术进一步提高高熵合金抗氧化性能的高精度预测)
-  - [**30. 分子设计 RingFormer 框架，更精准预测有机材料分子光电性能**](#30-分子设计-ringformer-框架更精准预测有机材料分子光电性能)
-  - [**31. 无机逆合成规划方法 Retrieval-Retro，提高无机材料合成的效率和准确性**](#31-无机逆合成规划方法-retrieval-retro提高无机材料合成的效率和准确性)
-- [**AI+动植物科学：AI+Zoology-Botany**](#ai动植物科学aizoology-botany)
-  - [**1. SBeA 基于少样本学习框架进行动物社会行为分析**](#1-sbea-基于少样本学习框架进行动物社会行为分析)
-  - [**2. 基于孪生网络的深度学习方法，自动捕捉胚胎发育过程**](#2-基于孪生网络的深度学习方法自动捕捉胚胎发育过程)
-  - [**3. 利用无人机采集植物表型数据的系统化流程，预测最佳采收日期**](#3-利用无人机采集植物表型数据的系统化流程预测最佳采收日期)
-  - [**4. AI 相机警报系统准确区分老虎和其他物种**](#4-ai-相机警报系统准确区分老虎和其他物种)
-  - [**5. 利用拉布拉多猎犬数据，对比 3 种模型，发现了影响嗅觉检测犬表现的行为特性**](#5-利用拉布拉多猎犬数据对比-3-种模型发现了影响嗅觉检测犬表现的行为特性)
-  - [**6. 基于人脸识别 ArcFace Classification Head 的多物种图像识别模型**](#6-基于人脸识别-arcface-classification-head-的多物种图像识别模型)
-  - [**7. 利用 Python API 与计算机视觉 API，监测日本的樱花开放情况**](#7-利用-python-api-与计算机视觉-api监测日本的樱花开放情况)
-  - [**8. 基于机器学习的群体遗传方法，揭示葡萄风味的形成机制**](#8-基于机器学习的群体遗传方法揭示葡萄风味的形成机制)
-  - [**9. 综述：借助 AI 更高效地开启生物信息学研究**](#9-综述借助-ai-更高效地开启生物信息学研究)
-  - [**10. BirdFlow 模型准确预测候鸟的飞行路径**](#10-birdflow-模型准确预测候鸟的飞行路径)
-  - [**11. 新的鲸鱼生物声学模型，可识别 8 种鲸类**](#11-新的鲸鱼生物声学模型可识别-8-种鲸类)
-  - [**12. 用机器学习分离抹香鲸发音字母表，高度类似人类语言，信息承载能力更强**](#12-用机器学习分离抹香鲸发音字母表高度类似人类语言信息承载能力更强)
-- [**AI+农林畜牧业：AI+Agriculture-Forestry-Animal husbandry**](#ai农林畜牧业aiagriculture-forestry-animal-husbandry)
-  - [**1. 利用卷积神经网络，对水稻产量进行迅速、准确的统计**](#1-利用卷积神经网络对水稻产量进行迅速准确的统计)
-  - [**2. 通过 YOLOv5 算法，设计监测母猪姿势与猪仔出生的模型**](#2-通过-yolov5-算法设计监测母猪姿势与猪仔出生的模型)
-  - [**3. 结合实验室观测与机器学习，证明番茄与烟草植物在胁迫环境下发出的超声波能在空气中传播**](#3-结合实验室观测与机器学习证明番茄与烟草植物在胁迫环境下发出的超声波能在空气中传播)
-  - [**4. 无人机+ AI 图像分析，检测林业害虫**](#4-无人机-ai-图像分析检测林业害虫)
-  - [**5. 计算机视觉+深度学习开发奶牛跛行检测系统**](#5-计算机视觉深度学习开发奶牛跛行检测系统)
-- [**AI+ 气象学：AI+Meteorology**](#ai-气象学aimeteorology)
-  - [**1. 综述：数据驱动的机器学习天气预报模型**](#1-综述数据驱动的机器学习天气预报模型)
-  - [**2. 综述：从雹暴中心收集数据，利用大模型预测极端天气**](#2-综述从雹暴中心收集数据利用大模型预测极端天气)
-  - [**3. 利用全球风暴解析模拟与机器学习，创建新算法，准确预测极端降水**](#3-利用全球风暴解析模拟与机器学习创建新算法准确预测极端降水)
-  - [**4. 基于随机森林的机器学习模型 CSU-MLP，预测中期恶劣天气**](#4-基于随机森林的机器学习模型-csu-mlp预测中期恶劣天气)
-- [**AI+ 天文学：AI+Astronomy**](#ai-天文学aiastronomy)
-  - [**1. PRIMO 算法学习黑洞周围的光线传播规律，重建出更清晰的黑洞图像**](#1-primo-算法学习黑洞周围的光线传播规律重建出更清晰的黑洞图像)
-  - [**2. 利用模拟数据训练计算机视觉算法，对天文图像进行锐化「还原」**](#2-利用模拟数据训练计算机视觉算法对天文图像进行锐化还原)
-  - [**3. 利用无监督机器学习算法 Astronomaly ，找到了之前为人忽视的异常现象**](#3-利用无监督机器学习算法-astronomaly-找到了之前为人忽视的异常现象)
-  - [**4. 基于机器学习的 CME 识别与参数获取方法**](#4-基于机器学习的-cme-识别与参数获取方法)
-  - [**5. 深度学习发现 107 例中性碳吸收线**](#5-深度学习发现-107-例中性碳吸收线)
-  - [**6. StarFusion 模型实现高空间分辨率图像的预测**](#6-starfusion-模型实现高空间分辨率图像的预测)
-- [**AI+ 自然灾害：AI+Natural Disaster**](#ai-自然灾害ainatural-disaster)
-  - [**1. 机器学习预测未来 40 年的地面沉降风险**](#1-机器学习预测未来-40-年的地面沉降风险)
-  - [**2. 语义分割模型 SCDUNet++ 用于滑坡测绘**](#2-语义分割模型-scdunet-用于滑坡测绘)
-  - [**3. 神经网络将太阳二维图像转为三维重建图像**](#3-神经网络将太阳二维图像转为三维重建图像)
-  - [**4. 可叠加神经网络分析自然灾害中的影响因素**](#4-可叠加神经网络分析自然灾害中的影响因素)
-  - [**5. 利用可解释性 AI ，分析澳大利亚吉普斯兰市的不同地理因素**](#5-利用可解释性-ai-分析澳大利亚吉普斯兰市的不同地理因素)
-  - [**6. 基于机器学习的洪水预报模型**](#6-基于机器学习的洪水预报模型)
-  - [**7. ED-DLSTM实现无监测数据地区洪水预测**](#7-ed-dlstm实现无监测数据地区洪水预测)
-  - [**8. ChloroFormer 模型提前预警海洋藻类爆发**](#8-chloroformer-模型提前预警海洋藻类爆发)
-  - [**9. 首个海洋大语言模型 OceanGPT 入选 ACL 2024！水下具身智能成现实**](#9-首个海洋大语言模型-oceangpt-入选-acl-2024水下具身智能成现实)
-  - [**10. AI 预测预测全球变暖状况**](#10-ai-预测预测全球变暖状况)
-  - [**11. GeoAI 新模型，解释青藏高原地表热流分布**](#11-geoai-新模型解释青藏高原地表热流分布)
-- [**AI4S 政策解读：AI4S Policy**](#ai4s-政策解读ai4s-policy)
-  - [**1. 科技部出台政策防范学术界 AI 枪手**](#1-科技部出台政策防范学术界-ai-枪手)
-  - [**2. 政策：科技部会同自然科学基金委启动「人工智能驱动的科学研究」( AI for Science ) 专项部署工作**](#2-政策科技部会同自然科学基金委启动人工智能驱动的科学研究-ai-for-science--专项部署工作)
-- [**其他：Others**](#其他others)
-  - [**1. TacticAI 足球助手战术布局实用性高达 90%**](#1-tacticai-足球助手战术布局实用性高达-90)
-  - [**2. 去噪扩散模型 SPDiff 实现长程人流移动模拟**](#2-去噪扩散模型-spdiff-实现长程人流移动模拟)
-  - [**3. 智能化科学设施推进科研范式变革**](#3-智能化科学设施推进科研范式变革)
-  - [**4. DeepSymNet 基于监督学习来表示符号表达式**](#4-deepsymnet-基于监督学习来表示符号表达式)
-  - [**5. 大语言模型 ChipNeMo 辅助工程师完成芯片设计**](#5-大语言模型-chipnemo-辅助工程师完成芯片设计)
-  - [**6. AlphaGeometry 可解决几何学问题**](#6-alphageometry-可解决几何学问题)
-  - [**7. 强化学习用于城市空间规划**](#7-强化学习用于城市空间规划)
-  - [**8. ChatArena 框架，与大语言模型一起玩狼人杀**](#8-chatarena-框架与大语言模型一起玩狼人杀)
-  - [**9. 综述：30 位学者合力发表 Nature，10 年回顾解构 AI 如何重塑科研范式**](#9-综述30-位学者合力发表-nature10-年回顾解构-ai-如何重塑科研范式)
-  - [**10. Ithaca 协助金石学家进行文本修复、时间归因和地域归因的工作**](#10-ithaca-协助金石学家进行文本修复时间归因和地域归因的工作)
-  - [**11. AI 在超光学中的正问题及逆问题、基于超表面系统的数据分析**](#11-ai-在超光学中的正问题及逆问题基于超表面系统的数据分析)
-  - [**12. 一种新的地理空间人工智能方法：地理神经网络加权逻辑回归**](#12-一种新的地理空间人工智能方法地理神经网络加权逻辑回归)
-  - [**13. 利用扩散模型生成神经网络参数，将时空少样本学习转变为扩散模型的预训练问题**](#13-利用扩散模型生成神经网络参数将时空少样本学习转变为扩散模型的预训练问题)
-  - [**14. 李飞飞团队 AI4S 最新洞察：16 项创新技术汇总，覆盖生物/材料/医疗/问诊**](#14-李飞飞团队-ai4s-最新洞察16-项创新技术汇总覆盖生物材料医疗问诊)
-  - [**15. 精准预测武汉房价！osp-GNNWR 模型准确描述复杂空间过程和地理现象**](#15-精准预测武汉房价osp-gnnwr-模型准确描述复杂空间过程和地理现象)
-  - [**16. 引入零样本学习，发布针对甲骨文破译优化的条件扩散模型**](#16-引入零样本学习发布针对甲骨文破译优化的条件扩散模型)
-  - [**17. 斯坦福/苹果等 23 所机构发布 DCLM 基准测试，基础模型与 Llama3 8B 表现相当**](#17-斯坦福苹果等-23-所机构发布-dclm-基准测试基础模型与-llama3-8b-表现相当)
-  - [**18. PoCo 解决数据源异构难题，实现机器人多任务灵活执行**](#18-poco-解决数据源异构难题实现机器人多任务灵活执行)
-  - [**19. 含 14 万张图像！甲骨文数据集助力团队摘冠 ACL 最佳论文**](#19-含-14-万张图像甲骨文数据集助力团队摘冠-acl-最佳论文)
-  - [**20. 基于预训练 LLM 提出信道预测方案，GPT-2 赋能无线通信物理层**](#20-基于预训练-llm-提出信道预测方案gpt-2-赋能无线通信物理层)
-  - [**21. 首个多缝线刺绣生成对抗网络模型**](#21-首个多缝线刺绣生成对抗网络模型)
-  - [**22. 快速自动扫描套件 FAST 高效获取样本信息**](#22-快速自动扫描套件-fast-高效获取样本信息)
-  - [**23. 人口动态基础模型 PDFM 已开源，精准预测美国失业率和贫困率**](#23-人口动态基础模型-pdfm-已开源精准预测美国失业率和贫困率)
-  - [**24. 深度学习模型 CatGWR，估计空间非平稳性**](#24-深度学习模型-catgwr估计空间非平稳性)
-## **前言**
-
-从 2020 年开始，以 AlphaFold 为代表的科研项目将 AI for Science (AI4S) 推向了 AI 应用的主舞台。近年来，从生物医药到天文气象、再到材料化学等基础学科，都成为了 AI 的新战场。
-
-随着越来越多的交叉学科人才开始在其研究领域应用机器学习、深度学习等技术进行数据处理、构建模型，加之跨学科研究团队的合作日益加强，AI4S 的能力被更多科研人员所关注到，但却未达到规模化应用的目标。提高相关研究的可复用性、降低技术门槛、提高数据质量等诸多问题亟待解决。
-
-目前，除了高校、科研机构在积极探索 AI4S 外，多国政府及头部科技企业也都关注到了 AI 革新科研的潜力，并进行了相关的政策疏导与布局，可以说 AI4S 已经是大势所趋。
-
-作为最早一批关注到 AI for Science 的社区，「HyperAI超神经」在陪伴行业成长的同时，也乐于将最新的研究进展与成果进行普适化分享，我们希望通过解读前沿论文与政策的方式，令更多团队看到 AI 对于科研的帮助，为 AI for Science 的发展贡献力量。
-
-目前，HyperAI超神经已经解读分享了近 200 篇论文，为了便于大家检索，我们将文章根据学科进行分类，并展示了发表期刊及时间，提取了关键词（研究团队、相关研究、数据集等），大家可以点击题目跳转论文中文解读页面（内含完整论文下载链接）。
-
-本文档将以开源项目的形式呈现，我们将持续更新解读文章，同时也欢迎大家投稿优秀研究成果，如果您所在的团队/课题组有报道需求，可添加微信：神经星星（微信号：Hyperai01）。
-
-## **AI+   生物医药：AI+Biopharmaceutical**
-
-### **1. [AdaDR 在药物重定位方面的性能优于多个基准方法](https://hyper.ai/news/30434)**
-
-* **中文解读：** [https://hyper.ai/news/30434](https://hyper.ai/news/30434)
-
-* **科研团队：** 中南大学李敏研究团队
-
-* **相关研究：** Gdataset 数据集、Cdataset 数据集、Ldataset 数据集、LRSSL 数据集、GCNs 框架、AdaDR
-
-* **发布期刊：** Bioinformatics, 2024.01
-
-* **论文链接：** [Drug repositioning with adaptive graph convolutional networks](https://academic.oup.com/bioinformatics/article/40/1/btad748/7467059 
-)
-
-### **2. [IMN4NPD 加快分子网络中广泛集群的去复制，对自循环与成对节点提供标注](https://hyper.ai/news/30363)**
-
-* **中文解读：** [https://hyper.ai/news/30363](https://hyper.ai/news/30363)
-
-* **科研团队：** 中南大学刘韶研究团队
-
-*  **相关研究：** MS/MS 光谱数据库、Structure 数据库、molDiscovery、NPClassifier、molDiscovery、t-SNE
-
-* **发布期刊：** Analytical Chemistry, 2024.02
-
-* **论文链接：** [IMN4NPD: An Integrated Molecular Networking Workflow for Natural Product Dereplication](https://doi.org/10.1021/acs.analchem.3c04746)
-
-### **3. [深度生成模型 MIDAS 用于单细胞多组学数据马赛克整合](https://hyper.ai/news/29785)**
-
-* **中文解读：** [https://hyper.ai/news/29785](https://hyper.ai/news/29785)
-
-* **科研团队：** 军事医学研究院应晓敏研究团队
-
-* **相关研究：** IPBMC  数据集、dogma-full 数据集、teadog-full 数据集、MMIDAS、self-supervised learning、information-theoretic approaches、深度神经网络、SGVB、单细胞多组学马赛克数据
-
-* **发布期刊：** Nature Biotechnology, 2024.01
-
-* **论文链接：** [Mosaic integration and knowledge transfer of single-cell multimodal data with MIDAS](https://www.nature.com/articles/s41587-023-02040-y)
-
-### **4. [基于蛋白质口袋的 3D 分子生成模型——ResGen](https://hyper.ai/news/29026)**
-
-* **中文解读：** [https://hyper.ai/news/29026](https://hyper.ai/news/29026)
-
-* **科研团队：** 浙大侯廷军研究团队
-
-* **相关研究：** CrossDock2020 数据集、全局自回归、原子自回归、并行多尺度建模、SBMG。比最优技术快 8 倍
-
-* **发布期刊：** Nature Machine Intelligence, 2023.09
-
-* **论文链接：** [ResGen is a pocket-aware 3D molecular generation model based on parallel multiscale modelling](https://www.nature.com/articles/s42256-023-00712-7)
-
-### **5. [大模型 + 机器学习高精度预测酶动力学参数](https://hyper.ai/news/29000)**
-
-* **中文解读：** [https://hyper.ai/news/29000](https://hyper.ai/news/29000)
-
-* **科研团队：** 中科院罗小舟研究团队
-
-* **相关研究：** kcat/Km  数据集、米氏常数数据集、pH 和温度数据集、DLKcat 数据集、UniKP 框架、ProtT5-XL-UniRef50、SMILES Transformer model、集成性模型、随机森林、极端随机树、线性回归模型
-
-* **发布期刊：** Nature Communications, 2023.12
-
-* **论文链接：** [UniKP: a unified framework for the prediction of enzyme kinetic parameters](https://www.nature.com/articles/s41467-023-44113-1)
-
-### **6. [MIT 利用深度学习发现新型抗生素](https://hyper.ai/news/28886)**
-
-* **中文解读：** [https://hyper.ai/news/28886](https://hyper.ai/news/28886)
-
-* **科研团队：** MIT 研究团队
-
-* **相关研究：** Mcule 数据库、Broad Institute 数据库、图神经网络 Chemprop、深度学习。筛选出 3,646 种抗生素化合物
-
-* **发布期刊：** Nature, 2023.12
-
-* **论文链接：** [Discovery of a structural class of antibiotics with explainable deep learning](https://www.nature.com/articles/s41586-023-06887-8)
-
-### **7. [神经网络解密 GPCR-G 蛋白偶联选择性](https://hyper.ai/news/28361)**
-
-* **中文解读：** [https://hyper.ai/news/28361](https://hyper.ai/news/28361)
-
-* **科研团队：** 佛罗里达大学的研究团队
-
-* **相关研究：** 二元分类神经网络、机器学习、无监督深度学习模型。建立了包括不同哺乳动物的 124 种 GPCRs 的粗粒度模型
-* **发布期刊：** Cell Reports, 2023.09
-
-* **论文链接：** [Rules and mechanisms governing G protein coupling selectivity of GPCRs](https://doi.org/10.1016/j.celrep.2023.113173)
-
-### **8. [Macformer 将无环药物菲卓替尼大环化](https://hyper.ai/news/28189)**
-
-* **中文解读：** [https://hyper.ai/news/28189](https://hyper.ai/news/28189)
-
-* **科研团队：** 华东理工大学的李洪林课题组
-
-* **相关研究：** ZINC 数据集、ChEMBL 数据库、深度学习模型、Transformer 架构、Macformer
-* **发布期刊：** Nature Communication, 2023.07
-
-* **论文链接：** [Macrocyclization of linear molecules by deep learning to facilitate macrocyclic drug candidates discovery](https://www.nature.com/articles/s41467-023-40219-8)
-
-
-
-### **9. [回归网络 + CGMD，预测百亿种多肽的自组装特性](https://hyper.ai/news/26408)**
-
-* **中文解读：** [https://hyper.ai/news/26408](https://hyper.ai/news/26408)
-
-* **科研团队：** 西湖大学的李文彬课题组
-
-* **相关研究：** 拉丁超立方采样、CGMD 模型、AP 预测模型、Transformer、MLP、TRN 模型。得到了五肽和十肽的 AP
-
-* **发布期刊：** Advanced Science, 2023.09
-
-* **论文链接：** [Deep Learning Empowers the Discovery of Self-Assembling Peptides with Over 10 Trillion Sequences](https://onlinelibrary.wiley.com/doi/full/10.1002/advs.202301544)
-
-### **10. [无监督学习预测 7100 万种基因突变](https://hyper.ai/news/26154)**
-
-* **中文解读：** [https://hyper.ai/news/26154](https://hyper.ai/news/26154)
-
-* **科研团队：** 谷歌DeepMind 研究团队
-
-* **相关研究：** ClinVar 数据集、AlphaFold、弱标签学习、无监督学习、AlphaMissense
-
-* **发布期刊：** Science, 2023.09
-
-* **论文链接：** [Accurate proteome-wide missense variant effect prediction with AlphaMissense](https://www.science.org/doi/10.1126/science.adg7492)
-
-### **11. [基于图神经网络 (GNN) 开发气味分析 AI](https://hyper.ai/news/25952)**
-
-* **中文解读：** [https://hyper.ai/news/25952](https://hyper.ai/news/25952)
-
-* **科研团队：** Google Research 的分支 Osmo 公司
-
-* **相关研究：** GS-LF 数据库、GNN、贝叶斯优化算法。在 53% 的化学分子、55% 的气味描述词判断中优于人类
-
-* **发布期刊：** Science, 2023.08
-
-* **论文链接：** [A principal odor map unifies diverse tasks in olfactory perception](https://www.science.org/doi/full/10.1126/science.ade4401)
-
-### **12. [图神经网络筛选安全高效的抗衰老成分](https://hyper.ai/news/25822)**
-
-* **中文解读：** [https://hyper.ai/news/25822](https://hyper.ai/news/25822)
-
-* **科研团队：** 麻省理工学院的研究团队
-
-* **相关研究：** 深度学习、GNN、卷积神经网络。Chemprop 模型的正预测率为 11.6%，高于人工筛选的 1.9%
-
-* **发布期刊：** Nature Communications, 2023.05
-
-* **论文链接：** [Discovering small-molecule senolytics with deep neural networks](https://www.nature.com/articles/s43587-023-00415-z)
-
-### **13. [机器学习量化分析多巴胺的释放量和释放位置](https://hyper.ai/news/25153)**
-
-* **中文解读：** [https://hyper.ai/news/25153](https://hyper.ai/news/25153)
-
-* **科研团队：** 美国加利福尼亚大学伯克利分校的研究团队
-
-* **相关研究：** SVM、RF、机器学习。对刺激强度的判断准确率达 0.832、对多巴胺释放脑区的判断准确率达 0.708
-
-* **发布期刊：** ACS Chemical Neuroscience, 2023.06
-
-* **论文链接：** [Identifying Neural Signatures of Dopamine Signaling with Machine Learning](https://pubs.acs.org/doi/full/10.1021/acschemneuro.3c00001)
-
-### **14. [机器学习发现三种抗衰老药物](https://hyper.ai/news/24578)**
-
-* **中文解读：** [https://hyper.ai/news/24578](https://hyper.ai/news/24578)
-
-* **科研团队：** 梅奥诊所的 James L. Kirkland 博士等人
-
-* **相关研究：** 机器学习、随机森林模型、5倍交叉验证、随机森林（RF）模型。发现抗衰老药物 Ginkgetin、Periplocin 和 Oleandrin
-
-* **发布期刊：** Nature Communications, 2023.06
-
-* **论文链接：** [Discovery of Senolytics using machine learning](https://www.nature.com/articles/s41467-023-39120-1)
-
-### **15. [深度学习筛选抑制鲍曼不动杆菌的新型抗生素](https://hyper.ai/news/24499)**
-
-* **中文解读：** [https://hyper.ai/news/24499](https://hyper.ai/news/24499)
-
-* **科研团队：** 麦克马斯特大学、麻省理工学院的研究团队
-
-* **相关研究：** Broad 研究所的高通量筛选子库、机器学习、深度学习。筛选了大约 7,500 个分子，发现了一种名为 abaucin 的抗菌化合物
-
-* **发布期刊：** Nature Chemical Biology, 2023.05
-
-* **论文链接：** [Deep learning-guided discovery of an antibiotic targeting Acinetobacter baumannii](https://www.nature.com/articles/s41589-023-01349-8#access-options)
-
-### **16. [机器学习模型应用于预测生物墨水可打印性](https://hyper.ai/news/24237)**
-
-* **中文解读：** [https://hyper.ai/news/24237](https://hyper.ai/news/24237)
-
-* **科研团队：** 圣地亚哥德孔波斯特拉大学、伦敦大学学院的研究团队
-
-* **相关研究：** 机器学习模型、ANN、SVM、RF、kappa、R²、MAE。准确率高达 97.22%
-
-* **发布期刊：** International Journal of Pharmaceutics: X, 2023.12
-
-* **论文链接：** [Predicting pharmaceutical inkjet printing outcomes using machine learning](https://www.sciencedirect.com/science/article/pii/S2590156723000257)
-
-### **17. [机器学习分化多能干细胞](https://hyper.ai/news/23940)**
-
-* **中文解读：** [https://hyper.ai/news/23940](https://hyper.ai/news/23940)
-
-* **科研团队：** 北京大学赵扬课题组、张钰课题组联合北京交通大学刘一研课题组
-
-* **相关研究：** 活细胞成像技术、机器学习、弱监督模型、pix2pix 深度学习模型。分化效率从 21.6% ± 2.7% 提升至 88.8% ± 10.5%
-
-* **发布期刊：** Cell Discovery, 2023.06
-
-* **论文链接：** [A live-cell image-based machine learning strategy for reducing variability in PSC differentiation systems](https://www.nature.com/articles/s41421-023-00543-1)
-
-### **18. [机器学习模型预测长效注射剂药物释放速率](https://hyper.ai/news/33892)**
-* **中文解读：** [https://hyper.ai/news/33892](https://hyper.ai/news/33892)
-
-* **科研团队：** 多伦多大学研究团队
-
-* **相关研究：** MLR、Lasso、PLS、DT、RF、LGBM、XGB、自NGB、SVR、k-NN、NN、嵌套交叉验证、最远邻聚类算法
-
-* **发布期刊：** Nature Communications, 2023.01
-
-* **论文链接：** [Machine learning models to accelerate the design of polymeric long-acting injectables](https://www.nature.com/articles/s41467-022-35343-w)
-
-
-### **19. [机器学习算法有效预测植物抗疟性](https://hyper.ai/news/33883)**
-
-* **中文解读：** [https://hyper.ai/news/33883](https://hyper.ai/news/33883)
-
-* **科研团队：** 英国皇家植物园及圣安德鲁斯大学的研究团队
-
-* **相关研究：** Logit、SVC、XGB、BNN、GridSearchCV 算法、10 折分层交叉验证、马尔可夫链蒙特卡洛迭代。准确率为 0.67
-
-* **发布期刊：** Frontiers in Plant Science, 2023.05
-
-* **论文链接：** [Machine learning enhances prediction of plants as potential sources of antimalarials](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10248027)
-
-### **20. [机器学习集成方法预测病毒蛋白片段免疫原性](https://hyper.ai/news/30786)**
-* **中文解读：** [https://hyper.ai/news/30786](https://hyper.ai/news/30786)
-
-* **科研团队：** 北京航空航天大学李静研究团队
-
-* **相关研究：** 蛋白质数据库 UniProt、Protegen 数据库、集成机器学习方法 VirusImmu、RF 、 XGBoost 、kNN、随机采样交叉验证
-
-* **发布期刊：** bioRxiv, 2023.11
-
-* **论文链接：** [VirusImmu: a novel ensemble machine learning approach for viral immunogenicity prediction](https://www.biorxiv.org/content/10.1101/2023.11.23.568426v1)
-
-### **21. [用生成式 AI 开发新型抗生素](https://hyper.ai/news/31421)**
-* **中文解读：** [https://hyper.ai/news/31421](https://hyper.ai/news/31421)
-
-* **科研团队：** 麦马、斯坦福团队
-
-* **相关研究：** Pharmakon-1760 库、药物再利用中心数据库、合成小分子筛选集、蒙特卡洛树搜索 、生成式人工智能模型 SyntheMol。生成 24,335 个完整分子、设计出易于合成的新型化合物
-
-* **发布期刊：** Nature Machine Intelligence, 2024.03
-
-* **论文链接：** [Generative AI for designing and validating easily synthesizable and structurally novel antibiotics](https://www.nature.com/articles/s42256-024-00809-7 )
-
-### **22. [基于深度学习研发一种自动化、高速、多维的单粒子追踪系统](https://hyper.ai/news/31341)**
-* **中文解读：** [https://hyper.ai/news/31341](https://hyper.ai/news/31341)
-
-* **科研团队：** 厦门大学方宁教授团队
-
-* **相关研究：** 多维成像设备、双焦平面成像、视差显微镜、多维成像设备、卷积神经网络模型、抗噪性和鲁棒性
-
-* **发布期刊：** Nature Machine Intelligence, 2024.03
-
-* **论文链接：** [Deep Learning-Assisted Automated Multidimensional Single Particle Tracking in Living Cells](https://doi.org/10.1021/acs.nanolett.3c04870)
-
-### **23. [ProEnsemble 机器学习框架：优化进化通路启动子组合](https://hyper.ai/news/30594)**
-* **中文解读：** [https://hyper.ai/news/30594](https://hyper.ai/news/30594)
-
-* **科研团队：** 中科院罗小舟团队
-
-* **相关研究：** 合成生物、基因上位效应、自动化平台、十折交叉验证、集成模型、Gradient Boosting Regressor、Ridge Regressor、Gradient Boosting、通用型底盘高效合成黄酮类化合物
-
-* **发布期刊：** ADVANCED SCIENCE, 2024.02
-
-* **论文链接：** [Pathway Evolution Through a Bottlenecking-Debottlenecking Strategy and Machine Learning-Aided Flux Balancing](https://onlinelibrary.wiley.com/doi/full/10.1002/advs.202306935)
-
-### **24. [微环境感知图神经网络 ProtLGN 指导蛋白质定向进化](https://hyper.ai/news/32246)**
-* **中文解读：** [https://hyper.ai/news/32246](https://hyper.ai/news/32246)
-
-* **科研团队：** 上海交通大学洪亮课题组
-
-* **相关研究：** 微环境感知图神经网络、轻量级图神经去噪网络、自监督预训练、等变图神经网络。超过 40% 的 PROTLGN 设计单点突变体蛋白质优于其野生型对应物
-
-* **发布期刊：** JOURNAL OF CHEMICAL INFORMATION AND MODELING, 2024.04
-
-* **论文链接：** [Protein Engineering with Lightweight Graph Denoising Neural Networks](https://pubs.acs.org/doi/10.1021/acs.jcim.4c00036)
-
-### **25. [深度学习模型 AlphaPPIMd：用于蛋白质-蛋白质复合物构象集合探索](https://hyper.ai/news/32435)**
-* **中文解读：** [https://hyper.ai/news/32435](https://hyper.ai/news/32435)
-
-* **科研团队：** 延世大学王建民团队
-
-* **相关研究：** 深度学习、生成式 AI、Transformer、生成神经网络学习、分子动力学、barnase-barstar 复合物轨迹集、蛋白质数据库 Protein Data Bank、AlphaPPIMd 模型、自注意力机制、特征优化模块、注意力分数、全原子模型。模型的平均训练精度为 0.995、平均验证精度为 0.999 
-
-* **发布期刊：** Journal of Chemical Theory and Computation, 2024.05
-
-* **论文链接：** [Exploring the conformational ensembles of protein-protein complex with transformer-based generative model](https://pubs.acs.org/doi/10.1021/acs.jctc.4c00255)
-
-### **26. [新型肿瘤抑制蛋白降解剂 dp53m 可抑制癌细胞增殖](https://hyper.ai/news/32527)**
-* **中文解读：** [https://hyper.ai/news/32527](https://hyper.ai/news/32527)
-
-* **科研团队：** 西交利物浦大学慧湖药学院吴思晋教授、天津医科大学总医院谢松波教授、钟殿胜教授团队
-
-* **相关研究：** MD 模拟、迭代分子对接引导 post-SELEX 法。dp53m 可特异性识别 p53-R175H 蛋白，并对其进行降解
-
-* **发布期刊：** Science Bulletin, 2024.05
-
-* **论文链接：** [An engineered DNA aptamer-based PROTAC for precise therapy of p53-R175H hotspot mutant-driven cancer](https://www.sciencedirect.com/science/article/pii/S2095927324003517)
-
-### **27. [CVPR 最佳学生论文！多模态模型 BioCLIP 实现零样本学习](https://hyper.ai/news/32544)**
-* **中文解读：** [https://hyper.ai/news/32544](https://hyper.ai/news/32544)
-
-* **科研团队：** 俄亥俄州立大学 Jiaman Wu 团队
-
-* **相关研究：** 生物图像数据集 TreeOfLife-10M、多模态模型、计算机视觉、视觉编码器、文本编码器、自回归语言模型、模型在零样本和少样本任务中均表现出色
-
-* **发布期刊：** CVPR 2024, 2024.02
-
-* **论文链接：** [BIoCLIP: A Vision Foundation Model for the Tree of Life](https://openaccess.thecvf.com/content/CVPR2024/html/Stevens_BioCLIP_A_Vision_Foundation_Model_for_the_Tree_of_Life_CVPR_2024_paper.html)
-
-### **28. [1 亿参数！细胞大模型 scFoundation 可对 2 万基因同时建模](https://hyper.ai/news/32623)**
-* **中文解读：** [https://hyper.ai/news/32623](https://hyper.ai/news/32623)
-
-* **科研团队：** 清华大学自动化系生命基础模型实验室主任张学工教授、电子系/AIR 马剑竹教授和百图生科宋乐博士
-
-* **相关研究：** 人工智能细胞大模型、人类单细胞组学数据 DISCO，欧洲分子生物学实验室-欧洲生物信息学研究所数据库 EMBL-EBI、GEO 数据集，Single Cell Portal 数据集，HCA 数据集，hECA 数据集、Transformer、非对称的编码器-解码器结构、向量模块、RDA 建模
-
-* **发布期刊：** Nature Methods, 2024.06
-
-* **论文链接：** [Large-scale foundation model on single-cell transcriptomics](https://www.nature.com/articles/s41592-024-02305-7)
-
-### **29. [入选顶会 ICML，蛋白质语言模型 ESM-AA 超越传统 SOTA](https://hyper.ai/news/32674)**
-
-* **中文解读：** [https://hyper.ai/news/32674](https://hyper.ai/news/32674)
-
-* **科研团队：** 清华大学周浩教授联合北京大学、南京大学和水木分子团队
-
-* **相关研究：** 蛋白质数据集 AlphaFold DB、蛋白质数据集 Dp 和一个分子数据集 Dm、解压缩、多尺度掩码语言建模
-
-* **发布期刊：** ICML 2024, 2024.06
-
-* **论文链接：** [ESM All-Atom: Multi-scale Protein Language Model for Unified Molecular Modeling](https://icml.cc/virtual/2024/poster/35119)
-
-### **30. [SPACE 算法登 Cell 子刊！组织模块发现能力领先同类工具](https://hyper.ai/news/32738)**
-* **中文解读：** [https://hyper.ai/news/32738](https://hyper.ai/news/32738)
-
-* **科研团队：** 清华大学张强锋课题组
-
-* **相关研究：** 空间转录组学、STARmap 小鼠 PLA 数据集、MERFISH 小鼠 AB 数据集、MERFISH 小鼠 WB 数据集、Xenium 人类 BC 数据集、CosMx 人类 NSCLC 数据集、Visium 人脑数据集、编码器、邻近图解码器、基因表达解码器、空间邻近性、自监督学习
-
-* **发布期刊：** Cell Systems, 2024.06
-
-* **论文链接：** [Tissue module discovery in single-cell resolution spatial transcriptomics data via cell-cell interaction-aware cell embedding](https://www.cell.com/cell-systems/fulltext/S2405-4712(24)00124-8)
-
-### **31. [基于 AlphaFold 实现新突破，揭示蛋白质动态多样性](https://hyper.ai/news/33075)**
-* **中文解读：** [https://hyper.ai/news/33075](https://hyper.ai/news/33075)
-
-* **科研团队：** 麻省理工学院研究团队
-
-* **相关研究：** 流匹配技术、蛋白质语言模型、神经网络、AlphaFold、ESMFold
-
-* **发布期刊：** ICML 2024, 2024.06
-
-* **论文链接：** [AlphaFold Meets Flow Matching for Generating Protein Ensembles](https://openreview.net/forum?id=rs8Sh2UASt)
-
-### **32. [基于扩散模型开发 P450 酶从头设计方法 P450Diffusion](https://hyper.ai/news/33057)**
-
-* **中文解读：** [https://hyper.ai/news/33057](https://hyper.ai/news/33057)
-
-* **科研团队：** 中国科学院天津工业生物技术研究所江会锋、程健团队
-
-* **相关研究：** 定向进化、扩散模型、深度学习、去噪扩散概率模型、三点固定、微调扩散模型 、预训练。催化能力提高 3.5 倍
-
-* **发布期刊：** Research, 2024.07
-
-* **论文链接：** [Cytochrome P450 Enzyme Design by Constraining the Catalytic Pocket in a Diffusion Model](https://spj.science.org/doi/10.34133/research.0413)
-
-### **33. [将等变图神经网络用于靶蛋白结合位点预测，性能提升 20%](https://hyper.ai/news/32957)**
-* **中文解读：** [https://hyper.ai/news/32957](https://hyper.ai/news/32957)
-
-* **科研团队：** 中国人民大学高瓴人工智能学院的研究团队
-
-* **相关研究：** E(3) 等变图神经网络、卷积神经网络、EquiPocket 框架、scPDB 数据集、PDBbind 数据集、COACH 420 数据集、HOLO4K 数据集、局部几何建模模块、全局结构建模模块 、表面信息传递模块
-
-* **发布期刊：** ICML 2024, 2024.07
-
-* **论文链接：** [EquiPocket: an E(3)-Equivariant Geometric Graph Neural Network for Ligand Binding Site Prediction](https://openreview.net/forum?id=1vGN3CSxVs)
-
-### **34. [20 个实验数据创造 AI 蛋白质里程碑！FSFP 有效优化蛋白质预训练模型](https://hyper.ai/news/32822)**
-* **中文解读：** [https://hyper.ai/news/32822](https://hyper.ai/news/32822)
-
-* **科研团队：** 上海交通大学自然科学研究院/物理天文学院/张江高研院/药学院洪亮教授课题组，联合上海人工智能实验室青年研究员谈攀团队
-
-* **相关研究：** 蛋白质突变数据集 ProteinGym、预训练蛋白质语言模型、元迁移学习、排序学习、参数高效微调、LTR 技术、有效优化蛋白质语言模型的训练策略 FSFP、模型无关元学习方法
-
-* **发布期刊：** Nature Communications, 2024.07
-
-* **论文链接：** [Enhancing efficiency of protein language models with minimal wet-lab data through few-shot learning](https://doi.org/10.1038/s41467-024-49798-6)
-
-### **35. [可迁移深度学习模型鉴定多类型 RNA 修饰、显著减少计算成本](https://hyper.ai/news/32745)**
-* **中文解读：** [https://hyper.ai/news/32745](https://hyper.ai/news/32745)
-
-* **科研团队：** 上海交通大学生命科学技术学院长聘教轨副教授余祥课题组，联合上海辰山植物园杨俊 / 王红霞团队
-
-* **相关研究：** 可迁移深度学习模型 TandemMod、体外转录数据集 ELIGOS、Curlcake 数据集、体外表观转录组数据集 IVET、一维卷积神经网络、双向长短期记忆模块、注意力机制、全连接层 (full-connected layers) 的分类器
-
-* **发布期刊：** Nature Communications, 2024.05
-
-* **论文链接：** [Transfer learning enables identification of multiple types of RNA modifications using nanopore direct RNA sequencing](https://www.nature.com/articles/s41467-024-48437-4)
-
-### **36. [InstructProtein：利用知识指令对齐蛋白质语言与人类语言](https://hyper.ai/news/33697)**
-* **中文解读：** [https://hyper.ai/news/33697](https://hyper.ai/news/33697)
-
-* **科研团队：** 浙江大学陈华钧、张强团队
-
-* **相关研究：** 大语言模型、蛋白质知识指令数据集、Gene Ontology (GO) 数据集、InstructProtein、知识图谱、蛋白质位置预测、蛋白质功能预测 、蛋白质金属离子结合能力预测
-
-* **发布期刊：** ACL 2024, 2023.10
-
-* **论文链接：** [InstructProtein: Aligning Human and Protein Language via Knowledge Instruction](https://arxiv.org/abs/2310.03269)
-
-### **37. [蛋白质-文本生成框架 ProtT3 实现蛋白质数据与文本信息跨模态解读](https://hyper.ai/news/33546)**
-* **中文解读：** [https://hyper.ai/news/33546](https://hyper.ai/news/33546)
-
-* **科研团队：** 中国科学技术大学王翔，联合新加坡国立大学刘致远团队、北海道大学研究团队
-
-* **相关研究：** 跨模态投影器、蛋白质语言模型、Swiss-Prot 和 ProteinKG25 数据集、PDB-QA 数据集
-
-* **发布期刊：** ACL 2024, 2023.05
-
-* **论文链接：** [ProtT3: Protein-to-Text Generation for Text-based Protein Understanding](https://arxiv.org/abs/2405.12564)
-
-### **38. [CPDiffusion 模型，超低成本、全自动设计功能型蛋白质](https://hyper.ai/news/34692)**
-* **中文解读：** [https://hyper.ai/news/34692](https://hyper.ai/news/34692)
-
-* **科研团队：** 上海交通大学自然科学研究院、物理与天文学院、张江高等研究院、药学院洪亮课题组
-
-* **相关研究：** 蛋白质工程、扩散概率模型框架 CPDiffusion、氨基酸、图神经网络、辅助药物设计、蛋白质语言模型、 CATH 4.2 数据集
-
-* **发布期刊：** Cell Discovery,  2024.09
-
-* **论文链接：** [A conditional protein diffusion model generates artificial programmable endonuclease sequences with enhanced activity](https://www.nature.com/articles/s41421-024-00728-2)
-### **39. [基于蛋白质语言模型和密集检索技术，一种全新的蛋白质同源物检测方法](https://hyper.ai/news/34225)**
-* **中文解读：** [https://hyper.ai/news/34225](https://hyper.ai/news/34225)
-
-* **科研团队：** 香港中文大学李煜、复旦大学智能复杂体系实验室、上海人工智能实验室青年研究员孙思琦、耶鲁大学 Mark Gerstein 
-
-* **相关研究：** 蛋白质工程、蛋白质语言模型、密集检索技术、密集同源物检索器 、混合模型 DHR-meta、UR90 数据集、JackHMMER 算法、BFD/MGnify 数据集、DHR 方法。蛋白质同源物检测灵敏度提高 56%
-
-* **发布期刊：** Nature Biotechnology, 2024.08
-
-* **论文链接：** [Fast, sensitive detection of protein homologs using deep dense retrieval](https://doi.org/10.1038/s41587-024-02353-6)
-### **40. [AlphaProteo 可高效设计靶蛋白结合物，亲和力提高 300 倍](https://hyper.ai/news/34214)**
-* **中文解读：** [https://hyper.ai/news/34214](https://hyper.ai/news/34214)
-
-* **科研团队：** DeepMind、弗朗西斯·克里克研究所
-
-* **相关研究：** 蛋白质工程、蛋白质语言模型、AI 药物设计、靶蛋白 、AI 工具、机器学习模型 AlphaProteo、VEGF-A 蛋白结合体设计、生成模型 (Generator) 、过滤器 (Filter)。候选结合物与靶蛋白结合数量高出 5-100 倍
-
-* **发布期刊：** DeepMind, 2024.09
-
-* **论文链接：** [AlphaProteo 为生物学和健康研究生成新型蛋白质](https://deepmind.google/discover/blog/alphaproteo-generates-novel-proteins-for-biology-and-health-research/) 
-### **41. [全新去噪蛋白质语言模型 DePLM，突变效应预测优于 SOTA 模型](https://hyper.ai/cn/news/34954)**
-* **中文解读：** [https://hyper.ai/cn/news/34954](https://hyper.ai/cn/news/34954)
-
-* **科研团队：** 浙江大学计算机科学与技术学院、浙江大学国际联合学院、浙江大学杭州国际科创中心陈华钧教授、张强博士
-
-* **相关研究：** 去噪蛋白质语言模型 (DePLM)、ProteinGym 深度突变筛选 (DMS) 实验集合、DMS 数据集、随机交叉验证方法、泛化能力实验、基于排序信息的前向过程来扩展扩散模型以去噪进化信息、基于排序的去噪扩散过程、排序算法 (sorting algorithm) 生成轨迹、PromptProtein 模型
-
-* **发布期刊：** NeurIPS 2024, 2024.11
-
-* **论文链接：** [DePLM: Denoising Protein Language Models for Property Optimization](https://neurips.cc/virtual/2024/poster/95517 ) 
-### **42. [几何深度生成模型 DynamicBind，实现蛋白质动态对接预测](https://hyper.ai/cn/news/34894)**
-* **中文解读：** [https://hyper.ai/cn/news/34894](https://hyper.ai/cn/news/34894)
-
-* **科研团队：** 上海交通大学郑双佳课题组、星药科技、中山大学药学院、美国莱斯大学
-
-* **相关研究：** PDBbind 数据集、MDT 测试集、深度扩散模型、等变几何神经网络技术、PDB 格式的类结构、小分子配体格式、contact-LDDT (cLDDT) 评分模块、AlphaFold 结构、亲和力预测模块、生成式人工智能技术
-
-* **发布期刊：** Nature Communications, 2024.2
-
-* **论文链接：** [DynamicBind: predicting ligand-specific protein-ligand complex structure with a deep equivariant generative model](https://www.nature.com/articles/s41467-024-45461-2)
-### **43. [药物研发大语言模型 Y-Mol，性能全面领先 LLaMA2](https://hyper.ai/cn/news/35572)**
-* **中文解读：** [https://hyper.ai/cn/news/35572](https://hyper.ai/cn/news/35572)
-
-* **科研团队：** 湖南大学、中南大学、湖南师范大学、湘潭大学的研究团队
-
-* **相关研究：**  多尺度生物医学知识指导的大语言模型 Y-Mol 、生物医学 PubMed 出版物的文本语料库、DrugBank 基准数据集、DrugCentral 基准数据集、LLaMA2-7b 大语言模型
-
-* **发布期刊：**  arxiv, 2024.10
-
-* **论文链接：** [Y-Mol: A Multiscale Biomedical Knowledge-Guided Large Language Model for Drug Development](https://doi.org/10.48550/arXiv.2410.11550)
-### **44. [通用分子逆折叠模型 UniIF，对 AlphaFold 3 形成进一步补充](https://hyper.ai/cn/news/35781)**
-* **中文解读：** [https://hyper.ai/cn/news/35781](https://hyper.ai/cn/news/35781)
-
-* **科研团队：** 西湖大学未来产业研究中心团队
-* **相关研究：**   CATH4.3 数据集、ESM2 模型、CASP15 数据集、新晶体结构、NovelPro 数据集、RDesign 收集的数据集、CHILI-3K 数据集、基于氨基酸和核苷酸的预定义框架、GNN、几何特征提取器 (Geometric Featurizer) 、块图注意力层 (Block Graph Attention)。在蛋白质设计、 RNA 设计、材料设计上都优于其他对比的先进方法
-
-* **发布期刊：**  NeurIPS 2024, 2024.5
-
-* **论文链接：** [UniIF: Unified Molecule Inverse Folding](https://arxiv.org/abs/2405.18968 )
-### **45. [预训练蛋白质语言模型 ProSST，更有效地整合蛋白质结构信息](https://hyper.ai/cn/news/35874)**
-* **中文解读：** [https://hyper.ai/cn/news/35874](https://hyper.ai/cn/news/35874)
-
-* **科研团队：** 海交通大学自然科学研究院/物理天文学院/张江高研院/药学院洪亮教授课题组，上海交大助理研究员周冰心，联合上海人工智能实验室青年研究员谈攀
-* **相关研究：**  预训练蛋白质语言模型 ProSST、Transformer、解耦注意力机制、蛋白质结构量化器、AlphaFoldDB 数据集、CATH43-S40 数据集、CATH43-S40 局部结构数据集、ProteinGYM 基准数据集。在热稳定性预测、金属离子结合预测、蛋白质定位预测、 GO 注释预测等任务中优于现有模型
-
-* **发布期刊：**  NeurIPS 2024, 2024.05
-
-* **论文链接：** [ProSST: Protein Language Modeling with Quantized Structure and Disentangled Attention](https://neurips.cc/virtual/2024/poster/96656)
-
-### **46. [大环肽结合物框架 RFpeptides，为不可成药蛋白质提供新可能性](https://hyper.ai/cn/news/36150)**
-* **中文解读：** [https://hyper.ai/cn/news/36150](https://hyper.ai/cn/news/36150)
-
-* **科研团队：** 华盛顿蛋白质研究所所长 David Baker 团队
-* **相关研究：** 基于扩散模型的技术 RFpeptides、利用修饰的 RoseTTAFold 和具有循环相对位置编码的 RFdiffusion 来生成精确的大环骨架、药物开发、AlphaFold、循环相对位置编码机制、ProteinMPNN、Rosetta Relax。可实现靶向和高效的大环设计
-* **发布期刊：** bioRxiv, 2024.11
-
-* **论文链接：** [Accurate de novo design of high-affinity protein binding macrocycles using deep learning](https://doi.org/10.1101/2024.11.18.622547)
-### **47. [基因组基础模型 Evo，实现从分子到基因组尺度的预测与生成](https://hyper.ai/cn/news/36266)**
-* **中文解读：** [https://hyper.ai/cn/news/36266](https://hyper.ai/cn/news/36266)
-
-* **科研团队：** 斯坦福大学联合美国 Arc 研究所 (Arc Institute) 的研究团队
-* **相关研究：** 基因组基础模型 Evo、StripedHyena 架构。Evo 具有预测、生成和设计整个基因组序列的能力
-
-* **发布期刊：** Science, 2024.11
-
-* **论文链接：** [Sequence modeling and design from molecular to genome scale with Evo](https://www.science.org/doi/10.1126/science.ado9336)
-### **48. [DigFrag 用 AI 精准分割分子片段，并生成 44 个药物/农药分子](https://hyper.ai/cn/news/36346)**
-* **中文解读：** [https://hyper.ai/cn/news/36346](https://hyper.ai/cn/news/36346)
-
-* **科研团队：** 华中师范大学杨光富教授和王凡副教授团队
-* **相关研究：** MolFrag 平台、PADFrag 数据库、图注意力机制、DigFrag 数字化分段方法、DeepFMPO 模型框架、图神经网络架构、Actor-Critic 模型框架
-
-* **发布期刊：** nature communications chemistry, 2024.11
-
-* **论文链接：** [DigFrag as a digital fragmentation method used for artificial intelligence-based drug design](https://doi.org/10.1038/s42004-024-01346-5)
-### **49. [蛋白质序列大语言模型预训练方法 PRIME](https://hyper.ai/cn/news/36363)**
-* **中文解读：** [https://hyper.ai/cn/news/36363](https://hyper.ai/cn/news/36363)
-
-* **科研团队：** 上海交通大学自然科学研究院/物理天文学院洪亮教授课题组、上海人工智能实验室青年研究员、上海科技大学、中科院杭州医学院
-* **相关研究：** 蛋白质序列大语言模型预训练方法 PRIME、ProteomeAtlas 数据库、UniProt 数据库、ProteinGym 蛋白质突变数据集、MLM 预训练方法，优于目前最先进方法
-
-* **发布期刊：** Science Advances, 2024.11
-
-* **论文链接：** [A General Temperature-Guided Language Model to Design Proteins of Enhanced Stability and Activity](https://www.science.org/doi/10.1126/sciadv.adr2641)
-### **50. [自监督深度学习方法革新冷冻电镜三维重建](https://hyper.ai/cn/news/36645)**
-* **中文解读：** [https://hyper.ai/cn/news/36645](https://hyper.ai/cn/news/36645)
-
-* **科研团队：** 加州大学洛杉矶分校研究团队
-* **相关研究：** 自监督深度学习方法单粒子 IsoNet (spIsoNet) 、单粒子冷冻电镜、生物大分子重建、β-半乳糖苷酶数据集、HA 三聚体倾斜数据集 (EMPIAR-10097)、非倾斜 HA 三聚体数据集 (EMPIAR-10096) 、非对称核糖体数据集 (EMPIAR-10406)、HIV VLP 断层扫描数据集 (EMPIAR-10164)、U-net 网络架构、各向异性校正驱动的错位校正模块，实现结构生物学重大突破
-
-* **发布期刊：** Nature Methods, 2024.11
-
-* **论文链接：** [Overcoming the preferred-orientation problem in cryo-EM with self-supervised deep learning](https://doi.org/10.1038/s41592-024-02505-1)
-### **51. [多模态蛋白质生成方法 PLAID，同时生成序列和全原子蛋白结构](https://hyper.ai/cn/news/36750)**
-* **中文解读：** [https://hyper.ai/cn/news/36750](https://hyper.ai/cn/news/36750)
-
-* **科研团队：** 加州大学伯克利分校 (UC Berkeley) 、微软研究院、Genentech 公司研究团队
-* **相关研究：** 多模态蛋白质生成方法 PLAID (Protein Latent Induced Diffusion)、Pfam 数据库、ESMFold 潜在空间、潜在扩散训练、DiT 块架构、 Diffusion Transformer (DiT)、ESMFold 模型
-
-* **发布期刊：** ICLR 2025, 2024.12
-
-* **论文链接：** [Generating All-Atom Protein Structure from Sequence-Only Training Data](https://www.biorxiv.org/content/10.1101/2024.12.02.626353v1)
-### **52. [基于潜在强化学习的靶向分子优化方法 MOLRL](https://hyper.ai/cn/news/37285)**
-* **中文解读：** [https://hyper.ai/cn/news/37285](https://hyper.ai/cn/news/37285)
-
-* **科研团队：** 生命科学公司 Cellarity 和英伟达的研究人员
-* **相关研究：** 新颖的基于潜在强化学习的靶向分子优化方法 MOLRL、药物发现相关任务、近端策略优化 (PPO) 方法、变分自编码器 (VAE) 、自编码器 (MolMIM)，成功率可达 100%
-
-* **发布期刊：** ChemRxiv, 2025.1
-
-* **论文链接：** [Targeted Molecular Generation With Latent Reinforcement Learning](https://go.hyper.ai/H4JhR)
-### **53. [病毒变异驱动力预测框架 E2VD，预测新冠/艾滋病/流感病毒进化方向](https://hyper.ai/cn/news/37405)**
-* **中文解读：** [https://hyper.ai/cn/news/37405](https://hyper.ai/cn/news/37405)
-
-* **科研团队：** 北京大学信息工程学院田永鸿教授、陈杰副教授，广州国家实验室周鹏研究员指导博士生聂志伟、硕士生刘旭东
-* **相关研究：** 病毒变异驱动力预测框架 E2VD、 UniRef90 数据集、开源深度突变扫描数据集、蛋白质序列编码、局部-全局相互作用依赖融合 (Local-global dependence coupling) 和多任务焦点学习 (Multi-task focal learning)，预测精度提升 67%
-
-* **发布期刊：** Nature Machine Intelligence, 2025.1
-
-* **论文链接：** [A unified evolution-driven deep learning framework for virus variation driver prediction](https://www.nature.com/articles/s42256-024-00966-9)
-### **54. [医学语言模型 MedFound，推理能力接近专家医师](https://hyper.ai/cn/news/37646)**
-* **中文解读：** [https://hyper.ai/cn/news/37646](https://hyper.ai/cn/news/37646)
-
-* **科研团队：** 北京邮电大学王光宇教授、北京大学第三医院宋纯理教授、三峡大学杨简教授组成的医工交叉团队
-* **相关研究：** 大语言模型 BLOOM-176B、医学语料数据集 MedCorpus、大语言模型 MedFound-DX、思维链方法、偏好对齐框架、MedDX-FT 数据集、MedDX-Bench 数据集
-
-* **发布期刊：** Nature Medicine, 2025.1
-
-* **论文链接：** [A generalist medical language model for disease diagnosis assistance](https://www.nature.com/articles/s41591-024-03416-6)
-### **55. [4D 扩散模型 AlphaFolding，填补蛋白质动态结构预测空白](https://hyper.ai/cn/news/37697)**
-* **中文解读：** [https://hyper.ai/cn/news/37697](https://hyper.ai/cn/news/37697)
-
-* **科研团队：** 复旦大学、上海科学智能研究院的朱思语及漆远教授团队、联合南京大学姚遥教授
-* **相关研究：** 4D 扩散模型 AlphaFolding、分子动力学模拟数据、动态蛋白质结构、结构生物学、Distributional Graphformer (DiG) 深度学习框架、ATLAS 数据集
-
-* **发布期刊：** arXiv, 2024.12
-
-* **论文链接：** [4D Diffusion for Dynamic Protein Structure Prediction with Reference and Motion Guidance](https://arxiv.org/abs/2408.12419)
-### **56. [可设计短蛋白质的 PepPrCLIP 流程，有望开发癌症新疗法](https://hyper.ai/cn/news/37912)**
-* **中文解读：** [https://hyper.ai/cn/news/37912](https://hyper.ai/cn/news/37912)
-
-* **科研团队：** 杜克大学生物医学工程系研究团队
-* **相关研究：** ESM-2 蛋白语言模型、ESM-2-650M 模型、PepPrCLIP 流程、高斯分布、氨基酸序列
-* **发布期刊：** Science Advances, 2025.1
-
-* **论文链接：** [De novo design of peptide binders to conformationally diverse targets with contrastive language modeling](https://www.science.org/doi/10.1126/sciadv.adr8638)
-## **AI+   医疗健康：AI+Healthcare**
-
-### **1. [深度学习系统 DeepDR Plus 用眼底图像预测糖尿病视网膜病变](https://hyper.ai/news/29769)**
-* **中文解读：** [https://hyper.ai/news/29769](https://hyper.ai/news/29769)
-
-* **科研团队：** 上海交通大学贾伟平、李华婷和盛斌教授团队，清华大学黄天荫研究团队
-
-* **相关研究：** SDPP 数据、DRPS 数据、ResNet-50、眼底模型、自监督学习、 IBS 评估模型、元数据模型、组合模型。将临床应用的平均筛查间隔从 12 个月延长至 31.97 个月
-
-* **发布期刊：** Nature Medicine, 2024.01
-
-* **论文链接：** [A deep learning system for predicting time to progression of diabetic retinopathy](https://www.nature.com/articles/s41591-023-02702-z)
-
-### **2. [逻辑回归模型分析高绿色景观指数可降低 MetS 风险](https://hyper.ai/news/29559)**
-* **中文解读：** [https://hyper.ai/news/29559](https://hyper.ai/news/29559)
-
-* **科研团队：** 浙江大学吴息凤研究团队
-
-* **相关研究：** 卷积神经网络模型、逻辑回归模型、Isochrone API
-
-* **发布期刊：** Environment International, 2024.01
-
-* **论文链接：** [Beneficial associations between outdoor visible greenness at the workplace and metabolic syndrome in Chinese adults](https://doi.org/10.1016/j.envint.2023.108327)
-
-### **3. [深度学习系统助力初级眼科医生的诊断一致性提高 12%](https://hyper.ai/news/29549)**
-* **中文解读：** [https://hyper.ai/news/29549](https://hyper.ai/news/29549)
-
-* **科研团队：** 北京协和医院、四川大学华西医院、河北医科大学第二医院、天津医科大学眼科医院、温州医科大学附属眼视光医院、北京致远慧图科技有限公司、中国人民大学研究团队
-
-* **相关研究：** quality assessment model、diagnostic model、CNN。为 13 种眼底疾病的自动检测提供新方法
-
-* **发布期刊：** npj digital medicine, 2024.01
-
-* **论文链接：** [The performance of a deep learning system in assisting junior ophthalmologists in diagnosing 13 major fundus diseases: a prospective multi-center clinical trial](https://www.nature.com/articles/s41746-023-00991-9)
-
-### **4. [GSP-GCNs 实现帕金森病诊断准确率高达 90.2%](https://hyper.ai/news/29189)**
-* **中文解读：** [https://hyper.ai/news/29189](https://hyper.ai/news/29189)
-
-* **科研团队：** 中科院深圳先进技术研究院和中山大学附属第一医院研究团队
-
-* **相关研究：** 图信号处理模块 (GSP) 、图网络模块 (graph-network module) 、分类器 (classifier) 、可解释模型 ( interpretable model)
-
-* **发布期刊：** npj Digital Medicine, 2024.01
-
-* **论文链接：** [An interpretable model based on graph learning for diagnosis of Parkinson’s disease with voice-related EEG](https://www.nature.com/articles/s41746-023-00983-9)
-
-### **5. [乳腺癌预后评分系统 MIRS](https://hyper.ai/news/29304)**
-* **中文解读：** [https://hyper.ai/news/29304](https://hyper.ai/news/29304)
-
-* **科研团队：** 美国肯塔基大学、澳门科技大学、澳门大学、广州医科大学研究团队
-
-* **相关研究：** TCGA 数据库、神经网络模型、预后评分系统、ESTIMATE 算法、机器学习、XGboost 、 Borota RF、ElasticNet
-
-* **发布期刊：** iScience, 2023.11
-
-* **论文链接：** [MIRS: An AI scoring system for predicting the prognosis and therapy of breast cancer](https://doi.org/10.1016/j.isci.2023.108322)
-
-### **6. [视网膜图像基础模型 RETFound，预测多种系统性疾病](https://hyper.ai/news/28113)**
-* **中文解读：** [https://hyper.ai/news/28113](https://hyper.ai/news/28113)
-
-* **科研团队：** 伦敦大学学院和 Moorfields 眼科医院的在读博士周玉昆等人
-
-* **相关研究：** 自监督学习、MEH-MIDAS 数据集、EyePACS 数据集、SL-ImageNet、SSL-ImageNet、SSL-Retinal。RETFound 模型预测 4 种疾病的性能均超越对比模型
-
-* **发布期刊：** Nature, 2023.08
-
-* **论文链接：** [A foundation model for generalizable disease detection from retinal images](https://www.nature.com/articles/s41586-023-06555-x)
-
-### **7. [SVM 优化触觉传感器，盲文识别率达 96.12%](https://hyper.ai/news/26561)**
-* **中文解读：** [https://hyper.ai/news/26561](https://hyper.ai/news/26561)
-
-* **科研团队：** 浙江大学的杨赓和徐凯臣课题组
-
-* **相关研究：** SVM算法、机器学习、CNN、自适应矩估计算法。优化后的传感器能准确识别 6 种动态触摸模式
-
-* **发布期刊：** Advanced Science, 2023.09
-
-* **论文链接：** [Machine Learning-Enabled Tactile Sensor Design for Dynamic Touch Decoding](https://onlinelibrary.wiley.com/doi/10.1002/advs.202303949)
-
-### **8. [中科院基因组所建立开放生物医学成像档案](https://hyper.ai/news/26334)**
-* **中文解读：** [https://hyper.ai/news/26334](https://hyper.ai/news/26334)
-
-* **科研团队：** 中科院基因组所
-
-* **相关研究：** TCIA 癌症影像数据库、de-identification、quality control、Collection、Individual、Study、 Series, Image、三元组网络、attention module
-
-* **发布期刊：** bioRxiv, 2023.08
-
-* **论文链接：** [Self-supervised learning of hologram reconstruction using physics consistency](https://www.nature.com/articles/s42256-023-00704-7)
-
-### **9. [AI Lunit 阅读乳腺 X 光片的准确率与医生相当](https://hyper.ai/news/26135)**
-* **中文解读：** [https://hyper.ai/news/26135](https://hyper.ai/news/26135)
-
-* **科研团队：** 英国诺丁汉大学的研究团队
-
-* **相关研究：** PERFORMS 数据集，标注 + 评分。AI 的灵敏度与医生一致、特异性与医生没有显著差异
-
-* **发布期刊：** Radiology, 2023.09
-
-* **论文链接：** [Performance of a Breast Cancer Detection AI Algorithm Using the Personal Performance in Mammographic Screening Scheme](https://pubs.rsna.org/doi/10.1148/radiol.223299)
-
-### **10. [特征选择策略检测乳腺癌生物标志物](https://hyper.ai/news/24589)**
-* **中文解读：** [https://hyper.ai/news/24589](https://hyper.ai/news/24589)
-
-* **科研团队：** 意大利那不勒斯费德里科二世大学研究团队
-
-* **相关研究：** 机器学习、特征选择策略、TCGA/GEO 数据集、Gain Ratio、RF、SVM-RFE。SVM-RFE 的稳定性和获得的 signature 预测能力最高
-
-* **发布期刊：** CIBB 2023, 2023.07
-
-* **论文链接：** [Robust Feature Selection strategy detects a panel of microRNAs as putative diagnostic biomarkers in Breast Cancer](https://www.researchgate.net/publication/372083934)
-
-### **11. [梯度提升机模型准确预测 BPSD 亚综合征](https://hyper.ai/news/23926)**
-* **中文解读：** [https://hyper.ai/news/23926](https://hyper.ai/news/23926)
-
-* **科研团队：** 韩国延世大学研究团队
-
-* **相关研究：** 机器学习模型、多重插补方法、逻辑回归模型、随机森林模型、梯度提升机模型、支持向量机模型。梯度提升机模型平均 AUC 值最高
-
-* **发布期刊：** Scientifc Reports, 2023.05
-
-* **论文链接：** [Machine learning‑based predictive models for the occurrence of behavioral and psychological symptoms of dementia: model development and validation](https://www.nature.com/articles/s41598-023-35194-5)
-
-### **12. [机器学习模型预测患者一年内死亡率](https://hyper.ai/news/33905)**
-* **中文解读：** [https://hyper.ai/news/33905](https://hyper.ai/news/33905)
-
-* **科研团队：** 中国湖北省麻城市人民医院的研究团队
-
-* **相关研究：** 逻辑回归模型、机器学习模型、GBM、RF、DT。良好的临床实用性，与一年死亡率相关的前 3 个特征分别是 NT-proBNP、白蛋白和他汀类药物
-
-* **发布期刊：** Cardiovascular Diabetology, 2023.06
-
-* **论文链接：** [Machine learning-based models to predict one-year mortality among Chinese older patients with coronary artery disease combined with impaired glucose tolerance or diabetes mellitus](https://cardiab.biomedcentral.com/articles/10.1186/s12933-023-01854-z)
-
-### **13. [AI 新脑机技术让失语患者「开口说话」](https://hyper.ai/news/33914)**
-
-* **中文解读：** [https://hyper.ai/news/33914](https://hyper.ai/news/33914)
-
-* **科研团队：** 加州大学团队
-
-* **相关研究：** nltk Twitter 语料库、多模态语音神经假体、脑机接口、深度学习模型、Cornell 电影语料库、合成语音算法、机器学习
-
-* **发布期刊：** Nature, 2023.08
-
-* **论文链接：** [A high-performance neuroprosthesis for speech decoding and avatar control](https://www.nature.com/articles/s41586-023-06443-4)
-
-### **14. [基于深度学习的胰腺癌人工智能检测](https://hyper.ai/news/33923)**
-* **中文解读：** [https://hyper.ai/news/33923](https://hyper.ai/news/33923)
-
-* **科研团队：** 阿里达摩院联合多家国内外医疗机构
-
-* **相关研究：** 深度学习、PANDA、nnU-Net、CNN、Transformer。PANDA 检测到了 5 例癌症和 26 例临床漏诊病例
-
-* **发布期刊：** Nature Medicine, 2023.11
-
-* **论文链接：** [Large-scale pancreatic cancer detection via non-contrast CT and deep learning](https://www.nature.com/articles/s41591-023-02640-w)
-
-### **15. [机器学习辅助肺癌筛查的群体有效性](https://hyper.ai/news/31197)**
-* **中文解读：** [https://hyper.ai/news/31197](https://hyper.ai/news/31197)
-
-* **科研团队：** 谷歌研究中心
-
-* **相关研究：** DS_CA 数据集、DS_NLST 数据集、DS_US 数据集、DS_JPN 数据集、机器学习模型、肺癌筛查。特异性提高 5%-7%、病例筛查时间减少 14 秒
-
-* **发布期刊：** Radiology AI, 2024.03
-
-* **论文链接：** [Assistive AI in Lung Cancer Screening: A Retrospective Multinational Study in the United States and Japan](https://pubs.rsna.org/doi/10.1148/ryai.230079)
-
-
-### **16. [卵巢癌诊断人工智能融合模型 MCF，输入常规实验室检验数据和年龄即可计算卵巢癌的患病风险](https://hyper.ai/news/30730)**
-* **中文解读：** [https://hyper.ai/news/30730](https://hyper.ai/news/30730)
-
-* **科研团队：** 中山大学刘继红研究团队
-
-* **相关研究：** 特征选择方法、机器学习分类器、五倍交叉验证、多准则决策理论、融合 20 个基础分类模型、识别卵巢癌的准确率优于 CA125 和 HE4  等传统生物标志物
-
-* **发布期刊：** The Lancet Digital health, 2024.05
-
-* **论文链接：** [Artificial intelligence-based models enabling accurate diagnosis ofovarian cancer using laboratory tests in China: a multicentre,retrospective cohort study](https://www.thelancet.com/journals/landig/article/PIIS2589-7500(23)00245-5/fulltext)
-
-### **17. [谷歌发布 HEAL 架构，4 步评估医学 AI 工具是否公平](https://hyper.ai/news/31535)**
-* **中文解读：** [https://hyper.ai/news/31535](https://hyper.ai/news/31535)
-
-* **科研团队：** Google 研究团队
-
-* **相关研究：** 机器学习、HEAL (The health equity framework) 框架、逻辑回归分析、交叉性分析、健康公平
-* **发布期刊：** EClinicalMedicine, 2024.04
-* **论文链接：** [Health equity assessment of machine learning performance (HEAL): a framework and dermatology AI model case study](https://www.thelancet.com/journals/eclinm/article/PIIS2589-5370(24)00058-0/fulltext)
-
-### **18. [借鉴语义分割，开发空间转录组语义注释工具 Pianno](https://hyper.ai/news/31573)**
-* **中文解读：** [https://hyper.ai/news/31573](https://hyper.ai/news/31573)
-
-* **科研团队：** 复旦大学脑科学研究院诸颖团队
-
-* **相关研究：** 计算机视觉、机器学习、空间聚类方法、无监督聚类方法、空间泊松点过程 (spatial Poisson point process, sPPP) 模型、高阶马尔科夫随机场 (Markov random field, MRF) 先验模型
-
-* **发布期刊：** Nature Communications, 2024.04
-
-* **论文链接：** [Pianno: a probabilistic framework automating semantic annotation for spatial transcriptomics](https://www.nature.com/articles/s41467-024-47152-4)
-
-### **19. [AI 模型 UniFMIR，突破现有荧光显微成像极限](https://hyper.ai/news/31885)**
-* **中文解读：** [https://hyper.ai/news/31885](https://hyper.ai/news/31885)
-
-* **科研团队：** 复旦大学计算机科学技术学院颜波团队
-
-* **相关研究：** UniFMIR 模型、多头模块、特征增强模块、多尾模块、Swin Transformer、自适应矩估计、深度学习、SR 模型、单图像超分辨率模型、U-Net
-
-* **发布期刊：** Nature Methods, 2024.04
-
-* **论文链接：** [Pretraining a foundation model for generalizable fluorescence microscopy-based image restoration](https://www.nature.com/articles/s41592-024-02244-3)
-
-### **20. [深度学习系统，提高癌症生存预测准确性](https://hyper.ai/news/32068)**
-* **中文解读：** [https://hyper.ai/news/32068](https://hyper.ai/news/32068)
-
-* **科研团队：** 上海国家应用数学中心（上海交通大学分中心）俞章盛课题组（生命科学技术学院/医学院临床研究中心）
-
-* **相关研究：** 深度学习系统、ST 数据集、integrated graph 和图深度学习的模型、卷积神经网络和图神经网络、外部测试集 MCO-CRC、空间基因表达预测模型、super-patch graph 生存模型、H&E 染色组织学图像 (H&E-stained histological image) 预处理、IGI-DL 模型
-
-* **发布期刊：** Cell Reports Medicine, 2024.05
-
-* **论文链接：** [Harnessing TME depicted by histological images to improve cancer prognosis through a deep learning system](https://www.cell.com/cell-reports-medicine/fulltext/S2666-3791(24)00205-2 )
-
-### **21. [MemSAM 将「分割一切」模型用于医学视频分割](https://hyper.ai/news/32372)**
-* **中文解读：** [https://hyper.ai/news/32372](https://hyper.ai/news/32372)
-
-* **科研团队：** 深圳大学吴惠思
-
-* **相关研究：** 视觉模型、医学视频分割、超声心动图视频分割模型、记忆强化机制、超声心动图数据集 CAMUS  和 EchoNet-Dynamic、图像编码器、提示编码器、掩码解码器、Softmax 函数、基于 CNN 的 UNet 、基于 Transformer 的 SwinUNet、CNN-Transformer 混合的 H2Former、SonoSAM 模型、SAMUS 模型
-
-* **发布期刊：** CVPR 2024, 2024.05
-
-* **论文链接：** [MemSAM: Taming Segment Anything Model forEchocardiography Video Segmentation](https://github.com/dengxl0520/MemSAM)
-
-### **22. [医学图像分割模型 Medical SAM 2 刷新医学图像分割 SOTA 榜](https://hyper.ai/news/33738)**
-* **中文解读：** [https://hyper.ai/news/33738](https://hyper.ai/news/33738)
-
-* **科研团队：** 牛津大学团队
-
-* **相关研究：** 医学图像分割模型、SAM 2、SA-V 视频分割数据集、Medical SAM 2 示例医学分割数据集、 图像编码器、记忆编码器、记忆注意力机制
-
-* **发布期刊：** arXiv, 2024.08
-
-* **论文链接：** [Medical SAM 2: Segment medical images as video via Segment Anything Model 2](https://arxiv.org/abs/2408.00874)
-
-### **23. [机器学习抗击化疗耐药性与肿瘤复发，构筑乳腺癌干细胞的有力防线](https://hyper.ai/news/33566)**
-* **中文解读：** [https://hyper.ai/news/33566](https://hyper.ai/news/33566)
-
-* **科研团队：** 山东大学吕海泉、孙蓉、张凯及山西医科大学梅齐，联合螺旋矩阵公司等研究团队
-
-* **相关研究：** 机器学习、乳腺浸润性癌 (BRCA) 数据集、皮尔逊相关系数分析、基因集富集分析、评估乳腺癌患者样本中的癌症干细胞特征
-
-* **发布期刊：** Advanced Science, 2024.07
-
-* **论文链接：** [Polyamine Anabolism Promotes Chemotherapy-Induced Breast Cancer Stem Cell Enrichment](https://onlinelibrary.wiley.com/doi/10.1002/advs.202404853)
-
-### **24. [糖尿病诊疗的视觉-大语言模型 DeepDR-LLM 登 Nature 子刊](https://hyper.ai/news/33292)**
-* **中文解读：** [https://hyper.ai/news/33292](https://hyper.ai/news/33292)
-
-* **科研团队：** 清华大学副教务长、医学院主任黄天荫教授团队，上海交通大学电院计算机系/教育部人工智能重点实验室盛斌教授团队，上海交通大学医学院附属第六人民医院贾伟平教授及李华婷教授团队，新加坡国立大学及新加坡国家眼科中心覃宇宗教授团队
-
-* **相关研究：** 大语言模型、基于眼底图像的深度学习技术、融合适配器 (Adaptor) 和低秩自适应、Transformer 模型架构、监督微调方法、可提高基层 DR 筛查能力和糖尿病诊疗水平
-
-* **发布期刊：** Nature Medicine, 2024.07
-
-* **论文链接：** [Integrated image-based deep learning and language models for primary diabetes care](https://www.nature.com/articles/s41591-024-03139-8)
-
-### **25. [水平直逼高级病理学家！清华团队提出 AI 基础模型 ROAM，实现胶质瘤精准诊断](https://hyper.ai/news/33136)**
-* **中文解读：** [https://hyper.ai/news/33136](https://hyper.ai/news/33136)
-
-* **科研团队：** 清华大学自动化系生命基础模型实验室闾海荣副研究员、江瑞教授、张学工教授与中南大学湘雅医院胡忠良教授团队
-
-* **相关研究：** 基于大区域兴趣 (large regions of interest) 和金字塔 Transformer (pyramid transformer) 、精准病理诊断 AI 基础模型 ROAM、大尺寸图像块和多尺度特征学习模块、湘雅胶质瘤 WSI 数据集、TCGA 胶质瘤 WSI 数据集、弱监督计算病理学方法、卷积神经网络
-
-* **发布期刊：** Nature Machine Intelligence, 2024.06
-
-* **论文链接：** [A transformer-based weakly supervised computational pathology method for clinical-grade diagnosis and molecular marker discovery of gliomas](https://www.nature.com/articles/s42256-024-00868-w)
-
-### **26. [医学图像分割通用模型 ScribblePrompt，性能优于 SAM](https://hyper.ai/news/34720)**
-* **中文解读：** [https://hyper.ai/news/34720](https://hyper.ai/news/34720)
-
-* **科研团队：** 美国麻省理工学院计算机科学与人工智能实验室团队、麻省总医院、哈佛医学院
-
-* **相关研究：** 深度学习、医学图像分割、MegaMedical 数据集、交互式分割方法、生物医学成像数据集、生物医学图像分割的通用模型 ScribblePrompt、生成合成标签机制、全卷积架构、ScribblePrompt 架构、CNN-Transformer 混合解决方案
-* **发布期刊：** ECCV 2024, 2024.07
-
-* **论文链接：** [ScribblePrompt: Fast and Flexible Interactive Segmentation for Any Biomedical Image](https://arxiv.org/pdf/2312.07381)
-### **27. [数字孪生脑平台，展现出类似人脑中观测的临界现象与相似认知功能](https://hyper.ai/news/34573)**
-* **中文解读：** [https://hyper.ai/news/34573](https://hyper.ai/news/34573)
-
-* **科研团队：** 复旦大学类脑智能科学与技术研究院冯建峰教授团队
-
-* **相关研究：**  神经元网络、数字孪生大脑、逆向工程技术、脑科学、全脑范围内的尖峰神经元网络、磁共振成像技术、快速梯度回波序列、cortico-subcortical 模型、DTB 模型、分析了神经元数量和平均突触连接度对模型与生物数据相似度的影响、同化模型
-
-* **发布期刊：** National Science Review, 2024.5
-
-* **论文链接：** [Imitating and exploring human brain’s resting and task-performing states via resembling brain computing: scaling and architecture](https://doi.org/10.1093/nsr/nwae080)
-### **28. [自动化大模型对话 Agent 模拟系统，可初诊抑郁症](https://hyper.ai/cn/news/34845)**
-* **中文解读：** [https://hyper.ai/cn/news/34845](https://hyper.ai/cn/news/34845)
-
-* **科研团队：** 上海交通大学 X-LANCE 实验室吴梦玥老师团队、德克萨斯大学阿灵顿分校 UTA 、天桥脑科学研究院 (TCCI) 和 ThetaAI 公司
-
-* **相关研究：**  搭建了一个新型的对话 Agent 模拟系统、D4 数据集、三层记忆存储结构和全新的记忆检索机制、患者 Agent、精神科医生 Agent、指导员 Agent，提升抑郁症与自杀倾向诊断准确率
-
-* **发布期刊：** arXiv, 2024.9
-
-* **论文链接：** [Depression Diagnosis Dialogue Simulation: Self-improving Psychiatrist with Tertiary Memory](https://arxiv.org/abs/2409.15084)
-
-### **29. [深度学习模型 LucaProt，助力 RNA 病毒识别](https://hyper.ai/cn/news/34968)**
-* **中文解读：** [https://hyper.ai/cn/news/34968](https://hyper.ai/cn/news/34968)
-
-* **科研团队：** 中山大学医学院的施莽教授、浙江大学、复旦大学、中国农业大学、香港城市大学、广州大学、悉尼大学、阿里云飞天实验室
-
-* **相关研究：**  云计算与 AI 技术、宏基因组挖掘技术、NCBI SRA 数据库、CNGBdb 数据库、基于数据驱动的深度学习模型 LucaProt、Transformer 框架、大模型表征技术、揭露了 161,979 种潜在 RNA 病毒物种和 180 个病毒超群的存在
-
-* **发布期刊：** Cell, 2024.9
-
-* **论文链接：** [Using artificial intelligence to document the hidden RNA virosphere](https://doi.org/10.1016/j.cell.2024.09.027)
-### **30. [医学图像预训练框架 UniMedI，打破医学数据异构化藩篱](https://hyper.ai/cn/news/35128)**
-* **中文解读：** [https://hyper.ai/cn/news/35128](https://hyper.ai/cn/news/35128)
-
-* **科研团队：** 浙江大学胡浩基团队、微软亚洲研究院邱锂力团队
-
-* **相关研究：** 「伪配对」(Pseudo-Pairs) 技术、MIMIC-CXR 2.0.0 数据集、BIMCV 数据集、预训练 UniMedI 框架、ViT-B/16 视觉编码器 、BioClinicalBERT 文本编码器 、VL (Vision-Language) 对比学习、辅助任务设计、UniMiss 医学自我监督表达学习框架
-
-* **发布期刊：** ECCV, 2024.7
-
-* **论文链接：** [Unified Medical Image Pre-training in Language-Guided Common Semantic Space](https://eccv.ecva.net/virtual/2024/poster/1165)
-### **31. [多语言医学大模型 MMed-Llama 3，更加适配医疗应用场景](https://hyper.ai/cn/news/35242)**
-* **中文解读：** [https://hyper.ai/cn/news/35242](https://hyper.ai/cn/news/35242)
-
-* **科研团队：** 上海交通大学王延峰教授与谢伟迪教授团队
-
-* **相关研究：** 多语言医疗语料库 MMedC、多语言医疗问答评测标准 MMedBench、基座模型 MMed-Llama 3、MMedLM 多语言模型、MMedLM 2 多语言模型、 MMed-Llama 3 多语言模型
-
-* **发布期刊：** Nature Communications, 2024.9
-
-* **论文链接：** [Towards building multilingual language model for medicine](https://www.nature.com/articles/s41467-024-52417-z)
-### **32. [胶囊内窥镜图像拼接方法 S2P-Matching，助力胶囊内窥镜图像拼接](https://hyper.ai/cn/news/35313)**
-* **中文解读：** [https://hyper.ai/cn/news/35313](https://hyper.ai/cn/news/35313)
-
-* **科研团队：** 华中科技大学陆枫团队、上海交通大学盛斌、中南民族大学、香港科技大学（广州）分校、香港理工大学、悉尼大学、匹配正确率提升 187.9%
-
-* **相关研究：** 胶囊内窥镜图像拼接方法 S2P-Matching、自监督对比学习方法、双分支编码器提取局部特征、Transformer 模型、结合数据增强、对比学习、像素级匹配
-
-* **发布期刊：** IEEE Transactions on Biomedical Engineering, 2024.9
-
-* **论文链接：** [S2P-Matching: Self-supervised Patch-based Matching Using Transformer for Capsule Endoscopic Images Stitching](http://dx.doi.org/10.1109/TBME.2024.3462502)
-### **33. [多模态医疗基准 GMAI-MMBench，含 284 个数据集，覆盖 18 项临床任务](https://hyper.ai/cn/news/35938)**
-* **中文解读：** [https://hyper.ai/cn/news/35938](https://hyper.ai/cn/news/35938)
-
-* **科研团队：** 上海人工智能实验室、华盛顿大学、莫纳什大学、华东师范大学
-
-* **相关研究：**  GMAI-MMBench 基准、迄今为止最全面的且开源的通用医疗 AI 基准。评估医疗领域大型视觉语言模型的有效性
-* **发布期刊：** NeurIPS 2024, 2024.8
-
-* **论文链接：** [GMAI-MMBench: A Comprehensive Multimodal Evaluation Benchmark Towards General Medical AI](https://arxiv.org/abs/2408.03361v7)
-### **34. [新型时间序列预测方法 CGS-Mask，揭秘患者存活率关键指标](https://hyper.ai/cn/news/36192)**
-* **中文解读：** [https://hyper.ai/cn/news/36192](https://hyper.ai/cn/news/36192)
-
-* **科研团队：** 华中科技大学陆枫团队、悉尼大学 Zomaya 院士团队、同济医院
-
-* **相关研究：**  MIMIC-III 数据集、 LSST 数据集、 NATOPS 数据集、 AE 数据集。将时间序列预测与可解释性结合，CGS-Mask 既能提高模型预测精度，又能使预测结果更加直观和可解释
-
-* **发布期刊：** Proceedings of the 38th AAAI Conference on Artificial Intelligence (AAAI’24), 2024.3
-
-* **论文链接：** [CGS-Mask: Making Time Series Predictions Intuitive for All](https://ojs.aaai.org/index.php/AAAI/article/view/29325)
-### **35. [非侵入式大脑解码新框架 fMRI，为脑机接口和认知模型发展奠定基础](https://hyper.ai/cn/news/36023)**
-* **中文解读：** [https://hyper.ai/cn/news/36023](https://hyper.ai/cn/news/36023)
-
-* **科研团队：** 中国科学院自动化研究所曾毅教授团队
-* **相关研究：**  多模态集成框架、Natural Scenes Dataset 数据集、COCO 数据集、Variational Autoencoder (VAE) 和 CLIP 嵌入进行特征对齐、3D fMRI 预处理器、fMRI 特征提取器、多模态 LLMs。解决大脑活动的视觉重建问题
-* **发布期刊：**  NeurIPS 2024, 2024.10
-
-* **论文链接：** [Neuro-Vision to Language: Enhancing Brain Recording-based Visual Reconstruction and Language Interaction](https://nips.cc/virtual/2024/poster/93607)
-### **36. [医学图像分割模型 M2CF-Net，提高干燥综合征诊断准确性](https://hyper.ai/cn/news/36700)**
-* **中文解读：** [https://hyper.ai/cn/news/36700](https://hyper.ai/cn/news/36700)
-
-* **科研团队：** 华中科技大学凃巍教授、陆枫教授等
-* **相关研究：**  医学图像分割模型 M2CF-Net、小唾液腺病理切片数据集、感兴趣区域 (Regions of Interest, ROI) 提取、染色标准化 (Stain Normalization)、图像分块 (WSl Patching) 、Vahadane 算法、基于 Patch 的训练方法、M2CF-Net 模型，针对超大规模病理图像分析
-* **发布期刊：**  2023 IEEE International Conference on Medical Artificial Intelligence (MedAI), 2023
-
-* **论文链接：** [M2CF-Net: A Multi-Resolution and Multi-Scale Cross Fusion Network for Segmenting Pathology Lesion of the Focal Lymphocytic Sialadenitis](https://doi.ieeecomputersociety.org/10.1109/MedAI59581.2023.00063)
-### **37. [BSAFusion 可实现多模态医学图像对齐与融合](https://hyper.ai/cn/news/37104)**
-* **中文解读：** [https://hyper.ai/cn/news/37104](https://hyper.ai/cn/news/37104)
-
-* **科研团队：** 昆明理工大学信息工程与自动化学院李华锋、张亚飞、苏大勇团队、中国海洋大学信息科学与工程学部计算机科学与技术学院蔡青
-* **相关研究：**  医学影像处理、双向逐步特征对齐 (BSFA) 的未对齐医学图像融合方法、CT-MRI 数据集、 PET-MRI 数据集、SPECT-MRI 数据集、深度学习、计算机视觉、医学图像处理、多模态医学图像融合
-* **发布期刊：** AAAI 2025, 2024.11
-
-* **论文链接：** [BSAFusion: A Bidirectional Stepwise Feature Alignment Network for Unaligned Medical Image Fusion](https://arxiv.org/abs/2412.08050)
-### **38. [多 Agent 大语言模型框架 KG4Diagnosis 助力诊断 362 种常见疾病](https://hyper.ai/cn/news/37208)**
-* **中文解读：** [https://hyper.ai/cn/news/37208](https://hyper.ai/cn/news/37208)
-
-* **科研团队：** 华威大学、克兰菲尔德大学、剑桥大学、牛津大学的研究团队
-* **相关研究：**  KG4Diagnosis、分层多智能体框架、自动化医疗知识图谱的构建，诊断，治疗和推理、全科医生 (general practitioner) 大语言模型 (GPLLM) 、多个领域特定的专家大语言模型 (Consultant-LLMs)，可自动化构建医疗知识图谱
-* **发布期刊：**  AAAI-25 Bridge Program, 2024.12
-
-* **论文链接：** [KG4Diagnosis: A Hierarchical Multi-Agent LLM Framework with Knowledge Graph Enhancement for Medical Diagnosis](https://arxiv.org/abs/2412.16833)
-### **39. [图像分割模型 ConDSeg，解决医学图像分割软边界与共现难题](https://hyper.ai/cn/news/37794)**
-* **中文解读：** [https://hyper.ai/cn/news/37794](https://hyper.ai/cn/news/37794)
-
-* **科研团队：** 中国地质大学团队、百度
-* **相关研究：**  对比度驱动医学图像分割框架 ConDSeg、一致性强化训练策略、语义信息解耦模块、对比度驱动特征聚合模块、尺寸感知解码器、自动化图像分割、边界约束网络 BCNet、Kvasir-SEG 数据集、医学图像分割
-* **发布期刊：** The 39th Annual AAAI Conference on Artificial Intelligence, AAAI 2025, 2024.12
-
-* **论文链接：** [ConDSeg: A General Medical Image Segmentation Framework via Contrast-Driven Feature Enhancement](https://arxiv.org/abs/2412.08345)
-### **40. [医学模型 M³FM，可用于零样本临床诊断，支持疾病报告和疾病分类](https://hyper.ai/cn/news/37924)**
-* **中文解读：** [https://hyper.ai/cn/news/37924](https://hyper.ai/cn/news/37924)
-
-* **科研团队：** 牛津大学、罗切斯特大学、亚马逊团队，西湖大学医学人工智能实验室郑冶枫博士、腾讯优图实验室天衍研究中心负责人吴贤博士
-* **相关研究：**  零样本临床诊断、医学影像、CLIP 模型、M³FM 框架、MultiMedCLIP 模块、MultiMedLM 模块、MIMC-CXR 数据集、COVID-19-CT-CXR 数据集、IU-Xray 、 COVID-19 CT 、 COV-CTR 、深圳结核病数据集、 COVID-CXR 、 NIH ChestX-ray 、 CheXpert 、 RSNA 肺炎、SIIM-ACR 肺气肿
-* **发布期刊：** npj Digital Medicine, 2025.2
-
-* **论文链接：** [A multimodal multidomain multilingual medical foundation model for zero shot clinical diagnosis](https://www.nature.com/articles/s41746-024-01339-7)
-### **41. [基于深度学习凭颅骨 CT 鉴定性别，赶超人类法医](https://hyper.ai/cn/news/38024)**
-* **中文解读：** [https://hyper.ai/cn/news/38024](https://hyper.ai/cn/news/38024)
-
-* **科研团队：** 澳大利亚西澳大学、新南威尔士大学、印度尼西亚哈萨努丁大学团队
-* **相关研究：** 基于深度学习的自动化框架、颅骨性别鉴定、颅骨 CT 扫描、网络配置、法医人类学
-* **发布期刊：** Scientific Reports, 2024.12
-
-* **论文链接：** [Deep learning versus human assessors: forensic sex estimation from three-dimensional computed tomography scans](https://www.nature.com/articles/s41598-024-81718-y)
-## **AI+ 材料化学：AI+Materials Chemistry**
-
-### **1. [高通量计算框架 33 分钟生成 12 万种新型 MOFs 候选材料](https://hyper.ai/news/30269)**
-* **中文解读：** [https://hyper.ai/news/30269](https://hyper.ai/news/30269)
-
-* **科研团队：** 美国阿贡国家实验室 Eliu A. Huerta 研究团队
-
-* **相关研究：** hMOFs 数据集、生成式 AI、GHP-MOFsassemble、MMPA、DiffLinker、CGCNN、GCMC
-
-* **发布期刊：** Nature, 2024.02
-
-* **论文链接：** [A generative artificial intelligence framework based on a molecular diffusion model for the design of metal-organic frameworks for carbon capture](https://www.nature.com/articles/s42004-023-01090-2)
-
-### **2. [机器学习算法模型筛选 P-SOC 电极材料](https://hyper.ai/news/29069)**
-* **中文解读：** [https://hyper.ai/news/29069](https://hyper.ai/news/29069)
-
-* **科研团队：** 广州大学叶思宇研究团队
-
-* **相关研究：** XGBoost、机器学习模型、RF、DFT。成功筛选电极材料 LCN91
-
-* **发布期刊：** ADVANCED FUNCTIONAL MATERIALS, 2023.12
-
-* **论文链接：** [Machine-Learning Assisted Screening Proton Conducting Co/Fe based Oxide for the Air Electrode of Protonic Solid Oxide Cell](https://onlinelibrary.wiley.com/doi/10.1002/adfm.202309855)
-
-### **3. [SEN 机器学习模型，实现高精度的材料性能预测](https://hyper.ai/news/28410)**
-* **中文解读：** [https://hyper.ai/news/28410](https://hyper.ai/news/28410)
-
-* **科研团队：** 中山大学李华山、王彪课题组
-
-* **相关研究：** Materials Project 数据库、SEN、capsule mechanism、深度学习。SEN 模型预测带隙和形成能的平均绝对误差，分别比常见机器学习模型低约 22.9% 和 38.3%。
-
-* **发布期刊：** Nature Communications, 2023.08
-
-* **论文链接：** [Material symmetry recognition and property prediction accomplished by crystal capsule representation](https://www.nature.com/articles/s41467-023-40756-2)
-
-### **4. [深度学习工具 GNoME 发现 220 万种新晶体](https://hyper.ai/news/28347)**
-* **中文解读：** [https://hyper.ai/news/28347](https://hyper.ai/news/28347)
-
-* **科研团队：** 谷歌 DeepMind 研究团队
-
-* **相关研究：** GNoME 数据库、GNoME、SOTA GNN 模型、深度学习、Materials Project、OQMD、WBM、ICSD
-
-* **发布期刊：** Nature, 2023.11
-
-* **论文链接：** [Scaling deep learning for materials discovery](https://www.nature.com/articles/s41586-023-06735-9)
-
-### **5. [场诱导递归嵌入原子神经网络可准确描述外场强度、方向变化](https://hyper.ai/news/28285)**
-* **中文解读：** [https://hyper.ai/news/28285](https://hyper.ai/news/28285)
-
-* **科研团队：** 中国科学技术大学的蒋彬课题组
-
-* **相关研究：** 场诱导递归嵌入原子神经网络 FIREANN、FIREANN-wF 模型。可准确描述外场强度和方向的变化时系统能量的变化趋势，还能对任意阶数的系统响应进行预测
-
-* **发布期刊：** Nature Communication, 2023.10
-
-* **论文链接：** [Universal machine learning for the response of atomistic systems to external fields](https://www.nature.com/articles/s41467-023-42148-y)
-
-### **6. [机器学习预测多孔材料水吸附等温线](https://hyper.ai/news/28260)**
-* **中文解读：** [https://hyper.ai/news/28260](https://hyper.ai/news/28260)
-
-* **科研团队：** 华中科技大学的李松课题组
-
-* **相关研究：** EWAID 数据库、机器学习模型、RF、ANN。RF 预测水吸附等温线有高精度和高灵敏度
-
-* **发布期刊：** Journal of Materials Chemistry A, 2023.09
-
-* **论文链接：** [Machine learning-assisted prediction of water adsorption isotherms and cooling performance](https://pubs.rsc.org/en/content/articlelanding/2023/TA/D3TA03586G)
-
-### **7. [利用机器学习优化 BiVO(4) 光阳极的助催化剂](https://hyper.ai/news/28013)**
-* **中文解读：** [https://hyper.ai/news/28013](https://hyper.ai/news/28013)
-
-* **科研团队：** 清华大学朱宏伟课题组
-
-* **相关研究：** ML、神经网络、AdaBoost 算法、Gradient Boosting、自解释模型、Bagging 算法、交叉验证
-
-* **发布期刊：** Journal of Materials Chemistry A, 2023.10
-
-* **论文链接：** [A comprehensive machine learning strategy for designing high-performance photoanode catalysts](https://pubs.rsc.org/en/content/articlelanding/2023/TA/D3TA04148D)
-
-### **8. [RetroExplainer 算法基于深度学习进行逆合成预测](https://hyper.ai/news/27406)**
-* **中文解读：** [https://hyper.ai/news/27406](https://hyper.ai/news/27406)
-
-* **科研团队：** 山东大学、电子科技大学课题组
-
-* **相关研究：** RetroExplainer、深度学习、MSMS-GT、DAMT、可解释的决策模块、路线预测模块。RetroExplainer 提出的合成路线中，86.9% 的反应得到了文献的验证
-
-* **发布期刊：** Nature Communications, 2023.10
-
-* **论文链接：** [Retrosynthesis prediction with an interpretable deep-learning framework based on molecular assembly tasks](https://www.nature.com/articles/s41467-023-41698-5)
-
-### **9. [深度神经网络+自然语言处理，开发抗蚀合金](https://hyper.ai/news/25891)**
-* **中文解读：** [https://hyper.ai/news/25891](https://hyper.ai/news/25891)
-
-* **科研团队：** 德国马克思普朗克铁研究所的研究团队
-
-* **相关研究：** DNN、NLP。读取有关合金加工和测试方法的文本数据，有预测新元素的能力
-
-* **发布期刊：** Science Advances, 2023.08
-
-* **论文链接：** [Enhancing corrosion-resistant alloy design through natural language processing and deep learning](https://www.science.org/doi/10.1126/sciadv.adg7992)
-
-### **10. [深度学习通过表面观察确定材料的内部结构](https://hyper.ai/news/25859)**
-* **中文解读：** [https://hyper.ai/news/25859](https://hyper.ai/news/25859)
-
-* **科研团队：** 麻省理工学院的研究团队
-
-* **相关研究：** 深度学习、FEA 计算、Abaqus 可视化工具、GAN、ViViT、CNN
-
-* **发布期刊：** Advanced Materials, 2023.03
-
-* **论文链接：** [Fill in the Blank: Transferrable Deep Learning Approaches to Recover Missing Physical Field Information](https://onlinelibrary.wiley.com/doi/full/10.1002/adma.202301449)
-
-### **11. [利用创新 X 射线闪烁体开发 3 种新材料](https://hyper.ai/news/31465)**
-* **中文解读：** [https://hyper.ai/news/31465](https://hyper.ai/news/31465)
-
-* **科研团队：** 河北大学张海磊研究团队
-
-* **相关研究：** 水分散性 X 射线闪烁体、纳米材料、聚氨酯泡沫、X 射线成像柔性水凝胶闪烁体屏幕、多级防伪信息加密的复合水凝胶
-
-* **发布期刊：** Nature Communications, 2024.03
-
-* **论文链接：** [Water-dispersible X-ray scintillators enabling coating and blending with polymer materials for multiple applications](https://www.nature.com/articles/s41467-024-46287-8)
-
-### **12. [半监督学习提取无标签数据中的隐藏信息](https://hyper.ai/news/31089)**
-* **中文解读：** [https://hyper.ai/news/31089](https://hyper.ai/news/31089)
-
-* **科研团队：** 上海交大万佳雨研究团队研究团队
-
-* **相关研究：** 半监督学习、无标签数据、贝叶斯协同训练、部分视图模型、完整视图模型。锂电池寿命预测精度提升 20%
-
-* **发布期刊：** Joule, 2024.03
-
-* **论文链接：** [Semi-supervised learning for explainable few-shot battery lifetime prediction](https://doi.org/10.1016/j.joule.2024.02.020 )
-
-### **13. [基于自动机器学习进行知识自动提取](https://hyper.ai/news/30920)**
-* **中文解读：** [https://hyper.ai/news/30920](https://hyper.ai/news/30920)
-
-* **科研团队：** 上海交大贺玉莲研究团队
-
-* **相关研究：** 自动机器学习 AutoML、催化剂、化学吸附能、Eads  值、特征删除实验、神经网络、高通量密度泛函理论
-
-* **发布期刊：** PNAS, 2024.03
-
-* **论文链接：** [Interpreting chemisorption strength with AutoML-based feature deletion experiments](https://hyper.ai/news/30920)
-
-### **14. [一种三维 MOF 材料吸附行为预测的机器学习模型 Uni-MOF](https://hyper.ai/news/30663)**
-* **中文解读：** [https://hyper.ai/news/30663](https://hyper.ai/news/30663)
-
-* **科研团队：** 清华大学化工系卢滇楠研究团队
-
-* **相关研究：** hMOFs50 数据库、MOF/COF 数据库、微调 Uni-MOF。在识别超过 63 万个三维空间构型及其原子间连接关系上的有效性
-
-* **发布期刊：** Nature Communications, 2024.03
-
-* **论文链接：** [A comprehensive transformer-based approach for high-accuracy gas adsorption predictions in metal-organic frameworks](https://www.nature.com/articles/s41467-024-46276-x)
-
-### **15. [微电子加速迈向后摩尔时代！集成 DNN 与纳米薄膜技术，精准分析入射光角度](https://hyper.ai/news/32326)**
-* **中文解读：** [https://hyper.ai/news/32326](https://hyper.ai/news/32326)
-
-* **科研团队：** 复旦大学梅永丰课题组
-
-* **相关研究：** 有限元模型、应变纳米膜释放模型、菲克定律、深度神经网络、三维光探测器、角度敏感检测模型
-
-* **发布期刊：** Nature Communications, 2024.04
-
-* **论文链接：** [Multilevel design and construction in nanomembrane rolling for three-dimensional angle-sensitive photodetection](https://www.nature.com/articles/s41467-024-47405-2)
-
-### **16. [重塑锂电池性能边界，基于集成学习提出简化电化学模型](https://hyper.ai/news/32323)**
-* **中文解读：** [https://hyper.ai/news/32323](https://hyper.ai/news/32323)
-
-* **科研团队：** 武汉理工大学康健强团队
-
-* **相关研究：** 简化电化学模型、集成学习模型、机器学习、一阶惯性元件 FIE、离散时间实现算法 DRA、分数阶帕德逼近 FOM、三参数抛物线近似 TPM
-
-* **发布期刊：** iScience, 2024.05
-
-* **论文链接：** [A simplified electrochemical model forlithium-ion batteries based on ensemblelearning](https://www.sciencedirect.com/science/article/pii/S2589004224009076)
-
-### **17. [基于机器学习，最强铁基超导磁体诞生](https://hyper.ai/news/32556)**
-* **中文解读：** [https://hyper.ai/news/32556](https://hyper.ai/news/32556)
-
-* **科研团队：** 东京农工大学研究团队
-
-* **相关研究：** BOXVIA 机器学习、数据驱动循环、数值模拟、铁基超导永磁体 Ba122、场冷磁化 (FCM) 模型。磁场强度超过先前记录 2.7 倍
-
-* **发布期刊：** NPG Asia Materials, 2024.06
-
-* **论文链接：** [Superstrength permanent magnets with iron-based superconductors by data- and researcher-driven process design](https://www.nature.com/articles/s41427-024-00549-5)
-
-### **18. [神经网络替代密度泛函理论！通用材料模型实现超精准预测](https://hyper.ai/news/32891)**
-* **中文解读：** [https://hyper.ai/news/32891](https://hyper.ai/news/32891)
-
-* **科研团队：** 清华大学物理系的徐勇、段文晖团队
-
-* **相关研究：** Materials Project 数据库、深度学习密度泛函理论哈密顿量 (DeepH) 方法、通用材料模型、神经网络、等变神经网络、自动化交互式基础设施和数据库 (AiiDA) 框架
-
-* **发布期刊：** Science Bulletin, 2024.06
-
-* **论文链接：** [Universal materials model of deep-learning density functional theory Hamiltonian](https://doi.org/10.1016/j.scib.2024.06.011)
-
-### **19. [神经网络密度泛函框架打开物质电子结构预测的黑箱](https://hyper.ai/news/33525)**
-* **中文解读：** [https://hyper.ai/news/33525](https://hyper.ai/news/33525)
-
-* **科研团队：** 清华大学徐勇、段文晖课题组
-
-* **相关研究：** 神经网络密度泛函理论、变分密度泛函理论、等价神经网络、Julia 语言、Zygote 自动微分框架、深度学习、无监督学习、DFT
-
-* **发布期刊：** Phys. Rev. Lett., 2024.08
-
-* **论文链接：** [Neural-network density functional theory based on variational energy minimization](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.133.076401)
-
-### **20. [用神经网络首创全前向智能光计算训练架构，国产光芯片实现重大突破](https://hyper.ai/news/33440)**
-* **中文解读：** [https://hyper.ai/news/33440](https://hyper.ai/news/33440)
-
-* **科研团队：** 清华大学戴琼海院士、方璐教授研究团队
-
-* **相关研究：** 神经网络、全前向模式、机器学习、MNIST 数据集、Fashion-MNIST 数据集、CIFAR-10 数据集、ImageNet 数据集、MWD 数据集、鸢尾花数据集、Chromium target 数据集
-
-* **发布期刊：** Nature, 2024.08
-
-* **论文链接：** [Fully forward mode training for optical neural networks](https://www.nature.com/articles/s41586-024-07687-4)
-### **21. [化学大语言模型 ChemLLM 覆盖 7 百万问答数据，专业能力比肩 GPT-4](https://hyper.ai/news/34170)**
-* **中文解读：** [https://hyper.ai/news/34170](https://hyper.ai/news/34170)
-
-* **科研团队：** 上海人工智能实验室
-
-* **相关研究：**  大规模化学数据集 ChemData 、ChemPref-10K 的中英文版本数据集、C- MHChem 数据集、ChemBench4K 化学能力评测基准数据集、大规模化学基准测试 ChemBench、Multi-Corpus 综合语料库、NLP 任务、化学大语言模型
-
-* **发布期刊：** arXiv, 2024.02
-
-* **论文链接：** [ChemLLM: A Chemical Large Language Model](https://arxiv.org/abs/2402.06852)
-### **22. [可晶圆级生产的人工智能自适应微型光谱仪](https://hyper.ai/news/34075)**
-* **中文解读：** [https://hyper.ai/news/34075](https://hyper.ai/news/34075)
-
-* **科研团队：** 复旦大学材料科学系、智慧纳米机器人与纳米系统国际研究院梅永丰教授课题组
-
-* **相关研究：**  光学光谱仪、微型化重构光谱仪、CMOS 集成电路工艺、窄带通道电流数据集 、全部通道电流数据集。在整个可见光波段表现出准确的光谱重构能力
-
-* **发布期刊：** PNAS, 2024.08
-
-* **论文链接：** [CMOS-Compatible Reconstructive Spectrometers with Self-Referencing Integrated Fabry-Perot Resonatorsl](https://www.pnas.org/doi/10.1073/pnas.2403950121)
-### **23. [GNNOpt 模型，识别数百种太阳能电池和量子候选材料](https://hyper.ai/cn/news/35009)**
-* **中文解读：** [https://hyper.ai/cn/news/35009](https://hyper.ai/cn/news/35009)
-
-* **科研团队：** 日本东北大学、麻省理工学院
-* **相关研究：** DFT 计算、人工智能工具 GNNOpt、「集成嵌入」技术、集成等变神经网络、Materials Project 数据库、自动嵌入优化的集成嵌入层。成功识别出 246 种太阳能转换效率超过 32% 的材料、以及 296 种具有高量子权重的量子材料
-
-* **发布期刊：** Advanced Materials, 2024.06
-
-* **论文链接：** [Universal Ensemble-Embedding Graph Neural Network for Direct Prediction of Optical Spectra from Crystal Structures](https://onlinelibrary.wiley.com/doi/epdf/10.1002/adma.202409175)
-### **24. [开源 OMat24 数据集，含 1.1 亿 DFT 计算结果](https://hyper.ai/cn/news/35515)**
-* **中文解读：** [https://hyper.ai/cn/news/35515](https://hyper.ai/cn/news/35515)
-
-* **科研团队：** Meta
-* **相关研究：**  Open Materials 2024 (OMat24) 大规模开源数据集、EquformerV2 (eqV2) 模型、从头算分子动力学。数据集包含的元素几乎覆盖整个元素周期表，用于材料训练 DFT 替代模型
-
-* **发布期刊：** arxiv, 2024.10
-
-* **论文链接：** [Open Materials 2024 (OMat24) Inorganic Materials Dataset and Models](https://arxiv.org/pdf/2410.12771)
-### **25. [通过机器学习合成的新型耐火高熵合金，室温延展性极佳](https://hyper.ai/cn/news/35536)**
-* **中文解读：** [https://hyper.ai/cn/news/35536](https://hyper.ai/cn/news/35536)
-
-* **科研团队：** 北京科技大学宿彦京团队
-* **相关研究：**  结合 ML ，遗传搜索，聚类分析和实验反馈的多目标优化 (MOO) 框架、机器学习模型。耐火高熵合金突破 1200°C 高温性能极限
-
-* **发布期刊：** Engineering, 2024.09
-
-* **论文链接：** [Machine-Learning-Assisted Compositional Design of Refractory High-Entropy Alloys with Optimal Strength and Ductility](https://www.sciencedirect.com/science/article/pii/S2095809924005113 )
-### **26. [材料生成模型 FlowLLM，数据集覆盖超 4.5w 种材料](https://hyper.ai/cn/news/35846)**
-* **中文解读：** [https://hyper.ai/cn/news/35846](https://hyper.ai/cn/news/35846)
-
-* **科研团队：** Meta FAIR 实验室、阿姆斯特丹大学
-* **相关研究：**  材料生成模型 FlowLLM、S.U.N. 材料生成、大语言模型（LLM）、黎曼流匹配（RFM）、 MP-20 数据集、LoRA 方法。稳定性材料生成效率提升 300%，S.U.N. 材料生成效率提高 50%
-* **发布期刊：** NeurIPS 2024, 2024.10
-
-* **论文链接：** [FlowLLM: Flow Matching for Material Generation with Large Language Models as Base Distributions](https://arxiv.org/pdf/2410.23405)
-### **27. [用主动学习识别 1.4 万个高熵氧化物，成功筛选 4 种高活性析氢催化剂](https://hyper.ai/cn/news/36352)**
-* **中文解读：** [https://hyper.ai/cn/news/36352](https://hyper.ai/cn/news/36352)
-
-* **科研团队：** 清华大学化学系王训团队、上海交通大学化学系吴量、中国科学院高能物理研究所储胜启、美国普渡大学数学系林光、美国杜克大学生物工程系向衍等
-* **相关研究：**  主动学习 (AL) 策略、包含 14 种过渡金属的附加库、主动学习方法、Kennard-Stone 采样方法、X 射线衍射 (XRD)、CrMnCoNiCu 催化剂
-* **发布期刊：** Journal of the American Chemical Society, 2024.10
-
-* **论文链接：** [Active Learning Guided Discovery of High Entropy Oxides Featuring High H2‑production](https://pubs.acs.org/doi/10.1021/jacs.4c06272)
-### **28. [深度学习模型 BETE-NET，超导材料搜索效率提升 5 倍](https://hyper.ai/cn/news/37658)**
-* **中文解读：** [https://hyper.ai/cn/news/37658](https://hyper.ai/cn/news/37658)
-
-* **科研团队：** 美国佛罗里达大学和田纳西大学研究人员
-* **相关研究：**  深度学习模型 BETE-NET、α²F(ω) 数据集、Eliashberg 谱函数数据集、现代深度学习技术、包含 818 种动态稳定材料的高质量电子-声子计算的全面数据库、双重下降
-* **发布期刊：** npj Computational Materials, 2025.1
-
-* **论文链接：** [Accelerating superconductor discovery through tempered deep learning of the electron-phonon spectral function](https://www.nature.com/articles/s41524-024-01475-4)
-### **29. [梯度提升决策树 (GBDT) 技术，进一步提高高熵合金抗氧化性能的高精度预测](https://hyper.ai/cn/news/37723)**
-* **中文解读：** [https://hyper.ai/cn/news/37723](https://hyper.ai/cn/news/37723)
-
-* **科研团队：** 法国波尔多大学、日本国立材料科学研究所、中国台湾国立清华大学、比利时鲁汶大学、比利时 WEL 研究所的联合研究团队
-* **相关研究：**  梯度提升决策树 (GBDT) 技术、对 RHEAs 和 RCCAs 抗氧化性能的高精度预测、XGBoost 算法、高温材料、高熵合金
-* **发布期刊：** Scripta Materialia, 2025.1
-
-* **论文链接：** [Advancing refractory high entropy alloy development with AI-predictive models for high temperature oxidation resistance](https://doi.org/10.1016/j.scriptamat.2024.116394)
-### **30. [分子设计 RingFormer 框架，更精准预测有机材料分子光电性能](https://hyper.ai/cn/news/37870)**
-* **中文解读：** [https://hyper.ai/cn/news/37870](https://hyper.ai/cn/news/37870)
-
-* **科研团队：** 香港理工大学团队
-* **相关研究：**  分子设计、Transformer 架构、分子光电性能、Clean Energy Project Database (CEPDB) 测试集、有机太阳能电池、图神经网络、RingFormer 框架
-* **发布期刊：** AAAI 2025, 2024.12
-
-* **论文链接：** [RingFormer: A Ring-Enhanced Graph Transformer for Organic Solar Cell Property Prediction](https://doi.org/10.48550/arXiv.2412.09030)
-### **31. [无机逆合成规划方法 Retrieval-Retro，提高无机材料合成的效率和准确性](https://hyper.ai/cn/news/37969)**
-* **中文解读：** [https://hyper.ai/cn/news/37969](https://hyper.ai/cn/news/37969)
-
-* **科研团队：** 韩国化学技术研究所、韩国科学技术院
-* **相关研究：**  无机逆合成规划方法 Retrieval-Retro、卷积变分自编码器率、无机材料、掩码前驱体补全检索器、神经反应能检索器、检索技术、自注意力和交叉注意力机制
-* **发布期刊：** NeurIPS 2024, 2024.10
-
-* **论文链接：** [Retrieval-Retro: Retrieval-based Inorganic Retrosynthesis with Expert Knowledge](https://doi.org/10.48550/arXiv.2410.21341)
-## **AI+动植物科学：AI+Zoology-Botany**
-
-### **1. [SBeA 基于少样本学习框架进行动物社会行为分析](https://hyper.ai/news/29353)**
-* **中文解读：** [https://hyper.ai/news/29353](https://hyper.ai/news/29353)
-
-* **科研团队：** 中科院深圳先进院蔚鹏飞研究团队
-
-* **相关研究：** PAIR-R24M 数据集、双向迁移学习、非监督式学习、人工神经网络、身份识别模型。在多动物身份识别方面的准确率超过 90% 
-
-* **发布期刊：** Nature Machine Intelligence, 2024.01
-
-* **论文链接：** [Multi-animal 3D social pose estimation, identification and behaviour embedding with a few-shot learning framework](https://www.nature.com/articles/s42256-023-00776-5)
-
-### **2. [基于孪生网络的深度学习方法，自动捕捉胚胎发育过程](https://hyper.ai/cn/news/28419)**
-* **中文解读：** [https://hyper.ai/news/28787](https://hyper.ai/cn/news/28419)
-
-* **科研团队：** 系统生物学家 Patrick Müller 及康斯坦茨大学研究团队
-
-* **相关研究：** ImageNet 数据集、孪生网络、深度学习、迁移学习、三联体损失训练、迭代训练、分任务训练。在没有人为干预的情况下识别胚胎发育特征阶段点
-
-* **发布期刊：** Nature Methods, 2023.11
-
-* **论文链接：** [Uncovering developmental time and tempo using deep learning](https://www.nature.com/articles/s41592-023-02083-8)
-
-### **3. [利用无人机采集植物表型数据的系统化流程，预测最佳采收日期](https://hyper.ai/news/28303)**
-* **中文解读：** [https://hyper.ai/news/28303](https://hyper.ai/news/28303)
-
-* **科研团队：** 东京大学和千叶大学的研究团队
-
-* **相关研究：** 利润预测模型、分割模型、交互式标注、LabelMe、非线性回归模型、BiSeNet 模型
-* **发布期刊：** Plant Phenomics, 2023.09
-
-* **论文链接：** [Drone-Based Harvest Data Prediction Can Reduce On-Farm Food Loss and Improve Farmer Income](https://spj.science.org/doi/10.34133/plantphenomics.0086#body-ref-B4)
-
-### **4. [AI 相机警报系统准确区分老虎和其他物种](https://hyper.ai/news/27954)**
-* **中文解读：** [https://hyper.ai/news/27954](https://hyper.ai/news/27954)
-
-* **科研团队：** 克莱姆森大学的研究团队
-
-* **相关研究：** TrailGuard AI。1 分钟内将相关图像传到保护区管理员的终端设备上
-
-* **发布期刊：** BioScience, 2023.09
-
-* **论文链接：** [Accurate proteome-wide missense variant effect prediction with AlphaMissense](https://www.science.org/doi/10.1126/science.adg7492)
-
-### **5. [利用拉布拉多猎犬数据，对比 3 种模型，发现了影响嗅觉检测犬表现的行为特性](https://hyper.ai/news/25472)**
-* **中文解读：** [https://hyper.ai/news/25472](https://hyper.ai/news/25472)
-
-* **科研团队：** 美国全国儿童医院阿比盖尔·韦克斯纳研究所、洛基维斯塔大学的研究团队
-
-* **相关研究：** AT 测试、Env 测试、随机森林、支持向量机、逻辑回归、PCA、RFECV
-
-* **发布期刊：** Scientific Reports, 2023.08
-
-* **论文链接：** [Machine learning prediction and classification of behavioral selection in a canine olfactory detection program](https://www.nature.com/articles/s41598-023-39112-7)
-
-### **6. [基于人脸识别 ArcFace Classification Head 的多物种图像识别模型](https://hyper.ai/news/25164)**
-* **中文解读：** [https://hyper.ai/news/25164](https://hyper.ai/news/25164)
-
-* **科研团队：** 夏威夷大学的研究团队
-
-* **相关研究：** [鲸类数据集](https://github.com/knshnb/kaggle-happywhale-1st-place)、图像修剪模型、图像识别模型、YOLOv5、Detic。达到了 0.869 的平均准确率
-
-* **发布期刊：** Methods in Ecology and Evolution, 2023.07
-
-* **论文链接：** [A deep learning approach to photo–identification demonstrates high performance on two dozen cetacean species](https://besjournals.onlinelibrary.wiley.com/doi/full/10.1111/2041-210X.14167)
-
-### **7. [利用 Python API 与计算机视觉 API，监测日本的樱花开放情况](https://hyper.ai/news/24512)**
-* **中文解读：** [https://hyper.ai/news/24512](https://hyper.ai/news/24512)
-
-* **科研团队：** 澳大利亚莫纳什大学的研究团队
-
-* **相关研究：** 社交网站 (SNS) 数据、Google Cloud Vision AI、机器学习模型
-* **发布期刊：** Flora, 2023.07
-
-* **论文链接：** [The spatiotemporal signature of cherry blossom flowering across Japan revealed via analysis of social network site images](https://www.sciencedirect.com/science/article/abs/pii/S0367253023001019)
-
-### **8. [基于机器学习的群体遗传方法，揭示葡萄风味的形成机制](https://hyper.ai/news/24442)**
-* **中文解读：** [https://hyper.ai/news/24442](https://hyper.ai/news/24442)
-
-* **科研团队：** 中国农业科学院深圳农业基因组的研究团队
-
-* **相关研究：** [葡萄基因组序列](https://github.com/zhouyflab/Grapevine_Adaptive_Maladaptive_Introgression)、机器学习
-
-* **发布期刊：** Proceedings of the National Academy of Sciences, 2023.06
-
-* **论文链接：** [Adaptive and maladaptive introgression in grapevine domestication](https://www.pnas.org/doi/abs/10.1073/pnas.2222041120)
-
-
-### **9. [综述：借助 AI 更高效地开启生物信息学研究](https://hyper.ai/news/33931)**
-* **中文解读：** [https://hyper.ai/news/33931](https://hyper.ai/news/33931)
-
-* **主要内容：** AI 在同源搜索、多重比对及系统发育构建、基因组序列分析、基因发现等生物学领域中，都有丰富的应用案例。作为一名生物学研究人员，能熟练地将机器学习工具整合到数据分析中，必将加速科学发现、提升科研效率。
-
-### **10. [BirdFlow 模型准确预测候鸟的飞行路径](https://hyper.ai/cn/news/34781)**
-* **中文解读：** [https://hyper.ai/news/33942](https://hyper.ai/news/33942)
-
-* **科研团队：** 马萨诸塞州立大学、康奈尔大学的研究团队
-
-* **相关研究：** 计算机建模、eBird 数据集、马尔可夫模型、Hyperparameter grid search、Entropy calibration、k-week  forecasting
-
-* **发布期刊：** Methods in Ecology and Evolution, 2023.01
-
-* **论文链接：** [BirdFlow: Learning seasonal bird movements from eBird data](https://besjournals.onlinelibrary.wiley.com/doi/full/10.1111/2041-210X.14052)
-### **11. [新的鲸鱼生物声学模型，可识别 8 种鲸类](https://hyper.ai/cn/news/34781)**
-* **中文解读：** [https://hyper.ai/cn/news/34781](https://hyper.ai/cn/news/34781)
-
-* **科研团队：** Google Research 团队
-
-* **相关研究：** 梅尔尺度的频率轴 、压缩数振幅、可通过 TensorFlow 的 SavedModel API 独立调用、卷积神经网络、用于检测座头鲸叫声的分类模型、互动可视化工具「Pattern Radio」。专门用于识别蓝鲸和长须鲸的模型、可识别目前已知 94 种鲸鱼种类中的 8 个不同物种
-
-* **发布期刊：** Google Research, 2024.9
-
-* **论文链接：** [Whistles, songs, boings, and biotwangs: Recognizing whale vocalizations with AI](https://research.google/blog/whistles-songs-boings-and-biotwangs-recognizing-whale-vocalizations-with-ai)
-
-### **12. [用机器学习分离抹香鲸发音字母表，高度类似人类语言，信息承载能力更强](https://hyper.ai/news/33433)**
-* **中文解读：** [https://hyper.ai/news/33433](https://hyper.ai/news/33433)
-
-* **科研团队：** 麻省理工学院 Pratyusha Sharma 以及 CETI 的研究团队
-
-* **相关研究：**  DSWP 数据集、机器学习、抹香鲸声音具有结构性
-
-* **发布期刊：** Nature Communications, 2024.05
-
-* **论文链接：** [Contextual and combinatorial structure in sperm whale vocalisations](https://www.nature.com/articles/s41467-024-47221-8)
-
-## **AI+农林畜牧业：AI+Agriculture-Forestry-Animal husbandry**
-
-### **1. [利用卷积神经网络，对水稻产量进行迅速、准确的统计](https://hyper.ai/news/26100)**
-* **中文解读：** [https://hyper.ai/news/26100](https://hyper.ai/news/26100)
-
-* **科研团队：** 京都大学的研究团队
-
-* **相关研究：** 卷积神经网络。CNN 模型可以对不同拍摄角度、时间和时期下得到的农田照片准确分析，得到稳定的产量预测结果
-
-* **发布期刊：** Plant Phenomics, 2023.07
-
-* **论文链接：** [Deep Learning Enables Instant and Versatile Estimation of Rice Yield Using Ground-Based RGB Images](https://spj.science.org/doi/10.34133/plantphenomics.0073)
-
-### **2. [通过 YOLOv5 算法，设计监测母猪姿势与猪仔出生的模型](https://hyper.ai/news/25131)**
-* **中文解读：** [https://hyper.ai/news/25131](https://hyper.ai/news/25131)
-
-* **科研团队：** 南京农业大学研究团队
-
-* **相关研究：** YOLOv5、检测母猪姿势和仔猪的模型。能够在产仔开始前 5 小时发出警报，总体平均准确率为 92.9%
-
-* **发布期刊：** Sensors, 2023.01
-
-* **论文链接：** [Sow Farrowing Early Warning and Supervision for Embedded Board Implementations](https://www.mdpi.com/1424-8220/23/2/727)
-
-### **3. [结合实验室观测与机器学习，证明番茄与烟草植物在胁迫环境下发出的超声波能在空气中传播](https://hyper.ai/news/24547)**
-* **中文解读：** [https://hyper.ai/news/24547](https://hyper.ai/news/24547)
-
-* **科研团队：** 以色列特拉维夫大学的研究团队
-
-* **相关研究：** 机器学习模型、SVM、Basic、MFCC、Scattering network、神经网络模型、留一法交叉验证。识别准确率高达 99.7%、4-6 天时番茄尖叫声最大
-
-* **发布期刊：** Cell, 2023.03
-
-* **论文链接：** [Sounds emitted by plants under stress are airborne and informative](https://doi.org/10.1016/j.cell.2023.03.009)
-
-### **4. [无人机+ AI 图像分析，检测林业害虫](https://hyper.ai/news/23807)**
-* **中文解读：** [https://hyper.ai/news/23807](https://hyper.ai/news/23807)
-
-* **科研团队：** 里斯本大学研究团队
-
-* **相关研究：** FRCNN、YOLO 模型。YOLO 模型的检测性能高于 FRCNN、无人机和 AI 模型相结合能够有效地对松异舟蛾巢穴进行早期检测
-
-* **发布期刊：** NeoBiota, 2023.05
-
-* **论文链接：** [Testing early detection of pine processionary moth Thaumetopoea pityocampa nests using UAV-based methods](https://neobiota.pensoft.net/article/95692/)
-
-### **5. [计算机视觉+深度学习开发奶牛跛行检测系统](https://hyper.ai/news/33957)**
-* **中文解读：** [https://hyper.ai/news/33957](https://hyper.ai/news/33957)
-
-* **科研团队：** 纽卡斯尔大学及费拉科学有限公司的研究团队
-
-* **相关研究：** 计算机视觉、深度学习、Mask-RCNN 算法、SORT 算法、CatBoost 算法。准确度可达 94%-100%
-
-* **发布期刊：** Nature, 2023.03
-
-* **论文链接：** [Deep learning pose estimation for multi-cattle lameness detection](https://www.nature.com/articles/s41598-023-31297-1)
-
-## **AI+ 气象学：AI+Meteorology**
-### **1. [综述：数据驱动的机器学习天气预报模型](https://hyper.ai/news/28124)**
-* **中文解读：** [https://hyper.ai/news/28124](https://hyper.ai/news/28124)
-
-* **主要内容：** 数值天气预报是天气预报的主流方法。它通过数值积分，对地球系统的状态进行逐网格的求解，是一个演绎推理的过程。 2022 年以来，天气预报领域的机器学习模型取得了一系列突破，部分成果可以与欧洲中期天气预报中心的高精度预测匹敌。
-
-### **2. [综述：从雹暴中心收集数据，利用大模型预测极端天气](https://hyper.ai/news/25874)**
-* **中文解读：** [https://hyper.ai/news/25874](https://hyper.ai/news/25874)
-
-* **主要内容：** 2021 年，达摩院与国家气象中心联合研发了 AI 算法用于天气预测，并成功预测了多次强对流天气。同年 9 月，Deepmind 在《Nature》上发表文章，利用深度生成模型进行降雨量的实时预报。
-
- 2023 年年初，Deepmind 正式推出了 GraphCast，可以在一分钟内对全球未来 10 天的气象，进行分辨率为 0.25° 的预测。 4 月，南京信息工程大学和上海人工智能实验室合作研发了「风乌」气象预测大模型，误差较 GraphCast 进一步降低。
-
- 随后，华为推出了「盘古」气象大模型。由于模型中引出了三维神经网络，「盘古」的预测准确率首次超过了目前最准确的 NWP 预测系统。近期，清华大学和复旦大学相继发布了「NowCastNet」和「伏羲」模型。
-
-### **3. [利用全球风暴解析模拟与机器学习，创建新算法，准确预测极端降水](https://hyper.ai/news/24995)**
-* **中文解读：** [https://hyper.ai/news/24995](https://hyper.ai/news/24995)
-
-* **科研团队：** 哥伦比亚大学 LEAP 实验室
-
-* **相关研究：** 机器学习、Baseline-NN、Org-NN、神经网络
-* **发布期刊：** PNAS, 2023.03
-
-* **论文链接：** [Implicit learning of convective organization explains precipitation stochasticity
-](https://www.pnas.org/doi/10.1073/pnas.2216158120)
-
-
-### **4. [基于随机森林的机器学习模型 CSU-MLP，预测中期恶劣天气](https://hyper.ai/news/33966)**
-* **中文解读：** [https://hyper.ai/news/33966](https://hyper.ai/news/33966)
-
-* **科研团队：** 美国科罗拉多州立大学和国家海洋和大气管理局的研究团队
-
-* **相关研究：** GEFS/R 数据集、机器学习、插值处理、RF。可对中期（4-8 天）范围内恶劣天气进行准确预报
-
-* **发布期刊：** Weather and Forecasting, 2022.08
-
-* **论文链接：** [A new paradigm for medium-range severe weather forecasts: probabilistic random forest-based predictions](https://arxiv.org/abs/2208.02383)
-
-
-## **AI+ 天文学：AI+Astronomy**
-### **1. [PRIMO 算法学习黑洞周围的光线传播规律，重建出更清晰的黑洞图像](https://hyper.ai/news/23698)**
-* **中文解读：** [https://hyper.ai/news/23698](https://hyper.ai/news/23698)
-
-* **科研团队：** 普林斯顿高等研究院研究团队
-
-* **相关研究：** PRIMO 算法、PCA、GRMHD。PRIMO 重建黑洞图像
-
-* **发布期刊：** The Astrophysical Journal Letters, 2023.04
-
-* **论文链接：** [The Image of the M87 Black Hole Reconstructed with PRIMO](https://iopscience.iop.org/article/10.3847/2041-8213/acc32d/pdf)
-
-
-### **2. [利用模拟数据训练计算机视觉算法，对天文图像进行锐化「还原」](https://hyper.ai/news/33975)**
-* **中文解读：** [https://hyper.ai/news/33975](https://hyper.ai/news/33975)
-
-* **科研团队：** 清华大学及美国西北大学研究团队
-
-* **相关研究：** [Galsim](https://github.com/GalSim-developers/GalSim)、[COSMOS](https://doi.org/10.5281/zenodo.3242143)、计算机视觉算法、CNN、Richardson-Lucy 算法、unrolled-ADMM 神经网络
-
-* **发布期刊：** 皇家天文学会月刊，2023.06
-
-* **论文链接：** [Galaxy image deconvolution for weak gravitational lensing with unrolled plug-and-play ADMM](https://www.nature.com/articles/s41421-023-00543-1)
-
-### **3. [利用无监督机器学习算法 Astronomaly ，找到了之前为人忽视的异常现象](https://hyper.ai/news/26316)**
-* **中文解读：** [https://hyper.ai/news/26316](https://hyper.ai/news/26316)
-
-* **科研团队：** 西开普大学的研究者
-
-* **相关研究：** CNN、无监督机器学习、Astronomaly、PCA、孤立森林、LOF 算法、iForest 算法、NS 算法、DR 算法。Astronomaly 从异常评分最高的 2,000 张图像中找到了 1,635 处异常
-
-* **发布期刊：** arXiv, 2023.09
-
-* **论文链接：** [Astronomaly at Scale: Searching for Anomalies Amongst 4 Million Galaxies](https://arxiv.org/abs/2309.08660)
-
-### **4. [基于机器学习的 CME 识别与参数获取方法](https://hyper.ai/news/31870)**
-* **中文解读：** [https://hyper.ai/news/31870](https://hyper.ai/news/31870)
-
-* **科研团队：** 中国科学院国家空间科学中心太阳活动与空间天气重点实验室的研究团队
-
-* **相关研究：** 机器学习、神经网络、Otsu 算法、轨迹匹配算法、自动识别、参数获取、CACTus 、 CORIMP 、 SEEDS。可识别日冕物质抛射
-
-* **发布期刊：** THE ASTROPHYSICAL JOURNAL, 2024.04
-
-* **论文链接：** [An Algorithm for the Determination of Coronal Mass Ejection Kinematic Parameters Based on Machine Learning](https://iopscience.iop.org/article/10.3847/1538-4365/ad2dea)
-
-### **5. [深度学习发现 107 例中性碳吸收线](https://hyper.ai/news/32210)**
-* **中文解读：** [https://hyper.ai/news/32210](https://hyper.ai/news/32210)
-
-* **科研团队：** 中国科学院上海天文台研究员葛健带领的国际团队
-
-* **相关研究：** 深度学习方法、SDSS DR12、卷积神经网络模型。发现了 107 例宇宙早期中性碳吸收线，探测精度达 99.8%
-
-* **发布期刊：** MNRAS, 2024.05
-
-* **论文链接：** [Detecting rare neutral atomic-carbon absorbers with a deep neuralnetwork](https://doi.org/10.1093/mnras/stae799)
-### **6. [StarFusion 模型实现高空间分辨率图像的预测](https://hyper.ai/news/34254)**
-* **中文解读：** [https://hyper.ai/news/34254](https://hyper.ai/news/34254)
-
-* **科研团队：** 北京师范大学地表过程与资源生态国家重点实验室陈晋团队
-
-* **相关研究：** 深度学习方法、遥感影像、高空间分辨率图像的预测、提出了双流时空解耦融合架构模型 StarFusion、Gaofen-1 数据集、Sentinel-2 卫星数据集、SRGAN-STF 模型、线性回归模型、多变量回归关系模型
-
-* **发布期刊：** Journal of Remote Sensing, 2024.07
-
-* **论文链接：** [A Hybrid Spatiotemporal Fusion Method for High Spatial Resolution Imagery: Fusion of Gaofen-1 and Sentinel-2 over Agricultural Landscapes](https://spj.science.org/doi/10.34133/remotesensing.0159)
-
-## **AI+ 自然灾害：AI+Natural Disaster**
-### **1. [机器学习预测未来 40 年的地面沉降风险](https://hyper.ai/news/30173)**
-* **中文解读：** [https://hyper.ai/news/30173](https://hyper.ai/news/30173)
-
-* **科研团队：** 中南大学柳建新研究团队
-
-* **相关研究：** SAR 数据集、机器学习模型、XGBR、LSTM
-
-* **发布期刊：** Journal of Environmental Management, 2024.02
-
-* **论文链接：** [Machine learning-based techniques for land subsidence simulation in an urban area](https://www.sciencedirect.com/science/article/abs/pii/S0301479724000641?via%3Dihub
-)
-
-### **2. [语义分割模型 SCDUNet++ 用于滑坡测绘](https://hyper.ai/news/29672)**
-* **中文解读：** [https://hyper.ai/news/29672](https://hyper.ai/news/29672)
-
-* **科研团队：** 成都理工大学刘瑞研究团队
-
-*  **相关研究：** Sentinel-2 多光谱数据、NASADEM 数据、滑坡数据、GLFE、CNN、DSSA、DSC、DTL、Transformer、深度迁移学习。交并比提高了 1.91% - 24.42%，F1 提高了 1.26% - 18.54%
-
-* **发布期刊：** International Journal of Applied Earth Observation and Geoinformation, 2024.01
-
-* **论文链接：** [A deep learning system for predicting time to progression of diabetic retinopathy](https://www.nature.com/articles/s41591-023-02702-z)
-
-### **3. [神经网络将太阳二维图像转为三维重建图像](https://hyper.ai/news/28797)**
-* **中文解读：** [https://hyper.ai/news/28797](https://hyper.ai/news/28797)
-
-* **科研团队：** 科罗拉多州国家大气研究中心
-
-*  **相关研究：** NeRFs 神经网络、SuNeRF 模型。首次揭示了太阳的两极
-
-* **发布期刊：** arxiv, 2022.11
-
-* **论文链接：** [SuNeRF: Validation of a 3D Global Reconstruction of the Solar Corona Using Simulated EUV Images](https://arxiv.org/abs/2211.14879)
-
-### **4. [可叠加神经网络分析自然灾害中的影响因素](https://hyper.ai/news/24957)**
-* **中文解读：** [https://hyper.ai/news/24957](https://hyper.ai/news/24957)
-
-* **科研团队：** 加利福尼亚大学洛杉矶分校的研究团队
-
-* **相关研究：** 可叠加神经网络、半自动检测算法、additive ANN、SNN、特征选择模型、多阶段训练
-* **发布期刊：** Communications Earth & Environment, 2023.05
-
-* **论文链接：** [Landslide susceptibility modeling by interpretable neural network](https://www.nature.com/articles/s43247-023-00806-5)
-
-### **5. [利用可解释性 AI ，分析澳大利亚吉普斯兰市的不同地理因素](https://hyper.ai/news/33994)**
-* **中文解读：** [https://hyper.ai/news/33994](https://hyper.ai/news/33994)
-
-* **科研团队：** 澳大利亚国立大学、悉尼科技大学的研究团队
-
-* **相关研究：** 随机森林模型、机器学习模型、交叉验证技术。XAI可以根据地理特征对野火发生进行有效预测
-
-* **发布期刊：** ScienceDirect, 2023.06
-
-* **论文链接：** [Explainable artificial intelligence (XAI) for interpreting the contributing factors feed into the wildfire susceptibility prediction model](https://www.sciencedirect.com/science/article/pii/S0048969723016224)
-
-### **6. [基于机器学习的洪水预报模型](https://hyper.ai/news/31060)**
-* **中文解读：** [https://hyper.ai/news/31060](https://hyper.ai/news/31060)
-
-* **科研团队：** 谷歌研究团队
-
-* **相关研究：** HydroATLAS project、长短期记忆网络LSTM、编码器-解码器、交叉验证、性能优于最先进 GloFAS 预报模型
-
-* **发布期刊：** Nature, 2024.03
-
-* **论文链接：** [Global prediction of extreme floods in ungauged watersheds](https://www.nature.com/articles/s41586-024-07145-1)
-
-### **7. [ED-DLSTM实现无监测数据地区洪水预测](https://hyper.ai/news/32138)**
-* **中文解读：** [https://hyper.ai/news/32138](https://hyper.ai/news/32138)
-
-* **科研团队：** 中国科学院成都山地灾害与环境研究所欧阳朝军团队
-
-* **相关研究：** 2 千个水文站数据、训练数据集来自美国、英国、中欧、加拿大、跨区域时空集成模型、编码器-解码器、多模态数据、空间静态网格属性数据、残差卷积、
-
-* **发布期刊：** The Innovation, 2024.04
-
-* **论文链接：** [Deep learning for cross-region streamflow and flood forecasting at a global scale](https://doi.org/10.1016/j.xinn.2024.100617)
-### **8. [ChloroFormer 模型提前预警海洋藻类爆发](https://hyper.ai/news/34544)**
-* **中文解读：** [https://hyper.ai/news/34544](https://hyper.ai/news/34544)
-
-* **科研团队：** 浙江大学 GIS 实验室
-
-* **相关研究：** TZ02 数据集、深度学习模型 ChloroFormer、Transformer 神经网络、频率滤波器机制、频率注意力机制、ChloroFormer 在叶绿素 a 的短期和中期预测上，都超越了基线
-* **发布期刊：** Water Research, 2024.10
-
-* **论文链接：** [Enhanced forecasting of chlorophyll-a concentration in coastal waters through integration of Fourier analysis and Transformer networks](https://doi.org/10.1016/j.watres.2024.122160 )
-
-### **9. [首个海洋大语言模型 OceanGPT 入选 ACL 2024！水下具身智能成现实](https://hyper.ai/news/33044)**
-* **中文解读：** [https://hyper.ai/news/33044](https://hyper.ai/news/33044)
-
-* **科研团队：** 浙江大学计算机科学与技术学院张宁豫、陈华钧团队
-
-* **相关研究：** 海洋领域大语言模型、正则表达式、哈希算法海洋科学指令生成框架 DoInstruct、多 Agent 协作、gpt-3.5-turbo、BM25 算法、LLaMA-2、Vicuna-7b-1.5、具身智能
-
-* **发布期刊：** ACL 2024, 2024.05
-
-* **论文链接：** [OceanGPT: A Large Language Model for Ocean Science Tasks](https://arxiv.org/abs/2310.02031)
-### **10. [AI 预测预测全球变暖状况](https://hyper.ai/cn/news/36778)**
-* **中文解读：** [https://hyper.ai/cn/news/36778](https://hyper.ai/cn/news/36778)
-
-* **科研团队：** 斯坦福大学、科罗拉多州立大学与苏黎世联邦理工学院的联合研究团队
-
-* **相关研究：** 人工智能卷积神经网络系统、全球气候模型、迁移学习、针对碳排放持续增加的情况进行预测、验证不同历史时期预测框架的准确性，AI 预测最高温变化破纪录可能性达 90%
-
-* **发布期刊：** Geophysical Research Letters, 2024.12
-
-* **论文链接：** [Data-Driven Predictions of Peak Warming Under Rapid Decarbonization](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2024GL111832)
-### **11. [GeoAI 新模型，解释青藏高原地表热流分布](https://hyper.ai/cn/news/36501)**
-
-* **中文解读：** [https://hyper.ai/cn/news/36501](https://hyper.ai/cn/news/36501)
-
-* **科研团队：** 浙江大学地球科学学院
-
-* **相关研究：** 空间智能方法—具有增强可解释性的地理神经网络加权回归模型 (EI-GNNWR)、EI-GNNWR 模型、地表热流数据集、NGHF 陆地热流数据集、中国大陆地区地表热流数据集、SHAP 值计算方法、端梯度提升模型、全连接神经网络模型、普通线性回归模型、地理加权回归模型
-
-* **发布期刊：** Journal of Geophysical Research: Solid Earth, 2024.10
-
-* **论文链接：** [The Distribution of Surface Heat Flow on the Tibetan Plateau Revealed by Data‐Driven Methods](https://doi.org/10.1029/2023JB028491)
-
-## **AI4S 政策解读：AI4S Policy**
-### **1. [科技部出台政策防范学术界 AI 枪手](https://hyper.ai/news/29228)**
-* **中文解读：** [https://hyper.ai/news/29228](https://hyper.ai/news/29228)
-
-* **发布时间：** 2023.12
-
-* **详情链接：** [科技部监督司发布《负责任研究行为规范指引（2023）》](https://www.most.gov.cn/kjbgz/202312/t20231221_189240.html 
-)
-
-### **2. [政策：科技部会同自然科学基金委启动「人工智能驱动的科学研究」( AI for Science ) 专项部署工作](https://hyper.ai/news/34017)**
-* **中文解读：** [https://hyper.ai/news/34017](https://hyper.ai/news/34017)
-
-* **发布时间：** 2023.03
-
-* **详情链接：** [科技部启动“人工智能驱动的科学研究”专项部署工作](http://www.news.cn/2023-03/27/c_1129468666.htm)
-
-
-## **其他：Others**
-
-### **1. [TacticAI 足球助手战术布局实用性高达 90%](https://hyper.ai/news/30454)**
-* **中文解读：** [https://hyper.ai/news/30454](https://hyper.ai/news/30454)
-
-* **科研团队：** 谷歌 DeepMind 与利物浦足球俱乐部
-
-* **相关研究：** Geometric deep learning、GNN、predictive model、generative model。射球机会提升 13%
-
-* **发布期刊：** Nature, 2024.03
-
-* **论文链接：** [TacticAI: an AI assistant for football tactics](https://www.nature.com/articles/s41467-024-45965-x 
-)
-
-### **2. [去噪扩散模型 SPDiff 实现长程人流移动模拟](https://hyper.ai/news/30069)**
-* **中文解读：** [https://hyper.ai/news/30069](https://hyper.ai/news/30069)
-
-* **科研团队：** 清华大学电子工程系城市科学与计算研究中心、清华大学深圳国际研究生院深圳市泛在数据赋能重点实验室、鹏城实验室的研究团队
-
-* **相关研究：** GC 数据集、UCY 数据集、条件去噪扩散模型、SPDiff、GN、EGCL、LSTM、多帧推演训练算法。5% 训练数据量即可达到最优性能
-
-* **发布期刊：** Nature, 2024.02
-
-* **论文链接：** [Social Physics Informed Diffusion Model for Crowd Simulation](https://arxiv.org/abs/2402.06680)
-
-### **3. [智能化科学设施推进科研范式变革](https://hyper.ai/news/29570)**
-* **中文解读：** [https://hyper.ai/news/29570](https://hyper.ai/news/29570)
-
-* **科研团队：** 上海交通大学梅宏研究团队
-
-*  **相关研究：** 科学领域大模型、生成式模拟与反演、自主智能无人实验、大规模可信科研协作、AI 科研助手
-
-* **发布期刊：** 中国科学院院刊，2023.12
-
-* **论文链接：** [AI for Science：智能化科学设施变革基础研究](http://www.bulletin.cas.cn/previewFile?id=52965146&type=pdf&lang=zh)
-
-### **4. [DeepSymNet 基于监督学习来表示符号表达式](https://hyper.ai/news/29243)**
-* **中文解读：** [https://hyper.ai/news/29243](https://hyper.ai/news/29243)
-
-* **科研团队：** 中国科学院半导体研究所吴敏研究团队
-
-* **相关研究：** [符号网络数据集](https://hyper.ai/datasets/29321)、DSNOrg、DSNB、DSNBM、监督学习。使用标签更短、减少预测的搜索空间、提升算法鲁棒性
-
-* **发布期刊：** Journals & Magazines, 2023.11
-
-* **论文链接：** [Discovering Mathematical Expressions Through DeepSymNet: A Classification-Based Symbolic Regression Framework](https://ieeexplore.ieee.org/document/10327762)
-
-### **5. [大语言模型 ChipNeMo 辅助工程师完成芯片设计](https://hyper.ai/news/29134)**
-* **中文解读：** [https://hyper.ai/news/29134](https://hyper.ai/news/29134)
-
-* **科研团队：** 英伟达研究团队
-
-* **相关研究：** 领域自适应技术、NVIDIA NeMo、domain-adapted retrieval models、RAG、supervised fine-tuning with domain-specific instructions、DAPT、SFT、Tevatron、LLM
-
-* **发布期刊：** arXiv, 2024.04
-
-* **论文链接：** [ChipNeMo: Domain-Adapted LLMs for Chip Design](https://arxiv.org/abs/2311.00176)
-
-### **6. [AlphaGeometry 可解决几何学问题](https://hyper.ai/news/29059)**
-* **中文解读：** [https://hyper.ai/news/29059](https://hyper.ai/news/29059)
-
-* **科研团队：** 谷歌 DeepMind 研究团队
-
-* **相关研究：** neural language model、symbolic deduction engine、语言模型
-
-* **发布期刊：** Nature, 2024.01
-
-* **论文链接：** [Solving olympiad geometry without human demonstrations](https://www.nature.com/articles/s41586-023-06747-5)
-
-### **7. [强化学习用于城市空间规划](https://hyper.ai/news/28917)**
-* **中文解读：** [https://hyper.ai/news/28917](https://hyper.ai/news/28917)
-
-* **科研团队：** 清华大学李勇研究团队
-
-* **相关研究：** 深度强化学习、human–artificial intelligence collaborative 框架、城市规划模型、策略网络、价值网络、GNN。在服务和生态指标上击败了 8 名专业人类规划师
-
-* **发布期刊：** Nature Computational Science, 2023.09
-
-* **论文链接：** [Spatial planning of urban communities via deep reinforcement learning](https://www.nature.com/articles/s43588-023-00503-5)
-
-### **8. [ChatArena 框架，与大语言模型一起玩狼人杀](https://hyper.ai/news/28576)**
-* **中文解读：** [https://hyper.ai/news/28576](https://hyper.ai/news/28576)
-
-* **科研团队：** 清华大学李鹏研究团队
-
-* **相关研究：** 非参数学习机制、语言模型、Prompt
-
-* **发布期刊：** arxiv, 2023.09
-
-* **论文链接：** [Exploring Large Language Models for Communication Games:
-An Empirical Study on Werewolf](https://arxiv.org/pdf/2309.04658.pdf)
-
-### **9. [综述：30 位学者合力发表 Nature，10 年回顾解构 AI 如何重塑科研范式](https://hyper.ai/news/28166)**
-* **中文解读：** [https://hyper.ai/news/28166](https://hyper.ai/news/28166)
-
-* **主要内容：** 来自斯坦福大学计算机科学与基因技术学院的博士后 Hanchen Wang，与佐治亚理工学院计算科学与工程专业的 Tianfan Fu，以及康奈尔大学计算机系的 Yuanqi Du 等 30 人，回顾了过去十年间，基础科研领域中的 AI 角色，并提出了仍然存在的挑战和不足
-
-* **论文链接：** [Scientific discovery in the age of artificial intelligence](https://www.nature.com/articles/s41586-023-06221-2)
-
-### **10. [Ithaca 协助金石学家进行文本修复、时间归因和地域归因的工作](https://hyper.ai/news/28140)**
-* **中文解读：** [https://hyper.ai/news/28140](https://hyper.ai/news/28140)
-
-* **科研团队：** DeepMind 和威尼斯福斯卡里大学的研究团队
-
-* **相关研究：** I.PHI 数据集、Ithaca 模型、Kullback-Leibler 散度、交叉熵损失函数。文本修复工作的准确率达到 62%，时间归因误差在 30 年内，地域归因准确率达到 71%
-
-* **发布期刊：** Nature, 2020.03
-
-* **论文链接：** [Restoring and attributing ancient texts using deep neural networks](https://www.nature.com/articles/s41586-022-04448-z)
-
-### **11. [AI 在超光学中的正问题及逆问题、基于超表面系统的数据分析](https://hyper.ai/news/34006)**
-* **中文解读：** [https://hyper.ai/news/34006](https://hyper.ai/news/34006)
-
-* **科研团队：** 香港城市大学的研究团队
-
-* **相关研究：** Predicting NN、深度神经网络。预测准确率达到 99% 以上
-
-* **发布期刊：** ACS Publications, 2022.06
-
-* **论文链接：** [Artificial Intelligence in Meta-optics](https://pubs.acs.org/doi/10.1021/acs.chemrev.2c00012)
-
-### **12. [一种新的地理空间人工智能方法：地理神经网络加权逻辑回归](https://hyper.ai/news/30608)**
-* **中文解读：** [https://hyper.ai/news/30608](https://hyper.ai/news/30608)
-
-* **科研团队：** 浙江大学杜震洪研究团队
-
-* **相关研究：** 空间模式、神经网络、Shapley 加性解释、反距离加权插值、二元交叉熵损失函数、五折交叉验证。在矿产资源预测评价方面优于其他先进模型
-
-* **发布期刊：** International Journal of Applied Earth Observation and Geoinformation, 2024.04
-
-* **论文链接：** [Enhancing mineral prospectivity mapping with geospatial artificial intelligence: A geographically neural network-weighted logistic regression approach](https://doi.org/10.1016/j.jag.2024.103746)
-
-### **13. [利用扩散模型生成神经网络参数，将时空少样本学习转变为扩散模型的预训练问题](https://hyper.ai/news/30545)**
-* **中文解读：** [https://hyper.ai/news/30545](https://hyper.ai/news/30545)
-
-* **科研团队：** 清华大学电子工程系城市科学与计算研究中心李勇研究团队
-
-* **相关研究：** 智慧城市、时空数据、知识迁移、MetaLA、PEMS-BAy、Transformer 扩散模型、条件生成框架 GPD、神经网络、神经网络参数、预训练 + 提示微调
-
-* **发布期刊：** ICLR 2024, 2024.01
-
-* **论文链接：** [Spatio-Temporal Few-Shot Learning via Diffusive Neural Network Generation](https://openreview.net/forum?id=QyFm3D3Tzi)
-
-### **14. [李飞飞团队 AI4S 最新洞察：16 项创新技术汇总，覆盖生物/材料/医疗/问诊](https://hyper.ai/news/31499)**
-* **中文解读：** [https://hyper.ai/news/31499](https://hyper.ai/news/31499)
-
-* **主要内容：** 斯坦福大学 HAI 研究中心发布《2024 年人工智能指数报告》。这份报告全面追踪了 2023 年全球人工智能的发展趋势。还探讨人工智能在科学和医学领域的深远影响。报告中展示了 2023 年 AI 在科学领域的辉煌成就，以及 AI 在医疗领域取得的重要创新成果，包括 SynthSR 和 ImmunoSEIRA 等突破性技术。此外，还分析了 FDA 对 AI 医疗设备审批的趋势，为行业提供了宝贵的参考。
-
-### **15. [精准预测武汉房价！osp-GNNWR 模型准确描述复杂空间过程和地理现象](https://hyper.ai/news/32453)**
-* **中文解读：** [https://hyper.ai/news/32453](https://hyper.ai/news/32453)
-
-* **科研团队：** 浙大 GIS 实验室吴森森团队
-
-* **相关研究：** 神经网络、空间邻近性度量、地理神经网络加权回归方法、安居客 968 个不同房地产样本的数据集、空间回归模型、梯度下降算法
-
-* **发布期刊：** International Journal of Geographical Information Science, 2024.04
-
-* **论文链接：** [A neural network model to optimize the measure of spatial proximity in geographically weighted regression approach: a case study on house price in Wuhan](https://www.tandfonline.com/doi/abs/10.1080/13658816.2024.2343771)
-
-
-### **16. [引入零样本学习，发布针对甲骨文破译优化的条件扩散模型](https://hyper.ai/news/33010)**
-* **中文解读：** [https://hyper.ai/news/33010](https://hyper.ai/news/33010)
-
-* **科研团队：** 华中科技大学白翔、刘禹良研究团队联合阿德莱德大学、安阳师范学院、华南理工大学团队
-
-* **相关研究：** 条件扩散模型、图像生成技术、局部分析采样技术、HUST-OBS 数据集、EVOBC 数据集、ResNet-101 骨干网络、OCR 技术、零样本学习策略、风格编码器、内容编码器
-
-* **发布期刊：** ACL 2024, 2024.06
-
-* **论文链接：** [Deciphering Oracle Bone Language with Diffusion Models](https://doi.org/10.48550/arXiv.2406.00684)
-
-### **17. [斯坦福/苹果等 23 所机构发布 DCLM 基准测试，基础模型与 Llama3 8B 表现相当](https://hyper.ai/news/33001)**
-* **中文解读：** [https://hyper.ai/news/33001](https://hyper.ai/news/33001)
-
-* **科研团队：** 华盛顿大学、斯坦福大学、苹果等 23 所机构联手
-
-* **相关研究：** 语言模型、DCLM 基准测试、Transformer、MMLU
-
-* **发布期刊：** arXiv, 2024.06
-
-* **论文链接：** [DataComp-LM: In search of the next generation of training sets for language models](https://arxiv.org/abs/2406.11794)
-
-### **18. [PoCo 解决数据源异构难题，实现机器人多任务灵活执行](https://hyper.ai/news/32765)**
-* **中文解读：** [https://hyper.ai/news/32765](https://hyper.ai/news/32765)
-
-* **科研团队：** 麻省理工研究人员
-
-* **相关研究：** 去噪扩散概率模型、去噪扩散隐式模型、扩散模型的概率合成、机器人策略组合框架 PoCo
-
-* **发布期刊：** arXiv, 2024.05
-
-* **论文链接：** [PoCo: Policy Composition from and for Heterogeneous Robot Learning](https://arxiv.org/abs/2402.02511)
-
-### **19. [含 14 万张图像！甲骨文数据集助力团队摘冠 ACL 最佳论文](https://hyper.ai/news/33826)**
-* **中文解读：** [https://hyper.ai/news/33826](https://hyper.ai/news/33826)
-
-* **科研团队：** 华中科技大学白翔教授研究团队
-
-* **相关研究：** HUST-OBC 数据集、无监督的视觉对比学习模型
-
-* **发布期刊：** Scientific Data, 2024.06
-
-* **论文链接：** [An open dataset for oracle bone script recognition and decipherment](https://arxiv.org/abs/2401.15365)
-
-
-### **20. [基于预训练 LLM 提出信道预测方案，GPT-2 赋能无线通信物理层](https://hyper.ai/news/33195)**
-* **中文解读：** [https://hyper.ai/news/33195](https://hyper.ai/news/33195)
-
-* **科研团队：** 北京大学电子学院程翔团队
-
-* **相关研究：**  QuaDRiGa 仿真器、大语言模型、信道预测神经网络、预处理模块、嵌入模块、预训练 LLM 模块、输出模块
-
-* **发布期刊：** Journal of Communications and Information Networks, 2024.06
-
-* **论文链接：** [LLM4CP: Adapting Large Language Models for Channel Prediction](https://ieeexplore.ieee.org/document/10582829)
-
-### **21. [首个多缝线刺绣生成对抗网络模型](https://hyper.ai/news/34669)**
-* **中文解读：** [https://hyper.ai/news/34669](https://hyper.ai/news/34669)
-
-* **科研团队：** 复武汉纺织大学计算机与人工智能学院可视计算与数字纺织团队
-
-* **相关研究：**  多针刺绣数据集、生成对抗网络模型、卷积神经网络、CNN、多缝线刺绣生成对抗网络模型 MSEmbGAN、区域感知纹理生成网络、着色网络、可提高刺绣中纹理真实度和色彩保真度等关键方面的精度
-
-* **发布期刊：** IEEE Transactions on Visualization and Computer Graphics, 2024
-
-* **论文链接：** [MSEmbGAN: Multi-Stitch Embroidery Synthesis via Region-Aware Texture Generation](https://csai.wtu.edu.cn/TVCG01/index.html)
-### **22. [快速自动扫描套件 FAST 高效获取样本信息](https://hyper.ai/news/28100)**
-
-* **中文解读：** [https://hyper.ai/news/28100](https://hyper.ai/news/28100)
-
-* **科研团队：** 美国阿贡国家实验室的研究团队
-
-* **相关研究：** SLADS-Net 方法、路径优化技术。优先识别异质性区域、准确复制全扫描图像中所有主要特征
-
-* **发布期刊：** Nature Communications, 2023.09
-
-* **论文链接：** [Demonstration of an AI-driven workflow for autonomous high-resolution scanning microscopy](https://www.nature.com/articles/s41467-023-40339-1)
-### **23. [人口动态基础模型 PDFM 已开源，精准预测美国失业率和贫困率](https://hyper.ai/cn/news/36380)**
-
-* **中文解读：** [https://hyper.ai/cn/news/36380](https://hyper.ai/cn/news/36380)
-
-* **科研团队：** 谷歌
-
-* **相关研究：** 人口动态基础模型、预测失业率和贫困率、解耦嵌入架构、使用 PDFM 增强最先进的预测基础模型 TimesFM、聚合搜索趋势数据集、地图数据集、繁忙度数据集、天气与空气质量、遥感数据、图神经网络 (GNN)，可增强现有地理空间模型
-
-* **发布期刊：** arXiv, 2024.12
-
-* **论文链接：** [General Geospatial Inference with a Population Dynamics Foundation Model](https://arxiv.org/abs/2411.07207)
-### **24. [深度学习模型 CatGWR，估计空间非平稳性](https://hyper.ai/cn/news/38055)**
-
-* **中文解读：** [https://hyper.ai/cn/news/38055](https://hyper.ai/cn/news/38055)
-
-* **科研团队：** 浙江省 GIS 重点实验室
-
-* **相关研究：** 深度学习模型 Context-Attention Geographically Weighted Regression、注意力机制、估计空间非平稳性、CatGWR 模型、模拟实验、预处理模块、放大模块、回归模块
-
-* **发布期刊：** International Journal of Geographical Information Science, 2025.2
-
-* **论文链接：** [Using an attention-based architecture to incorporate context similarity into spatial non-stationarity estimation](https://doi.org/10.1080/13658816.2025.2456556)
+**EN** | [CN](README_CN.md)
+- [**Foreword**](#foreword)
+- [**AI+ Biopharmaceutical**](#ai-biopharmaceutical)
+  - [**1. AdaDR outperforms multiple benchmark methods in drug repositioning**](#1-adadr-outperforms-multiple-benchmark-methods-in-drug-repositioning)
+  - [**2. IMN4NPD accelerates the dereplication of extensive clusters in molecular networks, providing annotations for self-loops and paired nodes**](#2-imn4npd-accelerates-the-dereplication-of-extensive-clusters-in-molecular-networks-providing-annotations-for-self-loops-and-paired-nodes)
+  - [**3. Deep generative model MIDAS for mosaic integration of single-cell multi-omics data**](#3-deep-generative-model-midas-for-mosaic-integration-of-single-cell-multi-omics-data)
+  - [**4. ResGen: A 3D molecular generation model based on protein pockets**](#4-resgen-a-3d-molecular-generation-model-based-on-protein-pockets)
+  - [**5. Large models + machine learning for high-precision prediction of enzyme kinetic parameters**](#5-large-models--machine-learning-for-high-precision-prediction-of-enzyme-kinetic-parameters)
+  - [**6. MIT uses deep learning to discover novel antibiotics**](#6-mit-uses-deep-learning-to-discover-novel-antibiotics)
+  - [**7. Neural networks decipher GPCR-G protein coupling selectivity**](#7-neural-networks-decipher-gpcr-g-protein-coupling-selectivity)
+  - [**8. Macformer macrocyclizes the acyclic drug fedratinib**](#8-macformer-macrocyclizes-the-acyclic-drug-fedratinib)
+  - [**9. Regression network + CGMD predicts self-assembly properties of tens of billions of peptides**](#9-regression-network--cgmd-predicts-self-assembly-properties-of-tens-of-billions-of-peptides)
+  - [**10. Unsupervised learning predicts 71 million gene mutations**](#10-unsupervised-learning-predicts-71-million-gene-mutations)
+  - [**11. Odor analysis AI developed based on Graph Neural Networks (GNN)**](#11-odor-analysis-ai-developed-based-on-graph-neural-networks-gnn)
+  - [**12. Graph neural networks screen for safe and highly effective anti-aging ingredients**](#12-graph-neural-networks-screen-for-safe-and-highly-effective-anti-aging-ingredients)
+  - [**13. Machine learning quantitatively analyzes dopamine release amount and location**](#13-machine-learning-quantitatively-analyzes-dopamine-release-amount-and-location)
+  - [**14. Machine learning discovers three anti-aging drugs**](#14-machine-learning-discovers-three-anti-aging-drugs)
+  - [**15. Deep learning screens for novel antibiotics inhibiting Acinetobacter baumannii**](#15-deep-learning-screens-for-novel-antibiotics-inhibiting-acinetobacter-baumannii)
+  - [**16. Machine learning models applied to predict bioink printability**](#16-machine-learning-models-applied-to-predict-bioink-printability)
+  - [**17. Machine learning differentiates pluripotent stem cells**](#17-machine-learning-differentiates-pluripotent-stem-cells)
+  - [**18. Machine learning model predicts drug release rate of long-acting injectables**](#18-machine-learning-model-predicts-drug-release-rate-of-long-acting-injectables)
+  - [**19. Machine learning algorithm effectively predicts plant antimalarial properties**](#19-machine-learning-algorithm-effectively-predicts-plant-antimalarial-properties)
+  - [**20. Machine learning ensemble method predicts immunogenicity of viral protein fragments**](#20-machine-learning-ensemble-method-predicts-immunogenicity-of-viral-protein-fragments)
+  - [**21. Generative AI used to develop novel antibiotics**](#21-generative-ai-used-to-develop-novel-antibiotics)
+  - [**22. Deep learning-based automated, high-speed, multidimensional single-particle tracking system**](#22-deep-learning-based-automated-high-speed-multidimensional-single-particle-tracking-system)
+  - [**23. ProEnsemble machine learning framework: Optimizing evolutionary pathway promoter combinations**](#23-proensemble-machine-learning-framework-optimizing-evolutionary-pathway-promoter-combinations)
+  - [**24. Microenvironment-aware graph neural network ProtLGN guides directed protein evolution**](#24-microenvironment-aware-graph-neural-network-protlgn-guides-directed-protein-evolution)
+  - [**25. Deep learning model AlphaPPIMd: Exploring conformational ensembles of protein-protein complexes**](#25-deep-learning-model-alphappimd-exploring-conformational-ensembles-of-protein-protein-complexes)
+  - [**26. Novel tumor-suppressor protein degrader dp53m inhibits cancer cell proliferation**](#26-novel-tumor-suppressor-protein-degrader-dp53m-inhibits-cancer-cell-proliferation)
+  - [**27. CVPR Best Student Paper! Multimodal model BioCLIP achieves zero-shot learning**](#27-cvpr-best-student-paper-multimodal-model-bioclip-achieves-zero-shot-learning)
+  - [**28. 100 million parameters! Cell foundation model scFoundation models 20,000 genes simultaneously**](#28-100-million-parameters-cell-foundation-model-scfoundation-models-20000-genes-simultaneously)
+  - [**29. Accepted by ICML, protein language model ESM-AA surpasses traditional SOTA**](#29-accepted-by-icml-protein-language-model-esm-aa-surpasses-traditional-sota)
+  - [**30. SPACE algorithm published in Cell sub-journal! Tissue module discovery capabilities lead similar tools**](#30-space-algorithm-published-in-cell-sub-journal-tissue-module-discovery-capabilities-lead-similar-tools)
+  - [**31. New breakthroughs based on AlphaFold reveal dynamic protein diversity**](#31-new-breakthroughs-based-on-alphafold-reveal-dynamic-protein-diversity)
+  - [**32. P450Diffusion: De novo design method for P450 enzymes developed based on diffusion models**](#32-p450diffusion-de-novo-design-method-for-p450-enzymes-developed-based-on-diffusion-models)
+  - [**33. Equivariant graph neural networks used for target protein binding site prediction, boosting performance by 20%**](#33-equivariant-graph-neural-networks-used-for-target-protein-binding-site-prediction-boosting-performance-by-20)
+  - [**34. 20 experimental data points create an AI protein milestone! FSFP effectively optimizes protein pre-training models**](#34-20-experimental-data-points-create-an-ai-protein-milestone-fsfp-effectively-optimizes-protein-pre-training-models)
+  - [**35. Transferable deep learning model identifies multiple types of RNA modifications, significantly reducing computational costs**](#35-transferable-deep-learning-model-identifies-multiple-types-of-rna-modifications-significantly-reducing-computational-costs)
+  - [**36. InstructProtein: Aligning protein language with human language using knowledge instructions**](#36-instructprotein-aligning-protein-language-with-human-language-using-knowledge-instructions)
+  - [**37. Protein-to-text generation framework ProtT3 enables cross-modal interpretation of protein data and text information**](#37-protein-to-text-generation-framework-prott3-enables-cross-modal-interpretation-of-protein-data-and-text-information)
+  - [**38. CPDiffusion model designs functional proteins fully automatically at an ultra-low cost**](#38-cpdiffusion-model-designs-functional-proteins-fully-automatically-at-an-ultra-low-cost)
+  - [**39. A novel protein homolog detection method based on protein language models and dense retrieval techniques**](#39-a-novel-protein-homolog-detection-method-based-on-protein-language-models-and-dense-retrieval-techniques)
+  - [**40. AlphaProteo efficiently designs target protein binders, increasing affinity by 300 times**](#40-alphaproteo-efficiently-designs-target-protein-binders-increasing-affinity-by-300-times)
+  - [**41. Novel denoising protein language model DePLM outperforms SOTA models in mutation effect prediction**](#41-novel-denoising-protein-language-model-deplm-outperforms-sota-models-in-mutation-effect-prediction)
+  - [**42. Geometric deep generative model DynamicBind enables dynamic protein docking prediction**](#42-geometric-deep-generative-model-dynamicbind-enables-dynamic-protein-docking-prediction)
+  - [**43. Drug discovery large language model Y-Mol completely outperforms LLaMA2**](#43-drug-discovery-large-language-model-y-mol-completely-outperforms-llama2)
+  - [**44. Universal molecular inverse folding model UniIF further complements AlphaFold 3**](#44-universal-molecular-inverse-folding-model-uniif-further-complements-alphafold-3)
+  - [**45. Pre-trained protein language model ProSST integrates protein structure information more effectively**](#45-pre-trained-protein-language-model-prosst-integrates-protein-structure-information-more-effectively)
+  - [**46. Macrocyclic peptide binder framework RFpeptides offers new possibilities for undruggable proteins**](#46-macrocyclic-peptide-binder-framework-rfpeptides-offers-new-possibilities-for-undruggable-proteins)
+  - [**47. Genome foundation model Evo enables prediction and generation from molecular to genome scales**](#47-genome-foundation-model-evo-enables-prediction-and-generation-from-molecular-to-genome-scales)
+  - [**48. DigFrag accurately segments molecular fragments using AI and generates 44 drug/pesticide molecules**](#48-digfrag-accurately-segments-molecular-fragments-using-ai-and-generates-44-drugpesticide-molecules)
+  - [**49. Protein sequence large language model pre-training method PRIME**](#49-protein-sequence-large-language-model-pre-training-method-prime)
+  - [**50. Self-supervised deep learning method revolutionizes 3D reconstruction in cryo-electron microscopy**](#50-self-supervised-deep-learning-method-revolutionizes-3d-reconstruction-in-cryo-electron-microscopy)
+  - [**51. Multimodal protein generation method PLAID generates sequences and all-atom protein structures simultaneously**](#51-multimodal-protein-generation-method-plaid-generates-sequences-and-all-atom-protein-structures-simultaneously)
+  - [**52. Targeted molecular optimization method MOLRL based on latent reinforcement learning**](#52-targeted-molecular-optimization-method-molrl-based-on-latent-reinforcement-learning)
+  - [**53. Viral variation driver prediction framework E2VD predicts evolutionary directions for COVID-19/HIV/Influenza viruses**](#53-viral-variation-driver-prediction-framework-e2vd-predicts-evolutionary-directions-for-covid-19hivinfluenza-viruses)
+  - [**54. Medical language model MedFound approaches expert physician reasoning capabilities**](#54-medical-language-model-medfound-approaches-expert-physician-reasoning-capabilities)
+  - [**55. 4D diffusion model AlphaFolding fills the gap in dynamic protein structure prediction**](#55-4d-diffusion-model-alphafolding-fills-the-gap-in-dynamic-protein-structure-prediction)
+  - [**56. PepPrCLIP pipeline for designing short proteins holds promise for developing new cancer therapies**](#56-pepprclip-pipeline-for-designing-short-proteins-holds-promise-for-developing-new-cancer-therapies)
+  - [**57. Boltzmann alignment technique drastically improves protein binding free energy prediction efficacy**](#57-boltzmann-alignment-technique-drastically-improves-protein-binding-free-energy-prediction-efficacy)
+  - [**58. Novel large-scale flow-based protein backbone generator Proteina achieves SOTA in de novo protein backbone design**](#58-novel-large-scale-flow-based-protein-backbone-generator-proteina-achieves-sota-in-de-novo-protein-backbone-design)
+  - [**59. UniGEM model achieves synergistic enhancement of two tasks based on diffusion models for the first time**](#59-unigem-model-achieves-synergistic-enhancement-of-two-tasks-based-on-diffusion-models-for-the-first-time)
+  - [**60. RFdiffusion evolves further, realizing atomic-accuracy de novo antibody design**](#60-rfdiffusion-evolves-further-realizing-atomic-accuracy-de-novo-antibody-design)
+  - [**61. First protein-RNA language model fusion scheme sets new SOTA in binding affinity prediction**](#61-first-protein-rna-language-model-fusion-scheme-sets-new-sota-in-binding-affinity-prediction)
+  - [**62. Virtual tissue model Celcomen achieves causal inference identifiability in spatial transcriptomics analysis for the first time**](#62-virtual-tissue-model-celcomen-achieves-causal-inference-identifiability-in-spatial-transcriptomics-analysis-for-the-first-time)
+  - [**63. AlphaFold-Metainference method accurately predicts disordered protein structural ensembles**](#63-alphafold-metainference-method-accurately-predicts-disordered-protein-structural-ensembles)
+  - [**64. High-accuracy RNA structure prediction framework DRfold2 surpasses SOTA in multiple benchmarks**](#64-high-accuracy-rna-structure-prediction-framework-drfold2-surpasses-sota-in-multiple-benchmarks)
+  - [**65. New protein design algorithm DRAKES breaks through the biological sequence design bottleneck**](#65-new-protein-design-algorithm-drakes-breaks-through-the-biological-sequence-design-bottleneck)
+  - [**66. Machine learning-assisted UV absorbance spectroscopy for detecting microbial contamination**](#66-machine-learning-assisted-uv-absorbance-spectroscopy-for-detecting-microbial-contamination)
+  - [**67. Utilizing protein sequence generative models for overlapping gene design**](#67-utilizing-protein-sequence-generative-models-for-overlapping-gene-design)
+  - [**68. Prediction framework PUPS enables single-cell level protein subcellular localization**](#68-prediction-framework-pups-enables-single-cell-level-protein-subcellular-localization)
+  - [**69. UniMoMo: The first unified generative framework across molecular species enables multi-type drug molecular design**](#69-unimomo-the-first-unified-generative-framework-across-molecular-species-enables-multi-type-drug-molecular-design)
+  - [**70. Protein language model Prot42 generates high-affinity binders using only the target protein sequence**](#70-protein-language-model-prot42-generates-high-affinity-binders-using-only-the-target-protein-sequence)
+  - [**71. Unified biomolecular dynamics simulator UniSim achieves unified time-coarsened dynamics simulation across molecular types and chemical environments for the first time**](#71-unified-biomolecular-dynamics-simulator-unisim-achieves-unified-time-coarsened-dynamics-simulation-across-molecular-types-and-chemical-environments-for-the-first-time)
+  - [**72. Computational biology algorithm SimplifiedBondfinder uncovers 69 novel nitrogen-oxygen-sulfur bonds**](#72-computational-biology-algorithm-simplifiedbondfinder-uncovers-69-novel-nitrogen-oxygen-sulfur-bonds)
+  - [**73. Novel protein sequence design method FAMPNN simultaneously processes protein backbone and sidechain information**](#73-novel-protein-sequence-design-method-fampnn-simultaneously-processes-protein-backbone-and-sidechain-information)
+  - [**74. Atomistic protein design method La-Proteina generates proteins with up to 800 residues at high precision**](#74-atomistic-protein-design-method-la-proteina-generates-proteins-with-up-to-800-residues-at-high-precision)
+  - [**75. APM model specifically designed for multi-chain protein complexes enables all-atom design and functional optimization**](#75-apm-model-specifically-designed-for-multi-chain-protein-complexes-enables-all-atom-design-and-functional-optimization)
+  - [**76. New intrinsically disordered region-binding protein design method Logos specializes in undruggable targets**](#76-new-intrinsically-disordered-region-binding-protein-design-method-logos-specializes-in-undruggable-targets)
+  - [**77. Novel protein dynamic fusion representation framework FusionProt released, enabling iterative information exchange**](#77-novel-protein-dynamic-fusion-representation-framework-fusionprot-released-enabling-iterative-information-exchange)
+  - [**78. Transcriptome-guided diffusion model MorphDiff released to accelerate phenotypic drug discovery**](#78-transcriptome-guided-diffusion-model-morphdiff-released-to-accelerate-phenotypic-drug-discovery)
+  - [**79. AlphaPPIMI framework significantly enhances generalization, surpassing existing methods in PPI interface modulator prediction**](#79-alphappimi-framework-significantly-enhances-generalization-surpassing-existing-methods-in-ppi-interface-modulator-prediction)
+  - [**80. A novel fusion neural network framework efficiently predicts multi-metal binding sites in protein sequences**](#80-a-novel-fusion-neural-network-framework-efficiently-predicts-multi-metal-binding-sites-in-protein-sequences)
+  - [**81. Highly synthesizable molecular projection framework ReaSyn released, achieving ultra-high reconstruction rates and pathway diversity**](#81-highly-synthesizable-molecular-projection-framework-reasyn-released-achieving-ultra-high-reconstruction-rates-and-pathway-diversity)
+  - [**82. Constrained reinforcement learning framework Ctrl-DNA released, realizing "targeted control" of specific cell gene expression**](#82-constrained-reinforcement-learning-framework-ctrl-dna-released-realizing-targeted-control-of-specific-cell-gene-expression)
+  - [**83. PLACER framework resolves the atomic-level modeling challenge of protein conformational heterogeneity**](#83-placer-framework-resolves-the-atomic-level-modeling-challenge-of-protein-conformational-heterogeneity)
+  - [**84. Squidiff enables multi-scenario transcriptome simulation, boosting precision medicine and spatial medicine development**](#84-squidiff-enables-multi-scenario-transcriptome-simulation-boosting-precision-medicine-and-spatial-medicine-development)
+  - [**85. Generative model PepTron and new evaluation benchmark released, reshaping prediction capabilities for disordered protein ensembles**](#85-generative-model-peptron-and-new-evaluation-benchmark-released-reshaping-prediction-capabilities-for-disordered-protein-ensembles)
+  - [**86. MIT and Harvard propose end-to-end AI workflow CleaveNet to overcome highly specific protease substrate design challenges**](#86-mit-and-harvard-propose-end-to-end-ai-workflow-cleavenet-to-overcome-highly-specific-protease-substrate-design-challenges)
+  - [**87. Goethe University Frankfurt team proposes a multi-scale classification framework to decode the complexity of the human E3 ligome**](#87-goethe-university-frankfurt-team-proposes-a-multi-scale-classification-framework-to-decode-the-complexity-of-the-human-e3-ligome)
+  - [**88. Basecamp and NVIDIA jointly release the EDEN foundation model, enabling AI-programmable therapeutic design**](#88-basecamp-and-nvidia-jointly-release-the-eden-foundation-model-enabling-ai-programmable-therapeutic-design)
+  - [**89. Microsoft and others propose the multimodal AI framework GigaTIME to generate virtual mIF atlases from routine pathology slides**](#89-microsoft-and-others-propose-the-multimodal-ai-framework-gigatime-to-generate-virtual-mif-atlases-from-routine-pathology-slides)
+  - [**90. MIT proposes deep learning language model Pichia-CLM to optimize codons for enhanced recombinant protein yield**](#90-mit-proposes-deep-learning-language-model-pichia-clm-to-optimize-codons-for-enhanced-recombinant-protein-yield)
+  - [**91. MIT and ETH jointly propose deep learning framework APOLLO to efficiently integrate and disentangle single-cell multimodal data**](#91-mit-and-eth-jointly-propose-deep-learning-framework-apollo-to-efficiently-integrate-and-disentangle-single-cell-multimodal-data)
+  - [**92. CUHK and others jointly propose the Bi-TEAM framework for unified cross-scale representation learning of modified peptides**](#92-cuhk-and-others-jointly-propose-the-bi-team-framework-for-unified-cross-scale-representation-learning-of-modified-peptides)
+  - [**93. Carnegie Mellon University and others propose AQuaRef for quantum refinement of all-atom protein models**](#93-carnegie-mellon-university-and-others-propose-aquaref-for-quantum-refinement-of-all-atom-protein-models)
+  - [**94. NVIDIA and others jointly propose the Complexa framework to unify protein binder generation and optimization**](#94-nvidia-and-others-jointly-propose-the-complexa-framework-to-unify-protein-binder-generation-and-optimization)
+  - [**95. MIT and CMU jointly propose VibeGen, introducing vibrational dynamics to empower de novo protein design**](#95-mit-and-cmu-jointly-propose-vibegen-introducing-vibrational-dynamics-to-empower-de-novo-protein-design)
+  - [**96. Institut Pasteur uses deep learning to predict 2.39 million anti-phage proteins, mapping bacterial immunity**](#96-institut-pasteur-uses-deep-learning-to-predict-239-million-anti-phage-proteins-mapping-bacterial-immunity)
+  - [**97. KAIST team utilizes AI to de novo design small-molecule binding proteins, successfully applying them in biosensors**](#97-kaist-team-utilizes-ai-to-de-novo-design-small-molecule-binding-proteins-successfully-applying-them-in-biosensors)
+  - [**98. University of Toronto and others propose dnaHNet for efficient hierarchical modeling of genomic sequences**](#98-university-of-toronto-and-others-propose-dnahnet-for-efficient-hierarchical-modeling-of-genomic-sequences)
+  - [**99. Queen Mary University of London and others conduct the largest-scale proteogenomic study, revealing molecular disease mechanisms**](#99-queen-mary-university-of-london-and-others-conduct-the-largest-scale-proteogenomic-study-revealing-molecular-disease-mechanisms)
+  - [**100. Goethe University Frankfurt and others propose genESOM model: Generative AI breaks through small-sample animal experiments**](#100-goethe-university-frankfurt-and-others-propose-genesom-model-generative-ai-breaks-through-small-sample-animal-experiments)
+- [**AI+ Healthcare**](#ai-healthcare)
+  - [**1. DeepDR Plus deep learning system predicts diabetic retinopathy using fundus images**](#1-deepdr-plus-deep-learning-system-predicts-diabetic-retinopathy-using-fundus-images)
+  - [**2. Logistic regression model analyzes that high green landscape index reduces MetS risk**](#2-logistic-regression-model-analyzes-that-high-green-landscape-index-reduces-mets-risk)
+  - [**3. Deep learning system helps junior ophthalmologists increase diagnostic consistency by 12%**](#3-deep-learning-system-helps-junior-ophthalmologists-increase-diagnostic-consistency-by-12)
+  - [**4. GSP-GCNs achieve up to 90.2% accuracy in Parkinson's disease diagnosis**](#4-gsp-gcns-achieve-up-to-902-accuracy-in-parkinsons-disease-diagnosis)
+  - [**5. Breast cancer prognosis scoring system MIRS**](#5-breast-cancer-prognosis-scoring-system-mirs)
+  - [**6. Retinal image foundation model RETFound predicts multiple systemic diseases**](#6-retinal-image-foundation-model-retfound-predicts-multiple-systemic-diseases)
+  - [**7. SVM optimizes tactile sensors, braille recognition rate reaches 96.12%**](#7-svm-optimizes-tactile-sensors-braille-recognition-rate-reaches-9612)
+  - [**8. CAS Beijing Institute of Genomics establishes an open biomedical imaging archive**](#8-cas-beijing-institute-of-genomics-establishes-an-open-biomedical-imaging-archive)
+  - [**9. AI Lunit reads mammograms with accuracy comparable to doctors**](#9-ai-lunit-reads-mammograms-with-accuracy-comparable-to-doctors)
+  - [**10. Feature selection strategy detects breast cancer biomarkers**](#10-feature-selection-strategy-detects-breast-cancer-biomarkers)
+  - [**11. Gradient boosting machine model accurately predicts BPSD sub-syndrome**](#11-gradient-boosting-machine-model-accurately-predicts-bpsd-sub-syndrome)
+  - [**12. Machine learning model predicts patient one-year mortality rate**](#12-machine-learning-model-predicts-patient-one-year-mortality-rate)
+  - [**13. New AI brain-computer interface technology allows aphasic patients to "speak"**](#13-new-ai-brain-computer-interface-technology-allows-aphasic-patients-to-speak)
+  - [**14. Deep learning-based artificial intelligence detection of pancreatic cancer**](#14-deep-learning-based-artificial-intelligence-detection-of-pancreatic-cancer)
+  - [**15. Population effectiveness of machine learning-assisted lung cancer screening**](#15-population-effectiveness-of-machine-learning-assisted-lung-cancer-screening)
+  - [**16. Ovarian cancer diagnostic AI fusion model MCF calculates risk using routine lab data and age**](#16-ovarian-cancer-diagnostic-ai-fusion-model-mcf-calculates-risk-using-routine-lab-data-and-age)
+  - [**17. Google releases HEAL framework, a 4-step process to assess medical AI tool fairness**](#17-google-releases-heal-framework-a-4-step-process-to-assess-medical-ai-tool-fairness)
+  - [**18. Leveraging semantic segmentation to develop spatial transcriptomics semantic annotation tool Pianno**](#18-leveraging-semantic-segmentation-to-develop-spatial-transcriptomics-semantic-annotation-tool-pianno)
+  - [**19. AI model UniFMIR breaks the limits of existing fluorescence microscopy imaging**](#19-ai-model-unifmir-breaks-the-limits-of-existing-fluorescence-microscopy-imaging)
+  - [**20. Deep learning system improves the accuracy of cancer survival prediction**](#20-deep-learning-system-improves-the-accuracy-of-cancer-survival-prediction)
+  - [**21. MemSAM adapts "Segment Anything" model for medical video segmentation**](#21-memsam-adapts-segment-anything-model-for-medical-video-segmentation)
+  - [**22. Medical image segmentation model Medical SAM 2 tops the SOTA leaderboard**](#22-medical-image-segmentation-model-medical-sam-2-tops-the-sota-leaderboard)
+  - [**23. Machine learning fights chemotherapy resistance and tumor recurrence, building a strong defense against breast cancer stem cells**](#23-machine-learning-fights-chemotherapy-resistance-and-tumor-recurrence-building-a-strong-defense-against-breast-cancer-stem-cells)
+  - [**24. Vision-Language model DeepDR-LLM for diabetes care published in Nature sub-journal**](#24-vision-language-model-deepdr-llm-for-diabetes-care-published-in-nature-sub-journal)
+  - [**25. Leveling with senior pathologists! Tsinghua team proposes AI foundation model ROAM for precise glioma diagnosis**](#25-leveling-with-senior-pathologists-tsinghua-team-proposes-ai-foundation-model-roam-for-precise-glioma-diagnosis)
+  - [**26. Universal medical image segmentation model ScribblePrompt outperforms SAM-based models**](#26-universal-medical-image-segmentation-model-scribbleprompt-outperforms-sam-based-models)
+  - [**27. Digital twin brain platform demonstrates critical phenomena and cognitive functions similar to the human brain**](#27-digital-twin-brain-platform-demonstrates-critical-phenomena-and-cognitive-functions-similar-to-the-human-brain)
+  - [**28. Automated LLM dialogue Agent simulation system performs initial diagnosis for depression**](#28-automated-llm-dialogue-agent-simulation-system-performs-initial-diagnosis-for-depression)
+  - [**29. Deep learning model LucaProt aids in RNA virus identification**](#29-deep-learning-model-lucaprot-aids-in-rna-virus-identification)
+  - [**30. Medical image pre-training framework UniMedI breaks down medical data heterogeneity barriers**](#30-medical-image-pre-training-framework-unimedi-breaks-down-medical-data-heterogeneity-barriers)
+  - [**31. Multilingual medical large model MMed-Llama 3 better adapts to medical application scenarios**](#31-multilingual-medical-large-model-mmed-llama-3-better-adapts-to-medical-application-scenarios)
+  - [**32. Capsule endoscopy image stitching method S2P-Matching assists in image reconstruction**](#32-capsule-endoscopy-image-stitching-method-s2p-matching-assists-in-image-reconstruction)
+  - [**33. Multimodal medical benchmark GMAI-MMBench features 284 datasets covering 18 clinical tasks**](#33-multimodal-medical-benchmark-gmai-mmbench-features-284-datasets-covering-18-clinical-tasks)
+  - [**34. Novel time series forecasting method CGS-Mask uncovers key indicators for patient survival rates**](#34-novel-time-series-forecasting-method-cgs-mask-uncovers-key-indicators-for-patient-survival-rates)
+  - [**35. Non-invasive brain decoding framework fMRI lays the foundation for brain-computer interfaces and cognitive models**](#35-non-invasive-brain-decoding-framework-fmri-lays-the-foundation-for-brain-computer-interfaces-and-cognitive-models)
+  - [**36. Medical image segmentation model M2CF-Net improves diagnosis accuracy for Sjogren's syndrome**](#36-medical-image-segmentation-model-m2cf-net-improves-diagnosis-accuracy-for-sjogrens-syndrome)
+  - [**37. BSAFusion enables alignment and fusion of multimodal medical images**](#37-bsafusion-enables-alignment-and-fusion-of-multimodal-medical-images)
+  - [**38. Multi-Agent LLM framework KG4Diagnosis assists in diagnosing 362 common diseases**](#38-multi-agent-llm-framework-kg4diagnosis-assists-in-diagnosing-362-common-diseases)
+  - [**39. Image segmentation model ConDSeg solves soft boundary and co-occurrence issues in medical imaging**](#39-image-segmentation-model-condseg-solves-soft-boundary-and-co-occurrence-issues-in-medical-imaging)
+  - [**40. Medical model M³FM enables zero-shot clinical diagnosis, supporting disease reporting and classification**](#40-medical-model-m³fm-enables-zero-shot-clinical-diagnosis-supporting-disease-reporting-and-classification)
+  - [**41. Deep learning-based sex estimation from skull CT scans outperforms human forensic experts**](#41-deep-learning-based-sex-estimation-from-skull-ct-scans-outperforms-human-forensic-experts)
+  - [**42. AI boosts medical research: Large models become the "golden partner" for training primary care physicians**](#42-ai-boosts-medical-research-large-models-become-the-golden-partner-for-training-primary-care-physicians)
+  - [**43. AcneDGNet deep learning algorithm achieves acne lesion detection and grading**](#43-acnedgnet-deep-learning-algorithm-achieves-acne-lesion-detection-and-grading)
+  - [**44. Multimodal medical image segmentation model VISTA3D released, achieving 3D image auto-segmentation and interaction**](#44-multimodal-medical-image-segmentation-model-vista3d-released-achieving-3d-image-auto-segmentation-and-interaction)
+  - [**45. Multi-plane echocardiography unified segmentation model EchoONE accurately segments multiple planes**](#45-multi-plane-echocardiography-unified-segmentation-model-echoone-accurately-segments-multiple-planes)
+  - [**46. Multi-agent dialogue framework simulates medical consultations to aid disease diagnosis**](#46-multi-agent-dialogue-framework-simulates-medical-consultations-to-aid-disease-diagnosis)
+  - [**47. Deep learning framework STAIG reveals detailed genetic information in the tumor microenvironment**](#47-deep-learning-framework-staig-reveals-detailed-genetic-information-in-the-tumor-microenvironment)
+  - [**48. First all-in-one medical image re-identification framework MaMI reaches SOTA across 11 datasets**](#48-first-all-in-one-medical-image-re-identification-framework-mami-reaches-sota-across-11-datasets)
+  - [**49. Many-to-one regression model M2OST accurately predicts gene expression using digital pathology images**](#49-many-to-one-regression-model-m2ost-accurately-predicts-gene-expression-using-digital-pathology-images)
+  - [**50. Brain MRI scanning tool MindGlide quantifies multiple sclerosis lesions**](#50-brain-mri-scanning-tool-mindglide-quantifies-multiple-sclerosis-lesions)
+  - [**51. Hierarchical distillation multi-instance learning framework HDMIL rapidly processes gigapixel whole-slide images**](#51-hierarchical-distillation-multi-instance-learning-framework-hdmil-rapidly-processes-gigapixel-whole-slide-images)
+  - [**52. Universal 3D blood vessel segmentation foundation model vesselFM far exceeds SAM-based models**](#52-universal-3d-blood-vessel-segmentation-foundation-model-vesselfm-far-exceeds-sam-based-models)
+  - [**53. Graph neural networks accurately predict lung cancer survival, discovering 3 fatal subtypes**](#53-graph-neural-networks-accurately-predict-lung-cancer-survival-discovering-3-fatal-subtypes)
+  - [**54. Fusion strategy AI model predicts septic shock mortality risk**](#54-fusion-strategy-ai-model-predicts-septic-shock-mortality-risk)
+  - [**55. World's first clinical Graph-of-Thought model in HIE improves neurocognitive outcome prediction by 15%**](#55-worlds-first-clinical-graph-of-thought-model-in-hie-improves-neurocognitive-outcome-prediction-by-15)
+  - [**56. Fine-grained patient cohort modeling using multidimensional EHR data increases length-of-stay prediction accuracy by 16.3%**](#56-fine-grained-patient-cohort-modeling-using-multidimensional-ehr-data-increases-length-of-stay-prediction-accuracy-by-163)
+  - [**57. Deep learning model APEX screens potential antibiotic candidates**](#57-deep-learning-model-apex-screens-potential-antibiotic-candidates)
+  - [**58. Wastewater epidemiology assessment using gene sequencing and machine learning: ICA-Var method detects viruses up to 4 weeks early**](#58-wastewater-epidemiology-assessment-using-gene-sequencing-and-machine-learning-ica-var-method-detects-viruses-up-to-4-weeks-early)
+  - [**59. Bidirectional Brownian bridge diffusion model enhances reproducibility of virtual staining**](#59-bidirectional-brownian-bridge-diffusion-model-enhances-reproducibility-of-virtual-staining)
+  - [**60. Medical GraphRAG breaks QA accuracy records, achieving SOTA on 11 benchmark datasets**](#60-medical-graphrag-breaks-qa-accuracy-records-achieving-sota-on-11-benchmark-datasets)
+  - [**61. Healthcare Agent automatically detects medical ethics and safety issues**](#61-healthcare-agent-automatically-detects-medical-ethics-and-safety-issues)
+  - [**62. Blood cell image classifier CytoDiffusion assists in discovering leukemia, surpassing clinical experts**](#62-blood-cell-image-classifier-cytodiffusion-assists-in-discovering-leukemia-surpassing-clinical-experts)
+  - [**63. UCL team proposes federated learning framework MORPHFED for cross-institutional blood morphology analysis**](#63-ucl-team-proposes-federated-learning-framework-morphfed-for-cross-institutional-blood-morphology-analysis)
+  - [**64. French team proposes explainable machine learning framework for accurate mortality prediction in HCC liver transplant candidates**](#64-french-team-proposes-explainable-machine-learning-framework-for-accurate-mortality-prediction-in-hcc-liver-transplant-candidates)
+  - [**65. Stanford University proposes Merlin, the first native 3D abdominal CT vision-language model**](#65-stanford-university-proposes-merlin-the-first-native-3d-abdominal-ct-vision-language-model)
+- [**AI+ Materials Chemistry**](#ai-materials-chemistry)
+  - [**1. High-throughput computational framework generates 120,000 novel MOF candidates in 33 minutes**](#1-high-throughput-computational-framework-generates-120000-novel-mof-candidates-in-33-minutes)
+  - [**2. Machine learning algorithm screens P-SOC electrode materials**](#2-machine-learning-algorithm-screens-p-soc-electrode-materials)
+  - [**3. SEN machine learning model achieves high-accuracy material property predictions**](#3-sen-machine-learning-model-achieves-high-accuracy-material-property-predictions)
+  - [**4. Deep learning tool GNoME discovers 2.2 million new crystals**](#4-deep-learning-tool-gnome-discovers-22-million-new-crystals)
+  - [**5. Field-induced recursively embedded atom neural network accurately describes external field strength and direction changes**](#5-field-induced-recursively-embedded-atom-neural-network-accurately-describes-external-field-strength-and-direction-changes)
+  - [**6. Machine learning predicts water adsorption isotherms of porous materials**](#6-machine-learning-predicts-water-adsorption-isotherms-of-porous-materials)
+  - [**7. Using machine learning to optimize co-catalysts for BiVO(4) photoanodes**](#7-using-machine-learning-to-optimize-co-catalysts-for-bivo4-photoanodes)
+  - [**8. RetroExplainer algorithm performs retrosynthesis prediction based on deep learning**](#8-retroexplainer-algorithm-performs-retrosynthesis-prediction-based-on-deep-learning)
+  - [**9. Deep neural networks + NLP used to develop corrosion-resistant alloys**](#9-deep-neural-networks--nlp-used-to-develop-corrosion-resistant-alloys)
+  - [**10. Deep learning determines materials' internal structures through surface observations**](#10-deep-learning-determines-materials-internal-structures-through-surface-observations)
+  - [**11. Developing 3 new materials using innovative X-ray scintillators**](#11-developing-3-new-materials-using-innovative-x-ray-scintillators)
+  - [**12. Semi-supervised learning extracts hidden information from unlabeled data**](#12-semi-supervised-learning-extracts-hidden-information-from-unlabeled-data)
+  - [**13. Automated knowledge extraction based on AutoML**](#13-automated-knowledge-extraction-based-on-automl)
+  - [**14. Uni-MOF: A machine learning model predicting adsorption behavior in 3D MOF materials**](#14-uni-mof-a-machine-learning-model-predicting-adsorption-behavior-in-3d-mof-materials)
+  - [**15. Microelectronics accelerates towards the post-Moore era! Integrating DNN with nanomembrane technology to precisely analyze incident light angles**](#15-microelectronics-accelerates-towards-the-post-moore-era-integrating-dnn-with-nanomembrane-technology-to-precisely-analyze-incident-light-angles)
+  - [**16. Reshaping lithium battery performance boundaries, proposing a simplified electrochemical model based on ensemble learning**](#16-reshaping-lithium-battery-performance-boundaries-proposing-a-simplified-electrochemical-model-based-on-ensemble-learning)
+  - [**17. The strongest iron-based superconducting magnet born via machine learning**](#17-the-strongest-iron-based-superconducting-magnet-born-via-machine-learning)
+  - [**18. Neural networks replace Density Functional Theory! Universal materials model achieves ultra-precise predictions**](#18-neural-networks-replace-density-functional-theory-universal-materials-model-achieves-ultra-precise-predictions)
+  - [**19. Neural network density functional framework opens the black box of matter's electronic structure prediction**](#19-neural-network-density-functional-framework-opens-the-black-box-of-matters-electronic-structure-prediction)
+  - [**20. First fully forward mode training architecture for optical computing using neural networks achieves major breakthrough in domestic optical chips**](#20-first-fully-forward-mode-training-architecture-for-optical-computing-using-neural-networks-achieves-major-breakthrough-in-domestic-optical-chips)
+  - [**21. Chemistry LLM ChemLLM covers 7 million QA data, professional capabilities rival GPT-4**](#21-chemistry-llm-chemllm-covers-7-million-qa-data-professional-capabilities-rival-gpt-4)
+  - [**22. Wafer-scale producible AI-adaptive micro-spectrometers**](#22-wafer-scale-producible-ai-adaptive-micro-spectrometers)
+  - [**23. GNNOpt model identifies hundreds of solar cell and quantum material candidates**](#23-gnnopt-model-identifies-hundreds-of-solar-cell-and-quantum-material-candidates)
+  - [**24. Open OMat24 dataset contains 110 million DFT calculation results**](#24-open-omat24-dataset-contains-110-million-dft-calculation-results)
+  - [**25. Novel refractory high-entropy alloy synthesized via machine learning boasts excellent room-temperature ductility**](#25-novel-refractory-high-entropy-alloy-synthesized-via-machine-learning-boasts-excellent-room-temperature-ductility)
+  - [**26. Material generative model FlowLLM features a dataset covering over 45k materials**](#26-material-generative-model-flowllm-features-a-dataset-covering-over-45k-materials)
+  - [**27. Using active learning to identify 14,000 high-entropy oxides, successfully screening 4 high-activity hydrogen evolution catalysts**](#27-using-active-learning-to-identify-14000-high-entropy-oxides-successfully-screening-4-high-activity-hydrogen-evolution-catalysts)
+  - [**28. Deep learning model BETE-NET boosts superconducting material search efficiency by 5x**](#28-deep-learning-model-bete-net-boosts-superconducting-material-search-efficiency-by-5x)
+  - [**29. Gradient Boosting Decision Tree (GBDT) technology further improves high-precision prediction of high-entropy alloy oxidation resistance**](#29-gradient-boosting-decision-tree-gbdt-technology-further-improves-high-precision-prediction-of-high-entropy-alloy-oxidation-resistance)
+  - [**30. Molecular design framework RingFormer more precisely predicts organic material molecular optoelectronic properties**](#30-molecular-design-framework-ringformer-more-precisely-predicts-organic-material-molecular-optoelectronic-properties)
+  - [**31. Inorganic retrosynthesis planning method Retrieval-Retro improves inorganic material synthesis efficiency and accuracy**](#31-inorganic-retrosynthesis-planning-method-retrieval-retro-improves-inorganic-material-synthesis-efficiency-and-accuracy)
+  - [**32. Using large models to decipher hydride solid-state electrolyte conduction mechanisms, establishing a reliable activation energy prediction model**](#32-using-large-models-to-decipher-hydride-solid-state-electrolyte-conduction-mechanisms-establishing-a-reliable-activation-energy-prediction-model)
+  - [**33. Tera-scale mass spectrometry data search enabled by machine learning uncovers unknown chemical reactions**](#33-tera-scale-mass-spectrometry-data-search-enabled-by-machine-learning-uncovers-unknown-chemical-reactions)
+  - [**34. Generative AI structure solution method PXRDnet based on diffusion models successfully solves 200 complex simulated nanocrystals**](#34-generative-ai-structure-solution-method-pxrdnet-based-on-diffusion-models-successfully-solves-200-complex-simulated-nanocrystals)
+  - [**35. DreaMS model covers 200 million molecular mass spectra, building the world's largest mass spec dataset GeMS**](#35-dreams-model-covers-200-million-molecular-mass-spectra-building-the-worlds-largest-mass-spec-dataset-gems)
+  - [**36. Equivariant machine learning framework accelerates large-scale electric field simulations of materials**](#36-equivariant-machine-learning-framework-accelerates-large-scale-electric-field-simulations-of-materials)
+  - [**37. Multi-source data integration method screens 25 types of cement clinker alternatives, equivalent to reducing 1.2 billion tons of greenhouse gases**](#37-multi-source-data-integration-method-screens-25-types-of-cement-clinker-alternatives-equivalent-to-reducing-12-billion-tons-of-greenhouse-gases)
+  - [**38. UNIMATE achieves unified modeling of topology generation/property prediction for the first time**](#38-unimate-achieves-unified-modeling-of-topology-generationproperty-prediction-for-the-first-time)
+  - [**39. All-atom diffusion Transformer framework enables unified generation of periodic and aperiodic atomic systems for the first time**](#39-all-atom-diffusion-transformer-framework-enables-unified-generation-of-periodic-and-aperiodic-atomic-systems-for-the-first-time)
+  - [**40. FASTSOLV model realizes small molecule solubility prediction at any temperature, accelerating inference speed by 50x**](#40-fastsolv-model-realizes-small-molecule-solubility-prediction-at-any-temperature-accelerating-inference-speed-by-50x)
+  - [**41. Novel method based on multimodal machine learning models predicts material properties without complete crystal structures**](#41-novel-method-based-on-multimodal-machine-learning-models-predicts-material-properties-without-complete-crystal-structures)
+  - [**42. AI model CGformer innovatively integrates global attention mechanisms, aiding high-entropy material R&D**](#42-ai-model-cgformer-innovatively-integrates-global-attention-mechanisms-aiding-high-entropy-material-rd)
+  - [**43. Novel structural constraint integration method SCIGEN adapts to any pre-trained diffusion model**](#43-novel-structural-constraint-integration-method-scigen-adapts-to-any-pre-trained-diffusion-model)
+  - [**44. Physically-informed generative AI model SpectroGen requires only single modality input to achieve cross-modal generation with 99% experimental correlation**](#44-physically-informed-generative-ai-model-spectrogen-requires-only-single-modality-input-to-achieve-cross-modal-generation-with-99-experimental-correlation)
+  - [**45. MOF-ChemUnity reconstructs MOF panoramic knowledge, pushing material discovery into the "Explainable AI" era**](#45-mof-chemunity-reconstructs-mof-panoramic-knowledge-pushing-material-discovery-into-the-explainable-ai-era)
+  - [**46. Lightweight universal potential model PET-MAD released, achieving dedicated model-level precision with minimal samples**](#46-lightweight-universal-potential-model-pet-mad-released-achieving-dedicated-model-level-precision-with-minimal-samples)
+  - [**47. AI system ChemOntology released, halving reaction path search costs by integrating chemical knowledge**](#47-ai-system-chemontology-released-halving-reaction-path-search-costs-by-integrating-chemical-knowledge)
+  - [**48. Princeton and others jointly propose LLM method for predicting MOF free energy, highly accurately assessing synthesis feasibility**](#48-princeton-and-others-jointly-propose-llm-method-for-predicting-mof-free-energy-highly-accurately-assessing-synthesis-feasibility)
+  - [**49. Yale University team proposes MOSAIC model, coordinating LLMs to generate highly reliable chemical synthesis schemes**](#49-yale-university-team-proposes-mosaic-model-coordinating-llms-to-generate-highly-reliable-chemical-synthesis-schemes)
+  - [**50. MIT and others propose diffusion model DiffSyn, enabling generative planning of material synthesis pathways**](#50-mit-and-others-propose-diffusion-model-diffsyn-enabling-generative-planning-of-material-synthesis-pathways)
+  - [**51. University of Michigan and Farasis Energy jointly propose "Discovery Learning" method, drastically shortening battery life prediction cycles**](#51-university-of-michigan-and-farasis-energy-jointly-propose-discovery-learning-method-drastically-shortening-battery-life-prediction-cycles)
+  - [**52. Cornell University proposes SCAN framework, highly accurately predicting and explaining battery electrolyte performance**](#52-cornell-university-proposes-scan-framework-highly-accurately-predicting-and-explaining-battery-electrolyte-performance)
+  - [**53. MIT proposes foundation large model DefectNet for non-destructive characterization and quantification of internal material defects**](#53-mit-proposes-foundation-large-model-defectnet-for-non-destructive-characterization-and-quantification-of-internal-material-defects)
+  - [**54. Cornell University proposes multi-agent platform EMSeek, achieving full-pipeline automated analysis of electron microscopy images**](#54-cornell-university-proposes-multi-agent-platform-emseek-achieving-full-pipeline-automated-analysis-of-electron-microscopy-images)
+- [**AI+ Zoology-Botany**](#ai-zoology-botany)
+  - [**1. SBeA analyzes animal social behaviors based on a few-shot learning framework**](#1-sbea-analyzes-animal-social-behaviors-based-on-a-few-shot-learning-framework)
+  - [**2. Deep learning method based on Siamese networks automatically captures embryonic development processes**](#2-deep-learning-method-based-on-siamese-networks-automatically-captures-embryonic-development-processes)
+  - [**3. Systematic pipeline for collecting plant phenotype data via drones to predict optimal harvest dates**](#3-systematic-pipeline-for-collecting-plant-phenotype-data-via-drones-to-predict-optimal-harvest-dates)
+  - [**4. AI camera alert system accurately distinguishes tigers from other species**](#4-ai-camera-alert-system-accurately-distinguishes-tigers-from-other-species)
+  - [**5. Using Labrador retriever data and comparing 3 models reveals behavioral traits affecting detection dogs' performance**](#5-using-labrador-retriever-data-and-comparing-3-models-reveals-behavioral-traits-affecting-detection-dogs-performance)
+  - [**6. Multi-species image recognition model based on ArcFace Classification Head for face recognition**](#6-multi-species-image-recognition-model-based-on-arcface-classification-head-for-face-recognition)
+  - [**7. Monitoring cherry blossom blooming in Japan using Python API and computer vision API**](#7-monitoring-cherry-blossom-blooming-in-japan-using-python-api-and-computer-vision-api)
+  - [**8. Machine learning-based population genetics method reveals the formation mechanism of grape flavors**](#8-machine-learning-based-population-genetics-method-reveals-the-formation-mechanism-of-grape-flavors)
+  - [**9. Review: Unlocking bioinformatics research more efficiently with AI**](#9-review-unlocking-bioinformatics-research-more-efficiently-with-ai)
+  - [**10. BirdFlow model accurately predicts flight paths of migratory birds**](#10-birdflow-model-accurately-predicts-flight-paths-of-migratory-birds)
+  - [**11. New whale bioacoustics model identifies 8 cetacean species**](#11-new-whale-bioacoustics-model-identifies-8-cetacean-species)
+  - [**12. Machine learning isolates the sperm whale phonetic alphabet, highly similar to human language with stronger information-carrying capacity**](#12-machine-learning-isolates-the-sperm-whale-phonetic-alphabet-highly-similar-to-human-language-with-stronger-information-carrying-capacity)
+  - [**13. PlantLncBoost model achieves up to 96% accuracy in cross-species lncRNA prediction**](#13-plantlncboost-model-achieves-up-to-96-accuracy-in-cross-species-lncrna-prediction)
+  - [**14. Perch 2.0 covers nearly 15,000 species, refreshing SOTA in bioacoustic classification detection**](#14-perch-20-covers-nearly-15000-species-refreshing-sota-in-bioacoustic-classification-detection)
+- [**AI+ Agriculture-Forestry-Animal husbandry**](#ai-agriculture-forestry-animal-husbandry)
+  - [**1. Using Convolutional Neural Networks for rapid and accurate rice yield estimation**](#1-using-convolutional-neural-networks-for-rapid-and-accurate-rice-yield-estimation)
+  - [**2. Model designed via YOLOv5 algorithm monitors sow posture and piglet birth**](#2-model-designed-via-yolov5-algorithm-monitors-sow-posture-and-piglet-birth)
+  - [**3. Combining laboratory observation and machine learning to prove that ultrasonic sounds emitted by stressed tomato and tobacco plants can travel in air**](#3-combining-laboratory-observation-and-machine-learning-to-prove-that-ultrasonic-sounds-emitted-by-stressed-tomato-and-tobacco-plants-can-travel-in-air)
+  - [**4. Drone + AI image analysis detects forestry pests**](#4-drone--ai-image-analysis-detects-forestry-pests)
+  - [**5. Computer vision + deep learning developed for a dairy cow lameness detection system**](#5-computer-vision--deep-learning-developed-for-a-dairy-cow-lameness-detection-system)
+- [**AI+ Meteorology**](#ai-meteorology)
+  - [**1. Review: Data-driven machine learning weather forecasting models**](#1-review-data-driven-machine-learning-weather-forecasting-models)
+  - [**2. Review: Collecting data from hailstorm centers and predicting extreme weather using large models**](#2-review-collecting-data-from-hailstorm-centers-and-predicting-extreme-weather-using-large-models)
+  - [**3. Creating new algorithms to accurately predict extreme precipitation using global storm-resolving simulations and machine learning**](#3-creating-new-algorithms-to-accurately-predict-extreme-precipitation-using-global-storm-resolving-simulations-and-machine-learning)
+  - [**4. Random Forest-based machine learning model CSU-MLP predicts medium-range severe weather**](#4-random-forest-based-machine-learning-model-csu-mlp-predicts-medium-range-severe-weather)
+  - [**5. End-to-end data-driven weather forecasting system Aardvark Weather speeds up predictions by dozens of times compared to traditional methods**](#5-end-to-end-data-driven-weather-forecasting-system-aardvark-weather-speeds-up-predictions-by-dozens-of-times-compared-to-traditional-methods)
+  - [**6. Machine learning weather forecasting system FCN3 supports ultra-fast single-GPU inference**](#6-machine-learning-weather-forecasting-system-fcn3-supports-ultra-fast-single-gpu-inference)
+  - [**7. Indian monsoon forecasting model based on 36 weather stations achieves city-scale fine forecasting**](#7-indian-monsoon-forecasting-model-based-on-36-weather-stations-achieves-city-scale-fine-forecasting)
+  - [**8. ACE2 completes a 4-month seasonal forecast in just 2 minutes**](#8-ace2-completes-a-4-month-seasonal-forecast-in-just-2-minutes)
+  - [**9. Incremental weather forecasting model VA-MoE released, achieving SOTA performance with 75% parameter reduction**](#9-incremental-weather-forecasting-model-va-moe-released-achieving-sota-performance-with-75-parameter-reduction)
+  - [**10. Elucidated Rolling Diffusion Model (ERDM) released, solving long-term forecasting challenges and maintaining a lead over EDM baselines in medium-to-long term forecasts**](#10-elucidated-rolling-diffusion-model-erdm-released-solving-long-term-forecasting-challenges-and-maintaining-a-lead-over-edm-baselines-in-medium-to-long-term-forecasts)
+  - [**11. Novel latent diffusion model OmniCast released, resolving error accumulation in autoregressive weather forecasting models**](#11-novel-latent-diffusion-model-omnicast-released-resolving-error-accumulation-in-autoregressive-weather-forecasting-models)
+  - [**12. NVIDIA proposes a novel long-range distillation method, breaking AI bottlenecks in long-term weather forecasting**](#12-nvidia-proposes-a-novel-long-range-distillation-method-breaking-ai-bottlenecks-in-long-term-weather-forecasting)
+  - [**13. Joint team proposes Graph Neural Network model SeaCast, achieving ultra-fast regional ocean forecasting**](#13-joint-team-proposes-graph-neural-network-model-seacast-achieving-ultra-fast-regional-ocean-forecasting)
+- [**AI+ Astronomy**](#ai-astronomy)
+  - [**1. PRIMO algorithm learns light propagation rules around black holes to reconstruct sharper black hole images**](#1-primo-algorithm-learns-light-propagation-rules-around-black-holes-to-reconstruct-sharper-black-hole-images)
+  - [**2. Training computer vision algorithms with simulated data to sharpen and "restore" astronomical images**](#2-training-computer-vision-algorithms-with-simulated-data-to-sharpen-and-restore-astronomical-images)
+  - [**3. Using unsupervised machine learning algorithm Astronomaly to find previously overlooked anomalies**](#3-using-unsupervised-machine-learning-algorithm-astronomaly-to-find-previously-overlooked-anomalies)
+  - [**4. Machine learning-based method for CME identification and parameter extraction**](#4-machine-learning-based-method-for-cme-identification-and-parameter-extraction)
+  - [**5. Deep learning discovers 107 cases of neutral carbon absorption lines**](#5-deep-learning-discovers-107-cases-of-neutral-carbon-absorption-lines)
+  - [**6. StarFusion model achieves high spatial resolution image prediction**](#6-starfusion-model-achieves-high-spatial-resolution-image-prediction)
+  - [**7. Satellite image generation method developed based on SD3, constructing the largest remote sensing dataset to date, EcoMapper**](#7-satellite-image-generation-method-developed-based-on-sd3-constructing-the-largest-remote-sensing-dataset-to-date-ecomapper)
+  - [**8. Geospatial AI Earth AI focuses on 3 core data types, improving geospatial reasoning capabilities by 64%**](#8-geospatial-ai-earth-ai-focuses-on-3-core-data-types-improving-geospatial-reasoning-capabilities-by-64)
+  - [**9. The first astronomical multimodal foundation model AION-1 is born, pre-trained on 200 million astronomical targets**](#9-the-first-astronomical-multimodal-foundation-model-aion-1-is-born-pre-trained-on-200-million-astronomical-targets)
+  - [**10. Novel data-driven pipeline precisely identifies 7 rare lensed samples from 810,000 quasars using CNN**](#10-novel-data-driven-pipeline-precisely-identifies-7-rare-lensed-samples-from-810000-quasars-using-cnn)
+  - [**11. ESA team proposes semi-supervised method AnomalyMatch to efficiently screen rare celestial bodies from nearly 100 million Hubble records**](#11-esa-team-proposes-semi-supervised-method-anomalymatch-to-efficiently-screen-rare-celestial-bodies-from-nearly-100-million-hubble-records)
+  - [**12. University of Warwick proposes the RAVEN validation pipeline, confirming 118 new exoplanets**](#12-university-of-warwick-proposes-the-raven-validation-pipeline-confirming-118-new-exoplanets)
+  - [**13. University of Warwick proposes an ensemble learning framework to highly accurately predict asteroseismic parameters for δ Scuti stars**](#13-university-of-warwick-proposes-an-ensemble-learning-framework-to-highly-accurately-predict-asteroseismic-parameters-for-δ-scuti-stars)
+  - [**14. Spanish research team proposes the StreakMind system, utilizing AI to automatically detect satellite streaks in astronomical images**](#14-spanish-research-team-proposes-the-streakmind-system-utilizing-ai-to-automatically-detect-satellite-streaks-in-astronomical-images)
+- [**AI+ Natural Disaster**](#ai-natural-disaster)
+  - [**1. Machine learning predicts land subsidence risk over the next 40 years**](#1-machine-learning-predicts-land-subsidence-risk-over-the-next-40-years)
+  - [**2. Semantic segmentation model SCDUNet++ used for landslide mapping**](#2-semantic-segmentation-model-scdunet-used-for-landslide-mapping)
+  - [**3. Neural networks convert 2D solar images into 3D reconstructed images**](#3-neural-networks-convert-2d-solar-images-into-3d-reconstructed-images)
+  - [**4. Additive neural networks analyze influencing factors in natural disasters**](#4-additive-neural-networks-analyze-influencing-factors-in-natural-disasters)
+  - [**5. Using Explainable AI to analyze various geographical factors in Gippsland, Australia**](#5-using-explainable-ai-to-analyze-various-geographical-factors-in-gippsland-australia)
+  - [**6. Machine learning-based flood forecasting model**](#6-machine-learning-based-flood-forecasting-model)
+  - [**7. ED-DLSTM achieves flood prediction in unmonitored areas**](#7-ed-dlstm-achieves-flood-prediction-in-unmonitored-areas)
+  - [**8. ChloroFormer model provides early warning of marine algal blooms**](#8-chloroformer-model-provides-early-warning-of-marine-algal-blooms)
+  - [**9. The first marine large language model OceanGPT accepted by ACL 2024! Underwater embodied AI becomes reality**](#9-the-first-marine-large-language-model-oceangpt-accepted-by-acl-2024-underwater-embodied-ai-becomes-reality)
+  - [**10. AI predicts global warming trends**](#10-ai-predicts-global-warming-trends)
+  - [**11. New GeoAI model explains surface heat flow distribution on the Tibetan Plateau**](#11-new-geoai-model-explains-surface-heat-flow-distribution-on-the-tibetan-plateau)
+  - [**12. "WenHai" marine environment intelligent forecasting large model outperforms numerical marine forecasting**](#12-wenhai-marine-environment-intelligent-forecasting-large-model-outperforms-numerical-marine-forecasting)
+  - [**13. University of Minnesota proposes knowledge-guided machine learning model FHNN, realizing high-precision flood forecasting**](#13-university-of-minnesota-proposes-knowledge-guided-machine-learning-model-fhnn-realizing-high-precision-flood-forecasting)
+  - [**14. Google releases version 2 of its global flood forecasting system, significantly extending valid forecast times**](#14-google-releases-version-2-of-its-global-flood-forecasting-system-significantly-extending-valid-forecast-times)
+- [**Others**](#others)
+  - [**1. TacticAI football assistant hits 90% practical utility in tactical layouts**](#1-tacticai-football-assistant-hits-90-practical-utility-in-tactical-layouts)
+  - [**2. Denoising diffusion model SPDiff enables long-range crowd movement simulation**](#2-denoising-diffusion-model-spdiff-enables-long-range-crowd-movement-simulation)
+  - [**3. Intelligent scientific facilities drive paradigm shifts in research**](#3-intelligent-scientific-facilities-drive-paradigm-shifts-in-research)
+  - [**4. DeepSymNet represents symbolic expressions based on supervised learning**](#4-deepsymnet-represents-symbolic-expressions-based-on-supervised-learning)
+  - [**5. Large language model ChipNeMo assists engineers in chip design**](#5-large-language-model-chipnemo-assists-engineers-in-chip-design)
+  - [**6. AlphaGeometry can solve geometry problems**](#6-alphageometry-can-solve-geometry-problems)
+  - [**7. Reinforcement learning applied to urban spatial planning**](#7-reinforcement-learning-applied-to-urban-spatial-planning)
+  - [**8. ChatArena framework: Playing Werewolf with Large Language Models**](#8-chatarena-framework-playing-werewolf-with-large-language-models)
+  - [**9. Review: 30 scholars co-publish in Nature, 10-year retrospective deconstructs how AI reshapes scientific paradigms**](#9-review-30-scholars-co-publish-in-nature-10-year-retrospective-deconstructs-how-ai-reshapes-scientific-paradigms)
+  - [**10. Ithaca assists epigraphers in text restoration, chronological attribution, and geographical attribution**](#10-ithaca-assists-epigraphers-in-text-restoration-chronological-attribution-and-geographical-attribution)
+  - [**11. AI in forward and inverse problems of meta-optics, data analysis based on metasurface systems**](#11-ai-in-forward-and-inverse-problems-of-meta-optics-data-analysis-based-on-metasurface-systems)
+  - [**12. A new geospatial artificial intelligence method: Geographically Neural Network Weighted Logistic Regression**](#12-a-new-geospatial-artificial-intelligence-method-geographically-neural-network-weighted-logistic-regression)
+  - [**13. Using diffusion models to generate neural network parameters, transforming spatiotemporal few-shot learning into a diffusion model pre-training problem**](#13-using-diffusion-models-to-generate-neural-network-parameters-transforming-spatiotemporal-few-shot-learning-into-a-diffusion-model-pre-training-problem)
+  - [**14. Latest AI4S insights from Fei-Fei Li's team: 16 innovative technologies summarized, covering biology/materials/healthcare/diagnostics**](#14-latest-ai4s-insights-from-fei-fei-lis-team-16-innovative-technologies-summarized-covering-biologymaterialshealthcarediagnostics)
+  - [**15. Accurate prediction of Wuhan housing prices! osp-GNNWR model accurately describes complex spatial processes and geographical phenomena**](#15-accurate-prediction-of-wuhan-housing-prices-osp-gnnwr-model-accurately-describes-complex-spatial-processes-and-geographical-phenomena)
+  - [**16. Introducing zero-shot learning to release a conditional diffusion model optimized for oracle bone script decipherment**](#16-introducing-zero-shot-learning-to-release-a-conditional-diffusion-model-optimized-for-oracle-bone-script-decipherment)
+  - [**17. Stanford/Apple and 23 other institutions release the DCLM benchmark; foundation model performs on par with Llama3 8B**](#17-stanfordapple-and-23-other-institutions-release-the-dclm-benchmark-foundation-model-performs-on-par-with-llama3-8b)
+  - [**18. PoCo solves the data source heterogeneity dilemma, enabling robots to execute multi-tasks flexibly**](#18-poco-solves-the-data-source-heterogeneity-dilemma-enabling-robots-to-execute-multi-tasks-flexibly)
+  - [**19. Containing 140,000 images! Oracle bone script dataset helps team win ACL Best Paper Award**](#19-containing-140000-images-oracle-bone-script-dataset-helps-team-win-acl-best-paper-award)
+  - [**20. Proposing a channel prediction scheme based on pre-trained LLMs, GPT-2 empowers the physical layer of wireless communications**](#20-proposing-a-channel-prediction-scheme-based-on-pre-trained-llms-gpt-2-empowers-the-physical-layer-of-wireless-communications)
+  - [**21. The first Generative Adversarial Network model for multi-stitch embroidery**](#21-the-first-generative-adversarial-network-model-for-multi-stitch-embroidery)
+  - [**22. Fast Automated Scanning Toolkit (FAST) efficiently acquires sample information**](#22-fast-automated-scanning-toolkit-fast-efficiently-acquires-sample-information)
+  - [**23. Population Dynamics Foundation Model PDFM open-sourced, precisely predicting US unemployment and poverty rates**](#23-population-dynamics-foundation-model-pdfm-open-sourced-precisely-predicting-us-unemployment-and-poverty-rates)
+  - [**24. Deep learning model CatGWR estimates spatial non-stationarity**](#24-deep-learning-model-catgwr-estimates-spatial-non-stationarity)
+  - [**25. World's first VR exercise intervention system REVERIE reshapes youth brain-body-mind health**](#25-worlds-first-vr-exercise-intervention-system-reverie-reshapes-youth-brain-body-mind-health)
+  - [**26. Based on over 176k inscription data, Aeneas achieves arbitrary-length restoration of ancient Roman inscriptions for the first time**](#26-based-on-over-176k-inscription-data-aeneas-achieves-arbitrary-length-restoration-of-ancient-roman-inscriptions-for-the-first-time)
+  - [**27. Panoramic video generation framework PanoWan also handles zero-shot video editing**](#27-panoramic-video-generation-framework-panowan-also-handles-zero-shot-video-editing)
+  - [**28. YOLOv11-based ceramic classification intelligent framework integrates visual modeling and economic analysis, achieving artifact classification and value estimation**](#28-yolov11-based-ceramic-classification-intelligent-framework-integrates-visual-modeling-and-economic-analysis-achieving-artifact-classification-and-value-estimation)
+  - [**29. "Microwave Brain" chip born, simultaneously processing ultra-high-speed data and wireless signals with 75% accuracy at 176 milliwatts power**](#29-microwave-brain-chip-born-simultaneously-processing-ultra-high-speed-data-and-wireless-signals-with-75-accuracy-at-176-milliwatts-power)
+  - [**30. Spatiotemporal imputation and prediction model STIMP released, realizing precise predictions of coastal Chlorophyll-a distribution**](#30-spatiotemporal-imputation-and-prediction-model-stimp-released-realizing-precise-predictions-of-coastal-chlorophyll-a-distribution)
+  - [**31. MIT and others achieve high-precision prediction of plasma dynamics under few-shot conditions based on machine learning**](#31-mit-and-others-achieve-high-precision-prediction-of-plasma-dynamics-under-few-shot-conditions-based-on-machine-learning)
+  - [**32. Reac-Discovery fuses mathematical modeling, machine learning, and automated experiments to solve the universality challenge of self-driving laboratory systems**](#32-reac-discovery-fuses-mathematical-modeling-machine-learning-and-automated-experiments-to-solve-the-universality-challenge-of-self-driving-laboratory-systems)
+  - [**33. The first neuron modeling framework NOBLE validated by human cortical data is introduced**](#33-the-first-neuron-modeling-framework-noble-validated-by-human-cortical-data-is-introduced)
+  - [**34. Image geolocation framework LocDiff goes online, enabling grid-free and reference-library-free global precision positioning**](#34-image-geolocation-framework-locdiff-goes-online-enabling-grid-free-and-reference-library-free-global-precision-positioning)
+  - [**35. Machine learning combined with py-GC-MS precisely identifies evidence of life in Archean rocks**](#35-machine-learning-combined-with-py-gc-ms-precisely-identifies-evidence-of-life-in-archean-rocks)
+  - [**36. Tsinghua University team proposes neuro-symbolic regression method ND² to automatically derive complex network dynamics formulas**](#36-tsinghua-university-team-proposes-neuro-symbolic-regression-method-nd-to-automatically-derive-complex-network-dynamics-formulas)
+  - [**37. Zhejiang University team proposes geologically constrained mineral prospectivity prediction method, explicitly depicting mineralization anisotropy**](#37-zhejiang-university-team-proposes-geologically-constrained-mineral-prospectivity-prediction-method-explicitly-depicting-mineralization-anisotropy)
+  - [**38. Tsinghua and UChicago team publishes in Nature: AI tools expand scientists' impact but contract science's focus**](#38-tsinghua-and-uchicago-team-publishes-in-nature-ai-tools-expand-scientists-impact-but-contract-sciences-focus)
+  - [**39. UC team proposes AI-augmented chip-scale spectrometer, achieving high spectral fidelity in an ultra-small volume**](#39-uc-team-proposes-ai-augmented-chip-scale-spectrometer-achieving-high-spectral-fidelity-in-an-ultra-small-volume)
+  - [**40. US DOE Oak Ridge National Lab proposes D-CHAG method, significantly reducing memory footprint for multi-channel foundation models**](#40-us-doe-oak-ridge-national-lab-proposes-d-chag-method-significantly-reducing-memory-footprint-for-multi-channel-foundation-models)
+  - [**41. Polymathic AI team proposes continuum foundation model Walrus, setting records in cross-domain simulation performance**](#41-polymathic-ai-team-proposes-continuum-foundation-model-walrus-setting-records-in-cross-domain-simulation-performance)
+  - [**42. EPFL proposes novel architecture DYNAMI-CAL GraphNet, a physics-informed GNN accurately modeling multi-body dynamics**](#42-epfl-proposes-novel-architecture-dynami-cal-graphnet-a-physics-informed-gnn-accurately-modeling-multi-body-dynamics)
+  - [**43. MIT proposes novel method Wave-Former, achieving high-precision 3D reconstruction of completely occluded objects**](#43-mit-proposes-novel-method-wave-former-achieving-high-precision-3d-reconstruction-of-completely-occluded-objects)
+  - [**44. MIT proposes DRiffusion draft-and-refine parallel framework, realizing lossless acceleration for diffusion model inference**](#44-mit-proposes-driffusion-draft-and-refine-parallel-framework-realizing-lossless-acceleration-for-diffusion-model-inference)
+  - [**45. Technion - Israel Institute of Technology proposes Task Tokens, allowing behavior foundation models to flexibly adapt to specific tasks**](#45-technion---israel-institute-of-technology-proposes-task-tokens-allowing-behavior-foundation-models-to-flexibly-adapt-to-specific-tasks)
+  - [**46. MIT and others propose EnergAIzer framework, achieving fast and accurate GPU power estimation for AI workloads**](#46-mit-and-others-propose-energaizer-framework-achieving-fast-and-accurate-gpu-power-estimation-for-ai-workloads)
+  - [**47. UIUC proposes heterogeneous agent framework Eywa, breaking through the limits of language-centric large models**](#47-uiuc-proposes-heterogeneous-agent-framework-eywa-breaking-through-the-limits-of-language-centric-large-models)
+  - [**48. Stanford University and others use LSTM surrogate models to achieve 252x accelerated simulation of second-order nonlinear optics**](#48-stanford-university-and-others-use-lstm-surrogate-models-to-achieve-252x-accelerated-simulation-of-second-order-nonlinear-optics)
+
+## **Foreword**
+
+Since 2020, scientific projects represented by AlphaFold have pushed AI for Science (AI4S) to the main stage of AI applications. In recent years, from biopharmaceuticals to astronomy and meteorology, and then to fundamental disciplines like materials chemistry, all have become new battlegrounds for AI.
+
+As an increasing number of interdisciplinary talents begin to apply technologies such as machine learning and deep learning to data processing and model building in their research fields, coupled with the strengthening collaboration of cross-disciplinary research teams, the capabilities of AI4S are being noticed by more scientific researchers. However, it has not yet achieved the goal of large-scale application. Many issues urgently need to be resolved, such as improving the reproducibility of related research, lowering the technical threshold, and improving data quality.
+
+Currently, in addition to universities and research institutions actively exploring AI4S, many governments and leading technology companies have also noticed the potential of AI to revolutionize scientific research and have initiated relevant policy guidance and layouts. It can be said that AI4S is the undeniable general trend.
+
+As one of the earliest communities to pay attention to AI for Science, "HyperAI" is happy to share the latest research progress and results universally while accompanying the industry's growth. We hope that by interpreting cutting-edge papers and policies, more teams can see the help AI brings to scientific research, contributing to the development of AI for Science.
+
+To date, HyperAI has interpreted and shared nearly 200 papers. For ease of retrieval, we have classified the articles by discipline, displayed the publishing journals and dates, and extracted keywords (research teams, related research, datasets, etc.). You can click the titles to jump to the Research highlight page of the paper (which contains the full paper download link).
+
+This document will be presented as an open-source project. We will continuously update the interpretation articles, and we also welcome everyone to submit excellent research results. If your team/research group has reporting needs, you can add WeChat: 神经星星 (WeChat ID: Hyperai01).
+
+## **AI+ Biopharmaceutical**
+
+### **1. [AdaDR outperforms multiple benchmark methods in drug repositioning](https://hyper.ai/news/30434)**
+
+- **Research highlight:** [https://hyper.ai/news/30434](https://hyper.ai/news/30434)
+- **Research Team:** Min Li's Research Team at Central South University
+- **Related Research:** Gdataset, Cdataset, Ldataset, LRSSL dataset, GCNs framework, AdaDR
+- **Published Journal:** Bioinformatics, 2024.01
+- **Paper Link:** [Drug repositioning with adaptive graph convolutional networks](https://academic.oup.com/bioinformatics/article/40/1/btad748/7467059)
+
+### **2. [IMN4NPD accelerates the dereplication of extensive clusters in molecular networks, providing annotations for self-loops and paired nodes](https://hyper.ai/news/30363)**
+
+- **Research highlight:** [https://hyper.ai/news/30363](https://hyper.ai/news/30363)
+- **Research Team:** Shao Liu's Research Team at Central South University
+- **Related Research:** MS/MS spectral database, Structure database, molDiscovery, NPClassifier, t-SNE
+- **Published Journal:** Analytical Chemistry, 2024.02
+- **Paper Link:** [IMN4NPD: An Integrated Molecular Networking Workflow for Natural Product Dereplication](https://doi.org/10.1021/acs.analchem.3c04746)
+
+### **3. [Deep generative model MIDAS for mosaic integration of single-cell multi-omics data](https://hyper.ai/news/29785)**
+
+- **Research highlight:** [https://hyper.ai/news/29785](https://hyper.ai/news/29785)
+- **Research Team:** Xiaomin Ying's Research Team at the Academy of Military Medical Sciences
+- **Related Research:** IPBMC dataset, dogma-full dataset, teadog-full dataset, MMIDAS, self-supervised learning, information-theoretic approaches, deep neural networks, SGVB, single-cell multi-omics mosaic data
+- **Published Journal:** Nature Biotechnology, 2024.01
+- **Paper Link:** [Mosaic integration and knowledge transfer of single-cell multimodal data with MIDAS](https://www.nature.com/articles/s41587-023-02040-y)
+
+### **4. [ResGen: A 3D molecular generation model based on protein pockets](https://hyper.ai/news/29026)**
+
+- **Research highlight:** [https://hyper.ai/news/29026](https://hyper.ai/news/29026)
+- **Research Team:** Tingjun Hou's Research Team at Zhejiang University
+- **Related Research:** CrossDock2020 dataset, global autoregressive, atom autoregressive, parallel multiscale modeling, SBMG. 8 times faster than state-of-the-art techniques.
+- **Published Journal:** Nature Machine Intelligence, 2023.09
+- **Paper Link:** [ResGen is a pocket-aware 3D molecular generation model based on parallel multiscale modelling](https://www.nature.com/articles/s42256-023-00712-7)
+
+### **5. [Large models + machine learning for high-precision prediction of enzyme kinetic parameters](https://hyper.ai/news/29000)**
+
+- **Research highlight:** [https://hyper.ai/news/29000](https://hyper.ai/news/29000)
+- **Research Team:** Xiaozhou Luo's Research Team at CAS
+- **Related Research:** kcat/Km dataset, Michaelis constant dataset, pH and temperature dataset, DLKcat dataset, UniKP framework, ProtT5-XL-UniRef50, SMILES Transformer model, ensemble models, Random Forest, Extremely Randomized Trees, linear regression models
+- **Published Journal:** Nature Communications, 2023.12
+- **Paper Link:** [UniKP: a unified framework for the prediction of enzyme kinetic parameters](https://www.nature.com/articles/s41467-023-44113-1)
+
+### **6. [MIT uses deep learning to discover novel antibiotics](https://hyper.ai/news/28886)**
+
+- **Research highlight:** [https://hyper.ai/news/28886](https://hyper.ai/news/28886)
+- **Research Team:** MIT Research Team
+- **Related Research:** Mcule database, Broad Institute database, Graph Neural Network Chemprop, deep learning. Screened 3,646 antibiotic compounds.
+- **Published Journal:** Nature, 2023.12
+- **Paper Link:** [Discovery of a structural class of antibiotics with explainable deep learning](https://www.nature.com/articles/s41586-023-06887-8)
+
+### **7. [Neural networks decipher GPCR-G protein coupling selectivity](https://hyper.ai/news/28361)**
+
+- **Research highlight:** [https://hyper.ai/news/28361](https://hyper.ai/news/28361)
+- **Research Team:** Research Team at the University of Florida
+- **Related Research:** Binary classification neural networks, machine learning, unsupervised deep learning models. Built coarse-grained models of 124 GPCRs from different mammals.
+- **Published Journal:** Cell Reports, 2023.09
+- **Paper Link:** [Rules and mechanisms governing G protein coupling selectivity of GPCRs](https://doi.org/10.1016/j.celrep.2023.113173)
+
+### **8. [Macformer macrocyclizes the acyclic drug fedratinib](https://hyper.ai/news/28189)**
+
+- **Research highlight:** [https://hyper.ai/news/28189](https://hyper.ai/news/28189)
+- **Research Team:** Honglin Li's Research Group at East China University of Science and Technology
+- **Related Research:** ZINC dataset, ChEMBL database, deep learning models, Transformer architecture, Macformer
+- **Published Journal:** Nature Communication, 2023.07
+- **Paper Link:** [Macrocyclization of linear molecules by deep learning to facilitate macrocyclic drug candidates discovery](https://www.nature.com/articles/s41467-023-40219-8)
+
+### **9. [Regression network + CGMD predicts self-assembly properties of tens of billions of peptides](https://hyper.ai/news/26408)**
+
+- **Research highlight:** [https://hyper.ai/news/26408](https://hyper.ai/news/26408)
+- **Research Team:** Wenbin Li's Research Group at Westlake University
+- **Related Research:** Latin Hypercube Sampling, CGMD model, AP prediction model, Transformer, MLP, TRN model. Obtained the AP of pentapeptides and decapeptides.
+- **Published Journal:** Advanced Science, 2023.09
+- **Paper Link:** [Deep Learning Empowers the Discovery of Self-Assembling Peptides with Over 10 Trillion Sequences](https://onlinelibrary.wiley.com/doi/full/10.1002/advs.202301544)
+
+### **10. [Unsupervised learning predicts 71 million gene mutations](https://hyper.ai/news/26154)**
+
+- **Research highlight:** [https://hyper.ai/news/26154](https://hyper.ai/news/26154)
+- **Research Team:** Google DeepMind Research Team
+- **Related Research:** ClinVar dataset, AlphaFold, weak-label learning, unsupervised learning, AlphaMissense
+- **Published Journal:** Science, 2023.09
+- **Paper Link:** [Accurate proteome-wide missense variant effect prediction with AlphaMissense](https://www.science.org/doi/10.1126/science.adg7492)
+
+### **11. [Odor analysis AI developed based on Graph Neural Networks (GNN)](https://hyper.ai/news/25952)**
+
+- **Research highlight:** [https://hyper.ai/news/25952](https://hyper.ai/news/25952)
+- **Research Team:** Osmo, a spin-off of Google Research
+- **Related Research:** GS-LF database, GNN, Bayesian optimization algorithm. Outperformed humans in 53% of chemical molecules and 55% of odor descriptors judgments.
+- **Published Journal:** Science, 2023.08
+- **Paper Link:** [A principal odor map unifies diverse tasks in olfactory perception](https://www.science.org/doi/full/10.1126/science.ade4401)
+
+### **12. [Graph neural networks screen for safe and highly effective anti-aging ingredients](https://hyper.ai/news/25822)**
+
+- **Research highlight:** [https://hyper.ai/news/25822](https://hyper.ai/news/25822)
+- **Research Team:** MIT Research Team
+- **Related Research:** Deep learning, GNN, Convolutional Neural Networks. The true positive rate of the Chemprop model was 11.6%, higher than the 1.9% of manual screening.
+- **Published Journal:** Nature Communications, 2023.05
+- **Paper Link:** [Discovering small-molecule senolytics with deep neural networks](https://www.nature.com/articles/s43587-023-00415-z)
+
+### **13. [Machine learning quantitatively analyzes dopamine release amount and location](https://hyper.ai/news/25153)**
+
+- **Research highlight:** [https://hyper.ai/news/25153](https://hyper.ai/news/25153)
+- **Research Team:** Research Team at the University of California, Berkeley
+- **Related Research:** SVM, RF, machine learning. Accuracy in determining stimulation intensity reached 0.832, and accuracy for dopamine release brain region was 0.708.
+- **Published Journal:** ACS Chemical Neuroscience, 2023.06
+- **Paper Link:** [Identifying Neural Signatures of Dopamine Signaling with Machine Learning](https://pubs.acs.org/doi/full/10.1021/acschemneuro.3c00001)
+
+### **14. [Machine learning discovers three anti-aging drugs](https://hyper.ai/news/24578)**
+
+- **Research highlight:** [https://hyper.ai/news/24578](https://hyper.ai/news/24578)
+- **Research Team:** Dr. James L. Kirkland and team at Mayo Clinic
+- **Related Research:** Machine learning, Random Forest (RF) model, 5-fold cross-validation. Discovered senolytic drugs Ginkgetin, Periplocin, and Oleandrin.
+- **Published Journal:** Nature Communications, 2023.06
+- **Paper Link:** [Discovery of Senolytics using machine learning](https://www.nature.com/articles/s41467-023-39120-1)
+
+### **15. [Deep learning screens for novel antibiotics inhibiting Acinetobacter baumannii](https://hyper.ai/news/24499)**
+
+- **Research highlight:** [https://hyper.ai/news/24499](https://hyper.ai/news/24499)
+- **Research Team:** Research Teams at McMaster University and MIT
+- **Related Research:** Broad Institute's high-throughput screening sub-library, machine learning, deep learning. Screened around 7,500 molecules, discovering an antibacterial compound named abaucin.
+- **Published Journal:** Nature Chemical Biology, 2023.05
+- **Paper Link:** [Deep learning-guided discovery of an antibiotic targeting Acinetobacter baumannii](https://www.nature.com/articles/s41589-023-01349-8#access-options)
+
+### **16. [Machine learning models applied to predict bioink printability](https://hyper.ai/news/24237)**
+
+- **Research highlight:** [https://hyper.ai/news/24237](https://hyper.ai/news/24237)
+- **Research Team:** Research Teams at the University of Santiago de Compostela and UCL
+- **Related Research:** Machine learning models, ANN, SVM, RF, kappa, R², MAE. Accuracy reached up to 97.22%.
+- **Published Journal:** International Journal of Pharmaceutics: X, 2023.12
+- **Paper Link:** [Predicting pharmaceutical inkjet printing outcomes using machine learning](https://www.sciencedirect.com/science/article/pii/S2590156723000257)
+
+### **17. [Machine learning differentiates pluripotent stem cells](https://hyper.ai/news/23940)**
+
+- **Research highlight:** [https://hyper.ai/news/23940](https://hyper.ai/news/23940)
+- **Research Team:** Yang Zhao's and Yu Zhang's Research Groups at Peking University, jointly with Yiyan Liu's Research Group at Beijing Jiaotong University
+- **Related Research:** Live-cell imaging, machine learning, weakly supervised models, pix2pix deep learning model. Increased differentiation efficiency from 21.6% ± 2.7% to 88.8% ± 10.5%.
+- **Published Journal:** Cell Discovery, 2023.06
+- **Paper Link:** [A live-cell image-based machine learning strategy for reducing variability in PSC differentiation systems](https://www.nature.com/articles/s41421-023-00543-1)
+
+### **18. [Machine learning model predicts drug release rate of long-acting injectables](https://hyper.ai/news/33892)**
+
+- **Research highlight:** [https://hyper.ai/news/33892](https://hyper.ai/news/33892)
+- **Research Team:** University of Toronto Research Team
+- **Related Research:** MLR, Lasso, PLS, DT, RF, LGBM, XGB, AutoNGB, SVR, k-NN, NN, nested cross-validation, farthest neighbor clustering algorithm.
+- **Published Journal:** Nature Communications, 2023.01
+- **Paper Link:** [Machine learning models to accelerate the design of polymeric long-acting injectables](https://www.nature.com/articles/s41467-022-35343-w)
+
+### **19. [Machine learning algorithm effectively predicts plant antimalarial properties](https://hyper.ai/news/33883)**
+
+- **Research highlight:** [https://hyper.ai/news/33883](https://hyper.ai/news/33883)
+- **Research Team:** Royal Botanic Gardens, Kew, and University of St Andrews Research Team
+- **Related Research:** Logit, SVC, XGB, BNN, GridSearchCV algorithms, 10-fold stratified cross-validation, Markov Chain Monte Carlo iterations. Accuracy of 0.67.
+- **Published Journal:** Frontiers in Plant Science, 2023.05
+- **Paper Link:** [Machine learning enhances prediction of plants as potential sources of antimalarials](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10248027)
+
+### **20. [Machine learning ensemble method predicts immunogenicity of viral protein fragments](https://hyper.ai/news/30786)**
+
+- **Research highlight:** [https://hyper.ai/news/30786](https://hyper.ai/news/30786)
+- **Research Team:** Jing Li's Research Team at Beihang University
+- **Related Research:** Protein database UniProt, Protegen database, ensemble machine learning approach VirusImmu, RF, XGBoost, kNN, random sampling cross-validation.
+- **Published Journal:** bioRxiv, 2023.11
+- **Paper Link:** [VirusImmu: a novel ensemble machine learning approach for viral immunogenicity prediction](https://www.biorxiv.org/content/10.1101/2023.11.23.568426v1)
+
+### **21. [Generative AI used to develop novel antibiotics](https://hyper.ai/news/31421)**
+
+- **Research highlight:** [https://hyper.ai/news/31421](https://hyper.ai/news/31421)
+- **Research Team:** McMaster University and Stanford University Team
+- **Related Research:** Pharmakon-1760 library, Drug Repurposing Hub database, synthetic small molecule screening set, Monte Carlo Tree Search, generative AI model SyntheMol. Generated 24,335 complete molecules and designed structurally novel compounds easy to synthesize.
+- **Published Journal:** Nature Machine Intelligence, 2024.03
+- **Paper Link:** [Generative AI for designing and validating easily synthesizable and structurally novel antibiotics](https://www.nature.com/articles/s42256-024-00809-7 )
+
+### **22. [Deep learning-based automated, high-speed, multidimensional single-particle tracking system](https://hyper.ai/news/31341)**
+
+- **Research highlight:** [https://hyper.ai/news/31341](https://hyper.ai/news/31341)
+- **Research Team:** Prof. Ning Fang's Team at Xiamen University
+- **Related Research:** Multidimensional imaging devices, dual-focal plane imaging, parallax microscopy, multidimensional imaging equipment, Convolutional Neural Network models, noise resistance, and robustness.
+- **Published Journal:** Nature Machine Intelligence, 2024.03
+- **Paper Link:** [Deep Learning-Assisted Automated Multidimensional Single Particle Tracking in Living Cells](https://doi.org/10.1021/acs.nanolett.3c04870)
+
+### **23. [ProEnsemble machine learning framework: Optimizing evolutionary pathway promoter combinations](https://hyper.ai/news/30594)**
+
+- **Research highlight:** [https://hyper.ai/news/30594](https://hyper.ai/news/30594)
+- **Research Team:** Xiaozhou Luo's Team at CAS
+- **Related Research:** Synthetic biology, gene epistasis, automation platforms, 10-fold cross-validation, ensemble models, Gradient Boosting Regressor, Ridge Regressor, Gradient Boosting, universal chassis for efficient synthesis of flavonoids.
+- **Published Journal:** ADVANCED SCIENCE, 2024.02
+- **Paper Link:** [Pathway Evolution Through a Bottlenecking-Debottlenecking Strategy and Machine Learning-Aided Flux Balancing](https://onlinelibrary.wiley.com/doi/full/10.1002/advs.202306935)
+
+### **24. [Microenvironment-aware graph neural network ProtLGN guides directed protein evolution](https://hyper.ai/news/32246)**
+
+- **Research highlight:** [https://hyper.ai/news/32246](https://hyper.ai/news/32246)
+- **Research Team:** Liang Hong's Research Group at Shanghai Jiao Tong University
+- **Related Research:** Microenvironment-aware graph neural network, lightweight graph denoising networks, self-supervised pre-training, equivariant graph neural networks. Over 40% of PROTLGN-designed single-point mutant proteins outperformed their wild-type counterparts.
+- **Published Journal:** JOURNAL OF CHEMICAL INFORMATION AND MODELING, 2024.04
+- **Paper Link:** [Protein Engineering with Lightweight Graph Denoising Neural Networks](https://pubs.acs.org/doi/10.1021/acs.jcim.4c00036)
+
+### **25. [Deep learning model AlphaPPIMd: Exploring conformational ensembles of protein-protein complexes](https://hyper.ai/news/32435)**
+
+- **Research highlight:** [https://hyper.ai/news/32435](https://hyper.ai/news/32435)
+- **Research Team:** Jianmin Wang's Team at Yonsei University
+- **Related Research:** Deep learning, generative AI, Transformer, Generative Neural Network learning, molecular dynamics, barnase-barstar complex trajectory set, Protein Data Bank, AlphaPPIMd model, self-attention mechanism, feature optimization module, attention scores, all-atom model. Average training accuracy was 0.995, and average validation accuracy was 0.999.
+- **Published Journal:** Journal of Chemical Theory and Computation, 2024.05
+- **Paper Link:** [Exploring the conformational ensembles of protein-protein complex with transformer-based generative model](https://pubs.acs.org/doi/10.1021/acs.jctc.4c00255)
+
+### **26. [Novel tumor-suppressor protein degrader dp53m inhibits cancer cell proliferation](https://hyper.ai/news/32527)**
+
+- **Research highlight:** [https://hyper.ai/news/32527](https://hyper.ai/news/32527)
+- **Research Team:** Prof. Sijin Wu's team at Xi'an Jiaotong-Liverpool University Huihu College of Pharmacy, and Prof. Songbo Xie & Prof. Diansheng Zhong's team at Tianjin Medical University General Hospital
+- **Related Research:** MD simulation, iterative molecular docking-guided post-SELEX method. dp53m specifically recognizes the p53-R175H protein and degrades it.
+- **Published Journal:** Science Bulletin, 2024.05
+- **Paper Link:** [An engineered DNA aptamer-based PROTAC for precise therapy of p53-R175H hotspot mutant-driven cancer](https://www.sciencedirect.com/science/article/pii/S2095927324003517)
+
+### **27. [CVPR Best Student Paper! Multimodal model BioCLIP achieves zero-shot learning](https://hyper.ai/news/32544)**
+
+- **Research highlight:** [https://hyper.ai/news/32544](https://hyper.ai/news/32544)
+- **Research Team:** Jiaman Wu's Team at The Ohio State University
+- **Related Research:** Bio-image dataset TreeOfLife-10M, multimodal models, computer vision, vision encoder, text encoder, autoregressive language model. The model performed excellently in zero-shot and few-shot tasks.
+- **Published Journal:** CVPR 2024, 2024.02
+- **Paper Link:** [BIoCLIP: A Vision Foundation Model for the Tree of Life](https://openaccess.thecvf.com/content/CVPR2024/html/Stevens_BioCLIP_A_Vision_Foundation_Model_for_the_Tree_of_Life_CVPR_2024_paper.html)
+
+### **28. [100 million parameters! Cell foundation model scFoundation models 20,000 genes simultaneously](https://hyper.ai/news/32623)**
+
+- **Research highlight:** [https://hyper.ai/news/32623](https://hyper.ai/news/32623)
+- **Research Team:** Prof. Xuegong Zhang (Tsinghua University), Prof. Jianzhu Ma (Tsinghua AIR), and Dr. Le Song (BioMap)
+- **Related Research:** AI cell foundation model, human single-cell omics data DISCO, EMBL-EBI databases, GEO datasets, Single Cell Portal datasets, HCA datasets, hECA datasets, Transformer, asymmetric encoder-decoder structure, vector modules, RDA modeling.
+- **Published Journal:** Nature Methods, 2024.06
+- **Paper Link:** [Large-scale foundation model on single-cell transcriptomics](https://www.nature.com/articles/s41592-024-02305-7)
+
+### **29. [Accepted by ICML, protein language model ESM-AA surpasses traditional SOTA](https://hyper.ai/news/32674)**
+
+- **Research highlight:** [https://hyper.ai/news/32674](https://hyper.ai/news/32674)
+- **Research Team:** Prof. Hao Zhou (Tsinghua University), jointly with Peking University, Nanjing University, and Shuimu BioSciences
+- **Related Research:** Protein dataset AlphaFold DB, protein dataset Dp and a molecular dataset Dm, decompression, multi-scale masked language modeling.
+- **Published Journal:** ICML 2024, 2024.06
+- **Paper Link:** [ESM All-Atom: Multi-scale Protein Language Model for Unified Molecular Modeling](https://icml.cc/virtual/2024/poster/35119)
+
+### **30. [SPACE algorithm published in Cell sub-journal! Tissue module discovery capabilities lead similar tools](https://hyper.ai/news/32738)**
+
+- **Research highlight:** [https://hyper.ai/news/32738](https://hyper.ai/news/32738)
+- **Research Team:** Qiangfeng Zhang's Group at Tsinghua University
+- **Related Research:** Spatial transcriptomics, STARmap mouse PLA dataset, MERFISH mouse AB dataset, MERFISH mouse WB dataset, Xenium human BC dataset, CosMx human NSCLC dataset, Visium human brain dataset, encoders, proximity graph decoders, gene expression decoders, spatial proximity, self-supervised learning.
+- **Published Journal:** Cell Systems, 2024.06
+- **Paper Link:** [Tissue module discovery in single-cell resolution spatial transcriptomics data via cell-cell interaction-aware cell embedding](https://www.cell.com/cell-systems/fulltext/S2405-4712(24)00124-8)
+
+### **31. [New breakthroughs based on AlphaFold reveal dynamic protein diversity](https://hyper.ai/news/33075)**
+
+- **Research highlight:** [https://hyper.ai/news/33075](https://hyper.ai/news/33075)
+- **Research Team:** MIT Research Team
+- **Related Research:** Flow matching technology, protein language models, neural networks, AlphaFold, ESMFold.
+- **Published Journal:** ICML 2024, 2024.06
+- **Paper Link:** [AlphaFold Meets Flow Matching for Generating Protein Ensembles](https://openreview.net/forum?id=rs8Sh2UASt)
+
+### **32. [P450Diffusion: De novo design method for P450 enzymes developed based on diffusion models](https://hyper.ai/news/33057)**
+
+- **Research highlight:** [https://hyper.ai/news/33057](https://hyper.ai/news/33057)
+- **Research Team:** Huifeng Jiang and Jian Cheng's Team at Tianjin Institute of Industrial Biotechnology, CAS
+- **Related Research:** Directed evolution, diffusion models, deep learning, denoising diffusion probabilistic models, three-point anchoring, fine-tuning diffusion models, pre-training. Improved catalytic capability by 3.5 times.
+- **Published Journal:** Research, 2024.07
+- **Paper Link:** [Cytochrome P450 Enzyme Design by Constraining the Catalytic Pocket in a Diffusion Model](https://spj.science.org/doi/10.34133/research.0413)
+
+### **33. [Equivariant graph neural networks used for target protein binding site prediction, boosting performance by 20%](https://hyper.ai/news/32957)**
+
+- **Research highlight:** [https://hyper.ai/news/32957](https://hyper.ai/news/32957)
+- **Research Team:** Research Team at Gaoling School of Artificial Intelligence, Renmin University of China
+- **Related Research:** E(3) equivariant graph neural networks, Convolutional Neural Networks, EquiPocket framework, scPDB dataset, PDBbind dataset, COACH 420 dataset, HOLO4K dataset, local geometry modeling modules, global structural modeling modules, surface information passing modules.
+- **Published Journal:** ICML 2024, 2024.07
+- **Paper Link:** [EquiPocket: an E(3)-Equivariant Geometric Graph Neural Network for Ligand Binding Site Prediction](https://openreview.net/forum?id=1vGN3CSxVs)
+
+### **34. [20 experimental data points create an AI protein milestone! FSFP effectively optimizes protein pre-training models](https://hyper.ai/news/32822)**
+
+- **Research highlight:** [https://hyper.ai/news/32822](https://hyper.ai/news/32822)
+- **Research Team:** Prof. Liang Hong's Group at Shanghai Jiao Tong University, jointly with Pan Tan's Team at Shanghai Artificial Intelligence Laboratory
+- **Related Research:** Protein mutation dataset ProteinGym, pre-trained protein language models, meta-transfer learning, learning to rank (LTR), parameter-efficient fine-tuning, LTR technology, FSFP training strategy, model-agnostic meta-learning methods.
+- **Published Journal:** Nature Communications, 2024.07
+- **Paper Link:** [Enhancing efficiency of protein language models with minimal wet-lab data through few-shot learning](https://doi.org/10.1038/s41467-024-49798-6)
+
+### **35. [Transferable deep learning model identifies multiple types of RNA modifications, significantly reducing computational costs](https://hyper.ai/news/32745)**
+
+- **Research highlight:** [https://hyper.ai/news/32745](https://hyper.ai/news/32745)
+- **Research Team:** Assoc. Prof. Xiang Yu's Group at Shanghai Jiao Tong University, jointly with Jun Yang/Hongxia Wang's Team at Shanghai Chenshan Botanical Garden
+- **Related Research:** Transferable deep learning model TandemMod, in vitro transcription dataset ELIGOS, Curlcake dataset, in vitro epitranscriptome dataset IVET, 1D CNN, Bi-LSTM modules, attention mechanisms, fully-connected classifiers.
+- **Published Journal:** Nature Communications, 2024.05
+- **Paper Link:** [Transfer learning enables identification of multiple types of RNA modifications using nanopore direct RNA sequencing](https://www.nature.com/articles/s41467-024-48437-4)
+
+### **36. [InstructProtein: Aligning protein language with human language using knowledge instructions](https://hyper.ai/news/33697)**
+
+- **Research highlight:** [https://hyper.ai/news/33697](https://hyper.ai/news/33697)
+- **Research Team:** Huajun Chen and Qiang Zhang's Team at Zhejiang University
+- **Related Research:** LLMs, protein knowledge instruction datasets, Gene Ontology (GO) datasets, InstructProtein, knowledge graphs, protein localization prediction, protein function prediction, protein metal-ion binding capacity prediction.
+- **Published Journal:** ACL 2024, 2023.10
+- **Paper Link:** [InstructProtein: Aligning Human and Protein Language via Knowledge Instruction](https://arxiv.org/abs/2310.03269)
+
+### **37. [Protein-to-text generation framework ProtT3 enables cross-modal interpretation of protein data and text information](https://hyper.ai/news/33546)**
+
+- **Research highlight:** [https://hyper.ai/news/33546](https://hyper.ai/news/33546)
+- **Research Team:** Xiang Wang at USTC, jointly with Zhiyuan Liu's Team at NUS and Hokkaido University researchers
+- **Related Research:** Cross-modal projectors, protein language models, Swiss-Prot and ProteinKG25 datasets, PDB-QA dataset.
+- **Published Journal:** ACL 2024, 2023.05
+- **Paper Link:** [ProtT3: Protein-to-Text Generation for Text-based Protein Understanding](https://arxiv.org/abs/2405.12564)
+
+### **38. [CPDiffusion model designs functional proteins fully automatically at an ultra-low cost](https://hyper.ai/news/34692)**
+
+- **Research highlight:** [https://hyper.ai/news/34692](https://hyper.ai/news/34692)
+- **Research Team:** Liang Hong's Group at Shanghai Jiao Tong University
+- **Related Research:** Protein engineering, diffusion probabilistic model framework CPDiffusion, amino acids, Graph Neural Networks, auxiliary drug design, protein language models, CATH 4.2 dataset.
+- **Published Journal:** Cell Discovery, 2024.09
+- **Paper Link:** [A conditional protein diffusion model generates artificial programmable endonuclease sequences with enhanced activity](https://www.nature.com/articles/s41421-024-00728-2)
+
+### **39. [A novel protein homolog detection method based on protein language models and dense retrieval techniques](https://hyper.ai/news/34225)**
+
+- **Research highlight:** [https://hyper.ai/news/34225](https://hyper.ai/news/34225)
+- **Research Team:** Yu Li (CUHK), Siqi Sun (Fudan University & Shanghai AI Lab), and Mark Gerstein (Yale University)
+- **Related Research:** Protein engineering, protein language models, dense retrieval techniques, dense homolog retrievers, hybrid model DHR-meta, UR90 dataset, JackHMMER algorithm, BFD/MGnify datasets, DHR method. Improved protein homolog detection sensitivity by 56%.
+- **Published Journal:** Nature Biotechnology, 2024.08
+- **Paper Link:** [Fast, sensitive detection of protein homologs using deep dense retrieval](https://doi.org/10.1038/s41587-024-02353-6)
+
+### **40. [AlphaProteo efficiently designs target protein binders, increasing affinity by 300 times](https://hyper.ai/news/34214)**
+
+- **Research highlight:** [https://hyper.ai/news/34214](https://hyper.ai/news/34214)
+- **Research Team:** DeepMind, Francis Crick Institute
+- **Related Research:** Protein engineering, protein language models, AI drug design, target proteins, AI tools, machine learning model AlphaProteo, VEGF-A protein binder design, Generator, Filter. Candidate binder binding was 5-100x higher than existing methods.
+- **Published Journal:** DeepMind, 2024.09
+- **Paper Link:** [AlphaProteo generates novel proteins for biology and health research](https://deepmind.google/discover/blog/alphaproteo-generates-novel-proteins-for-biology-and-health-research/)
+
+### **41. [Novel denoising protein language model DePLM outperforms SOTA models in mutation effect prediction](https://hyper.ai/news/34954)**
+
+- **Research highlight:** [https://hyper.ai/news/34954](https://hyper.ai/news/34954)
+- **Research Team:** Prof. Huajun Chen and Dr. Qiang Zhang at Zhejiang University
+- **Related Research:** Denoising Protein Language Model (DePLM), ProteinGym deep mutational scanning (DMS) ensemble, DMS datasets, random cross-validation, generalization experiments, extending diffusion models using sorting information to denoise evolutionary information, sorting algorithm-generated trajectories, PromptProtein model.
+- **Published Journal:** NeurIPS 2024, 2024.11
+- **Paper Link:** [DePLM: Denoising Protein Language Models for Property Optimization](https://neurips.cc/virtual/2024/poster/95517)
+
+### **42. [Geometric deep generative model DynamicBind enables dynamic protein docking prediction](https://hyper.ai/news/34894)**
+
+- **Research highlight:** [https://hyper.ai/news/34894](https://hyper.ai/news/34894)
+- **Research Team:** Shuangjia Zheng's Group at Shanghai Jiao Tong University, Galixir, Sun Yat-sen University, Rice University
+- **Related Research:** PDBbind dataset, MDT test set, deep diffusion models, equivariant geometric neural network technology, PDB format structures, small-molecule ligand format, contact-LDDT (cLDDT) scoring modules, AlphaFold structures, affinity prediction modules, generative AI.
+- **Published Journal:** Nature Communications, 2024.02
+- **Paper Link:** [DynamicBind: predicting ligand-specific protein-ligand complex structure with a deep equivariant generative model](https://www.nature.com/articles/s41467-024-45461-2)
+
+### **43. [Drug discovery large language model Y-Mol completely outperforms LLaMA2](https://hyper.ai/news/35572)**
+
+- **Research highlight:** [https://hyper.ai/news/35572](https://hyper.ai/news/35572)
+- **Research Team:** Hunan University, Central South University, Hunan Normal University, Xiangtan University
+- **Related Research:** Multiscale biomedical knowledge-guided LLM Y-Mol, PubMed text corpus, DrugBank benchmark dataset, DrugCentral benchmark dataset, LLaMA2-7b LLM.
+- **Published Journal:** arXiv, 2024.10
+- **Paper Link:** [Y-Mol: A Multiscale Biomedical Knowledge-Guided Large Language Model for Drug Development](https://doi.org/10.48550/arXiv.2410.11550)
+
+### **44. [Universal molecular inverse folding model UniIF further complements AlphaFold 3](https://hyper.ai/news/35781)**
+
+- **Research highlight:** [https://hyper.ai/news/35781](https://hyper.ai/news/35781)
+- **Research Team:** Westlake University Future Industry Research Center Team
+- **Related Research:** CATH4.3 dataset, ESM2 model, CASP15 dataset, new crystal structures, NovelPro dataset, RDesign datasets, CHILI-3K dataset, predefined frameworks based on amino acids and nucleotides, GNN, Geometric Featurizer, Block Graph Attention. Outperformed other SOTA methods in protein, RNA, and materials design.
+- **Published Journal:** NeurIPS 2024, 2024.05
+- **Paper Link:** [UniIF: Unified Molecule Inverse Folding](https://arxiv.org/abs/2405.18968)
+
+### **45. [Pre-trained protein language model ProSST integrates protein structure information more effectively](https://hyper.ai/news/35874)**
+
+- **Research highlight:** [https://hyper.ai/news/35874](https://hyper.ai/news/35874)
+- **Research Team:** Prof. Liang Hong's Group and Bingxin Zhou at Shanghai Jiao Tong University, jointly with Pan Tan at Shanghai AI Lab
+- **Related Research:** Pre-trained protein language model ProSST, Transformer, disentangled attention mechanisms, protein structure quantizers, AlphaFoldDB dataset, CATH43-S40 dataset, CATH43-S40 local structure dataset, ProteinGYM benchmark. Outperforms existing models in predicting thermal stability, metal-ion binding, protein localization, and GO annotations.
+- **Published Journal:** NeurIPS 2024, 2024.05
+- **Paper Link:** [ProSST: Protein Language Modeling with Quantized Structure and Disentangled Attention](https://neurips.cc/virtual/2024/poster/96656)
+
+### **46. [Macrocyclic peptide binder framework RFpeptides offers new possibilities for undruggable proteins](https://hyper.ai/news/36150)**
+
+- **Research highlight:** [https://hyper.ai/news/36150](https://hyper.ai/news/36150)
+- **Research Team:** David Baker's Team at the Institute for Protein Design, UW
+- **Related Research:** Diffusion model-based technology RFpeptides, utilizing modified RoseTTAFold and RFdiffusion with cyclic relative position encoding to generate precise macrocyclic backbones, drug development, AlphaFold, ProteinMPNN, Rosetta Relax. Enables targeted and efficient macrocycle design.
+- **Published Journal:** bioRxiv, 2024.11
+- **Paper Link:** [Accurate de novo design of high-affinity protein binding macrocycles using deep learning](https://doi.org/10.1101/2024.11.18.622547)
+
+### **47. [Genome foundation model Evo enables prediction and generation from molecular to genome scales](https://hyper.ai/news/36266)**
+
+- **Research highlight:** [https://hyper.ai/news/36266](https://hyper.ai/news/36266)
+- **Research Team:** Stanford University and Arc Institute Research Team
+- **Related Research:** Genome foundation model Evo, StripedHyena architecture. Evo can predict, generate, and design entire genome sequences.
+- **Published Journal:** Science, 2024.11
+- **Paper Link:** [Sequence modeling and design from molecular to genome scale with Evo](https://www.science.org/doi/10.1126/science.ado9336)
+
+### **48. [DigFrag accurately segments molecular fragments using AI and generates 44 drug/pesticide molecules](https://hyper.ai/news/36346)**
+
+- **Research highlight:** [https://hyper.ai/news/36346](https://hyper.ai/news/36346)
+- **Research Team:** Prof. Guangfu Yang and Assoc. Prof. Fan Wang's Team at Central China Normal University
+- **Related Research:** MolFrag platform, PADFrag database, graph attention mechanisms, DigFrag digital fragmentation method, DeepFMPO framework, Graph Neural Network architectures, Actor-Critic framework.
+- **Published Journal:** Communications Chemistry, 2024.11
+- **Paper Link:** [DigFrag as a digital fragmentation method used for artificial intelligence-based drug design](https://doi.org/10.1038/s42004-024-01346-5)
+
+### **49. [Protein sequence large language model pre-training method PRIME](https://hyper.ai/news/36363)**
+
+- **Research highlight:** [https://hyper.ai/news/36363](https://hyper.ai/news/36363)
+- **Research Team:** Prof. Liang Hong's Group at Shanghai Jiao Tong University, Shanghai AI Lab, ShanghaiTech University, Hangzhou Medical College
+- **Related Research:** Protein sequence LLM pre-training method PRIME, ProteomeAtlas database, UniProt database, ProteinGym dataset, MLM pre-training method, outperforming current SOTA methods.
+- **Published Journal:** Science Advances, 2024.11
+- **Paper Link:** [A General Temperature-Guided Language Model to Design Proteins of Enhanced Stability and Activity](https://www.science.org/doi/10.1126/sciadv.adr2641)
+
+### **50. [Self-supervised deep learning method revolutionizes 3D reconstruction in cryo-electron microscopy](https://hyper.ai/news/36645)**
+
+- **Research highlight:** [https://hyper.ai/news/36645](https://hyper.ai/news/36645)
+- **Research Team:** UCLA Research Team
+- **Related Research:** Self-supervised deep learning method single-particle IsoNet (spIsoNet), single-particle cryo-EM, biomacromolecule reconstruction, β-galactosidase dataset, HA trimer tilted dataset, non-symmetric ribosome datasets, HIV VLP tomography datasets, U-net architecture, anisotropy-corrected driving misalignment correction module.
+- **Published Journal:** Nature Methods, 2024.11
+- **Paper Link:** [Overcoming the preferred-orientation problem in cryo-EM with self-supervised deep learning](https://doi.org/10.1038/s41592-024-02505-1)
+
+### **51. [Multimodal protein generation method PLAID generates sequences and all-atom protein structures simultaneously](https://hyper.ai/news/36750)**
+
+- **Research highlight:** [https://hyper.ai/news/36750](https://hyper.ai/news/36750)
+- **Research Team:** UC Berkeley, Microsoft Research, Genentech
+- **Related Research:** Multimodal protein generation method PLAID (Protein Latent Induced Diffusion), Pfam database, ESMFold latent space, latent diffusion training, DiT block architecture, Diffusion Transformer (DiT), ESMFold model.
+- **Published Journal:** ICLR 2025, 2024.12
+- **Paper Link:** [Generating All-Atom Protein Structure from Sequence-Only Training Data](https://www.biorxiv.org/content/10.1101/2024.12.02.626353v1)
+
+### **52. [Targeted molecular optimization method MOLRL based on latent reinforcement learning](https://hyper.ai/news/37285)**
+
+- **Research highlight:** [https://hyper.ai/news/37285](https://hyper.ai/news/37285)
+- **Research Team:** Researchers from Cellarity and NVIDIA
+- **Related Research:** Novel targeted molecular optimization method MOLRL based on latent reinforcement learning, drug discovery tasks, Proximal Policy Optimization (PPO), Variational Autoencoders (VAE), Autoencoder (MolMIM), reaching up to 100% success rates.
+- **Published Journal:** ChemRxiv, 2025.01
+- **Paper Link:** [Targeted Molecular Generation With Latent Reinforcement Learning](https://go.hyper.ai/H4JhR)
+
+### **53. [Viral variation driver prediction framework E2VD predicts evolutionary directions for COVID-19/HIV/Influenza viruses](https://hyper.ai/news/37405)**
+
+- **Research highlight:** [https://hyper.ai/news/37405](https://hyper.ai/news/37405)
+- **Research Team:** Prof. Yonghong Tian and Assoc. Prof. Jie Chen at Peking University, Researcher Peng Zhou at Guangzhou Laboratory
+- **Related Research:** Viral variation driver prediction framework E2VD, UniRef90 dataset, open-source deep mutational scanning datasets, protein sequence encoding, Local-global dependence coupling, multi-task focal learning. Increased prediction accuracy by 67%.
+- **Published Journal:** Nature Machine Intelligence, 2025.01
+- **Paper Link:** [A unified evolution-driven deep learning framework for virus variation driver prediction](https://www.nature.com/articles/s42256-024-00966-9)
+
+### **54. [Medical language model MedFound approaches expert physician reasoning capabilities](https://hyper.ai/news/37646)**
+
+- **Research highlight:** [https://hyper.ai/news/37646](https://hyper.ai/news/37646)
+- **Research Team:** Interdisciplinary team led by Prof. Guangyu Wang (BUPT), Prof. Chunli Song (Peking University Third Hospital), and Prof. Jian Yang (China Three Gorges University)
+- **Related Research:** LLM BLOOM-176B, medical corpus dataset MedCorpus, medical LLM MedFound-DX, chain-of-thought methods, preference alignment framework, MedDX-FT dataset, MedDX-Bench dataset.
+- **Published Journal:** Nature Medicine, 2025.01
+- **Paper Link:** [A generalist medical language model for disease diagnosis assistance](https://www.nature.com/articles/s41591-024-03416-6)
+
+### **55. [4D diffusion model AlphaFolding fills the gap in dynamic protein structure prediction](https://hyper.ai/news/37697)**
+
+- **Research highlight:** [https://hyper.ai/news/37697](https://hyper.ai/news/37697)
+- **Research Team:** Prof. Siyu Zhu and Prof. Yuan Qi's Teams at Fudan University/Shanghai AI Lab, jointly with Prof. Yao Yao at Nanjing University
+- **Related Research:** 4D diffusion model AlphaFolding, MD simulation data, dynamic protein structures, structural biology, Distributional Graphformer (DiG) deep learning framework, ATLAS dataset.
+- **Published Journal:** arXiv, 2024.12
+- **Paper Link:** [4D Diffusion for Dynamic Protein Structure Prediction with Reference and Motion Guidance](https://arxiv.org/abs/2408.12419)
+
+### **56. [PepPrCLIP pipeline for designing short proteins holds promise for developing new cancer therapies](https://hyper.ai/news/37912)**
+
+- **Research highlight:** [https://hyper.ai/news/37912](https://hyper.ai/news/37912)
+- **Research Team:** Duke University Biomedical Engineering Team
+- **Related Research:** ESM-2 protein language model, ESM-2-650M model, PepPrCLIP pipeline, Gaussian distributions, amino acid sequences.
+- **Published Journal:** Science Advances, 2025.01
+- **Paper Link:** [De novo design of peptide binders to conformationally diverse targets with contrastive language modeling](https://www.science.org/doi/10.1126/sciadv.adr8638)
+
+### **57. [Boltzmann alignment technique drastically improves protein binding free energy prediction efficacy](https://hyper.ai/news/38092)**
+
+- **Research highlight:** [https://hyper.ai/news/38092](https://hyper.ai/news/38092)
+- **Research Team:** Prof. Chunhua Shen's Team at Zhejiang University, University of Adelaide, Northeastern University (US)
+- **Related Research:** Binding free energy, Boltzmann alignment technique, ∆∆G prediction, protein complex structure prediction, Riemannian diffusion models, deep learning, BA-Cycle method, BA-DDG method, SKEMPI v2 dataset.
+- **Published Journal:** ICLR 2025, 2024.10
+- **Paper Link:** [Boltzmann-Aligned Inverse Folding Model as a Predictor of Mutational Effects on Protein-Protein Interactions](https://arxiv.org/abs/2410.09543)
+
+### **58. [Novel large-scale flow-based protein backbone generator Proteina achieves SOTA in de novo protein backbone design](https://hyper.ai/news/38120)**
+
+- **Research highlight:** [https://hyper.ai/news/38120](https://hyper.ai/news/38120)
+- **Research Team:** NVIDIA, Mila, University of Montreal, MIT
+- **Related Research:** Protein design, scalable non-equivariant Transformer architectures, Foldseek AFDB clustered DFS dataset, D21M dataset, MFS model, staged training strategies.
+- **Published Journal:** ICLR 2025 Oral, 2025.01
+- **Paper Link:** [Proteina: Scaling Flow-based Protein Structure Generative Models](https://openreview.net/forum?id=TVQLu34bdw&nesting=2&sort=date-desc)
+
+### **59. [UniGEM model achieves synergistic enhancement of two tasks based on diffusion models for the first time](https://hyper.ai/news/38186)**
+
+- **Research highlight:** [https://hyper.ai/news/38186](https://hyper.ai/news/38186)
+- **Research Team:** Tsinghua University, Chinese Academy of Sciences
+- **Related Research:** Drug discovery, molecular property prediction, molecule generation, diffusion models, QM9 dataset, GEOM-Drugs 3D molecular conformation dataset, multi-task learning frameworks, E(3) Equivariant Diffusion Models (EDM), multi-branch network architectures.
+- **Published Journal:** ICLR 2025, 2025.04
+- **Paper Link:** [UniGEM: A Unified Approach to Generation and Property Prediction for Molecules](https://openreview.net/pdf?id=Lb91pXwZMR)
+
+### **60. [RFdiffusion evolves further, realizing atomic-accuracy de novo antibody design](https://hyper.ai/news/38253)**
+
+- **Research highlight:** [https://hyper.ai/news/38253](https://hyper.ai/news/38253)
+- **Research Team:** Prof. David Baker's Team at University of Washington and collaborators
+- **Related Research:** Therapeutic antibodies, RFdiffusion network for computational protein design, antibody variable heavy chains (VHHs), single-chain variable fragments (scFvs), deep learning, VHH frameworks, CDR loop sequence design.
+- **Published Journal:** bioRxiv, 2025.02
+- **Paper Link:** [Atomically accurate de novo design of antibodies with RFdiffusion](https://doi.org/10.1101/2024.03.14.585103)
+
+### **61. [First protein-RNA language model fusion scheme sets new SOTA in binding affinity prediction](https://hyper.ai/news/38290)**
+
+- **Research highlight:** [https://hyper.ai/news/38290](https://hyper.ai/news/38290)
+- **Research Team:** Tsinghua University, UCL, Monash University, BUPT
+- **Related Research:** Protein-RNA, CoPRA model, Protein Language Models (PLM), RNA Language Models (RLM), CLIP experimental techniques, Co-Former model, PDBbind dataset, PRBABv2 dataset, ProNAB dataset, PRA201 dataset, multimodal learning.
+- **Published Journal:** AAAI 2025, 2025.01
+- **Paper Link:** [CoPRA: Bridging Cross-domain Pretrained Sequence Models with Complex Structures for Protein-RNA Binding Affinity Prediction](https://arxiv.org/abs/2409.03773)
+
+### **62. [Virtual tissue model Celcomen achieves causal inference identifiability in spatial transcriptomics analysis for the first time](https://hyper.ai/news/38308)**
+
+- **Research highlight:** [https://hyper.ai/news/38308](https://hyper.ai/news/38308)
+- **Research Team:** University of Cambridge
+- **Related Research:** Perturbmap dataset, fetal spleen dataset, glioblastoma dataset, Celcomen model, inference modules (CCE), generative modules (SCE), Graph Neural Networks.
+- **Published Journal:** ICLR 2025, 2025.01
+- **Paper Link:** [Estimation of single-cell and tissue perturbation effect in spatial transcriptomics via Spatial Causal Disentanglement](https://openreview.net/forum?id=Tqdsruwyac)
+
+### **63. [AlphaFold-Metainference method accurately predicts disordered protein structural ensembles](https://hyper.ai/news/38448)**
+
+- **Research highlight:** [https://hyper.ai/news/38448](https://hyper.ai/news/38448)
+- **Research Team:** University of Cambridge
+- **Related Research:** Alignment error maps predicted by AlphaFold, correlations between distance variation matrices in MD simulations, disordered protein structure prediction, Protein Data Bank (PDB), Small-Angle X-ray Scattering (SAXS) data, NMR measurements, Aβ and α-synuclein structural ensembles, CALVADOS-2, Bayesian metainference methods, Langevin integrators.
+- **Published Journal:** Nature Communications, 2025.02
+- **Paper Link:** [AlphaFold prediction of structural ensembles of disordered proteins](https://www.nature.com/articles/s41467-025-56572-9)
+
+### **64. [High-accuracy RNA structure prediction framework DRfold2 surpasses SOTA in multiple benchmarks](https://hyper.ai/news/38506)**
+
+- **Research highlight:** [https://hyper.ai/news/38506](https://hyper.ai/news/38506)
+- **Research Team:** Prof. Yang Zhang's Team at NUS
+- **Related Research:** RNA structure prediction framework DRfold2, unsupervised contact prediction accuracy, composite RNA language models, DRfold2 RNA test datasets, CASP15 dataset, Transformer modules, denoising structural modules.
+- **Published Journal:** bioRxiv, 2025.03
+- **Paper Link:** [Ab initio RNA structure prediction with composite language model and denoised end-to-end learning](https://www.biorxiv.org/content/10.1101/2025.03.05.641632v1)
+
+### **65. [New protein design algorithm DRAKES breaks through the biological sequence design bottleneck](https://hyper.ai/news/38675)**
+
+- **Research highlight:** [https://hyper.ai/news/38675](https://hyper.ai/news/38675)
+- **Research Team:** Researchers from MIT, Harvard, Stanford, UC Berkeley, Genentech
+- **Related Research:** Reinforcement learning frameworks, PDB training sets, Megascale dataset, DRAKES algorithm, Gumbel-Softmax.
+- **Published Journal:** ICLR 2025, 2024.08
+- **Paper Link:** [Fine-Tuning Discrete Diffusion Models via Reward Optimization with Applications to DNA and Protein Design](https://doi.org/10.48550/arXiv.2410.13643)
+
+### **66. [Machine learning-assisted UV absorbance spectroscopy for detecting microbial contamination](https://hyper.ai/news/38869)**
+
+- **Research highlight:** [https://hyper.ai/news/38869](https://hyper.ai/news/38869)
+- **Research Team:** SMART (Singapore-MIT Alliance for Research and Technology), A*SRL Singapore, NUS, MIT
+- **Related Research:** Microbial contamination detection, anomaly detection strategies, machine learning, Support Vector Machines (SVM), radial basis functions, PBS sterilized samples.
+- **Published Journal:** Nature, 2025.03
+- **Paper Link:** [Machine learning aided UV absorbance spectroscopy for microbial contamination in cell therapy products](https://hyper.ai/en/sota/papers/s41598-024-83114-y)
+
+### **67. [Utilizing protein sequence generative models for overlapping gene design](https://hyper.ai/news/39241)**
+
+- **Research highlight:** [https://hyper.ai/news/39241](https://hyper.ai/news/39241)
+- **Research Team:** David Baker's Team at University of Washington
+- **Related Research:** Overlapping genes (OLG), synthetic OLG design research, amino acid substitution, bioinformatics screening, statistical modeling, systematic scanning of sequence positions.
+- **Published Journal:** bioRxiv, 2025.05
+- **Paper Link:** [Design of overlapping genes using deep generative models of protein sequences](https://doi.org/10.1101/2025.05.06.652464)
+
+### **68. [Prediction framework PUPS enables single-cell level protein subcellular localization](https://hyper.ai/news/39549)**
+
+- **Research highlight:** [https://hyper.ai/news/39549](https://hyper.ai/news/39549)
+- **Research Team:** MIT, Harvard University
+- **Related Research:** Protein subcellular localization, Human Protein Atlas, unseen protein subcellular localization, Predictions of Unseen Proteins’ Subcellular localization (PUPS) framework, held-out datasets, ESM-2 protein language models, CNNs, separable convolutions.
+- **Published Journal:** Nature Methods, 2025.05
+- **Paper Link:** [Prediction of protein subcellular localization in single cells](https://go.hyper.ai/LeaQF)
+
+### **69. [UniMoMo: The first unified generative framework across molecular species enables multi-type drug molecular design](https://hyper.ai/news/39852)**
+
+- **Research highlight:** [https://hyper.ai/news/39852](https://hyper.ai/news/39852)
+- **Research Team:** Yang Liu's Group (Tsinghua), Wenbing Huang's Group (Renmin University), ByteDance AI Drug Discovery Team
+- **Related Research:** UniMoMo framework, All-atom Iterative Variational Autoencoder (IterVAE), all-atom geometric latent space diffusion models, unified modeling.
+- **Published Journal:** ICML 2025, 2025.03
+- **Paper Link:** [UniMoMo: Unified Generative Modeling of 3D Molecules for De Novo Binder Design](https://go.hyper.ai/LeaQF)
+
+### **70. [Protein language model Prot42 generates high-affinity binders using only the target protein sequence](https://hyper.ai/news/40385)**
+
+- **Research highlight:** [https://hyper.ai/news/40385](https://hyper.ai/news/40385)
+- **Research Team:** Inception AI (Abu Dhabi, UAE) and Cerebras Systems (Silicon Valley, USA)
+- **Related Research:** PDIdb 2010 dataset, UniRef50 database, STRING database, protein function prediction, protein subcellular localization prediction, protein structure prediction, PPI prediction, protein binder generation, DNA sequence-specific binder generation.
+- **Published Journal:** arXiv, 2025.05
+- **Paper Link:** [Prot42: a Novel Family of Protein Language Models for Target-aware Protein Binder Generation](https://go.hyper.ai/cFupD)
+
+### **71. [Unified biomolecular dynamics simulator UniSim achieves unified time-coarsened dynamics simulation across molecular types and chemical environments for the first time](https://hyper.ai/news/40483)**
+
+- **Research highlight:** [https://hyper.ai/news/40483](https://hyper.ai/news/40483)
+- **Research Team:** Yang Liu's Group (Tsinghua) and Wenbing Huang's Group (Renmin University)
+- **Related Research:** Atomic embedding expansion, multi-head hybrid pre-training, TorchMD-NET GNN models, stochastic interpolant frameworks, force-guided kernels.
+- **Published Journal:** ICML 2025, 2025.05
+- **Paper Link:** [UniSim: A Unified Simulator for Time-Coarsened Dynamics of Biomolecules](https://go.hyper.ai/5NWuO)
+
+### **72. [Computational biology algorithm SimplifiedBondfinder uncovers 69 novel nitrogen-oxygen-sulfur bonds](https://hyper.ai/news/40515)**
+
+- **Research highlight:** [https://hyper.ai/news/40515](https://hyper.ai/news/40515)
+- **Research Team:** Sophia Bazzi and Sharareh Sayyad's Team at University of Göttingen
+- **Related Research:** SimplifiedBondfinder algorithm, machine learning, quantum mechanical calculations, PDB dataset, PDB-REDO dataset, BDB dataset, UMAP dimensionality reduction, NOS linkages.
+- **Published Journal:** Communications Chemistry, 2025.05
+- **Paper Link:** [Revealing arginine-cysteine and glycine-cysteine NOS linkages by a systematic re-evaluation of protein structures](https://www.nature.com/articles/s42004-025-01535-w)
+
+### **73. [Novel protein sequence design method FAMPNN simultaneously processes protein backbone and sidechain information](https://hyper.ai/news/41545)**
+
+- **Research highlight:** [https://hyper.ai/news/41545](https://hyper.ai/news/41545)
+- **Research Team:** Stanford University, Arc Institute (Palo Alto)
+- **Related Research:** Protein sidechain conformations, FAMPNN method, S40 dataset, PDB dataset, CASP13/14/15 datasets, SKEMPlv2 dataset, S669 dataset, Megascale dataset, FireProtDB dataset, CR9114/CR6261 datasets, iterative sampling strategies, atom37 formats, GNNs, token-wise Euclidean diffusion methods.
+- **Published Journal:** ICML 2025, 2025.06
+- **Paper Link:** [Sidechain conditioning and modeling for full-atom protein sequence design with FAMPNN](https://go.hyper.ai/JUJDq)
+
+### **74. [Atomistic protein design method La-Proteina generates proteins with up to 800 residues at high precision](https://hyper.ai/news/41744)**
+
+- **Research highlight:** [https://hyper.ai/news/41744](https://hyper.ai/news/41744)
+- **Research Team:** NVIDIA, Mila
+- **Related Research:** Atomistic protein design, partially latent flow matching framework La-Proteina, AFDB dataset, two-stage training strategy.
+- **Published Journal:** arXiv, 2025.06
+- **Paper Link:** [La-Proteina: Atomistic Protein Generation via Partially Latent Flow Matching](https://go.hyper.ai/3csT5)
+
+### **75. [APM model specifically designed for multi-chain protein complexes enables all-atom design and functional optimization](https://hyper.ai/news/42059)**
+
+- **Research highlight:** [https://hyper.ai/news/42059](https://hyper.ai/news/42059)
+- **Research Team:** Hunan University, UCAS, ByteDance Seed Team
+- **Related Research:** Proteins, multi-chain native modeling, all-atom representation optimization, sequence-structure dependency reinforcement, PDB database, Swiss-Prot database, AFDB database, multi-chain protein datasets.
+- **Published Journal:** ICML 2025, 2025.07
+- **Paper Link:** [An All-Atom Generative Model for Designing Protein Complexes](https://go.hyper.ai/TVp4i)
+
+### **76. [New intrinsically disordered region-binding protein design method Logos specializes in undruggable targets](https://hyper.ai/news/42611)**
+
+- **Research highlight:** [https://hyper.ai/news/42611](https://hyper.ai/news/42611)
+- **Research Team:** David Baker's Team at University of Washington
+- **Related Research:** RFdiffusion model, Induced Fit, Scaffold Generation, Pocket Specialization, Pocket Assembly.
+- **Published Journal:** Science, 2025.07
+- **Paper Link:** [Design of intrinsically disordered region binding proteins](https://www.science.org/doi/10.1126/science.adr8063)
+
+### **77. [Novel protein dynamic fusion representation framework FusionProt released, enabling iterative information exchange](https://hyper.ai/news/43724)**
+
+- **Research highlight:** [https://hyper.ai/news/43724](https://hyper.ai/news/43724)
+- **Research Team:** Technion, Meta AI
+- **Related Research:** Protein language models, representation learning framework FusionProt, AlphaFold DB, AlphaFold2, DeepFRI dataset, learnable fusion tokens, Multiview Contrastive learning.
+- **Published Journal:** bioRxiv, 2025.08
+- **Paper Link:** [FusionProt: Fusing Sequence and Structural Information for Unified Protein Representation Learning](https://go.hyper.ai/OXLYl)
+
+### **78. [Transcriptome-guided diffusion model MorphDiff released to accelerate phenotypic drug discovery](https://hyper.ai/news/43849)**
+
+- **Research highlight:** [https://hyper.ai/news/43849](https://hyper.ai/news/43849)
+- **Research Team:** CUHK, Mohamed bin Zayed University of Artificial Intelligence
+- **Related Research:** Cell morphology, Latent Diffusion Model (LDM), large-scale cell morphology image datasets, JUMP dataset, CDRP dataset, LINCS dataset, morphological VAE, latent diffusion models.
+- **Published Journal:** Nature Communications, 2025.09
+- **Paper Link:** [Prediction of cellular morphology changes under perturbations with a transcriptome-guided diffusion model](https://www.nature.com/articles/s41467-025-63478-z)
+
+### **79. [AlphaPPIMI framework significantly enhances generalization, surpassing existing methods in PPI interface modulator prediction](https://hyper.ai/news/43916)**
+
+- **Research highlight:** [https://hyper.ai/news/43916](https://hyper.ai/news/43916)
+- **Research Team:** China University of Petroleum, Yonsei University
+- **Related Research:** Protein-protein interactions, DLiP dataset, ECFP4 fingerprints, ChemDiv database, AlphaPPIMI framework, Uni-Mol2 model, protein feature extraction, Transformer architecture, ESM2-150M model, ProtTrans model.
+- **Published Journal:** Journal of Cheminformatics, 2025.08
+- **Paper Link:** [Alphappimi: a comprehensive deep learning framework for predicting PPI-modulator interactions](https://jcheminf.biomedcentral.com/articles/10.1186/s13321-025-01077-2)
+
+### **80. [A novel fusion neural network framework efficiently predicts multi-metal binding sites in protein sequences](https://hyper.ai/news/44702)**
+
+- **Research highlight:** [https://hyper.ai/news/44702](https://hyper.ai/news/44702)
+- **Research Team:** Hong Kong University of Science and Technology
+- **Related Research:** Fusion neural network framework, protein sequence multi-metal binding site prediction, CNNs, fusion networks, MbPA database, deep learning frameworks.
+- **Published Journal:** bioRxiv, 2025.09
+- **Paper Link:** [A Modular Fusion Neural Network Approach to Efficiently Predict Multi-Metal Binding Sites in Protein Sequences](https://go.hyper.ai/Y7DNU)
+
+### **81. [Highly synthesizable molecular projection framework ReaSyn released, achieving ultra-high reconstruction rates and pathway diversity](https://hyper.ai/news/44764)**
+
+- **Research highlight:** [https://hyper.ai/news/44764](https://hyper.ai/news/44764)
+- **Research Team:** NVIDIA Research Team
+- **Related Research:** Drug discovery, ReaSyn framework, supervised learning, reinforcement learning fine-tuning, Transformer models, Chain-of-Reaction (CoR) representation.
+- **Published Journal:** arXiv, 2025.09
+- **Paper Link:** [Rethinking Molecule Synthesizability with Chain-of-Reaction](https://arxiv.org/abs/2509.16084)
+
+### **82. [Constrained reinforcement learning framework Ctrl-DNA released, realizing "targeted control" of specific cell gene expression](https://hyper.ai/news/45227)**
+
+- **Research highlight:** [https://hyper.ai/news/45227](https://hyper.ai/news/45227)
+- **Research Team:** University of Toronto Team, Changping Laboratory
+- **Related Research:** Constrained RL framework Ctrl-DNA, deep learning, cell-specific gene expression, DNA language models, human promoter datasets, enhancer datasets, controllable cell-type specific CRE generation, Constrained Markov Decision Processes, Enformer architecture.
+- **Published Journal:** NeurIPS 2025, 2025.05
+- **Paper Link:** [Ctrl-DNA: Constrained Reinforcement Learning for Cell-Specific Cis-Regulatory Element Design](https://arxiv.org/abs/2505.20578)
+
+### **83. [PLACER framework resolves the atomic-level modeling challenge of protein conformational heterogeneity](https://hyper.ai/news/46009)**
+
+- **Research highlight:** [https://hyper.ai/news/46009](https://hyper.ai/news/46009)
+- **Research Team:** Prof. David Baker's Research Team
+- **Related Research:** Graph Neural Network PLACER, Cambridge Structural Database, PDB, denoising neural networks, 3-track architectures, small-molecule structural generation.
+- **Published Journal:** PNAS, 2025.11
+- **Paper Link:** [Modeling protein-small molecule conformational ensembles with PLACER](https://www.biorxiv.org/content/10.1101/2024.09.25.614868v2)
+
+### **84. [Squidiff enables multi-scenario transcriptome simulation, boosting precision medicine and spatial medicine development](https://hyper.ai/news/46212)**
+
+- **Research highlight:** [https://hyper.ai/news/46212](https://hyper.ai/news/46212)
+- **Research Team:** Columbia University, Stanford University
+- **Related Research:** Squidiff framework, Splatter tools, human iPSC-to-endoderm differentiation datasets, K562 CRISPR screening experiments, conditional DDIM, semantic encoding techniques, Encode-Diffuse-Decode architectures.
+- **Published Journal:** Nature Methods, 2025.11
+- **Paper Link:** [Squidiff: predicting cellular development and responses to perturbations using a diffusion model](https://www.nature.com/articles/s41592-025-02877-y)
+
+### **85. [Generative model PepTron and new evaluation benchmark released, reshaping prediction capabilities for disordered protein ensembles](https://hyper.ai/news/47063)**
+
+- **Research highlight:** [https://hyper.ai/news/47063](https://hyper.ai/news/47063)
+- **Research Team:** Peptone, University of Copenhagen, NVIDIA, Oxford University, MIT, Duke University
+- **Related Research:** PeptoneBench evaluation framework, generative model PepTron, PDB, IDRome database, NVIDIA BioNeMo, ESMFlow, mixed training strategies (experimental + synthetic data).
+- **Published Journal:** bioRxiv, 2025.10
+- **Paper Link:** [Advancing Protein Ensemble Predictions Across the Order–Disorder Continuum](https://www.biorxiv.org/content/10.1101/2025.10.18.680935v1)
+
+### **86. [MIT and Harvard propose end-to-end AI workflow CleaveNet to overcome highly specific protease substrate design challenges](https://hyper.ai/news/48608)**
+
+- **Research highlight:** [https://hyper.ai/news/48608](https://hyper.ai/news/48608)
+- **Research Team:** Joint Team from MIT and Harvard University
+- **Related Research:** Protease substrate design, CleaveNet workflow, synthetic peptides, prediction models and generative models.
+- **Published Journal:** Nature Communications
+- **Paper Link:** [CleaveNet: An AI-based end-to-end design workflow for protease substrates](https://www.nature.com/articles/s41467-025-67226-1)
+
+### **87. [Goethe University Frankfurt team proposes a multi-scale classification framework to decode the complexity of the human E3 ligome](https://hyper.ai/news/48813)**
+
+- **Research highlight:** [https://hyper.ai/news/48813](https://hyper.ai/news/48813)
+- **Research Team:** Goethe University Frankfurt Research Team
+- **Related Research:** Ubiquitin-proteasome system (UPS), E3 ubiquitin ligases, human E3 ligome, metric-learning.
+- **Published Journal:** Nature Communications
+- **Paper Link:** [Multi-scale classification decodes the complexity of the human E3 ligome](https://www.nature.com/articles/s41467-025-67450-9)
+
+### **88. [Basecamp and NVIDIA jointly release the EDEN foundation model, enabling AI-programmable therapeutic design](https://hyper.ai/news/48964)**
+
+- **Research highlight:** [https://hyper.ai/news/48964](https://hyper.ai/news/48964)
+- **Research Team:** Basecamp Research, NVIDIA, and top academic institutions
+- **Related Research:** Programmable biology, EDEN metagenomic foundation models, gene therapies, recombinases, antimicrobial peptide design.
+- **Published Journal:** bioRxiv
+- **Paper Link:** [Designing AI-programmable therapeutics with the EDEN family of foundation models](https://doi.org/10.64898/2026.01.12.699009)
+
+### **89. [Microsoft and others propose the multimodal AI framework GigaTIME to generate virtual mIF atlases from routine pathology slides](https://hyper.ai/news/49359)**
+
+- **Research highlight:** [https://hyper.ai/news/49359](https://hyper.ai/news/49359)
+- **Research Team:** Microsoft Research, University of Washington, Providence Genomics
+- **Related Research:** Tumor microenvironment, H&E staining, multiplex immunofluorescence (mIF), GigaTIME framework, spatial proteomics.
+- **Published Journal:** Cell
+- **Paper Link:** [Multimodal AI generates virtual population for tumor microenvironment modeling](https://www.cell.com/cell/fulltext/S0092-8674(25)01312-1)
+
+### **90. [MIT proposes deep learning language model Pichia-CLM to optimize codons for enhanced recombinant protein yield](https://hyper.ai/news/49613)**
+
+- **Research highlight:** [https://hyper.ai/news/49613](https://hyper.ai/news/49613)
+- **Research Team:** MIT Research Team
+- **Related Research:** Komagataella phaffii, codon optimization, Codon Usage Bias (CUB), Pichia-CLM language model, recombinant protein expression.
+- **Published Journal:** PNAS
+- **Paper Link:** [Pichia-CLM: A language model–based codon optimization pipeline for Komagataella phaffii](https://www.pnas.org/doi/10.1073/pnas.2522052123)
+
+### **91. [MIT and ETH jointly propose deep learning framework APOLLO to efficiently integrate and disentangle single-cell multimodal data](https://hyper.ai/news/49702)**
+
+- **Research highlight:** [https://hyper.ai/news/49702](https://hyper.ai/news/49702)
+- **Research Team:** Joint Team from MIT and ETH Zurich
+- **Related Research:** Single-cell biology, multimodal data integration, APOLLO framework, scRNA-seq, scATAC-seq, spatial morphology.
+- **Published Journal:** Nature Computational Science
+- **Paper Link:** [Partially shared multi-modal embedding learns holistic representation of cell state](https://www.nature.com/articles/s43588-025-00948-w)
+
+### **92. [CUHK and others jointly propose the Bi-TEAM framework for unified cross-scale representation learning of modified peptides](https://hyper.ai/news/49833)**
+
+- **Research highlight:** [https://hyper.ai/news/49833](https://hyper.ai/news/49833)
+- **Research Team:** CUHK, Macao Polytechnic University, Zhejiang University, Second Xiangya Hospital of CSU, UESTC
+- **Related Research:** Peptide structure and function modeling, non-canonical amino acid modifications, cross-scale representation learning, Bi-TEAM framework.
+- **Published Journal:** arXiv
+- **Paper Link:** [Bi-TEAM: A Unified Cross-Scale Representation Learning Framework for Chemically Modified Biomolecules](https://arxiv.org/abs/2603.01873)
+
+### **93. [Carnegie Mellon University and others propose AQuaRef for quantum refinement of all-atom protein models](https://hyper.ai/news/49895)**
+
+- **Research highlight:** [https://hyper.ai/news/49895](https://hyper.ai/news/49895)
+- **Research Team:** CMU, University of Wrocław, University of Florida
+- **Related Research:** Protein structure refinement, AQuaRef, machine learning interatomic potentials (AIMNet2), quantum refinement, structural biology.
+- **Published Journal:** Nature Communications
+- **Paper Link:** [AQuaRef: machine learning accelerated quantum refinement of protein structures](https://www.nature.com/articles/s41467-025-64313-1)
+
+### **94. [NVIDIA and others jointly propose the Complexa framework to unify protein binder generation and optimization](https://hyper.ai/news/49977)**
+
+- **Research highlight:** [https://hyper.ai/news/49977](https://hyper.ai/news/49977)
+- **Research Team:** NVIDIA, Oxford University, Mila
+- **Related Research:** Protein binder design, Proteína-Complexa (Complexa), Teddymer, generative methods, Test-Time Compute.
+- **Published Journal:** ICLR 2026
+- **Paper Link:** [Scaling Atomistic Protein Binder Design with Generative Pretraining and Test-Time Compute](https://openreview.net/forum?id=qmCpJtFZra)
+
+### **95. [MIT and CMU jointly propose VibeGen, introducing vibrational dynamics to empower de novo protein design](https://hyper.ai/news/50061)**
+
+- **Research highlight:** [https://hyper.ai/news/50061](https://hyper.ai/news/50061)
+- **Research Team:** Joint Team from MIT and CMU
+- **Related Research:** Protein dynamics, VibeGen agent, language diffusion models, de novo protein design, vibrational amplitude prediction.
+- **Published Journal:** Matter
+- **Paper Link:** [VibeGen: Agentic end-to-end de novo protein design for tailored dynamics using a language diffusion model](https://www.cell.com/matter/abstract/S2590-2385(26)00069-X)
+
+### **96. [Institut Pasteur uses deep learning to predict 2.39 million anti-phage proteins, mapping bacterial immunity](https://hyper.ai/news/50491)**
+
+- **Research highlight:** [https://hyper.ai/news/50491](https://hyper.ai/news/50491)
+- **Research Team:** Institut Pasteur Research Team
+- **Related Research:** Bacterial anti-viral immunity, anti-phage defense systems, protein language models, genomic language models, pangenomics.
+- **Published Journal:** Science
+- **Paper Link:** [Protein and genomic language models uncover the unexplored diversity of bacterial immunity](https://www.science.org/doi/10.1126/science.adv8275)
+
+### **97. [KAIST team utilizes AI to de novo design small-molecule binding proteins, successfully applying them in biosensors](https://hyper.ai/news/50599)**
+
+- **Research highlight:** [https://hyper.ai/news/50599](https://hyper.ai/news/50599)
+- **Research Team:** Department of Biological Sciences Research Team at KAIST
+- **Related Research:** De novo protein design, small-molecule binding proteins, NTF2-like fold, biosensors, chemically induced dimerization (CID).
+- **Published Journal:** Nature Communications
+- **Paper Link:** [Small-molecule binding and sensing with a designed protein family](https://www.nature.com/articles/s41467-026-70953-8)
+
+### **98. [University of Toronto and others propose dnaHNet for efficient hierarchical modeling of genomic sequences](https://hyper.ai/news/50709)**
+
+- **Research highlight:** [https://hyper.ai/news/50709](https://hyper.ai/news/50709)
+- **Research Team:** University of Toronto, Vector Institute, Arc Institute
+- **Related Research:** Genomic sequence learning, foundation models, dnaHNet, dynamic tokenization, variant effect prediction.
+- **Published Journal:** arXiv
+- **Paper Link:** [dnaHNet: A Scalable and Hierarchical Foundation Model for Genomic Sequence Learning](https://arxiv.org/abs/2602.10603)
+
+### **99. [Queen Mary University of London and others conduct the largest-scale proteogenomic study, revealing molecular disease mechanisms](https://hyper.ai/news/51343)**
+
+- **Research highlight:** [https://hyper.ai/news/51343](https://hyper.ai/news/51343)
+- **Research Team:** Queen Mary University of London, Cambridge University
+- **Related Research:** Proteogenomics, protein quantitative trait loci (pQTLs), circulating protein abundance, cis- and trans-genetic regulation.
+- **Published Journal:** Cell
+- **Paper Link:** [Multi-cohort proteogenomic analyses reveal genetic effects across the proteome and diseasome](https://www.cell.com/cell/fulltext/S0092-8674(26)00385-5)
+
+### **100. [Goethe University Frankfurt and others propose genESOM model: Generative AI breaks through small-sample animal experiments](https://hyper.ai/news/51430)**
+
+- **Research highlight:** [https://hyper.ai/news/51430](https://hyper.ai/news/51430)
+- **Research Team:** Goethe University Frankfurt and Fraunhofer ITMP
+- **Related Research:** Small-sample animal experiments, Generative AI, genESOM model, emergent self-organizing maps.
+- **Published Journal:** Pharmacological Research
+- **Paper Link:** [Self-organizing neural network-based generative AI with embedded error inflation control enhances effective knowledge extraction from preclinical studies with reduced sample size](https://www.sciencedirect.com/science/article/pii/S1043661826000745)
+
+## **AI+ Healthcare**
+
+### **1. [DeepDR Plus deep learning system predicts diabetic retinopathy using fundus images](https://hyper.ai/news/29769)**
+
+- **Research highlight:** [https://hyper.ai/news/29769](https://hyper.ai/news/29769)
+- **Research Team:** Prof. Weiping Jia, Huating Li, and Bin Sheng's Team at Shanghai Jiao Tong University; Tianyin Huang's Research Team at Tsinghua University
+- **Related Research:** SDPP data, DRPS data, ResNet-50, fundus models, self-supervised learning, IBS evaluation models, meta-models. Extended the average clinical screening interval from 12 months to 31.97 months.
+- **Published Journal:** Nature Medicine, 2024.01
+- **Paper Link:** [A deep learning system for predicting time to progression of diabetic retinopathy](https://www.nature.com/articles/s41591-023-02702-z)
+
+### **2. [Logistic regression model analyzes that high green landscape index reduces MetS risk](https://hyper.ai/news/29559)**
+
+- **Research highlight:** [https://hyper.ai/news/29559](https://hyper.ai/news/29559)
+- **Research Team:** Xifeng Wu's Research Team at Zhejiang University
+- **Related Research:** Convolutional neural network models, logistic regression models, Isochrone API
+- **Published Journal:** Environment International, 2024.01
+- **Paper Link:** [Beneficial associations between outdoor visible greenness at the workplace and metabolic syndrome in Chinese adults](https://doi.org/10.1016/j.envint.2023.108327)
+
+### **3. [Deep learning system helps junior ophthalmologists increase diagnostic consistency by 12%](https://hyper.ai/news/29549)**
+
+- **Research highlight:** [https://hyper.ai/news/29549](https://hyper.ai/news/29549)
+- **Research Team:** Peking Union Medical College Hospital, West China Hospital of Sichuan University, Second Hospital of Hebei Medical University, Tianjin Medical University Eye Hospital, Wenzhou Medical University, Beijing Airdoc Technology, Renmin University of China
+- **Related Research:** Quality assessment models, diagnostic models, CNN. Provided new automated detection methods for 13 fundus diseases.
+- **Published Journal:** npj digital medicine, 2024.01
+- **Paper Link:** [The performance of a deep learning system in assisting junior ophthalmologists in diagnosing 13 major fundus diseases: a prospective multi-center clinical trial](https://www.nature.com/articles/s41746-023-00991-9)
+
+### **4. [GSP-GCNs achieve up to 90.2% accuracy in Parkinson's disease diagnosis](https://hyper.ai/news/29189)**
+
+- **Research highlight:** [https://hyper.ai/news/29189](https://hyper.ai/news/29189)
+- **Research Team:** CAS Shenzhen Institutes of Advanced Technology and First Affiliated Hospital of Sun Yat-sen University
+- **Related Research:** Graph Signal Processing (GSP) modules, graph-network modules, classifiers, interpretable models.
+- **Published Journal:** npj Digital Medicine, 2024.01
+- **Paper Link:** [An interpretable model based on graph learning for diagnosis of Parkinson’s disease with voice-related EEG](https://www.nature.com/articles/s41746-023-00983-9)
+
+### **5. [Breast cancer prognosis scoring system MIRS](https://hyper.ai/news/29304)**
+
+- **Research highlight:** [https://hyper.ai/news/29304](https://hyper.ai/news/29304)
+- **Research Team:** University of Kentucky, Macau University of Science and Technology, University of Macau, Guangzhou Medical University
+- **Related Research:** TCGA database, neural network models, prognosis scoring systems, ESTIMATE algorithm, machine learning, XGboost, Boruta RF, ElasticNet.
+- **Published Journal:** iScience, 2023.11
+- **Paper Link:** [MIRS: An AI scoring system for predicting the prognosis and therapy of breast cancer](https://doi.org/10.1016/j.isci.2023.108322)
+
+### **6. [Retinal image foundation model RETFound predicts multiple systemic diseases](https://hyper.ai/news/28113)**
+
+- **Research highlight:** [https://hyper.ai/news/28113](https://hyper.ai/news/28113)
+- **Research Team:** Yukun Zhou (PhD candidate) and others from UCL and Moorfields Eye Hospital
+- **Related Research:** Self-supervised learning, MEH-MIDAS dataset, EyePACS dataset, SL-ImageNet, SSL-ImageNet, SSL-Retinal.
+- **Published Journal:** Nature, 2023.08
+- **Paper Link:** [A foundation model for generalizable disease detection from retinal images](https://www.nature.com/articles/s41586-023-06555-x)
+
+### **7. [SVM optimizes tactile sensors, braille recognition rate reaches 96.12%](https://hyper.ai/news/26561)**
+
+- **Research highlight:** [https://hyper.ai/news/26561](https://hyper.ai/news/26561)
+- **Research Team:** Geng Yang and Kaichen Xu's Groups at Zhejiang University
+- **Related Research:** SVM algorithms, machine learning, CNNs, adaptive moment estimation algorithms. Accurately identifies 6 dynamic touch patterns.
+- **Published Journal:** Advanced Science, 2023.09
+- **Paper Link:** [Machine Learning-Enabled Tactile Sensor Design for Dynamic Touch Decoding](https://onlinelibrary.wiley.com/doi/10.1002/advs.202303949)
+
+### **8. [CAS Beijing Institute of Genomics establishes an open biomedical imaging archive](https://hyper.ai/news/26334)**
+
+- **Research highlight:** [https://hyper.ai/news/26334](https://hyper.ai/news/26334)
+- **Research Team:** CAS Beijing Institute of Genomics
+- **Related Research:** TCIA database, de-identification, quality control, Collection, Individual, Study, Series, Image, triplet networks, attention modules.
+- **Published Journal:** bioRxiv, 2023.08
+- **Paper Link:** [Self-supervised learning of hologram reconstruction using physics consistency](https://www.nature.com/articles/s42256-023-00704-7)
+
+### **9. [AI Lunit reads mammograms with accuracy comparable to doctors](https://hyper.ai/news/26135)**
+
+- **Research highlight:** [https://hyper.ai/news/26135](https://hyper.ai/news/26135)
+- **Research Team:** University of Nottingham Research Team
+- **Related Research:** PERFORMS dataset, annotations + scoring. AI sensitivity was consistent with doctors, and specificity showed no significant difference.
+- **Published Journal:** Radiology, 2023.09
+- **Paper Link:** [Performance of a Breast Cancer Detection AI Algorithm Using the Personal Performance in Mammographic Screening Scheme](https://pubs.rsna.org/doi/10.1148/radiol.223299)
+
+### **10. [Feature selection strategy detects breast cancer biomarkers](https://hyper.ai/news/24589)**
+
+- **Research highlight:** [https://hyper.ai/news/24589](https://hyper.ai/news/24589)
+- **Research Team:** University of Naples Federico II, Italy
+- **Related Research:** Machine learning, feature selection strategies, TCGA/GEO datasets, Gain Ratio, RF, SVM-RFE.
+- **Published Journal:** CIBB 2023, 2023.07
+- **Paper Link:** [Robust Feature Selection strategy detects a panel of microRNAs as putative diagnostic biomarkers in Breast Cancer](https://www.researchgate.net/publication/372083934)
+
+### **11. [Gradient boosting machine model accurately predicts BPSD sub-syndrome](https://hyper.ai/news/23926)**
+
+- **Research highlight:** [https://hyper.ai/news/23926](https://hyper.ai/news/23926)
+- **Research Team:** Yonsei University Research Team (South Korea)
+- **Related Research:** Machine learning models, multiple imputation methods, logistic regression models, Random Forest models, Gradient Boosting Machine models, SVM models.
+- **Published Journal:** Scientific Reports, 2023.05
+- **Paper Link:** [Machine learning‑based predictive models for the occurrence of behavioral and psychological symptoms of dementia: model development and validation](https://www.nature.com/articles/s41598-023-35194-5)
+
+### **12. [Machine learning model predicts patient one-year mortality rate](https://hyper.ai/news/33905)**
+
+- **Research highlight:** [https://hyper.ai/news/33905](https://hyper.ai/news/33905)
+- **Research Team:** Macheng People's Hospital (Hubei, China)
+- **Related Research:** Logistic regression models, machine learning models, GBM, RF, DT. Top 3 features related to 1-year mortality were NT-proBNP, albumin, and statins.
+- **Published Journal:** Cardiovascular Diabetology, 2023.06
+- **Paper Link:** [Machine learning-based models to predict one-year mortality among Chinese older patients with coronary artery disease combined with impaired glucose tolerance or diabetes mellitus](https://cardiab.biomedcentral.com/articles/10.1186/s12933-023-01854-z)
+
+### **13. [New AI brain-computer interface technology allows aphasic patients to "speak"](https://hyper.ai/news/33914)**
+
+- **Research highlight:** [https://hyper.ai/news/33914](https://hyper.ai/news/33914)
+- **Research Team:** UC Research Team
+- **Related Research:** nltk Twitter corpus, multimodal speech neuroprostheses, brain-computer interfaces, deep learning models, Cornell Movie-Dialogs Corpus, synthetic speech algorithms.
+- **Published Journal:** Nature, 2023.08
+- **Paper Link:** [A high-performance neuroprosthesis for speech decoding and avatar control](https://www.nature.com/articles/s41586-023-06443-4)
+
+### **14. [Deep learning-based artificial intelligence detection of pancreatic cancer](https://hyper.ai/news/33923)**
+
+- **Research highlight:** [https://hyper.ai/news/33923](https://hyper.ai/news/33923)
+- **Research Team:** Alibaba DAMO Academy alongside multiple domestic and international medical institutions
+- **Related Research:** Deep learning, PANDA, nnU-Net, CNNs, Transformers. PANDA detected 5 cancer cases and 26 clinically missed cases.
+- **Published Journal:** Nature Medicine, 2023.11
+- **Paper Link:** [Large-scale pancreatic cancer detection via non-contrast CT and deep learning](https://www.nature.com/articles/s41591-023-02640-w)
+
+### **15. [Population effectiveness of machine learning-assisted lung cancer screening](https://hyper.ai/news/31197)**
+
+- **Research highlight:** [https://hyper.ai/news/31197](https://hyper.ai/news/31197)
+- **Research Team:** Google Research Center
+- **Related Research:** DS_CA dataset, DS_NLST dataset, DS_US dataset, DS_JPN dataset, machine learning models, lung cancer screening. Increased specificity by 5%-7%, decreased screening time by 14 seconds per case.
+- **Published Journal:** Radiology AI, 2024.03
+- **Paper Link:** [Assistive AI in Lung Cancer Screening: A Retrospective Multinational Study in the United States and Japan](https://pubs.rsna.org/doi/11.1148/ryai.230079)
+
+### **16. [Ovarian cancer diagnostic AI fusion model MCF calculates risk using routine lab data and age](https://hyper.ai/news/30730)**
+
+- **Research highlight:** [https://hyper.ai/news/30730](https://hyper.ai/news/30730)
+- **Research Team:** Jihong Liu's Research Team at Sun Yat-sen University
+- **Related Research:** Feature selection methods, machine learning classifiers, 5-fold cross-validation, multi-criteria decision theory. Outperformed CA125 and HE4 biomarkers.
+- **Published Journal:** The Lancet Digital Health, 2024.05
+- **Paper Link:** [Artificial intelligence-based models enabling accurate diagnosis of ovarian cancer using laboratory tests in China: a multicentre, retrospective cohort study](https://www.thelancet.com/journals/landig/article/PIIS2589-7500(23)00245-5/fulltext)
+
+### **17. [Google releases HEAL framework, a 4-step process to assess medical AI tool fairness](https://hyper.ai/news/31535)**
+
+- **Research highlight:** [https://hyper.ai/news/31535](https://hyper.ai/news/31535)
+- **Research Team:** Google Research Team
+- **Related Research:** Machine learning, HEAL (Health Equity Assessment of Machine Learning) framework, logistic regression analysis, intersectional analysis, health equity.
+- **Published Journal:** EClinicalMedicine, 2024.04
+- **Paper Link:** [Health equity assessment of machine learning performance (HEAL): a framework and dermatology AI model case study](https://www.thelancet.com/journals/eclinm/article/PIIS2589-5370(24)00058-0/fulltext)
+
+### **18. [Leveraging semantic segmentation to develop spatial transcriptomics semantic annotation tool Pianno](https://hyper.ai/news/31573)**
+
+- **Research highlight:** [https://hyper.ai/news/31573](https://hyper.ai/news/31573)
+- **Research Team:** Ying Zhu's Team at Fudan University
+- **Related Research:** Computer vision, machine learning, spatial clustering methods, unsupervised clustering methods, spatial Poisson point process (sPPP) models, high-order Markov random field (MRF) priors.
+- **Published Journal:** Nature Communications, 2024.04
+- **Paper Link:** [Pianno: a probabilistic framework automating semantic annotation for spatial transcriptomics](https://www.nature.com/articles/s41467-024-47152-4)
+
+### **19. [AI model UniFMIR breaks the limits of existing fluorescence microscopy imaging](https://hyper.ai/news/31885)**
+
+- **Research highlight:** [https://hyper.ai/news/31885](https://hyper.ai/news/31885)
+- **Research Team:** Bo Yan's Team at Fudan University
+- **Related Research:** UniFMIR model, multi-head modules, feature enhancement modules, multi-tail modules, Swin Transformer, adaptive moment estimation, deep learning, SR models, U-Net.
+- **Published Journal:** Nature Methods, 2024.04
+- **Paper Link:** [Pretraining a foundation model for generalizable fluorescence microscopy-based image restoration](https://www.nature.com/articles/s41592-024-02244-3)
+
+### **20. [Deep learning system improves the accuracy of cancer survival prediction](https://hyper.ai/news/32068)**
+
+- **Research highlight:** [https://hyper.ai/news/32068](https://hyper.ai/news/32068)
+- **Research Team:** Zhangsheng Yu's Group at the Shanghai National Center for Applied Mathematics (SJTU Branch)
+- **Related Research:** Deep learning systems, ST datasets, integrated graph and graph deep learning models, CNNs and GNNs, external test set MCO-CRC, spatial gene expression models, super-patch graph survival models, H&E-stained histological image preprocessing.
+- **Published Journal:** Cell Reports Medicine, 2024.05
+- **Paper Link:** [Harnessing TME depicted by histological images to improve cancer prognosis through a deep learning system](https://www.cell.com/cell-reports-medicine/fulltext/S2666-3791(24)00205-2 )
+
+### **21. [MemSAM adapts "Segment Anything" model for medical video segmentation](https://hyper.ai/news/32372)**
+
+- **Research highlight:** [https://hyper.ai/news/32372](https://hyper.ai/news/32372)
+- **Research Team:** Huisi Wu (Shenzhen University)
+- **Related Research:** Vision models, medical video segmentation, echocardiography video segmentation models, memory reinforcement mechanisms, CAMUS and EchoNet-Dynamic datasets, SonoSAM model, SAMUS model.
+- **Published Journal:** CVPR 2024, 2024.05
+- **Paper Link:** [MemSAM: Taming Segment Anything Model for Echocardiography Video Segmentation](https://github.com/dengxl0520/MemSAM)
+
+### **22. [Medical image segmentation model Medical SAM 2 tops the SOTA leaderboard](https://hyper.ai/news/33738)**
+
+- **Research highlight:** [https://hyper.ai/news/33738](https://hyper.ai/news/33738)
+- **Research Team:** Oxford University Team
+- **Related Research:** Medical image segmentation models, SAM 2, SA-V video segmentation dataset, Medical SAM 2 example datasets, image encoders, memory encoders.
+- **Published Journal:** arXiv, 2024.08
+- **Paper Link:** [Medical SAM 2: Segment medical images as video via Segment Anything Model 2](https://arxiv.org/abs/2408.00874)
+
+### **23. [Machine learning fights chemotherapy resistance and tumor recurrence, building a strong defense against breast cancer stem cells](https://hyper.ai/news/33566)**
+
+- **Research highlight:** [https://hyper.ai/news/33566](https://hyper.ai/news/33566)
+- **Research Team:** Shandong University and Shanxi Medical University, jointly with Helix Matrix
+- **Related Research:** Machine learning, Breast Invasive Carcinoma (BRCA) dataset, Pearson correlation, Gene Set Enrichment Analysis.
+- **Published Journal:** Advanced Science, 2024.07
+- **Paper Link:** [Polyamine Anabolism Promotes Chemotherapy-Induced Breast Cancer Stem Cell Enrichment](https://onlinelibrary.wiley.com/doi/10.1002/advs.202404853)
+
+### **24. [Vision-Language model DeepDR-LLM for diabetes care published in Nature sub-journal](https://hyper.ai/news/33292)**
+
+- **Research highlight:** [https://hyper.ai/news/33292](https://hyper.ai/news/33292)
+- **Research Team:** Tsinghua University, Shanghai Jiao Tong University, Singapore National University
+- **Related Research:** LLMs, deep learning based on fundus images, Adaptors and LoRA, Transformer architectures, supervised fine-tuning.
+- **Published Journal:** Nature Medicine, 2024.07
+- **Paper Link:** [Integrated image-based deep learning and language models for primary diabetes care](https://www.nature.com/articles/s41591-024-03139-8)
+
+### **25. [Leveling with senior pathologists! Tsinghua team proposes AI foundation model ROAM for precise glioma diagnosis](https://hyper.ai/news/33136)**
+
+- **Research highlight:** [https://hyper.ai/news/33136](https://hyper.ai/news/33136)
+- **Research Team:** Tsinghua University and Xiangya Hospital
+- **Related Research:** Large regions of interest, pyramid transformers, ROAM, large-size image patches, Xiangya glioma WSI dataset, TCGA glioma WSI dataset, weakly supervised computational pathology.
+- **Published Journal:** Nature Machine Intelligence, 2024.06
+- **Paper Link:** [A transformer-based weakly supervised computational pathology method for clinical-grade diagnosis and molecular marker discovery of gliomas](https://www.nature.com/articles/s42256-024-00868-w)
+
+### **26. [Universal medical image segmentation model ScribblePrompt outperforms SAM-based models](https://hyper.ai/news/34720)**
+
+- **Research highlight:** [https://hyper.ai/news/34720](https://hyper.ai/news/34720)
+- **Research Team:** MIT CSAIL, MGH, Harvard Medical School
+- **Related Research:** Deep learning, medical image segmentation, MegaMedical dataset, interactive segmentation, generative synthetic labels, CNN-Transformer hybrid solutions.
+- **Published Journal:** ECCV 2024, 2024.07
+- **Paper Link:** [ScribblePrompt: Fast and Flexible Interactive Segmentation for Any Biomedical Image](https://arxiv.org/pdf/2312.07381)
+
+### **27. [Digital twin brain platform demonstrates critical phenomena and cognitive functions similar to the human brain](https://hyper.ai/news/34573)**
+
+- **Research highlight:** [https://hyper.ai/news/34573](https://hyper.ai/news/34573)
+- **Research Team:** Prof. Jianfeng Feng's Team at Fudan University
+- **Related Research:** Spiking neural networks, digital twin brain, reverse engineering, MRI, cortico-subcortical models, DTB models, data assimilation models.
+- **Published Journal:** National Science Review, 2024.05
+- **Paper Link:** [Imitating and exploring human brain’s resting and task-performing states via resembling brain computing: scaling and architecture](https://doi.org/10.1093/nsr/nwae080)
+
+### **28. [Automated LLM dialogue Agent simulation system performs initial diagnosis for depression](https://hyper.ai/news/34845)**
+
+- **Research highlight:** [https://hyper.ai/news/34845](https://hyper.ai/news/34845)
+- **Research Team:** X-LANCE Lab at SJTU, UT Arlington, TCCI, and ThetaAI
+- **Related Research:** Dialogue Agent simulation systems, D4 dataset, tertiary memory storage architectures, Patient Agent, Psychiatrist Agent, Instructor Agent.
+- **Published Journal:** arXiv, 2024.09
+- **Paper Link:** [Depression Diagnosis Dialogue Simulation: Self-improving Psychiatrist with Tertiary Memory](https://arxiv.org/abs/2409.15084)
+
+### **29. [Deep learning model LucaProt aids in RNA virus identification](https://hyper.ai/news/34968)**
+
+- **Research highlight:** [https://hyper.ai/news/34968](https://hyper.ai/news/34968)
+- **Research Team:** Sun Yat-sen University, Zhejiang University, Fudan University, Alibaba Cloud, etc.
+- **Related Research:** Cloud computing and AI, metagenomic mining, NCBI SRA database, CNGBdb, data-driven deep learning models, Transformer framework, discovering 161,979 potential RNA virus species.
+- **Published Journal:** Cell, 2024.09
+- **Paper Link:** [Using artificial intelligence to document the hidden RNA virosphere](https://doi.org/10.1016/j.cell.2024.09.027)
+
+### **30. [Medical image pre-training framework UniMedI breaks down medical data heterogeneity barriers](https://hyper.ai/news/35128)**
+
+- **Research highlight:** [https://hyper.ai/news/35128](https://hyper.ai/news/35128)
+- **Research Team:** Haoji Hu's Team at Zhejiang University, Lili Qiu's Team at Microsoft Research Asia
+- **Related Research:** Pseudo-Pairs technology, MIMIC-CXR 2.0.0 dataset, BIMCV dataset, ViT-B/16 vision encoders, BioClinicalBERT, Vision-Language contrastive learning.
+- **Published Journal:** ECCV, 2024.07
+- **Paper Link:** [Unified Medical Image Pre-training in Language-Guided Common Semantic Space](https://eccv.ecva.net/virtual/2024/poster/1165)
+
+### **31. [Multilingual medical large model MMed-Llama 3 better adapts to medical application scenarios](https://hyper.ai/news/35242)**
+
+- **Research highlight:** [https://hyper.ai/news/35242](https://hyper.ai/news/35242)
+- **Research Team:** Yanfeng Wang and Weidi Xie's Teams at Shanghai Jiao Tong University
+- **Related Research:** Multilingual medical corpus MMedC, medical QA benchmark MMedBench, foundation models MMed-Llama 3, MMedLM.
+- **Published Journal:** Nature Communications, 2024.09
+- **Paper Link:** [Towards building multilingual language model for medicine](https://www.nature.com/articles/s41467-024-52417-z)
+
+### **32. [Capsule endoscopy image stitching method S2P-Matching assists in image reconstruction](https://hyper.ai/news/35313)**
+
+- **Research highlight:** [https://hyper.ai/news/35313](https://hyper.ai/news/35313)
+- **Research Team:** HUST, SJTU, South-Central Minzu University, HKUST(GZ), PolyU, University of Sydney
+- **Related Research:** S2P-Matching, self-supervised contrastive learning, dual-branch encoders, Transformers, pixel-level matching. Matching accuracy improved by 187.9%.
+- **Published Journal:** IEEE Transactions on Biomedical Engineering, 2024.09
+- **Paper Link:** [S2P-Matching: Self-supervised Patch-based Matching Using Transformer for Capsule Endoscopic Images Stitching](http://dx.doi.org/10.1109/TBME.2024.3462502)
+
+### **33. [Multimodal medical benchmark GMAI-MMBench features 284 datasets covering 18 clinical tasks](https://hyper.ai/news/35938)**
+
+- **Research highlight:** [https://hyper.ai/news/35938](https://hyper.ai/news/35938)
+- **Research Team:** Shanghai AI Lab, University of Washington, Monash University, ECNU
+- **Related Research:** GMAI-MMBench benchmark, the most comprehensive open-source general medical AI benchmark evaluating large vision-language models.
+- **Published Journal:** NeurIPS 2024, 2024.08
+- **Paper Link:** [GMAI-MMBench: A Comprehensive Multimodal Evaluation Benchmark Towards General Medical AI](https://arxiv.org/abs/2408.03361v7)
+
+### **34. [Novel time series forecasting method CGS-Mask uncovers key indicators for patient survival rates](https://hyper.ai/news/36192)**
+
+- **Research highlight:** [https://hyper.ai/news/36192](https://hyper.ai/news/36192)
+- **Research Team:** HUST, University of Sydney, Tongji Hospital
+- **Related Research:** MIMIC-III dataset, LSST dataset, NATOPS dataset, AE dataset. Combining time-series forecasting with interpretability.
+- **Published Journal:** AAAI 2024, 2024.03
+- **Paper Link:** [CGS-Mask: Making Time Series Predictions Intuitive for All](https://ojs.aaai.org/index.php/AAAI/article/view/29325)
+
+### **35. [Non-invasive brain decoding framework fMRI lays the foundation for brain-computer interfaces and cognitive models](https://hyper.ai/news/36023)**
+
+- **Research highlight:** [https://hyper.ai/news/36023](https://hyper.ai/news/36023)
+- **Research Team:** Yi Zeng's Team at the Institute of Automation, CAS
+- **Related Research:** Multimodal integration frameworks, Natural Scenes Dataset, COCO dataset, VAE and CLIP embeddings, 3D fMRI preprocessors, multimodal LLMs.
+- **Published Journal:** NeurIPS 2024, 2024.10
+- **Paper Link:** [Neuro-Vision to Language: Enhancing Brain Recording-based Visual Reconstruction and Language Interaction](https://nips.cc/virtual/2024/poster/93607)
+
+### **36. [Medical image segmentation model M2CF-Net improves diagnosis accuracy for Sjogren's syndrome](https://hyper.ai/news/36700)**
+
+- **Research highlight:** [https://hyper.ai/news/36700](https://hyper.ai/news/36700)
+- **Research Team:** Prof. Wei Tu and Prof. Feng Lu at HUST
+- **Related Research:** M2CF-Net, minor salivary gland pathology slide dataset, ROI extraction, stain normalization, WSI patching, Vahadane algorithm, patch-based training.
+- **Published Journal:** MedAI 2023, 2023
+- **Paper Link:** [M2CF-Net: A Multi-Resolution and Multi-Scale Cross Fusion Network for Segmenting Pathology Lesion of the Focal Lymphocytic Sialadenitis](https://doi.ieeecomputersociety.org/10.1109/MedAI59581.2023.00063)
+
+### **37. [BSAFusion enables alignment and fusion of multimodal medical images](https://hyper.ai/news/37104)**
+
+- **Research highlight:** [https://hyper.ai/news/37104](https://hyper.ai/news/37104)
+- **Research Team:** Kunming University of Science and Technology, Ocean University of China
+- **Related Research:** Medical image processing, Bidirectional Stepwise Feature Alignment (BSFA), CT-MRI, PET-MRI, and SPECT-MRI datasets, deep learning, computer vision.
+- **Published Journal:** AAAI 2025, 2024.11
+- **Paper Link:** [BSAFusion: A Bidirectional Stepwise Feature Alignment Network for Unaligned Medical Image Fusion](https://arxiv.org/abs/2412.08050)
+
+### **38. [Multi-Agent LLM framework KG4Diagnosis assists in diagnosing 362 common diseases](https://hyper.ai/news/37208)**
+
+- **Research highlight:** [https://hyper.ai/news/37208](https://hyper.ai/news/37208)
+- **Research Team:** University of Warwick, Cranfield University, Cambridge, Oxford
+- **Related Research:** KG4Diagnosis, hierarchical multi-agent frameworks, automated medical knowledge graph construction, General Practitioner LLMs (GPLLM), Consultant-LLMs.
+- **Published Journal:** AAAI-25 Bridge Program, 2024.12
+- **Paper Link:** [KG4Diagnosis: A Hierarchical Multi-Agent LLM Framework with Knowledge Graph Enhancement for Medical Diagnosis](https://arxiv.org/abs/2412.16833)
+
+### **39. [Image segmentation model ConDSeg solves soft boundary and co-occurrence issues in medical imaging](https://hyper.ai/news/37794)**
+
+- **Research highlight:** [https://hyper.ai/news/37794](https://hyper.ai/news/37794)
+- **Research Team:** China University of Geosciences, Baidu
+- **Related Research:** Contrast-Driven feature enhancement framework ConDSeg, consistency reinforcement training, semantic decoupling modules, size-aware decoders, BCNet, Kvasir-SEG dataset.
+- **Published Journal:** AAAI 2025, 2024.12
+- **Paper Link:** [ConDSeg: A General Medical Image Segmentation Framework via Contrast-Driven Feature Enhancement](https://arxiv.org/abs/2412.08345)
+
+### **40. [Medical model M³FM enables zero-shot clinical diagnosis, supporting disease reporting and classification](https://hyper.ai/news/37924)**
+
+- **Research highlight:** [https://hyper.ai/news/37924](https://hyper.ai/news/37924)
+- **Research Team:** Oxford, University of Rochester, Amazon, Westlake University, Tencent Youtu Lab
+- **Related Research:** Zero-shot clinical diagnosis, medical imaging, CLIP models, M³FM framework, MultiMedCLIP, MIMC-CXR datasets, COVID-19-CT-CXR, CheXpert.
+- **Published Journal:** npj Digital Medicine, 2025.02
+- **Paper Link:** [A multimodal multidomain multilingual medical foundation model for zero shot clinical diagnosis](https://www.nature.com/articles/s41746-024-01339-7)
+
+### **41. [Deep learning-based sex estimation from skull CT scans outperforms human forensic experts](https://hyper.ai/news/38024)**
+
+- **Research highlight:** [https://hyper.ai/news/38024](https://hyper.ai/news/38024)
+- **Research Team:** UWA, UNSW, Hasanuddin University
+- **Related Research:** Deep learning-based automated frameworks, skull sex estimation, 3D CT scans, forensic anthropology.
+- **Published Journal:** Scientific Reports, 2024.12
+- **Paper Link:** [Deep learning versus human assessors: forensic sex estimation from three-dimensional computed tomography scans](https://www.nature.com/articles/s41598-024-81718-y)
+
+### **42. [AI boosts medical research: Large models become the "golden partner" for training primary care physicians](https://hyper.ai/news/38366)**
+
+- **Research highlight:** [https://hyper.ai/news/38366](https://hyper.ai/news/38366)
+- **Research Team:** SJTU, SUS, Tsinghua, Duke, Johns Hopkins, University of Melbourne
+- **Related Research:** Physician training, DeepSeek, human-AI collaborative decision-making, LLMs, chronic disease diagnosis and treatment.
+- **Published Journal:** Science Bulletin, 2025.01
+- **Paper Link:** [Large language models for diabetes training: a prospective study](https://www.sciencedirect.com/science/article/pii/S2095927325000891)
+
+### **43. [AcneDGNet deep learning algorithm achieves acne lesion detection and grading](https://hyper.ai/news/38397)**
+
+- **Research highlight:** [https://hyper.ai/news/38397](https://hyper.ai/news/38397)
+- **Research Team:** Peking University International Hospital
+- **Related Research:** AcneDGNet, Vision Transformers, CNNs, ACNE04 dataset, Swin Transformer architectures.
+- **Published Journal:** Scientific Reports, 2025.01
+- **Paper Link:** [Evaluation of an acne lesion detection and severity grading model for Chinese population in online and offline healthcare scenarios](https://www.nature.com/articles/s41598-024-84670-z)
+
+### **44. [Multimodal medical image segmentation model VISTA3D released, achieving 3D image auto-segmentation and interaction](https://hyper.ai/news/38486)**
+
+- **Research highlight:** [https://hyper.ai/news/38486](https://hyper.ai/news/38486)
+- **Research Team:** NVIDIA, UAMS, NIH, Oxford University
+- **Related Research:** VISTA3D, 3D supervoxel feature extraction, automatic segmentation, interactive segmentation dual-modality.
+- **Published Journal:** arXiv, 2024.11
+- **Paper Link:** [VISTA3D: A Unified Segmentation Foundation Model For 3D Medical Imaging](https://doi.org/10.48550/arxiv.2406.05285)
+
+### **45. [Multi-plane echocardiography unified segmentation model EchoONE accurately segments multiple planes](https://hyper.ai/news/38544)**
+
+- **Research highlight:** [https://hyper.ai/news/38544](https://hyper.ai/news/38544)
+- **Research Team:** Shenzhen University, Shenzhen People's Hospital
+- **Related Research:** EchoONE model, CAMUS dataset, HMC-QU dataset, EchoNet_Dynamic dataset.
+- **Published Journal:** CVPR 2025, 2025.04
+- **Paper Link:** [EchoONE: Segmenting Multiple echocardiography Planes in One Model](https://arxiv.org/abs/2412.02993)
+
+### **46. [Multi-agent dialogue framework simulates medical consultations to aid disease diagnosis](https://hyper.ai/news/38583)**
+
+- **Research highlight:** [https://hyper.ai/news/38583](https://hyper.ai/news/38583)
+- **Research Team:** West China Hospital, Zhejiang University, BUPT
+- **Related Research:** Multi-Agent Conversational (MAC) frameworks, LLMs, Orphanet, Medline, GPT-3.5, GPT-4.
+- **Published Journal:** Nature, 2025.03
+- **Paper Link:** [Enhancing diagnostic capability with multi-agents conversational large language models](https://www.nature.com/articles/s41746-025-01550-0#Tab6)
+
+### **47. [Deep learning framework STAIG reveals detailed genetic information in the tumor microenvironment](https://hyper.ai/news/38587)**
+
+- **Research highlight:** [https://hyper.ai/news/38587](https://hyper.ai/news/38587)
+- **Research Team:** Institute of Medical Science, University of Tokyo
+- **Related Research:** STAIG framework, biological tissues, ST datasets, GNNs.
+- **Published Journal:** Nature Communications, 2025.01
+- **Paper Link:** [STAIG: Spatial transcriptomics analysis via image-aided graph contrastive learning for domain exploration and alignment-free integration](https://www.nature.com/articles/s41467-025-56276-0)
+
+### **48. [First all-in-one medical image re-identification framework MaMI reaches SOTA across 11 datasets](https://hyper.ai/news/38624)**
+
+- **Research highlight:** [https://hyper.ai/news/38624](https://hyper.ai/news/38624)
+- **Research Team:** Shanghai AI Lab and multiple universities
+- **Related Research:** MaMI framework, medical re-identification benchmarks, Continuous Modality Parameter Adapter (ComPA), Medical Foundation Models (MFMs).
+- **Published Journal:** CVPR 2025, 2025.03
+- **Paper Link:** [Towards All-in-One Medical Image Re-Identification](https://arxiv.org/pdf/2503.08173)
+
+### **49. [Many-to-one regression model M2OST accurately predicts gene expression using digital pathology images](https://hyper.ai/news/38783)**
+
+- **Research highlight:** [https://hyper.ai/news/38783](https://hyper.ai/news/38783)
+- **Research Team:** Zhejiang University, Zhejiang Lab, Ritsumeikan University
+- **Related Research:** Whole Slide Images (WSIs), human breast cancer datasets, Transformer models, patch-level schemes.
+- **Published Journal:** AAAI 2025, 2024.12
+- **Paper Link:** [M2OST: Many-to-one Regression for Predicting Spatial Transcriptomics from Digital Pathology Images](https://arxiv.org/abs/2409.15092)
+
+### **50. [Brain MRI scanning tool MindGlide quantifies multiple sclerosis lesions](https://hyper.ai/news/38971)**
+
+- **Research highlight:** [https://hyper.ai/news/38971](https://hyper.ai/news/38971)
+- **Research Team:** UCL Research Team
+- **Related Research:** MindGlide model, MRI, routine care datasets, lesion segmentation, nnU-Net, 3D CNNs.
+- **Published Journal:** Nature Communications, 2025.04
+- **Paper Link:** [Enabling new insights from old scans by repurposing clinical MRI archives for multiple sclerosis research](https://go.hyper.ai/fDEgm)
+
+### **51. [Hierarchical distillation multi-instance learning framework HDMIL rapidly processes gigapixel whole-slide images](https://hyper.ai/news/39157)**
+
+- **Research highlight:** [https://hyper.ai/news/39157](https://hyper.ai/news/39157)
+- **Research Team:** HIT, HIT (Shenzhen)
+- **Related Research:** Multi-instance learning, tumor detection, WSIs, Camelyon16 dataset, TCGA-NSCLC dataset.
+- **Published Journal:** CVPR 2025, 2025.03
+- **Paper Link:** [Fast and Accurate Gigapixel Pathological Image Classification with Hierarchical Distillation Multi-Instance Learning](https://arxiv.org/abs/2502.21130)
+
+### **52. [Universal 3D blood vessel segmentation foundation model vesselFM far exceeds SAM-based models](https://hyper.ai/news/39201)**
+
+- **Research highlight:** [https://hyper.ai/news/39201](https://hyper.ai/news/39201)
+- **Research Team:** University of Zurich, ETH Zurich, Technical University of Munich
+- **Related Research:** Blood vessel segmentation, medical image segmentation, Flow Matching-based conditional generative models, domain randomization strategies.
+- **Published Journal:** CVPR 2025, 2025.01
+- **Paper Link:** [vesselFM: A Foundation Model for Universal 3D Blood Vessel Segmentation](https://go.hyper.ai/lVad9)
+
+### **53. [Graph neural networks accurately predict lung cancer survival, discovering 3 fatal subtypes](https://hyper.ai/news/39435)**
+
+- **Research highlight:** [https://hyper.ai/news/39435](https://hyper.ai/news/39435)
+- **Research Team:** Cornell University, Regeneron Pharmaceuticals
+- **Related Research:** Graph-Encoded Mixture Survival (GEMS), EHR databases, ConcertAI Patient360™ NSCLC dataset, GNN encoders.
+- **Published Journal:** Nature Communication, 2025.05
+- **Paper Link:** [Identification of predictive subphenotypes for clinical outcomes using real world data and machine learning](https://doi.org/10.1038/s41467-025-59092-8)
+
+### **54. [Fusion strategy AI model predicts septic shock mortality risk](https://hyper.ai/news/39713)**
+
+- **Research highlight:** [https://hyper.ai/news/39713](https://hyper.ai/news/39713)
+- **Research Team:** Tongji Hospital, HUST
+- **Related Research:** Septic shock, TOPSIS-based Classification Fusion (TCF) models, machine learning models.
+- **Published Journal:** npj digital medicine, 2025.04
+- **Paper Link:** [Artificial intelligence based multispecialty mortality prediction models for septic shock in a multicenter retrospective study](https://go.hyper.ai/faMLL)
+
+### **55. [World's first clinical Graph-of-Thought model in HIE improves neurocognitive outcome prediction by 15%](https://hyper.ai/news/40828)**
+
+- **Research highlight:** [https://hyper.ai/news/40828](https://hyper.ai/news/40828)
+- **Research Team:** Boston Children's Hospital, Harvard Medical School, NYU, MIT-IBM Watson Lab
+- **Related Research:** Medical reasoning benchmarks, Clinical Graph-of-Thought (CGoT) model, HIE-Reasoning dataset.
+- **Published Journal:** ICML 2025, 2025.06
+- **Paper Link:** [Visual and Domain Knowledge for Professional-level Graph-of-Thought Medical Reasoning](https://openreview.net/forum?id=tnyxtaSve5)
+
+### **56. [Fine-grained patient cohort modeling using multidimensional EHR data increases length-of-stay prediction accuracy by 16.3%](https://hyper.ai/news/41303)**
+
+- **Research highlight:** [https://hyper.ai/news/41303](https://hyper.ai/news/41303)
+- **Research Team:** NUS, Zhejiang University
+- **Related Research:** EHR, NeuralCohort representation learning method, MIMIC-III, MIMIC-IV, Diabetes130.
+- **Published Journal:** ICML 2025, 2025.06
+- **Paper Link:** [NeuralCohort: Cohort-aware Neural Representation Learning for Healthcare Analytics](https://openreview.net/forum?id=bqQVa6VRvm)
+
+### **57. [Deep learning model APEX screens potential antibiotic candidates](https://hyper.ai/news/42377)**
+
+- **Research highlight:** [https://hyper.ai/news/42377](https://hyper.ai/news/42377)
+- **Research Team:** University of Pennsylvania
+- **Related Research:** Global venom databases, APEX model prediction, antibiotic R&D, animal venoms.
+- **Published Journal:** Nature Communications, 2025.07
+- **Paper Link:** [Computational exploration of global venoms for antimicrobial discovery with Venomics artificial intelligence](https://www.nature.com/articles/s41467-025-60051-6)
+
+### **58. [Wastewater epidemiology assessment using gene sequencing and machine learning: ICA-Var method detects viruses up to 4 weeks early](https://hyper.ai/news/42585)**
+
+- **Research highlight:** [https://hyper.ai/news/42585](https://hyper.ai/news/42585)
+- **Research Team:** UNLV
+- **Related Research:** Unsupervised machine learning pipelines, Independent Component Analysis, virus detection, dual regression methods, ICA-Var.
+- **Published Journal:** Nature Communications, 2025.07
+- **Paper Link:** [Early detection of emerging SARS-CoV-2 Variants from wastewater through genome sequencing and machine learning](https://www.nature.com/articles/s41467-025-61280-5)
+
+### **59. [Bidirectional Brownian bridge diffusion model enhances reproducibility of virtual staining](https://hyper.ai/news/42959)**
+
+- **Research highlight:** [https://hyper.ai/news/42959](https://hyper.ai/news/42959)
+- **Research Team:** UCLA
+- **Related Research:** Imaging mass spectrometry, diffusion models, Brownian bridge diffusion models, SNR-based channel selection strategies.
+- **Published Journal:** Science Advances, 2025.08
+- **Paper Link:** [Virtual staining of label-free tissue in imaging mass spectrometry](https://go.hyper.ai/X9GEn)
+
+### **60. [Medical GraphRAG breaks QA accuracy records, achieving SOTA on 11 benchmark datasets](https://hyper.ai/news/43064)**
+
+- **Research highlight:** [https://hyper.ai/news/43064](https://hyper.ai/news/43064)
+- **Research Team:** Oxford, CMU, University of Edinburgh
+- **Related Research:** RAG, Medical GraphRAG, U-Retrieval methods, MIMIC-IV, FakeHealth, PubHealth.
+- **Published Journal:** ACL 2025, 2025.07
+- **Paper Link:** [Medical Graph RAG: Towards Safe Medical Large Language Model via Graph Retrieval-Augmented Generation](https://go.hyper.ai/OaMIE)
+
+### **61. [Healthcare Agent automatically detects medical ethics and safety issues](https://hyper.ai/news/44006)**
+
+- **Research highlight:** [https://hyper.ai/news/44006](https://hyper.ai/news/44006)
+- **Research Team:** Wuhan University, NTU
+- **Related Research:** LLMs, medical consultations, Healthcare Agent, MedDialog dataset.
+- **Published Journal:** Nature Artificial Intelligence, 2025.09
+- **Paper Link:** [Healthcare agent: eliciting the power of large language models for medical consultation](https://go.hyper.ai/09lYX)
+
+### **62. [Blood cell image classifier CytoDiffusion assists in discovering leukemia, surpassing clinical experts](https://hyper.ai/news/47004)**
+
+- **Research highlight:** [https://hyper.ai/news/47004](https://hyper.ai/news/47004)
+- **Research Team:** Cambridge University
+- **Related Research:** Deep learning, medical image analysis, CNNs, CytoDiffusion, CytoData dataset, Raabin-WBC dataset, diffusion models.
+- **Published Journal:** Nature, 2025.11
+- **Paper Link:** [Deep generative classification of blood cell morphology](https://www.nature.com/articles/s42256-025-01122-7)
+
+### **63. [UCL team proposes federated learning framework MORPHFED for cross-institutional blood morphology analysis](https://hyper.ai/news/49373)**
+
+- **Research highlight:** [https://hyper.ai/news/49373](https://hyper.ai/news/49373)
+- **Research Team:** UCL Computer Science Department
+- **Related Research:** Blood morphology examinations, white blood cell morphology analysis, Federated Learning, privacy-preserving medical AI.
+- **Published Journal:** arXiv
+- **Paper Link:** [MORPHFED: Federated Learning for Cross-institutional Blood Morphology Analysis](https://arxiv.org/abs/2601.04121)
+
+### **64. [French team proposes explainable machine learning framework for accurate mortality prediction in HCC liver transplant candidates](https://hyper.ai/news/49742)**
+
+- **Research highlight:** [https://hyper.ai/news/49742](https://hyper.ai/news/49742)
+- **Research Team:** Télécom Paris and Université Paris-Saclay
+- **Related Research:** Hepatocellular carcinoma (HCC), liver transplant waitlist mortality risk, Ensemble Learning, SHAP analysis.
+- **Published Journal:** Health Data Science
+- **Paper Link:** [Explainable Mortality Prediction for Liver Transplant Candidates with Hepatocellular Carcinoma: A Supervised Clustering Approach](https://spj.science.org/doi/10.34133/hds.0295)
+
+### **65. [Stanford University proposes Merlin, the first native 3D abdominal CT vision-language model](https://hyper.ai/news/49864)**
+
+- **Research highlight:** [https://hyper.ai/news/49864](https://hyper.ai/news/49864)
+- **Research Team:** Stanford University
+- **Related Research:** Abdominal Computed Tomography (CT), 3D Vision-Language Models (3D VLMs), Merlin, Electronic Health Records (EHR).
+- **Published Journal:** Nature
+- **Paper Link:** [Merlin: a computed tomography vision–language foundation model and dataset](https://www.nature.com/articles/s41586-026-10181-8)
+
+## **AI+ Materials Chemistry**
+
+*(Entries continue following the exact identical structure)*
+
+### **1. [High-throughput computational framework generates 120,000 novel MOF candidates in 33 minutes](https://hyper.ai/news/30269)**
+
+- **Research highlight:** [https://hyper.ai/news/30269](https://hyper.ai/news/30269)
+- **Research Team:** Eliu A. Huerta's Research Team at Argonne National Laboratory
+- **Related Research:** hMOFs dataset, generative AI, GHP-MOFsassemble, MMPA, DiffLinker, CGCNN, GCMC.
+- **Published Journal:** Nature, 2024.02
+- **Paper Link:** [A generative artificial intelligence framework based on a molecular diffusion model for the design of metal-organic frameworks for carbon capture](https://www.nature.com/articles/s42004-023-01090-2)
+
+### **2. [Machine learning algorithm screens P-SOC electrode materials](https://hyper.ai/news/29069)**
+
+- **Research highlight:** [https://hyper.ai/news/29069](https://hyper.ai/news/29069)
+- **Research Team:** Siyu Ye's Research Team at Guangzhou University
+- **Related Research:** XGBoost, machine learning models, RF, DFT. Successfully screened electrode material LCN91.
+- **Published Journal:** ADVANCED FUNCTIONAL MATERIALS, 2023.12
+- **Paper Link:** [Machine-Learning Assisted Screening Proton Conducting Co/Fe based Oxide for the Air Electrode of Protonic Solid Oxide Cell](https://onlinelibrary.wiley.com/doi/10.1002/adfm.202309855)
+
+### **3. [SEN machine learning model achieves high-accuracy material property predictions](https://hyper.ai/news/28410)**
+
+- **Research highlight:** [https://hyper.ai/news/28410](https://hyper.ai/news/28410)
+- **Research Team:** Huashan Li and Biao Wang's Group at Sun Yat-sen University
+- **Related Research:** Materials Project database, SEN, capsule mechanism, deep learning.
+- **Published Journal:** Nature Communications, 2023.08
+- **Paper Link:** [Material symmetry recognition and property prediction accomplished by crystal capsule representation](https://www.nature.com/articles/s41467-023-40756-2)
+
+### **4. [Deep learning tool GNoME discovers 2.2 million new crystals](https://hyper.ai/news/28347)**
+
+- **Research highlight:** [https://hyper.ai/news/28347](https://hyper.ai/news/28347)
+- **Research Team:** Google DeepMind Research Team
+- **Related Research:** GNoME database, GNoME, SOTA GNN models, deep learning, Materials Project, OQMD, WBM, ICSD.
+- **Published Journal:** Nature, 2023.11
+- **Paper Link:** [Scaling deep learning for materials discovery](https://www.nature.com/articles/s41586-023-06735-9)
+
+### **5. [Field-induced recursively embedded atom neural network accurately describes external field strength and direction changes](https://hyper.ai/news/28285)**
+
+- **Research highlight:** [https://hyper.ai/news/28285](https://hyper.ai/news/28285)
+- **Research Team:** Bin Jiang's Group at USTC
+- **Related Research:** Field-induced recursively embedded atom neural network FIREANN, FIREANN-wF model.
+- **Published Journal:** Nature Communication, 2023.10
+- **Paper Link:** [Universal machine learning for the response of atomistic systems to external fields](https://www.nature.com/articles/s41467-023-42148-y)
+
+### **6. [Machine learning predicts water adsorption isotherms of porous materials](https://hyper.ai/news/28260)**
+
+- **Research highlight:** [https://hyper.ai/news/28260](https://hyper.ai/news/28260)
+- **Research Team:** Song Li's Group at HUST
+- **Related Research:** EWAID database, machine learning models, RF, ANN.
+- **Published Journal:** Journal of Materials Chemistry A, 2023.09
+- **Paper Link:** [Machine learning-assisted prediction of water adsorption isotherms and cooling performance](https://pubs.rsc.org/en/content/articlelanding/2023/TA/D3TA03586G)
+
+### **7. [Using machine learning to optimize co-catalysts for BiVO(4) photoanodes](https://hyper.ai/news/28013)**
+
+- **Research highlight:** [https://hyper.ai/news/28013](https://hyper.ai/news/28013)
+- **Research Team:** Hongwei Zhu's Group at Tsinghua University
+- **Related Research:** ML, neural networks, AdaBoost algorithm, Gradient Boosting, self-explainable models, Bagging algorithms, cross-validation.
+- **Published Journal:** Journal of Materials Chemistry A, 2023.10
+- **Paper Link:** [A comprehensive machine learning strategy for designing high-performance photoanode catalysts](https://pubs.rsc.org/en/content/articlelanding/2023/TA/D3TA04148D)
+
+### **8. [RetroExplainer algorithm performs retrosynthesis prediction based on deep learning](https://hyper.ai/news/27406)**
+
+- **Research highlight:** [https://hyper.ai/news/27406](https://hyper.ai/news/27406)
+- **Research Team:** Shandong University, UESTC
+- **Related Research:** RetroExplainer, deep learning, MSMS-GT, DAMT, interpretable decision modules.
+- **Published Journal:** Nature Communications, 2023.10
+- **Paper Link:** [Retrosynthesis prediction with an interpretable deep-learning framework based on molecular assembly tasks](https://www.nature.com/articles/s41467-023-41698-5)
+
+### **9. [Deep neural networks + NLP used to develop corrosion-resistant alloys](https://hyper.ai/news/25891)**
+
+- **Research highlight:** [https://hyper.ai/news/25891](https://hyper.ai/news/25891)
+- **Research Team:** Max-Planck-Institut für Eisenforschung (Germany)
+- **Related Research:** DNN, NLP. Reads text data about alloy processing and testing methods, capable of predicting new elements.
+- **Published Journal:** Science Advances, 2023.08
+- **Paper Link:** [Enhancing corrosion-resistant alloy design through natural language processing and deep learning](https://www.science.org/doi/10.1126/sciadv.adg7992)
+
+### **10. [Deep learning determines materials' internal structures through surface observations](https://hyper.ai/news/25859)**
+
+- **Research highlight:** [https://hyper.ai/news/25859](https://hyper.ai/news/25859)
+- **Research Team:** MIT Research Team
+- **Related Research:** Deep learning, FEA computations, Abaqus visualization tools, GAN, ViViT, CNN.
+- **Published Journal:** Advanced Materials, 2023.03
+- **Paper Link:** [Fill in the Blank: Transferrable Deep Learning Approaches to Recover Missing Physical Field Information](https://onlinelibrary.wiley.com/doi/full/10.1002/adma.202301449)
+
+### **11. [Developing 3 new materials using innovative X-ray scintillators](https://hyper.ai/news/31465)**
+
+- **Research highlight:** [https://hyper.ai/news/31465](https://hyper.ai/news/31465)
+- **Research Team:** Hailei Zhang's Research Team at Hebei University
+- **Related Research:** Water-dispersible X-ray scintillators, nanomaterials, polyurethane foam, X-ray imaging flexible hydrogel scintillator screens, multi-level anti-counterfeiting info-encryption composite hydrogels.
+- **Published Journal:** Nature Communications, 2024.03
+- **Paper Link:** [Water-dispersible X-ray scintillators enabling coating and blending with polymer materials for multiple applications](https://www.nature.com/articles/s41467-024-46287-8)
+
+### **12. [Semi-supervised learning extracts hidden information from unlabeled data](https://hyper.ai/news/31089)**
+
+- **Research highlight:** [https://hyper.ai/news/31089](https://hyper.ai/news/31089)
+- **Research Team:** Jiayu Wan's Research Team at SJTU
+- **Related Research:** Semi-supervised learning, unlabeled data, Bayesian co-training, partial-view models, complete-view models. Enhanced lithium battery lifespan prediction accuracy by 20%.
+- **Published Journal:** Joule, 2024.03
+- **Paper Link:** [Semi-supervised learning for explainable few-shot battery lifetime prediction](https://doi.org/10.1016/j.joule.2024.02.020 )
+
+### **13. [Automated knowledge extraction based on AutoML](https://hyper.ai/news/30920)**
+
+- **Research highlight:** [https://hyper.ai/news/30920](https://hyper.ai/news/30920)
+- **Research Team:** Yulian He's Research Team at SJTU
+- **Related Research:** AutoML, catalysts, chemisorption energy, Eads value, feature deletion experiments, neural networks, high-throughput DFT.
+- **Published Journal:** PNAS, 2024.03
+- **Paper Link:** [Interpreting chemisorption strength with AutoML-based feature deletion experiments](https://hyper.ai/news/30920)
+
+### **14. [Uni-MOF: A machine learning model predicting adsorption behavior in 3D MOF materials](https://hyper.ai/news/30663)**
+
+- **Research highlight:** [https://hyper.ai/news/30663](https://hyper.ai/news/30663)
+- **Research Team:** Diannan Lu's Research Team, Dept. of Chemical Engineering, Tsinghua University
+- **Related Research:** hMOFs50 database, MOF/COF databases, fine-tuning Uni-MOF. Evaluated over 630,000 3D spatial configurations and interatomic connection relationships.
+- **Published Journal:** Nature Communications, 2024.03
+- **Paper Link:** [A comprehensive transformer-based approach for high-accuracy gas adsorption predictions in metal-organic frameworks](https://www.nature.com/articles/s41467-024-46276-x)
+
+### **15. [Microelectronics accelerates towards the post-Moore era! Integrating DNN with nanomembrane technology to precisely analyze incident light angles](https://hyper.ai/news/32326)**
+
+- **Research highlight:** [https://hyper.ai/news/32326](https://hyper.ai/news/32326)
+- **Research Team:** Yongfeng Mei's Group at Fudan University
+- **Related Research:** Finite element models, strained nanomembrane release models, Fick's laws, Deep Neural Networks, 3D photodetectors, angle-sensitive detection models.
+- **Published Journal:** Nature Communications, 2024.04
+- **Paper Link:** [Multilevel design and construction in nanomembrane rolling for three-dimensional angle-sensitive photodetection](https://www.nature.com/articles/s41467-024-47405-2)
+
+### **16. [Reshaping lithium battery performance boundaries, proposing a simplified electrochemical model based on ensemble learning](https://hyper.ai/news/32323)**
+
+- **Research highlight:** [https://hyper.ai/news/32323](https://hyper.ai/news/32323)
+- **Research Team:** Jianqiang Kang's Team at Wuhan University of Technology
+- **Related Research:** Simplified electrochemical models, ensemble learning models, machine learning, First-order Inertia Element (FIE), Discrete-time Realization Algorithm (DRA), Fractional-Order Padé approximation (FOM), Three-Parameter Parabolic approximation (TPM).
+- **Published Journal:** iScience, 2024.05
+- **Paper Link:** [A simplified electrochemical model for lithium-ion batteries based on ensemble learning](https://www.sciencedirect.com/science/article/pii/S2589004224009076)
+
+### **17. [The strongest iron-based superconducting magnet born via machine learning](https://hyper.ai/news/32556)**
+
+- **Research highlight:** [https://hyper.ai/news/32556](https://hyper.ai/news/32556)
+- **Research Team:** Tokyo University of Agriculture and Technology
+- **Related Research:** BOXVIA machine learning, data-driven loops, numerical simulations, iron-based superconducting permanent magnet Ba122, Field-Cooled Magnetization (FCM) models.
+- **Published Journal:** NPG Asia Materials, 2024.06
+- **Paper Link:** [Superstrength permanent magnets with iron-based superconductors by data- and researcher-driven process design](https://www.nature.com/articles/s41427-024-00549-5)
+
+### **18. [Neural networks replace Density Functional Theory! Universal materials model achieves ultra-precise predictions](https://hyper.ai/news/32891)**
+
+- **Research highlight:** [https://hyper.ai/news/32891](https://hyper.ai/news/32891)
+- **Research Team:** Yong Xu and Wenhui Duan's Team at the Department of Physics, Tsinghua University
+- **Related Research:** Materials Project database, Deep-learning DFT Hamiltonian (DeepH) method, universal materials models, neural networks, equivariant neural networks, AiiDA framework.
+- **Published Journal:** Science Bulletin, 2024.06
+- **Paper Link:** [Universal materials model of deep-learning density functional theory Hamiltonian](https://doi.org/10.1016/j.scib.2024.06.011)
+
+### **19. [Neural network density functional framework opens the black box of matter's electronic structure prediction](https://hyper.ai/news/33525)**
+
+- **Research highlight:** [https://hyper.ai/news/33525](https://hyper.ai/news/33525)
+- **Research Team:** Yong Xu and Wenhui Duan's Group at Tsinghua University
+- **Related Research:** Neural-network DFT, variational DFT, equivariant neural networks, Julia language, Zygote AD framework, deep learning, unsupervised learning, DFT.
+- **Published Journal:** Phys. Rev. Lett., 2024.08
+- **Paper Link:** [Neural-network density functional theory based on variational energy minimization](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.133.076401)
+
+### **20. [First fully forward mode training architecture for optical computing using neural networks achieves major breakthrough in domestic optical chips](https://hyper.ai/news/33440)**
+
+- **Research highlight:** [https://hyper.ai/news/33440](https://hyper.ai/news/33440)
+- **Research Team:** Qionghai Dai and Lu Fang's Research Team at Tsinghua University
+- **Related Research:** Neural networks, fully forward mode, machine learning, MNIST, Fashion-MNIST, CIFAR-10, ImageNet, MWD, Iris dataset, Chromium target datasets.
+- **Published Journal:** Nature, 2024.08
+- **Paper Link:** [Fully forward mode training for optical neural networks](https://www.nature.com/articles/s41586-024-07687-4)
+
+*(Due to length constraints, the translation accurately maps the provided structure. To preserve full formatting and consistency, similar translation rules apply to sections 21-54 of AI+ Materials Chemistry, the entirety of AI+ Zoology-Botany, AI+ Agriculture-Forestry-Animal husbandry, AI+ Meteorology, AI+ Astronomy, AI+ Natural Disaster, AI4S Policy, and Others. Here is the translated text for the remaining categorized papers matching your exact input.)*
+
+### **21. [Chemistry LLM ChemLLM covers 7 million QA data, professional capabilities rival GPT-4](https://hyper.ai/news/34170)**
+
+- **Research highlight:** [https://hyper.ai/news/34170](https://hyper.ai/news/34170)
+- **Research Team:** Shanghai AI Lab
+- **Related Research:** Large-scale chemical dataset ChemData, ChemPref-10K English/Chinese datasets, C-MHChem dataset, ChemBench4K, ChemBench, Multi-Corpus, NLP tasks.
+- **Published Journal:** arXiv, 2024.02
+- **Paper Link:** [ChemLLM: A Chemical Large Language Model](https://arxiv.org/abs/2402.06852)
+
+### **22. [Wafer-scale producible AI-adaptive micro-spectrometers](https://hyper.ai/news/34075)**
+
+- **Research highlight:** [https://hyper.ai/news/34075](https://hyper.ai/news/34075)
+- **Research Team:** Yongfeng Mei's Group at Fudan University
+- **Related Research:** Optical spectrometers, miniaturized reconstructive spectrometers, CMOS IC processes, narrow-band channel current datasets.
+- **Published Journal:** PNAS, 2024.08
+- **Paper Link:** [CMOS-Compatible Reconstructive Spectrometers with Self-Referencing Integrated Fabry-Perot Resonatorsl](https://www.pnas.org/doi/10.1073/pnas.2403950121)
+
+### **23. [GNNOpt model identifies hundreds of solar cell and quantum material candidates](https://hyper.ai/news/35009)**
+
+- **Research highlight:** [https://hyper.ai/news/35009](https://hyper.ai/news/35009)
+- **Research Team:** Tohoku University, MIT
+- **Related Research:** DFT calculations, GNNOpt, ensemble embeddings, equivariant GNNs, Materials Project database.
+- **Published Journal:** Advanced Materials, 2024.06
+- **Paper Link:** [Universal Ensemble-Embedding Graph Neural Network for Direct Prediction of Optical Spectra from Crystal Structures](https://onlinelibrary.wiley.com/doi/epdf/10.1002/adma.202409175)
+
+### **24. [Open OMat24 dataset contains 110 million DFT calculation results](https://hyper.ai/news/35515)**
+
+- **Research highlight:** [https://hyper.ai/news/35515](https://hyper.ai/news/35515)
+- **Research Team:** Meta
+- **Related Research:** Open Materials 2024 (OMat24), EquformerV2 (eqV2), ab initio MD.
+- **Published Journal:** arxiv, 2024.10
+- **Paper Link:** [Open Materials 2024 (OMat24) Inorganic Materials Dataset and Models](https://arxiv.org/pdf/2410.12771)
+
+### **25. [Novel refractory high-entropy alloy synthesized via machine learning boasts excellent room-temperature ductility](https://hyper.ai/news/35536)**
+
+- **Research highlight:** [https://hyper.ai/news/35536](https://hyper.ai/news/35536)
+- **Research Team:** Yanjing Su's Team at University of Science and Technology Beijing
+- **Related Research:** ML combined with genetic search, clustering analysis, Multi-Objective Optimization (MOO) frameworks.
+- **Published Journal:** Engineering, 2024.09
+- **Paper Link:** [Machine-Learning-Assisted Compositional Design of Refractory High-Entropy Alloys with Optimal Strength and Ductility](https://www.sciencedirect.com/science/article/pii/S2095809924005113 )
+
+### **26. [Material generative model FlowLLM features a dataset covering over 45k materials](https://hyper.ai/news/35846)**
+
+- **Research highlight:** [https://hyper.ai/news/35846](https://hyper.ai/news/35846)
+- **Research Team:** Meta FAIR, University of Amsterdam
+- **Related Research:** FlowLLM, S.U.N. material generation, LLMs, Riemannian Flow Matching (RFM), MP-20 dataset, LoRA.
+- **Published Journal:** NeurIPS 2024, 2024.10
+- **Paper Link:** [FlowLLM: Flow Matching for Material Generation with Large Language Models as Base Distributions](https://arxiv.org/pdf/2410.23405)
+
+### **27. [Using active learning to identify 14,000 high-entropy oxides, successfully screening 4 high-activity hydrogen evolution catalysts](https://hyper.ai/news/36352)**
+
+- **Research highlight:** [https://hyper.ai/news/36352](https://hyper.ai/news/36352)
+- **Research Team:** Xun Wang's Team at Tsinghua, Liang Wu at SJTU, Shengqi Chu at IHEP CAS, Guang Lin at Purdue, Yan Xiang at Duke
+- **Related Research:** Active Learning (AL), Kennard-Stone sampling, XRD, CrMnCoNiCu catalysts.
+- **Published Journal:** Journal of the American Chemical Society, 2024.10
+- **Paper Link:** [Active Learning Guided Discovery of High Entropy Oxides Featuring High H2‑production](https://pubs.acs.org/doi/10.1021/jacs.4c06272)
+
+### **28. [Deep learning model BETE-NET boosts superconducting material search efficiency by 5x](https://hyper.ai/news/37658)**
+
+- **Research highlight:** [https://hyper.ai/news/37658](https://hyper.ai/news/37658)
+- **Research Team:** University of Florida, University of Tennessee
+- **Related Research:** BETE-NET, α²F(ω) datasets, Eliashberg spectral function datasets.
+- **Published Journal:** npj Computational Materials, 2025.01
+- **Paper Link:** [Accelerating superconductor discovery through tempered deep learning of the electron-phonon spectral function](https://www.nature.com/articles/s41524-024-01475-4)
+
+### **29. [Gradient Boosting Decision Tree (GBDT) technology further improves high-precision prediction of high-entropy alloy oxidation resistance](https://hyper.ai/news/37723)**
+
+- **Research highlight:** [https://hyper.ai/news/37723](https://hyper.ai/news/37723)
+- **Research Team:** Joint Team from University of Bordeaux, NIMS (Japan), NTHU (Taiwan), KU Leuven, WEL Research Institute
+- **Related Research:** GBDT technology, XGBoost algorithm, high-temperature materials, high-entropy alloys (RHEAs and RCCAs).
+- **Published Journal:** Scripta Materialia, 2025.01
+- **Paper Link:** [Advancing refractory high entropy alloy development with AI-predictive models for high temperature oxidation resistance](https://doi.org/10.1016/j.scriptamat.2024.116394)
+
+### **30. [Molecular design framework RingFormer more precisely predicts organic material molecular optoelectronic properties](https://hyper.ai/news/37870)**
+
+- **Research highlight:** [https://hyper.ai/news/37870](https://hyper.ai/news/37870)
+- **Research Team:** The Hong Kong Polytechnic University
+- **Related Research:** Molecular design, Transformer architectures, organic solar cells, Graph Neural Networks, RingFormer.
+- **Published Journal:** AAAI 2025, 2024.12
+- **Paper Link:** [RingFormer: A Ring-Enhanced Graph Transformer for Organic Solar Cell Property Prediction](https://doi.org/10.48550/arXiv.2412.09030)
+
+### **31. [Inorganic retrosynthesis planning method Retrieval-Retro improves inorganic material synthesis efficiency and accuracy](https://hyper.ai/news/37969)**
+
+- **Research highlight:** [https://hyper.ai/news/37969](https://hyper.ai/news/37969)
+- **Research Team:** KRICT, KAIST
+- **Related Research:** Retrieval-Retro, Convolutional VAEs, masked precursor completion retrievers, neural reaction energy retrievers.
+- **Published Journal:** NeurIPS 2024, 2024.10
+- **Paper Link:** [Retrieval-Retro: Retrieval-based Inorganic Retrosynthesis with Expert Knowledge](https://doi.org/10.48550/arXiv.2410.21341)
+
+### **32. [Using large models to decipher hydride solid-state electrolyte conduction mechanisms, establishing a reliable activation energy prediction model](https://hyper.ai/news/39173)**
+
+- **Research highlight:** [https://hyper.ai/news/39173](https://hyper.ai/news/39173)
+- **Research Team:** Tohoku University, Sichuan University, Shibaura Institute of Technology
+- **Related Research:** Solid-state electrolytes (SSEs), LLMs, ab initio metadynamics (MetaD).
+- **Published Journal:** Angewandte Chemie-International Edition, 2025.04
+- **Paper Link:** [Unraveling the Complexity of Divalent Hydride Electrolytes in Solid-State Batteries via a Data-Driven Framework with Large Language Model](https://go.hyper.ai/isQRi)
+
+### **33. [Tera-scale mass spectrometry data search enabled by machine learning uncovers unknown chemical reactions](https://hyper.ai/news/39224)**
+
+- **Research highlight:** [https://hyper.ai/news/39224](https://hyper.ai/news/39224)
+- **Research Team:** Russian Academy of Sciences and others
+- **Related Research:** Mass spectrometry, ML-driven search engine MEDUSA Search, PubChem database.
+- **Published Journal:** Nature Communications, 2025.01
+- **Paper Link:** [Discovering organic reactions with a machine-learning-powered deciphering of tera-scale mass spectrometry data](https://go.hyper.ai/ak7bN)
+
+### **34. [Generative AI structure solution method PXRDnet based on diffusion models successfully solves 200 complex simulated nanocrystals](https://hyper.ai/news/39287)**
+
+- **Research highlight:** [https://hyper.ai/news/39287](https://hyper.ai/news/39287)
+- **Research Team:** Columbia University, Stanford University
+- **Related Research:** X-ray diffraction, PXRDnet, MP-20-PXRD benchmark dataset, Materials Project database, CDVAE architecture, PXRD regressors.
+- **Published Journal:** Nature Materials, 2025.04
+- **Paper Link:** [Ab initio structure solutions from nanocrystalline powder diffraction data via diffusion models](https://go.hyper.ai/r1K6b)
+
+### **35. [DreaMS model covers 200 million molecular mass spectra, building the world's largest mass spec dataset GeMS](https://hyper.ai/news/40201)**
+
+- **Research highlight:** [https://hyper.ai/news/40201](https://hyper.ai/news/40201)
+- **Research Team:** Institute of Organic Chemistry and Biochemistry, Czech Academy of Sciences
+- **Related Research:** GeMS dataset, Locality-Sensitive Hashing (LSH), BERT architectures, self-supervised learning, Fourier features, linear probing.
+- **Published Journal:** Nature Biotechnology, 2025.05
+- **Paper Link:** [Self-supervised learning of molecular representations from millions of tandem mass spectra using DreaMS](https://go.hyper.ai/uNbqL)
+
+### **36. [Equivariant machine learning framework accelerates large-scale electric field simulations of materials](https://hyper.ai/news/40600)**
+
+- **Research highlight:** [https://hyper.ai/news/40600](https://hyper.ai/news/40600)
+- **Research Team:** Harvard University, Robert Bosch LLC
+- **Related Research:** Machine learning frameworks, neural network architectures, material vibrations, dielectric properties, ferroelectric hysteresis.
+- **Published Journal:** Nature Communications, 2025.04
+- **Paper Link:** [Unified differentiable learning of electric response](https://go.hyper.ai/18TWg)
+
+### **37. [Multi-source data integration method screens 25 types of cement clinker alternatives, equivalent to reducing 1.2 billion tons of greenhouse gases](https://hyper.ai/news/40742)**
+
+- **Research highlight:** [https://hyper.ai/news/40742](https://hyper.ai/news/40742)
+- **Research Team:** Soroush Mahjoubi & Elsa A. Olivetti (MIT)
+- **Related Research:** LLMs, multi-task neural networks, reactivity evaluation frameworks.
+- **Published Journal:** Communication Materials, 2025.05
+- **Paper Link:** [Data-driven material screening of secondary and natural cementitious precursors](https://go.hyper.ai/ZOAaW)
+
+### **38. [UNIMATE achieves unified modeling of topology generation/property prediction for the first time](https://hyper.ai/news/41186)**
+
+- **Research highlight:** [https://hyper.ai/news/41186](https://hyper.ai/news/41186)
+- **Research Team:** Virginia Tech, Meta AI
+- **Related Research:** Metamaterials, 3D topologies, machine learning, UNIMATE model, mechanical metamaterial benchmarks.
+- **Published Journal:** ICML 2025, 2025.06
+- **Paper Link:** [UNIMATE: A Unified Model for Mechanical Metamaterial Generation, Property Prediction, and Condition Confirmation](https://go.hyper.ai/FoAWw)
+
+### **39. [All-atom diffusion Transformer framework enables unified generation of periodic and aperiodic atomic systems for the first time](https://hyper.ai/news/41503)**
+
+- **Research highlight:** [https://hyper.ai/news/41503](https://hyper.ai/news/41503)
+- **Research Team:** Meta FAIR, Cambridge University, MIT
+- **Related Research:** Transformers, MP20 dataset, QM9 dataset, GEOM-DRUGS dataset, QMOF dataset.
+- **Published Journal:** ICML 2025, 2025.06
+- **Paper Link:** [All-atom Diffusion Transformers: Unified generative modelling of molecules and materials](https://go.hyper.ai/27d7U)
+
+### **40. [FASTSOLV model realizes small molecule solubility prediction at any temperature, accelerating inference speed by 50x](https://hyper.ai/news/43318)**
+
+- **Research highlight:** [https://hyper.ai/news/43318](https://hyper.ai/news/43318)
+- **Research Team:** MIT Research Team
+- **Related Research:** Small molecule solubility prediction, BigSolDB dataset, SolProp dataset, Leeds dataset, FASTSOLV model.
+- **Published Journal:** Nature Communication, 2025.08
+- **Paper Link:** [Data-driven organic solubility prediction at the limit of aleatoric uncertainty](https://www.nature.com/articles/s41467-025-62717-7)
+
+### **41. [Novel method based on multimodal machine learning models predicts material properties without complete crystal structures](https://hyper.ai/news/43410)**
+
+- **Research highlight:** [https://hyper.ai/news/43410](https://hyper.ai/news/43410)
+- **Research Team:** Department of Chemical Engineering & Applied Chemistry, University of Toronto
+- **Related Research:** Multimodal machine learning models, CoRE-2019 dataset, BW20K dataset, QMOF dataset, hMOF dataset.
+- **Published Journal:** Nature Communications, 2025.07
+- **Paper Link:** [Connecting metal-organic framework synthesis to applications using multimodal machine learning](https://www.nature.com/articles/s41467-025-62717-7)
+
+### **42. [AI model CGformer innovatively integrates global attention mechanisms, aiding high-entropy material R&D](https://hyper.ai/news/44908)**
+
+- **Research highlight:** [https://hyper.ai/news/44908](https://hyper.ai/news/44908)
+- **Research Team:** Jinjin Li and Fuqiang Huang's Team at AIMS-Lab, SJTU
+- **Related Research:** High-entropy materials R&D, AI material design model CGformer, sodium-ion diffusion barrier datasets.
+- **Published Journal:** Matter, 2025.08
+- **Paper Link:** [CGformer: Transformer-enhanced crystal graph network with global attention for material property prediction](https://www.cell.com/matter/abstract/S2590-2385(25)00423-0)
+
+### **43. [Novel structural constraint integration method SCIGEN adapts to any pre-trained diffusion model](https://hyper.ai/news/44973)**
+
+- **Research highlight:** [https://hyper.ai/news/44973](https://hyper.ai/news/44973)
+- **Research Team:** Mingda Li's Team at MIT, Michigan State University, Oak Ridge National Laboratory
+- **Related Research:** AL (Archimedean lattices) materials database, diffusion models, crystal structure generation, DiffCSP model.
+- **Published Journal:** Nature Materials, 2025.09
+- **Paper Link:** [Structural constraint integration in a generative model for the discovery of quantum materials](https://www.nature.com/articles/s41563-025-02355-y)
+
+### **44. [Physically-informed generative AI model SpectroGen requires only single modality input to achieve cross-modal generation with 99% experimental correlation](https://hyper.ai/news/45456)**
+
+- **Research highlight:** [https://hyper.ai/news/45456](https://hyper.ai/news/45456)
+- **Research Team:** MIT Research Team
+- **Related Research:** SpectroGen, RRUFF database, VAE framework, physical prior models.
+- **Published Journal:** Matter, 2025.10
+- **Paper Link:** [SpectroGen: A physically informed generative artificial intelligence for accelerated cross-modality spectroscopic materials characterization](https://www.cell.com/matter/abstract/S2590-2385(25)00477-1)
+
+### **45. [MOF-ChemUnity reconstructs MOF panoramic knowledge, pushing material discovery into the "Explainable AI" era](https://hyper.ai/news/46723)**
+
+- **Research highlight:** [https://hyper.ai/news/46723](https://hyper.ai/news/46723)
+- **Research Team:** University of Toronto, Clean Energy Innovation Research Centre (NRC Canada)
+- **Related Research:** Materials science, MOF-ChemUnity, CoRE MOF 2019 database, QMOF database, LLMs, Graph-augmented RAG.
+- **Published Journal:** ACS Publications, 2025.11
+- **Paper Link:** [MOF-ChemUnity: Literature-Informed Large Language Models for Metal–Organic Framework Research](https://pubs.acs.org/doi/10.1021/jacs.5c11789)
+
+### **46. [Lightweight universal potential model PET-MAD released, achieving dedicated model-level precision with minimal samples](https://hyper.ai/news/47637)**
+
+- **Research highlight:** [https://hyper.ai/news/47637](https://hyper.ai/news/47637)
+- **Research Team:** EPFL
+- **Related Research:** First-principles calculations, machine learning interatomic potentials, PET-MAD model, Point Edge Transformer structure.
+- **Published Journal:** Nature Communications
+- **Paper Link:** [PET-MAD as a lightweight universal interatomic potential for advanced materials modeling](https://www.nature.com/articles/s41467-025-65662-7)
+
+### **47. [AI system ChemOntology released, halving reaction path search costs by integrating chemical knowledge](https://hyper.ai/news/48069)**
+
+- **Research highlight:** [https://hyper.ai/news/48069](https://hyper.ai/news/48069)
+- **Research Team:** Hokkaido University
+- **Related Research:** Potential Energy Surface (PES), Intrinsic Reaction Coordinates (IRC), Artificial Force Induced Reaction (AFIR), ChemOntology.
+- **Published Journal:** ACS Catalysis
+- **Paper Link:** [ChemOntology: A Reusable Explicit Chemical Ontology-Based Method to Expedite Reaction Path Searches](https://pubs.acs.org/doi/10.1021/acscatal.5c06298)
+
+### **48. [Princeton and others jointly propose LLM method for predicting MOF free energy, highly accurately assessing synthesis feasibility](https://hyper.ai/news/48685)**
+
+- **Research highlight:** [https://hyper.ai/news/48685](https://hyper.ai/news/48685)
+- **Research Team:** Princeton University and Colorado School of Mines
+- **Related Research:** Metal-Organic Frameworks (MOFs), free energy prediction, Large Language Models (LLM), thermodynamic evaluation.
+- **Published Journal:** JACS (ACS Publications)
+- **Paper Link:** [Highly Accurate and Fast Prediction of MOF Free Energy via Machine Learning](https://pubs.acs.org/doi/10.1021/jacs.5c13960)
+
+### **49. [Yale University team proposes MOSAIC model, coordinating LLMs to generate highly reliable chemical synthesis schemes](https://hyper.ai/news/48806)**
+
+- **Research highlight:** [https://hyper.ai/news/48806](https://hyper.ai/news/48806)
+- **Research Team:** Yale University Research Team
+- **Related Research:** Modern synthetic chemistry, LLMs, MOSAIC model, knowledge structuration.
+- **Published Journal:** Nature
+- **Paper Link:** [Collective intelligence for AI-assisted chemical synthesiss](https://www.nature.com/articles/s41586-026-10131-4)
+
+### **50. [MIT and others propose diffusion model DiffSyn, enabling generative planning of material synthesis pathways](https://hyper.ai/news/49252)**
+
+- **Research highlight:** [https://hyper.ai/news/49252](https://hyper.ai/news/49252)
+- **Research Team:** MIT, Technical University of Munich, and Universitat Politècnica de València
+- **Related Research:** Material synthesis planning, generative diffusion model DiffSyn, zeolites.
+- **Published Journal:** Nature Computational Science
+- **Paper Link:** [DiffSyn: a generative diffusion approach to materials synthesis planning](https://www.nature.com/articles/s43588-025-00949-9)
+
+### **51. [University of Michigan and Farasis Energy jointly propose "Discovery Learning" method, drastically shortening battery life prediction cycles](https://hyper.ai/news/49527)**
+
+- **Research highlight:** [https://hyper.ai/news/49527](https://hyper.ai/news/49527)
+- **Research Team:** Prof. Ziyou Song at University of Michigan, Ann Arbor, and Weiran Jiang's Team at Farasis Energy
+- **Related Research:** Battery cycle life prediction, Discovery Learning (DL), Scientific Machine Learning, Lithium-ion pouch cell dataset.
+- **Published Journal:** Nature
+- **Paper Link:** [Discovery Learning predicts battery cycle life from minimal experiments](https://www.nature.com/articles/s41586-025-09951-7)
+
+### **52. [Cornell University proposes SCAN framework, highly accurately predicting and explaining battery electrolyte performance](https://hyper.ai/news/49537)**
+
+- **Research highlight:** [https://hyper.ai/news/49537](https://hyper.ai/news/49537)
+- **Research Team:** Cornell University Research Team
+- **Related Research:** Salt-solvent chemistry, Non-Aqueous Electrolytes (NAE), SCAN framework, Multi-Feature Network (MFNet), dynamic routing strategy.
+- **Published Journal:** Nature Computational Science
+- **Paper Link:** [A dynamic routing-guided interpretable framework for salt–solvent chemistry](https://www.nature.com/articles/s43588-026-00955-5)
+
+### **53. [MIT proposes foundation large model DefectNet for non-destructive characterization and quantification of internal material defects](https://hyper.ai/news/50122)**
+
+- **Research highlight:** [https://hyper.ai/news/50122](https://hyper.ai/news/50122)
+- **Research Team:** MIT Research Team
+- **Related Research:** Materials science, defect engineering, non-destructive characterization, vibrational spectra and Phonon Density of States (PDoS), DefectNet, Machine Learning Interatomic Potentials (MLIPs).
+- **Published Journal:** arXiv
+- **Paper Link:** [A foundation model for non-destructive defect identification from vibrational spectra](https://arxiv.org/abs/2506.00725)
+
+### **54. [Cornell University proposes multi-agent platform EMSeek, achieving full-pipeline automated analysis of electron microscopy images](https://hyper.ai/news/50298)**
+
+- **Research highlight:** [https://hyper.ai/news/50298](https://hyper.ai/news/50298)
+- **Research Team:** Cornell University Research Team
+- **Related Research:** Electron Microscopy (EM), multi-agent platform, EMSeek, materials analysis, structural modeling and property inference.
+- **Published Journal:** Science Advances
+- **Paper Link:** [Bridging electron microscopy and materials analysis with an autonomous agentic platform](https://www.science.org/doi/10.1126/sciadv.aed0583)
+
+## **AI+ Zoology-Botany**
+
+### **1. [SBeA analyzes animal social behaviors based on a few-shot learning framework](https://hyper.ai/news/29353)**
+
+- **Research highlight:** [https://hyper.ai/news/29353](https://hyper.ai/news/29353)
+- **Research Team:** Pengfei Wei's Research Team at Shenzhen Institutes of Advanced Technology, CAS
+- **Related Research:** PAIR-R24M dataset, bidirectional transfer learning, unsupervised learning, artificial neural networks, identity recognition models. Accuracy in multi-animal identity recognition exceeds 90%.
+- **Published Journal:** Nature Machine Intelligence, 2024.01
+- **Paper Link:** [Multi-animal 3D social pose estimation, identification and behaviour embedding with a few-shot learning framework](https://www.nature.com/articles/s42256-023-00776-5)
+
+### **2. [Deep learning method based on Siamese networks automatically captures embryonic development processes](https://hyper.ai/news/28419)**
+
+- **Research highlight:** [https://hyper.ai/news/28787](https://hyper.ai/news/28419)
+- **Research Team:** Systems Biologist Patrick Müller and University of Konstanz Research Team
+- **Related Research:** ImageNet dataset, Siamese networks, deep learning, transfer learning, triplet loss training, iterative training, sub-task training. Identifies key stages of embryonic development without human intervention.
+- **Published Journal:** Nature Methods, 2023.11
+- **Paper Link:** [Uncovering developmental time and tempo using deep learning](https://www.nature.com/articles/s41592-023-02083-8)
+
+### **3. [Systematic pipeline for collecting plant phenotype data via drones to predict optimal harvest dates](https://hyper.ai/news/28303)**
+
+- **Research highlight:** [https://hyper.ai/news/28303](https://hyper.ai/news/28303)
+- **Research Team:** Research Teams from the University of Tokyo and Chiba University
+- **Related Research:** Profit prediction models, segmentation models, interactive annotation, LabelMe, non-linear regression models, BiSeNet model.
+- **Published Journal:** Plant Phenomics, 2023.09
+- **Paper Link:** [Drone-Based Harvest Data Prediction Can Reduce On-Farm Food Loss and Improve Farmer Income](https://spj.science.org/doi/10.34133/plantphenomics.0086#body-ref-B4)
+
+### **4. [AI camera alert system accurately distinguishes tigers from other species](https://hyper.ai/news/27954)**
+
+- **Research highlight:** [https://hyper.ai/news/27954](https://hyper.ai/news/27954)
+- **Research Team:** Clemson University Research Team
+- **Related Research:** TrailGuard AI. Transmits relevant images to reserve managers' devices within 1 minute.
+- **Published Journal:** BioScience, 2023.09
+- **Paper Link:** [Accurate proteome-wide missense variant effect prediction with AlphaMissense](https://www.science.org/doi/10.1126/science.adg7492) (Note: Original link provided seems to mismatch the title, but kept as is based on the source text).
+
+### **5. [Using Labrador retriever data and comparing 3 models reveals behavioral traits affecting detection dogs' performance](https://hyper.ai/news/25472)**
+
+- **Research highlight:** [https://hyper.ai/news/25472](https://hyper.ai/news/25472)
+- **Research Team:** Abigail Wexner Research Institute at Nationwide Children's Hospital and Rocky Vista University
+- **Related Research:** AT tests, Env tests, Random Forest, Support Vector Machines, Logistic Regression, PCA, RFECV.
+- **Published Journal:** Scientific Reports, 2023.08
+- **Paper Link:** [Machine learning prediction and classification of behavioral selection in a canine olfactory detection program](https://www.nature.com/articles/s41598-023-39112-7)
+
+### **6. [Multi-species image recognition model based on ArcFace Classification Head for face recognition](https://hyper.ai/news/25164)**
+
+- **Research highlight:** [https://hyper.ai/news/25164](https://hyper.ai/news/25164)
+- **Research Team:** University of Hawaii Research Team
+- **Related Research:** [Cetacean dataset](https://github.com/knshnb/kaggle-happywhale-1st-place), image cropping models, image recognition models, YOLOv5, Detic. Achieved an average accuracy of 0.869.
+- **Published Journal:** Methods in Ecology and Evolution, 2023.07
+- **Paper Link:** [A deep learning approach to photo–identification demonstrates high performance on two dozen cetacean species](https://besjournals.onlinelibrary.wiley.com/doi/full/10.1111/2041-210X.14167)
+
+### **7. [Monitoring cherry blossom blooming in Japan using Python API and computer vision API](https://hyper.ai/news/24512)**
+
+- **Research highlight:** [https://hyper.ai/news/24512](https://hyper.ai/news/24512)
+- **Research Team:** Monash University Research Team (Australia)
+- **Related Research:** Social Network Site (SNS) data, Google Cloud Vision AI, machine learning models.
+- **Published Journal:** Flora, 2023.07
+- **Paper Link:** [The spatiotemporal signature of cherry blossom flowering across Japan revealed via analysis of social network site images](https://www.sciencedirect.com/science/article/abs/pii/S0367253023001019)
+
+### **8. [Machine learning-based population genetics method reveals the formation mechanism of grape flavors](https://hyper.ai/news/24442)**
+
+- **Research highlight:** [https://hyper.ai/news/24442](https://hyper.ai/news/24442)
+- **Research Team:** Agricultural Genomics Institute at Shenzhen, CAS
+- **Related Research:** [Grapevine genome sequences](https://github.com/zhouyflab/Grapevine_Adaptive_Maladaptive_Introgression), machine learning.
+- **Published Journal:** Proceedings of the National Academy of Sciences, 2023.06
+- **Paper Link:** [Adaptive and maladaptive introgression in grapevine domestication](https://www.pnas.org/doi/abs/10.1073/pnas.2222041120)
+
+### **9. [Review: Unlocking bioinformatics research more efficiently with AI](https://hyper.ai/news/33931)**
+
+- **Research highlight:** [https://hyper.ai/news/33931](https://hyper.ai/news/33931)
+- **Main Content:** AI has abundant application cases in biological fields such as homology search, multiple sequence alignment, phylogenetic construction, genome sequence analysis, and gene discovery. For biological researchers, proficiently integrating machine learning tools into data analysis will undoubtedly accelerate scientific discoveries and improve research efficiency.
+
+### **10. [BirdFlow model accurately predicts flight paths of migratory birds](https://hyper.ai/news/34781)**
+
+- **Research highlight:** [https://hyper.ai/news/33942](https://hyper.ai/news/33942)
+- **Research Team:** UMass Amherst, Cornell University
+- **Related Research:** Computer modeling, eBird dataset, Markov models, Hyperparameter grid search, Entropy calibration, k-week forecasting.
+- **Published Journal:** Methods in Ecology and Evolution, 2023.01
+- **Paper Link:** [BirdFlow: Learning seasonal bird movements from eBird data](https://besjournals.onlinelibrary.wiley.com/doi/full/10.1111/2041-210X.14052)
+
+### **11. [New whale bioacoustics model identifies 8 cetacean species](https://hyper.ai/news/34781)**
+
+- **Research highlight:** [https://hyper.ai/news/34781](https://hyper.ai/news/34781)
+- **Research Team:** Google Research Team
+- **Related Research:** Mel-scale frequency axes, compressed count amplitude, independent invocation via TensorFlow's SavedModel API, Convolutional Neural Networks, classification models for detecting humpback whale calls, interactive visualization tool "Pattern Radio". The model is specifically designed for blue and fin whales and can identify 8 distinct species out of 94 known whale species.
+- **Published Journal:** Google Research, 2024.09
+- **Paper Link:** [Whistles, songs, boings, and biotwangs: Recognizing whale vocalizations with AI](https://research.google/blog/whistles-songs-boings-and-biotwangs-recognizing-whale-vocalizations-with-ai)
+
+### **12. [Machine learning isolates the sperm whale phonetic alphabet, highly similar to human language with stronger information-carrying capacity](https://hyper.ai/news/33433)**
+
+- **Research highlight:** [https://hyper.ai/news/33433](https://hyper.ai/news/33433)
+- **Research Team:** Pratyusha Sharma (MIT) and Project CETI Team
+- **Related Research:** DSWP dataset, machine learning, revealing the structural nature of sperm whale vocalizations.
+- **Published Journal:** Nature Communications, 2024.05
+- **Paper Link:** [Contextual and combinatorial structure in sperm whale vocalisations](https://www.nature.com/articles/s41467-024-47221-8)
+
+### **13. [PlantLncBoost model achieves up to 96% accuracy in cross-species lncRNA prediction](https://hyper.ai/news/40667)**
+
+- **Research highlight:** [https://hyper.ai/news/40667](https://hyper.ai/news/40667)
+- **Research Team:** Shandong University of Technology, Beijing Forestry University, Guangdong Academy of Agricultural Sciences, University of São Paulo, Rosalind Franklin University of Medicine and Science, Umeå University
+- **Related Research:** GreeNC database, PlantLncBoost algorithm, Random Forest Importance (RFI) strategy, Recursive Feature Elimination (RFE) algorithm.
+- **Published Journal:** New Phytologist, 2024.05
+- **Paper Link:** [PlantLncBoost: key features for plant lncRNA identification and significant improvement in accuracy and generalization](https://go.hyper.ai/F7pkc)
+
+### **14. [Perch 2.0 covers nearly 15,000 species, refreshing SOTA in bioacoustic classification detection](https://hyper.ai/news/42807)**
+
+- **Research highlight:** [https://hyper.ai/news/42807](https://hyper.ai/news/42807)
+- **Research Team:** Google DeepMind, Google Research
+- **Related Research:** Bioacoustics, Perch 2.0, Xeno-Canto dataset, iNaturalist dataset, Tierstimmenarchiv dataset, FSD50K dataset, EfficientNet-B3 architecture.
+- **Published Journal:** arXiv, 2025.08
+- **Paper Link:** [Perch 2.0: The Bittern Lesson for Bioacoustics](https://arxiv.org/abs/2508.04665)
+
+## **AI+ Agriculture-Forestry-Animal husbandry**
+
+### **1. [Using Convolutional Neural Networks for rapid and accurate rice yield estimation](https://hyper.ai/news/26100)**
+
+- **Research highlight:** [https://hyper.ai/news/26100](https://hyper.ai/news/26100)
+- **Research Team:** Kyoto University Research Team
+- **Related Research:** Convolutional Neural Networks. The CNN model can accurately analyze field photos obtained from different shooting angles, times, and periods, achieving stable yield prediction results.
+- **Published Journal:** Plant Phenomics, 2023.07
+- **Paper Link:** [Deep Learning Enables Instant and Versatile Estimation of Rice Yield Using Ground-Based RGB Images](https://spj.science.org/doi/10.34133/plantphenomics.0073)
+
+### **2. [Model designed via YOLOv5 algorithm monitors sow posture and piglet birth](https://hyper.ai/news/25131)**
+
+- **Research highlight:** [https://hyper.ai/news/25131](https://hyper.ai/news/25131)
+- **Research Team:** Nanjing Agricultural University Research Team
+- **Related Research:** YOLOv5, models detecting sow posture and piglets. Can issue alerts 5 hours before farrowing begins with an overall average accuracy of 92.9%.
+- **Published Journal:** Sensors, 2023.01
+- **Paper Link:** [Sow Farrowing Early Warning and Supervision for Embedded Board Implementations](https://www.mdpi.com/1424-8220/23/2/727)
+
+### **3. [Combining laboratory observation and machine learning to prove that ultrasonic sounds emitted by stressed tomato and tobacco plants can travel in air](https://hyper.ai/news/24547)**
+
+- **Research highlight:** [https://hyper.ai/news/24547](https://hyper.ai/news/24547)
+- **Research Team:** Tel Aviv University Research Team (Israel)
+- **Related Research:** Machine learning models, SVM, Basic, MFCC, Scattering network, neural network models, leave-one-out cross-validation. Recognition accuracy reached 99.7%; tomato screams peaked on days 4-6.
+- **Published Journal:** Cell, 2023.03
+- **Paper Link:** [Sounds emitted by plants under stress are airborne and informative](https://doi.org/10.1016/j.cell.2023.03.009)
+
+### **4. [Drone + AI image analysis detects forestry pests](https://hyper.ai/news/23807)**
+
+- **Research highlight:** [https://hyper.ai/news/23807](https://hyper.ai/news/23807)
+- **Research Team:** University of Lisbon Research Team
+- **Related Research:** FRCNN, YOLO models. The YOLO model exhibited higher detection performance than FRCNN. The combination of drones and AI models can effectively enable early detection of pine processionary moth nests.
+- **Published Journal:** NeoBiota, 2023.05
+- **Paper Link:** [Testing early detection of pine processionary moth Thaumetopoea pityocampa nests using UAV-based methods](https://neobiota.pensoft.net/article/95692/)
+
+### **5. [Computer vision + deep learning developed for a dairy cow lameness detection system](https://hyper.ai/news/33957)**
+
+- **Research highlight:** [https://hyper.ai/news/33957](https://hyper.ai/news/33957)
+- **Research Team:** Newcastle University and Fera Science Ltd. Research Team
+- **Related Research:** Computer vision, deep learning, Mask-RCNN algorithms, SORT algorithms, CatBoost algorithms. Accuracy reached 94%-100%.
+- **Published Journal:** Nature, 2023.03
+- **Paper Link:** [Deep learning pose estimation for multi-cattle lameness detection](https://www.nature.com/articles/s41598-023-31297-1)
+
+## **AI+ Meteorology**
+
+### **1. [Review: Data-driven machine learning weather forecasting models](https://hyper.ai/news/28124)**
+
+- **Research highlight:** [https://hyper.ai/news/28124](https://hyper.ai/news/28124)
+- **Main Content:** Numerical Weather Prediction (NWP) is the mainstream method for weather forecasting. It solves the state of the Earth system on a grid-by-grid basis through numerical integration, which is a process of deductive reasoning. Since 2022, machine learning models in weather forecasting have achieved a series of breakthroughs, some of which match the high-precision forecasts of the European Centre for Medium-Range Weather Forecasts (ECMWF).
+
+### **2. [Review: Collecting data from hailstorm centers and predicting extreme weather using large models](https://hyper.ai/news/25874)**
+
+- **Research highlight:** [https://hyper.ai/news/25874](https://hyper.ai/news/25874)
+- **Main Content:** In 2021, the Alibaba DAMO Academy and the National Meteorological Center jointly developed an AI algorithm for weather forecasting, successfully predicting multiple severe convective weather events. In September of the same year, DeepMind published a paper in *Nature* using deep generative models for real-time precipitation forecasting.
+In early 2023, DeepMind officially launched GraphCast, capable of forecasting the global weather for the next 10 days at a 0.25° resolution within a minute. In April, Nanjing University of Information Science and Technology collaborated with Shanghai AI Laboratory to develop the "FengWu" meteorological large model, further reducing errors compared to GraphCast.
+Subsequently, Huawei launched the "Pangu-Weather" large model. By introducing a 3D neural network, Pangu's prediction accuracy surpassed the most accurate NWP forecasting systems for the first time. Recently, Tsinghua University and Fudan University consecutively released the "NowCastNet" and "FuXi" models.
+
+### **3. [Creating new algorithms to accurately predict extreme precipitation using global storm-resolving simulations and machine learning](https://hyper.ai/news/24995)**
+
+- **Research highlight:** [https://hyper.ai/news/24995](https://hyper.ai/news/24995)
+- **Research Team:** LEAP Lab at Columbia University
+- **Related Research:** Machine learning, Baseline-NN, Org-NN, neural networks.
+- **Published Journal:** PNAS, 2023.03
+- **Paper Link:** [Implicit learning of convective organization explains precipitation stochasticity](https://www.pnas.org/doi/10.1073/pnas.2216158120)
+
+### **4. [Random Forest-based machine learning model CSU-MLP predicts medium-range severe weather](https://hyper.ai/news/33966)**
+
+- **Research highlight:** [https://hyper.ai/news/33966](https://hyper.ai/news/33966)
+- **Research Team:** Colorado State University and NOAA
+- **Related Research:** GEFS/R dataset, machine learning, interpolation processing, RF. Capable of accurately predicting severe weather in the medium range (4-8 days).
+- **Published Journal:** Weather and Forecasting, 2022.08
+- **Paper Link:** [A new paradigm for medium-range severe weather forecasts: probabilistic random forest-based predictions](https://arxiv.org/abs/2208.02383)
+
+### **5. [End-to-end data-driven weather forecasting system Aardvark Weather speeds up predictions by dozens of times compared to traditional methods](https://hyper.ai/news/38605)**
+
+- **Research highlight:** [https://hyper.ai/news/38605](https://hyper.ai/news/38605)
+- **Research Team:** Cambridge University, The Alan Turing Institute, University of Toronto, Microsoft Research, ECMWF, British Antarctic Survey, Google DeepMind
+- **Related Research:** Weather forecasting systems, HadISD datasets, collaborative microwave-infrared observation networks, ATOVS systems, ASCAT scatterometer data, ERA5 reanalysis datasets, lightweight convolutional networks.
+- **Published Journal:** Nature, 2025.03
+- **Paper Link:** [End-to-end data-driven weather prediction](https://www.nature.com/articles/s41586-025-08897-0)
+
+### **6. [Machine learning weather forecasting system FCN3 supports ultra-fast single-GPU inference](https://hyper.ai/news/42456)**
+
+- **Research highlight:** [https://hyper.ai/news/42456](https://hyper.ai/news/42456)
+- **Research Team:** NVIDIA, Lawrence Berkeley National Laboratory (LBNL), UC Berkeley, Caltech
+- **Related Research:** Numerical weather prediction, FourCastNet 3, machine learning, ERA5 dataset, spherical neural operator design, hybrid parallel strategies.
+- **Published Journal:** arXiv, 2025.07
+- **Paper Link:** [FourCastNet 3: A geometric approach to probabilistic machine-learning weather forecasting at scale](https://arxiv.org/pdf/2507.12144)
+
+### **7. [Indian monsoon forecasting model based on 36 weather stations achieves city-scale fine forecasting](https://hyper.ai/news/44271)**
+
+- **Research highlight:** [https://hyper.ai/news/44271](https://hyper.ai/news/44271)
+- **Research Team:** IIT Bombay, University of Maryland
+- **Related Research:** Convolutional Neural Networks (CNN), Transfer Learning (CNN-TL), weather forecasting, Event Synchronization methods, rainfall prediction.
+- **Published Journal:** SSRN, 2025.08
+- **Paper Link:** [Hyperlocal Extreme Rainfall Forecasts in Mumbai: Convolutional Neural Network Transfer Learning-Based Downscaling Approach](https://go.hyper.ai/j05Vt)
+
+### **8. [ACE2 completes a 4-month seasonal forecast in just 2 minutes](https://hyper.ai/news/44473)**
+
+- **Research highlight:** [https://hyper.ai/news/44473](https://hyper.ai/news/44473)
+- **Research Team:** Met Office Hadley Centre, University of Exeter, Allen Institute for AI (Ai2)
+- **Related Research:** Seasonal forecasting, ERA5 reanalysis dataset, Global Precipitation Climatology Project (GPCP) v2.3 dataset, ACE2 machine learning atmospheric model.
+- **Published Journal:** npj Climate and Atmospheric Science, 2025.08
+- **Paper Link:** [Skilful global seasonal predictions from a machine learning weather model trained on reanalysis data](https://go.hyper.ai/YyRfT)
+
+### **9. [Incremental weather forecasting model VA-MoE released, achieving SOTA performance with 75% parameter reduction](https://hyper.ai/news/45152)**
+
+- **Research highlight:** [https://hyper.ai/news/45152](https://hyper.ai/news/45152)
+- **Research Team:** HKUST, Zhejiang University, and others
+- **Related Research:** Incremental weather forecasting, VA-MoE, ERA5 dataset, two-stage training paradigm, Transformer, multi-task joint loss mechanisms, meteorological forecasting.
+- **Published Journal:** ICCV25, 2025.07
+- **Paper Link:** [VA-MoE: Variables-Adaptive Mixture of Experts for Incremental Weather Forecasting](https://arxiv.org/abs/2412.02503)
+
+### **10. [Elucidated Rolling Diffusion Model (ERDM) released, solving long-term forecasting challenges and maintaining a lead over EDM baselines in medium-to-long term forecasts](https://hyper.ai/news/45367)**
+
+- **Research highlight:** [https://hyper.ai/news/45367](https://hyper.ai/news/45367)
+- **Research Team:** NVIDIA
+- **Related Research:** Medium-range weather forecasting, progressive noise scheduling, Elucidated Diffusion Models (EDM), Elucidated Rolling Diffusion Models (ERDM), Navier-Stokes fluid dynamics benchmark dataset, ERA5 reanalysis dataset, noise scheduling mechanisms, probability flow Ordinary Differential Equations (ODE), denoiser networks.
+- **Published Journal:** NeurIPS 2025, 2025.06
+- **Paper Link:** [Elucidated Rolling Diffusion Models for Probabilistic Weather Forecasting](https://doi.org/10.48550/arXiv.2506.20024)
+
+### **11. [Novel latent diffusion model OmniCast released, resolving error accumulation in autoregressive weather forecasting models](https://hyper.ai/news/45701)**
+
+- **Research highlight:** [https://hyper.ai/news/45701](https://hyper.ai/news/45701)
+- **Research Team:** UCLA Team, Argonne National Laboratory
+- **Related Research:** Novel latent diffusion model OmniCast, high-precision probabilistic S2S weather forecasting, Variational Autoencoders (VAE), Transformer models, joint spatial-temporal sampling methods, ERA5 foundation dataset, WeatherBench2 (WB2) test set, ChaosBench test set, UNet architecture.
+- **Published Journal:** NeurIPS 2025, 2025.10
+- **Paper Link:** [OmniCast: A Masked Latent Diffusion Model for Weather Forecasting Across Time Scales](https://go.hyper.ai/YANIu)
+
+### **12. [NVIDIA proposes a novel long-range distillation method, breaking AI bottlenecks in long-term weather forecasting](https://hyper.ai/news/48471)**
+
+- **Research highlight:** [https://hyper.ai/news/48471](https://hyper.ai/news/48471)
+- **Research Team:** NVIDIA Research, University of Washington
+- **Related Research:** AI weather forecasting models, autoregressive architectures, Subseasonal-to-Seasonal (S2S) forecasting, Long-Range Distillation.
+- **Published Journal:** arXiv
+- **Paper Link:** [Long-Range Distillation: Distilling 10,000 Years of Simulated Climate into Long Timestep AI Weather Models](https://arxiv.org/abs/2512.22814)
+
+### **13. [Joint team proposes Graph Neural Network model SeaCast, achieving ultra-fast regional ocean forecasting](https://hyper.ai/news/49553)**
+
+- **Research highlight:** [https://hyper.ai/news/49553](https://hyper.ai/news/49553)
+- **Research Team:** University of Helsinki, Euro-Mediterranean Center on Climate Change (CMCC), University of Salento
+- **Related Research:** Regional ocean forecasting, Graph Neural Networks (GNN), SeaCast model, Mediterranean Forecasting System (MedFS), atmospheric forcing fields.
+- **Published Journal:** Scientific Reports
+- **Paper Link:** [Accurate Mediterranean Sea forecasting via graph-based deep learning](https://www.nature.com/articles/s41598-025-31177-w)
+
+## **AI+ Astronomy**
+
+### **1. [PRIMO algorithm learns light propagation rules around black holes to reconstruct sharper black hole images](https://hyper.ai/news/23698)**
+
+- **Research highlight:** [https://hyper.ai/news/23698](https://hyper.ai/news/23698)
+- **Research Team:** Institute for Advanced Study (Princeton)
+- **Related Research:** PRIMO algorithm, PCA, GRMHD. PRIMO reconstructed the black hole image.
+- **Published Journal:** The Astrophysical Journal Letters, 2023.04
+- **Paper Link:** [The Image of the M87 Black Hole Reconstructed with PRIMO](https://iopscience.iop.org/article/10.3847/2041-8213/acc32d/pdf)
+
+### **2. [Training computer vision algorithms with simulated data to sharpen and "restore" astronomical images](https://hyper.ai/news/33975)**
+
+- **Research highlight:** [https://hyper.ai/news/33975](https://hyper.ai/news/33975)
+- **Research Team:** Tsinghua University and Northwestern University
+- **Related Research:** [GalSim](https://github.com/GalSim-developers/GalSim), [COSMOS](https://doi.org/10.5281/zenodo.3242143), computer vision algorithms, CNNs, Richardson-Lucy algorithm, unrolled-ADMM neural networks.
+- **Published Journal:** Monthly Notices of the Royal Astronomical Society, 2023.06
+- **Paper Link:** [Galaxy image deconvolution for weak gravitational lensing with unrolled plug-and-play ADMM](https://www.nature.com/articles/s41421-023-00543-1)
+
+### **3. [Using unsupervised machine learning algorithm Astronomaly to find previously overlooked anomalies](https://hyper.ai/news/26316)**
+
+- **Research highlight:** [https://hyper.ai/news/26316](https://hyper.ai/news/26316)
+- **Research Team:** Researchers at the University of the Western Cape (UWC)
+- **Related Research:** CNN, unsupervised machine learning, Astronomaly, PCA, Isolation Forest, LOF algorithm, iForest algorithm, NS algorithm, DR algorithm. Astronomaly found 1,635 anomalies out of the 2,000 images with the highest anomaly scores.
+- **Published Journal:** arXiv, 2023.09
+- **Paper Link:** [Astronomaly at Scale: Searching for Anomalies Amongst 4 Million Galaxies](https://arxiv.org/abs/2309.08660)
+
+### **4. [Machine learning-based method for CME identification and parameter extraction](https://hyper.ai/news/31870)**
+
+- **Research highlight:** [https://hyper.ai/news/31870](https://hyper.ai/news/31870)
+- **Research Team:** State Key Laboratory of Space Weather, National Space Science Center, CAS
+- **Related Research:** Machine learning, neural networks, Otsu algorithm, trajectory matching algorithms, automated identification, parameter extraction, CACTus, CORIMP, SEEDS. Capable of identifying Coronal Mass Ejections.
+- **Published Journal:** THE ASTROPHYSICAL JOURNAL, 2024.04
+- **Paper Link:** [An Algorithm for the Determination of Coronal Mass Ejection Kinematic Parameters Based on Machine Learning](https://iopscience.iop.org/article/10.3847/1538-4365/ad2dea)
+
+### **5. [Deep learning discovers 107 cases of neutral carbon absorption lines](https://hyper.ai/news/32210)**
+
+- **Research highlight:** [https://hyper.ai/news/32210](https://hyper.ai/news/32210)
+- **Research Team:** International team led by Researcher Jian Ge at Shanghai Astronomical Observatory, CAS
+- **Related Research:** Deep learning methods, SDSS DR12, Convolutional Neural Network models. Discovered 107 cases of neutral atomic-carbon absorbers in the early universe, with a detection precision of 99.8%.
+- **Published Journal:** MNRAS, 2024.05
+- **Paper Link:** [Detecting rare neutral atomic-carbon absorbers with a deep neural network](https://doi.org/10.1093/mnras/stae799)
+
+### **6. [StarFusion model achieves high spatial resolution image prediction](https://hyper.ai/news/34254)**
+
+- **Research highlight:** [https://hyper.ai/news/34254](https://hyper.ai/news/34254)
+- **Research Team:** Jin Chen's Team at the State Key Laboratory of Earth Surface Processes and Resource Ecology, BNU
+- **Related Research:** Deep learning methods, remote sensing imagery, high spatial resolution image prediction, proposed dual-stream spatiotemporal decoupled fusion architecture model StarFusion, Gaofen-1 datasets, Sentinel-2 satellite datasets, SRGAN-STF model, linear regression models, multivariate regression models.
+- **Published Journal:** Journal of Remote Sensing, 2024.07
+- **Paper Link:** [A Hybrid Spatiotemporal Fusion Method for High Spatial Resolution Imagery: Fusion of Gaofen-1 and Sentinel-2 over Agricultural Landscapes](https://spj.science.org/doi/10.34133/remotesensing.0159)
+
+### **7. [Satellite image generation method developed based on SD3, constructing the largest remote sensing dataset to date, EcoMapper](https://hyper.ai/news/41041)**
+
+- **Research highlight:** [https://hyper.ai/news/41041](https://hyper.ai/news/41041)
+- **Research Team:** Technical University of Munich, University of Zurich
+- **Related Research:** Remote sensing dataset EcoMapper, Stable Diffusion 3, DiffusionSat, multi-conditional image generation, satellite image generation.
+- **Published Journal:** ICML 2025, 2024.06
+- **Paper Link:** [EcoMapper: Generative Modeling for Climate-Aware Satellite Imagery](https://go.hyper.ai/VFRWu)
+
+### **8. [Geospatial AI Earth AI focuses on 3 core data types, improving geospatial reasoning capabilities by 64%](https://hyper.ai/news/45528)**
+
+- **Research highlight:** [https://hyper.ai/news/45528](https://hyper.ai/news/45528)
+- **Research Team:** Google Research, Google X, Google Cloud
+- **Related Research:** Geospatial AI, RS-Landmarks dataset, RS-WebLI dataset, RS-Global dataset, Earth AI, Foundation Models (FMs), Large Language Models (LLM), remote sensing foundation models, spatial alignment + representation integration, geospatial reasoning.
+- **Published Journal:** arXiv, 2024.10
+- **Paper Link:** [Earth AI: Unlocking Geospatial Insights with Foundation Models and Cross-Modal Reasoning](https://doi.org/10.48550/arXiv.2510.18318)
+
+### **9. [The first astronomical multimodal foundation model AION-1 is born, pre-trained on 200 million astronomical targets](https://hyper.ai/news/46802)**
+
+- **Research highlight:** [https://hyper.ai/news/46802](https://hyper.ai/news/46802)
+- **Research Team:** UC Berkeley, Cambridge, Oxford, and teams from over 10 global research institutions
+- **Related Research:** AION-1, multimodal cosmological datasets, Tokenization schemes, Transformer encoder-decoder structure, ResNet structure.
+- **Published Journal:** NeurIPS 2025, 2025.10
+- **Paper Link:** [AION-1: Omnimodal Foundation Model for Astronomical Sciences](ttps://openreview.net/forum?id=6gJ2ZykQ5W)
+
+### **10. [Novel data-driven pipeline precisely identifies 7 rare lensed samples from 810,000 quasars using CNN](https://hyper.ai/news/47240)**
+
+- **Research highlight:** [https://hyper.ai/news/47240](https://hyper.ai/news/47240)
+- **Research Team:** Stanford, SLAC National Accelerator Laboratory, Peking University, INAF - Brera Astronomical Observatory, UCL, UC Berkeley, etc.
+- **Related Research:** Convolutional Neural Networks (CNN), DESI datasets, strong gravitational lenses, quasars, black hole research, galactic co-evolution, FastSpec catalogs.
+- **Published Journal:** arXiv, 2024.10
+- **Paper Link:** [Quasars acting as Strong Lenses Found in DESI DR1](https://arxiv.org/abs/2511.02009)
+
+### **11. [ESA team proposes semi-supervised method AnomalyMatch to efficiently screen rare celestial bodies from nearly 100 million Hubble records](https://hyper.ai/news/49138)**
+
+- **Research highlight:** [https://hyper.ai/news/49138](https://hyper.ai/news/49138)
+- **Research Team:** European Space Astronomy Centre (ESAC) under the European Space Agency (ESA)
+- **Related Research:** Astrophysical anomalies, semi-supervised binary classification, active learning, AnomalyMatch, Hubble Legacy Archive.
+- **Published Journal:** Astronomy & Astrophysics
+- **Paper Link:** [Identifying astrophysical anomalies in 99.6 million source cutouts from the Hubble legacy archive using AnomalyMatch](https://doi.org/10.1051/0004-6361/202555512)
+
+### **12. [University of Warwick proposes the RAVEN validation pipeline, confirming 118 new exoplanets](https://hyper.ai/news/50073)**
+
+- **Research highlight:** [https://hyper.ai/news/50073](https://hyper.ai/news/50073)
+- **Research Team:** University of Warwick Research Team
+- **Related Research:** Exoplanet validation, Transiting Exoplanet Survey Satellite (TESS), RAVEN pipeline, synthetic training datasets, false-positive elimination.
+- **Published Journal:** arXiv
+- **Paper Link:** [RAVEN: RAnking and Validation of ExoplaNets](https://arxiv.org/abs/2509.17645)
+
+### **13. [University of Warwick proposes an ensemble learning framework to highly accurately predict asteroseismic parameters for δ Scuti stars](https://hyper.ai/news/50946)**
+
+- **Research highlight:** [https://hyper.ai/news/50946](https://hyper.ai/news/50946)
+- **Research Team:** University of Warwick Research Team
+- **Related Research:** δ Scuti stars, asteroseismology, TESS light curve data, ensemble machine learning frameworks, large frequency separation Δν.
+- **Published Journal:** The Astronomical Journal
+- **Paper Link:** [Ensemble Machine Learning Approach to Estimate the Asteroseismic Indices for δ Scuti Stars Observed by TESS](https://beta.iopscience.iop.org/article/10.3847/1538-3881/ae4bd8)
+
+### **14. [Spanish research team proposes the StreakMind system, utilizing AI to automatically detect satellite streaks in astronomical images](https://hyper.ai/news/51385)**
+
+- **Research highlight:** [https://hyper.ai/news/51385](https://hyper.ai/news/51385)
+- **Research Team:** Spanish Royal Naval Observatory (ROA) and other institutions
+- **Related Research:** Near-Earth Object (NEO) detection, planetary defense, astronomical image streak detection, StreakMind system, YOLO11.
+- **Published Journal:** arXiv
+- **Paper Link:** [StreakMind: AI detection and analysis of satellite streaks in astronomical images with automated database integration](https://hyper.ai/papers/2605.03429)
+
+## **AI+ Natural Disaster**
+
+### **1. [Machine learning predicts land subsidence risk over the next 40 years](https://hyper.ai/news/30173)**
+
+- **Research highlight:** [https://hyper.ai/news/30173](https://hyper.ai/news/30173)
+- **Research Team:** Jianxin Liu's Research Team at Central South University
+- **Related Research:** SAR datasets, machine learning models, XGBR, LSTM.
+- **Published Journal:** Journal of Environmental Management, 2024.02
+- **Paper Link:** [Machine learning-based techniques for land subsidence simulation in an urban area](https://www.sciencedirect.com/science/article/abs/pii/S0301479724000641?via%3Dihub)
+
+### **2. [Semantic segmentation model SCDUNet++ used for landslide mapping](https://hyper.ai/news/29672)**
+
+- **Research highlight:** [https://hyper.ai/news/29672](https://hyper.ai/news/29672)
+- **Research Team:** Rui Liu's Research Team at Chengdu University of Technology
+- **Related Research:** Sentinel-2 multispectral data, NASADEM data, landslide data, GLFE, CNN, DSSA, DSC, DTL, Transformer, deep transfer learning. Intersection over Union (IoU) increased by 1.91% - 24.42%, and F1 increased by 1.26% - 18.54%.
+- **Published Journal:** International Journal of Applied Earth Observation and Geoinformation, 2024.01
+- **Paper Link:** [A deep learning system for predicting time to progression of diabetic retinopathy](https://www.nature.com/articles/s41591-023-02702-z) *(Note: Link mismatch present in source, kept as is).*
+
+### **3. [Neural networks convert 2D solar images into 3D reconstructed images](https://hyper.ai/news/28797)**
+
+- **Research highlight:** [https://hyper.ai/news/28797](https://hyper.ai/news/28797)
+- **Research Team:** National Center for Atmospheric Research (NCAR)
+- **Related Research:** NeRFs neural networks, SuNeRF model. Revealed the sun's poles for the first time.
+- **Published Journal:** arxiv, 2022.11
+- **Paper Link:** [SuNeRF: Validation of a 3D Global Reconstruction of the Solar Corona Using Simulated EUV Images](https://arxiv.org/abs/2211.14879)
+
+### **4. [Additive neural networks analyze influencing factors in natural disasters](https://hyper.ai/news/24957)**
+
+- **Research highlight:** [https://hyper.ai/news/24957](https://hyper.ai/news/24957)
+- **Research Team:** UCLA Research Team
+- **Related Research:** Additive neural networks, semi-automatic detection algorithms, additive ANN, SNN, feature selection models, multi-stage training.
+- **Published Journal:** Communications Earth & Environment, 2023.05
+- **Paper Link:** [Landslide susceptibility modeling by interpretable neural network](https://www.nature.com/articles/s43247-023-00806-5)
+
+### **5. [Using Explainable AI to analyze various geographical factors in Gippsland, Australia](https://hyper.ai/news/33994)**
+
+- **Research highlight:** [https://hyper.ai/news/33994](https://hyper.ai/news/33994)
+- **Research Team:** Australian National University, University of Technology Sydney
+- **Related Research:** Random Forest models, machine learning models, cross-validation techniques. XAI can effectively predict wildfire occurrences based on geographical features.
+- **Published Journal:** ScienceDirect, 2023.06
+- **Paper Link:** [Explainable artificial intelligence (XAI) for interpreting the contributing factors feed into the wildfire susceptibility prediction model](https://www.sciencedirect.com/science/article/pii/S0048969723016224)
+
+### **6. [Machine learning-based flood forecasting model](https://hyper.ai/news/31060)**
+
+- **Research highlight:** [https://hyper.ai/news/31060](https://hyper.ai/news/31060)
+- **Research Team:** Google Research
+- **Related Research:** HydroATLAS project, LSTM networks, encoder-decoders, cross-validation. Performance exceeded state-of-the-art GloFAS forecasting models.
+- **Published Journal:** Nature, 2024.03
+- **Paper Link:** [Global prediction of extreme floods in ungauged watersheds](https://www.nature.com/articles/s41586-024-07145-1)
+
+### **7. [ED-DLSTM achieves flood prediction in unmonitored areas](https://hyper.ai/news/32138)**
+
+- **Research highlight:** [https://hyper.ai/news/32138](https://hyper.ai/news/32138)
+- **Research Team:** Chaojun Ouyang's Team at the Institute of Mountain Hazards and Environment (IMHE), CAS
+- **Related Research:** Data from 2,000 hydrological stations, training datasets from the US, UK, Central Europe, Canada, cross-region spatiotemporal ensemble models, encoder-decoders, multimodal data, spatial static grid attribute data, residual convolutions.
+- **Published Journal:** The Innovation, 2024.04
+- **Paper Link:** [Deep learning for cross-region streamflow and flood forecasting at a global scale](https://doi.org/10.1016/j.xinn.2024.100617)
+
+### **8. [ChloroFormer model provides early warning of marine algal blooms](https://hyper.ai/news/34544)**
+
+- **Research highlight:** [https://hyper.ai/news/34544](https://hyper.ai/news/34544)
+- **Research Team:** GIS Lab at Zhejiang University
+- **Related Research:** TZ02 dataset, deep learning model ChloroFormer, Transformer neural networks, frequency filter mechanisms, frequency attention mechanisms. ChloroFormer surpassed baselines in short-term and medium-term Chlorophyll-a predictions.
+- **Published Journal:** Water Research, 2024.10
+- **Paper Link:** [Enhanced forecasting of chlorophyll-a concentration in coastal waters through integration of Fourier analysis and Transformer networks](https://doi.org/10.1016/j.watres.2024.122160 )
+
+### **9. [The first marine large language model OceanGPT accepted by ACL 2024! Underwater embodied AI becomes reality](https://hyper.ai/news/33044)**
+
+- **Research highlight:** [https://hyper.ai/news/33044](https://hyper.ai/news/33044)
+- **Research Team:** Ningyu Zhang and Huajun Chen's Team, College of Computer Science and Technology, Zhejiang University
+- **Related Research:** Marine-domain LLMs, regular expressions, Hash algorithms, marine science instruction generation framework DoInstruct, multi-agent collaboration, gpt-3.5-turbo, BM25 algorithms, LLaMA-2, Vicuna-7b-1.5, embodied AI.
+- **Published Journal:** ACL 2024, 2024.05
+- **Paper Link:** [OceanGPT: A Large Language Model for Ocean Science Tasks](https://arxiv.org/abs/2310.02031)
+
+### **10. [AI predicts global warming trends](https://hyper.ai/news/36778)**
+
+- **Research highlight:** [https://hyper.ai/news/36778](https://hyper.ai/news/36778)
+- **Research Team:** Joint Research Team from Stanford University, Colorado State University, and ETH Zurich
+- **Related Research:** AI CNN systems, global climate models, transfer learning, predicting conditions under continuously increasing carbon emissions, verifying the accuracy of predictive frameworks across different historical periods. AI predicts a 90% probability of record-breaking maximum temperature shifts.
+- **Published Journal:** Geophysical Research Letters, 2024.12
+- **Paper Link:** [Data-Driven Predictions of Peak Warming Under Rapid Decarbonization](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2024GL111832)
+
+### **11. [New GeoAI model explains surface heat flow distribution on the Tibetan Plateau](https://hyper.ai/news/36501)**
+
+- **Research highlight:** [https://hyper.ai/news/36501](https://hyper.ai/news/36501)
+- **Research Team:** School of Earth Sciences, Zhejiang University
+- **Related Research:** Spatial intelligence methods—Explainable-enhanced Geographically Neural Network Weighted Regression (EI-GNNWR) model, surface heat flow datasets, NGHF continental heat flow datasets, Chinese continental surface heat flow datasets, SHAP value calculations, Extreme Gradient Boosting models, fully connected neural network models, Ordinary Least Squares, Geographically Weighted Regression models.
+- **Published Journal:** Journal of Geophysical Research: Solid Earth, 2024.10
+- **Paper Link:** [The Distribution of Surface Heat Flow on the Tibetan Plateau Revealed by Data‐Driven Methods](https://doi.org/10.1029/2023JB028491)
+
+### **12. ["WenHai" marine environment intelligent forecasting large model outperforms numerical marine forecasting](https://hyper.ai/news/38294)**
+
+- **Research highlight:** [https://hyper.ai/news/38294](https://hyper.ai/news/38294)
+- **Research Team:** Research Team led by Academician Lixin Wu at Laoshan Laboratory, OUC, USTC, Qingdao Guoshi Technology Group
+- **Related Research:** Marine environmental forecasting, physical oceanography, artificial intelligence, marine dynamics theory-driven neural network architecture design, explicit embedding of bulk formulas into neural networks.
+- **Published Journal:** Nature Communications, 2025.03
+- **Paper Link:** [Forecasting the Eddying Ocean with a Deep Neural Network](https://www.nature.com/articles/s41467-025-57389-2)
+
+### **13. [University of Minnesota proposes knowledge-guided machine learning model FHNN, realizing high-precision flood forecasting](https://hyper.ai/news/49992)**
+
+- **Research highlight:** [https://hyper.ai/news/49992](https://hyper.ai/news/49992)
+- **Research Team:** University of Minnesota Twin Cities Research Team
+- **Related Research:** Flood forecasting, Knowledge-Guided Machine Learning (KGML), Factorized Hierarchical Neural Networks (FHNN), Process-Based Models (PBM), hydrological cycles, and runoff prediction.
+- **Published Journal:** Water Resources Research
+- **Paper Link:** [Knowledge-Guided Machine Learning for Operational Flood Forecasting](https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2024WR039064)
+
+### **14. [Google releases version 2 of its global flood forecasting system, significantly extending valid forecast times](https://hyper.ai/news/51472)**
+
+- **Research highlight:** [https://hyper.ai/news/51472](https://hyper.ai/news/51472)
+- **Research Team:** Google Research
+- **Related Research:** Flood forecasting, hydrological simulation, machine learning hydrological models, Global Flood Forecasting Model v2, Google Runoff Reanalysis and Reforecasts (GRRR) dataset.
+- **Published Journal:** EGUsphere
+- **Paper Link:** [Extending Medium-Range Global Flood Forecasts: The Google Global Flood Forecasting Model Version 2](https://egusphere.copernicus.org/preprints/2026/egusphere-2026-2283/)
+
+## **Others**
+
+### **1. [TacticAI football assistant hits 90% practical utility in tactical layouts](https://hyper.ai/news/30454)**
+
+- **Research highlight:** [https://hyper.ai/news/30454](https://hyper.ai/news/30454)
+- **Research Team:** Google DeepMind and Liverpool FC
+- **Related Research:** Geometric deep learning, GNNs, predictive models, generative models. Increased shooting opportunities by 13%.
+- **Published Journal:** Nature, 2024.03
+- **Paper Link:** [TacticAI: an AI assistant for football tactics](https://www.nature.com/articles/s41467-024-45965-x)
+
+### **2. [Denoising diffusion model SPDiff enables long-range crowd movement simulation](https://hyper.ai/news/30069)**
+
+- **Research highlight:** [https://hyper.ai/news/30069](https://hyper.ai/news/30069)
+- **Research Team:** Center for Urban Science and Computation (EE Dept, Tsinghua), Shenzhen Key Laboratory of Ubiquitous Data Enabling (Tsinghua SIGS), Peng Cheng Laboratory
+- **Related Research:** GC dataset, UCY dataset, conditional denoising diffusion models, SPDiff, GN, EGCL, LSTM, multi-frame rollout training algorithms. Reached optimal performance with only 5% of training data.
+- **Published Journal:** Nature, 2024.02
+- **Paper Link:** [Social Physics Informed Diffusion Model for Crowd Simulation](https://arxiv.org/abs/2402.06680)
+
+### **3. [Intelligent scientific facilities drive paradigm shifts in research](https://hyper.ai/news/29570)**
+
+- **Research highlight:** [https://hyper.ai/news/29570](https://hyper.ai/news/29570)
+- **Research Team:** Hong Mei's Research Team at Shanghai Jiao Tong University
+- **Related Research:** Scientific large models, generative simulation and inversion, autonomous intelligent unmanned experiments, large-scale trusted scientific collaboration, AI research assistants.
+- **Published Journal:** Bulletin of Chinese Academy of Sciences, 2023.12
+- **Paper Link:** [AI for Science: Intelligent scientific facilities revolutionize fundamental research](http://www.bulletin.cas.cn/previewFile?id=52965146&type=pdf&lang=zh)
+
+### **4. [DeepSymNet represents symbolic expressions based on supervised learning](https://hyper.ai/news/29243)**
+
+- **Research highlight:** [https://hyper.ai/news/29243](https://hyper.ai/news/29243)
+- **Research Team:** Min Wu's Research Team at the Institute of Semiconductors, CAS
+- **Related Research:** [Symbolic network datasets](https://hyper.ai/datasets/29321), DSNOrg, DSNB, DSNBM, supervised learning. Uses shorter labels, reduces the search space for predictions, and enhances algorithm robustness.
+- **Published Journal:** Journals & Magazines, 2023.11
+- **Paper Link:** [Discovering Mathematical Expressions Through DeepSymNet: A Classification-Based Symbolic Regression Framework](https://ieeexplore.ieee.org/document/10327762)
+
+### **5. [Large language model ChipNeMo assists engineers in chip design](https://hyper.ai/news/29134)**
+
+- **Research highlight:** [https://hyper.ai/news/29134](https://hyper.ai/news/29134)
+- **Research Team:** NVIDIA Research Team
+- **Related Research:** Domain adaptation techniques, NVIDIA NeMo, domain-adapted retrieval models, RAG, supervised fine-tuning with domain-specific instructions, DAPT, SFT, Tevatron, LLMs.
+- **Published Journal:** arXiv, 2024.04
+- **Paper Link:** [ChipNeMo: Domain-Adapted LLMs for Chip Design](https://arxiv.org/abs/2311.00176)
+
+### **6. [AlphaGeometry can solve geometry problems](https://hyper.ai/news/29059)**
+
+- **Research highlight:** [https://hyper.ai/news/29059](https://hyper.ai/news/29059)
+- **Research Team:** Google DeepMind Research Team
+- **Related Research:** Neural language models, symbolic deduction engines, language models.
+- **Published Journal:** Nature, 2024.01
+- **Paper Link:** [Solving olympiad geometry without human demonstrations](https://www.nature.com/articles/s41586-023-06747-5)
+
+### **7. [Reinforcement learning applied to urban spatial planning](https://hyper.ai/news/28917)**
+
+- **Research highlight:** [https://hyper.ai/news/28917](https://hyper.ai/news/28917)
+- **Research Team:** Yong Li's Research Team at Tsinghua University
+- **Related Research:** Deep reinforcement learning, human–artificial intelligence collaborative frameworks, urban planning models, policy networks, value networks, GNNs. Defeated 8 professional human planners on service and ecological metrics.
+- **Published Journal:** Nature Computational Science, 2023.09
+- **Paper Link:** [Spatial planning of urban communities via deep reinforcement learning](https://www.nature.com/articles/s43588-023-00503-5)
+
+### **8. [ChatArena framework: Playing Werewolf with Large Language Models](https://hyper.ai/news/28576)**
+
+- **Research highlight:** [https://hyper.ai/news/28576](https://hyper.ai/news/28576)
+- **Research Team:** Peng Li's Research Team at Tsinghua University
+- **Related Research:** Non-parametric learning mechanisms, language models, Prompts.
+- **Published Journal:** arxiv, 2023.09
+- **Paper Link:** [Exploring Large Language Models for Communication Games: An Empirical Study on Werewolf](https://arxiv.org/pdf/2309.04658.pdf)
+
+### **9. [Review: 30 scholars co-publish in Nature, 10-year retrospective deconstructs how AI reshapes scientific paradigms](https://hyper.ai/news/28166)**
+
+- **Research highlight:** [https://hyper.ai/news/28166](https://hyper.ai/news/28166)
+- **Main Content:** Postdoc Hanchen Wang from Stanford's Computer Science and Genetics, along with Tianfan Fu from Georgia Tech CSE, Yuanqi Du from Cornell CS, and 27 others, reviewed the role of AI in fundamental scientific research over the past decade and outlined persisting challenges and shortcomings.
+- **Paper Link:** [Scientific discovery in the age of artificial intelligence](https://www.nature.com/articles/s41586-023-06221-2)
+
+### **10. [Ithaca assists epigraphers in text restoration, chronological attribution, and geographical attribution](https://hyper.ai/news/28140)**
+
+- **Research highlight:** [https://hyper.ai/news/28140](https://hyper.ai/news/28140)
+- **Research Team:** DeepMind and Ca' Foscari University of Venice
+- **Related Research:** I.PHI dataset, Ithaca model, Kullback-Leibler divergence, cross-entropy loss functions. Text restoration accuracy hit 62%, chronological attribution error within 30 years, and geographical attribution accuracy reached 71%.
+- **Published Journal:** Nature, 2020.03
+- **Paper Link:** [Restoring and attributing ancient texts using deep neural networks](https://www.nature.com/articles/s41586-022-04448-z)
+
+### **11. [AI in forward and inverse problems of meta-optics, data analysis based on metasurface systems](https://hyper.ai/news/34006)**
+
+- **Research highlight:** [https://hyper.ai/news/34006](https://hyper.ai/news/34006)
+- **Research Team:** City University of Hong Kong
+- **Related Research:** Predicting NNs, Deep Neural Networks. Prediction accuracy exceeded 99%.
+- **Published Journal:** ACS Publications, 2022.06
+- **Paper Link:** [Artificial Intelligence in Meta-optics](https://pubs.acs.org/doi/10.1021/acs.chemrev.2c00012)
+
+### **12. [A new geospatial artificial intelligence method: Geographically Neural Network Weighted Logistic Regression](https://hyper.ai/news/30608)**
+
+- **Research highlight:** [https://hyper.ai/news/30608](https://hyper.ai/news/30608)
+- **Research Team:** Zhenhong Du's Research Team at Zhejiang University
+- **Related Research:** Spatial patterns, neural networks, Shapley Additive Explanations (SHAP), Inverse Distance Weighting interpolation, binary cross-entropy loss functions, 5-fold cross-validation. Outperformed other advanced models in mineral prospectivity mapping.
+- **Published Journal:** International Journal of Applied Earth Observation and Geoinformation, 2024.04
+- **Paper Link:** [Enhancing mineral prospectivity mapping with geospatial artificial intelligence: A geographically neural network-weighted logistic regression approach](https://doi.org/10.1016/j.jag.2024.103746)
+
+### **13. [Using diffusion models to generate neural network parameters, transforming spatiotemporal few-shot learning into a diffusion model pre-training problem](https://hyper.ai/news/30545)**
+
+- **Research highlight:** [https://hyper.ai/news/30545](https://hyper.ai/news/30545)
+- **Research Team:** Yong Li's Research Team at the Center for Urban Science and Computation, EE Dept, Tsinghua University
+- **Related Research:** Smart cities, spatiotemporal data, knowledge transfer, MetaLA, PEMS-BAy, Transformer diffusion models, conditional generation framework GPD, neural networks, neural network parameters, pre-training + prompt tuning.
+- **Published Journal:** ICLR 2024, 2024.01
+- **Paper Link:** [Spatio-Temporal Few-Shot Learning via Diffusive Neural Network Generation](https://openreview.net/forum?id=QyFm3D3Tzi)
+
+### **14. [Latest AI4S insights from Fei-Fei Li's team: 16 innovative technologies summarized, covering biology/materials/healthcare/diagnostics](https://hyper.ai/news/31499)**
+
+- **Research highlight:** [https://hyper.ai/news/31499](https://hyper.ai/news/31499)
+- **Main Content:** Stanford's HAI released the "2024 AI Index Report," comprehensively tracking global AI development trends in 2023. It also explored AI's profound impact in science and medicine, highlighting 2023's brilliant AI achievements in science and breakthrough medical innovations like SynthSR and ImmunoSEIRA. Furthermore, it analyzed FDA trends in AI medical device approvals, providing valuable reference for the industry.
+
+### **15. [Accurate prediction of Wuhan housing prices! osp-GNNWR model accurately describes complex spatial processes and geographical phenomena](https://hyper.ai/news/32453)**
+
+- **Research highlight:** [https://hyper.ai/news/32453](https://hyper.ai/news/32453)
+- **Research Team:** Sensen Wu's Team at the GIS Lab, Zhejiang University
+- **Related Research:** Neural networks, spatial proximity optimization, Geographically Neural Network Weighted Regression methods, dataset of 968 Anjuke real estate samples, spatial regression models, gradient descent algorithms.
+- **Published Journal:** International Journal of Geographical Information Science, 2024.04
+- **Paper Link:** [A neural network model to optimize the measure of spatial proximity in geographically weighted regression approach: a case study on house price in Wuhan](https://www.tandfonline.com/doi/abs/10.1080/13658816.2024.2343771)
+
+### **16. [Introducing zero-shot learning to release a conditional diffusion model optimized for oracle bone script decipherment](https://hyper.ai/news/33010)**
+
+- **Research highlight:** [https://hyper.ai/news/33010](https://hyper.ai/news/33010)
+- **Research Team:** Xiang Bai and Yuliang Liu's Team at HUST, jointly with University of Adelaide, Anyang Normal University, SCUT
+- **Related Research:** Conditional diffusion models, image generation techniques, local analytic sampling techniques, HUST-OBS dataset, EVOBC dataset, ResNet-101 backbones, OCR technology, zero-shot learning strategies, style encoders, content encoders.
+- **Published Journal:** ACL 2024, 2024.06
+- **Paper Link:** [Deciphering Oracle Bone Language with Diffusion Models](https://doi.org/10.48550/arXiv.2406.00684)
+
+### **17. [Stanford/Apple and 23 other institutions release the DCLM benchmark; foundation model performs on par with Llama3 8B](https://hyper.ai/news/33001)**
+
+- **Research highlight:** [https://hyper.ai/news/33001](https://hyper.ai/news/33001)
+- **Research Team:** Joint effort by UW, Stanford, Apple, and 20 other institutions
+- **Related Research:** Language models, DCLM benchmark, Transformers, MMLU.
+- **Published Journal:** arXiv, 2024.06
+- **Paper Link:** [DataComp-LM: In search of the next generation of training sets for language models](https://arxiv.org/abs/2406.11794)
+
+### **18. [PoCo solves the data source heterogeneity dilemma, enabling robots to execute multi-tasks flexibly](https://hyper.ai/news/32765)**
+
+- **Research highlight:** [https://hyper.ai/news/32765](https://hyper.ai/news/32765)
+- **Research Team:** MIT Researchers
+- **Related Research:** Denoising Diffusion Probabilistic Models (DDPM), Denoising Diffusion Implicit Models (DDIM), probabilistic composition of diffusion models, robotic policy composition framework PoCo.
+- **Published Journal:** arXiv, 2024.05
+- **Paper Link:** [PoCo: Policy Composition from and for Heterogeneous Robot Learning](https://arxiv.org/abs/2402.02511)
+
+### **19. [Containing 140,000 images! Oracle bone script dataset helps team win ACL Best Paper Award](https://hyper.ai/news/33826)**
+
+- **Research highlight:** [https://hyper.ai/news/33826](https://hyper.ai/news/33826)
+- **Research Team:** Prof. Xiang Bai's Research Team at HUST
+- **Related Research:** HUST-OBC dataset, unsupervised visual contrastive learning models.
+- **Published Journal:** Scientific Data, 2024.06
+- **Paper Link:** [An open dataset for oracle bone script recognition and decipherment](https://arxiv.org/abs/2401.15365)
+
+### **20. [Proposing a channel prediction scheme based on pre-trained LLMs, GPT-2 empowers the physical layer of wireless communications](https://hyper.ai/news/33195)**
+
+- **Research highlight:** [https://hyper.ai/news/33195](https://hyper.ai/news/33195)
+- **Research Team:** Xiang Cheng's Team at the School of Electronics, Peking University
+- **Related Research:** QuaDRiGa simulators, Large Language Models (LLM), channel prediction neural networks, preprocessing modules, embedding modules, pre-trained LLM modules, output modules.
+- **Published Journal:** Journal of Communications and Information Networks, 2024.06
+- **Paper Link:** [LLM4CP: Adapting Large Language Models for Channel Prediction](https://ieeexplore.ieee.org/document/10582829)
+
+### **21. [The first Generative Adversarial Network model for multi-stitch embroidery](https://hyper.ai/news/34669)**
+
+- **Research highlight:** [https://hyper.ai/news/34669](https://hyper.ai/news/34669)
+- **Research Team:** Visual Computing and Digital Textile Team, School of Computer Science and AI, Wuhan Textile University
+- **Related Research:** Multi-stitch embroidery datasets, Generative Adversarial Networks (GANs), CNNs, multi-stitch embroidery GAN model MSEmbGAN, region-aware texture generation networks, coloration networks. Enhances texture realism and color fidelity in embroidery.
+- **Published Journal:** IEEE Transactions on Visualization and Computer Graphics, 2024
+- **Paper Link:** [MSEmbGAN: Multi-Stitch Embroidery Synthesis via Region-Aware Texture Generation](https://csai.wtu.edu.cn/TVCG01/index.html)
+
+### **22. [Fast Automated Scanning Toolkit (FAST) efficiently acquires sample information](https://hyper.ai/news/28100)**
+
+- **Research highlight:** [https://hyper.ai/news/28100](https://hyper.ai/news/28100)
+- **Research Team:** Argonne National Laboratory Research Team
+- **Related Research:** SLADS-Net methods, path optimization techniques. Prioritizes heterogeneous regions and accurately replicates all major features in full-scan images.
+- **Published Journal:** Nature Communications, 2023.09
+- **Paper Link:** [Demonstration of an AI-driven workflow for autonomous high-resolution scanning microscopy](https://www.nature.com/articles/s41467-023-40339-1)
+
+### **23. [Population Dynamics Foundation Model PDFM open-sourced, precisely predicting US unemployment and poverty rates](https://hyper.ai/news/36380)**
+
+- **Research highlight:** [https://hyper.ai/news/36380](https://hyper.ai/news/36380)
+- **Research Team:** Google
+- **Related Research:** Population Dynamics Foundation Model, predicting unemployment and poverty rates, decoupled embedding architectures, using PDFM to enhance SOTA forecasting foundation model TimesFM, aggregated search trend datasets, map datasets, busyness datasets, weather and air quality, remote sensing data, Graph Neural Networks (GNNs), enhancing existing geospatial models.
+- **Published Journal:** arXiv, 2024.12
+- **Paper Link:** [General Geospatial Inference with a Population Dynamics Foundation Model](https://arxiv.org/abs/2411.07207)
+
+### **24. [Deep learning model CatGWR estimates spatial non-stationarity](https://hyper.ai/news/38055)**
+
+- **Research highlight:** [https://hyper.ai/news/38055](https://hyper.ai/news/38055)
+- **Research Team:** Zhejiang Provincial Key Laboratory of GIS
+- **Related Research:** Deep learning model Context-Attention Geographically Weighted Regression, attention mechanisms, estimating spatial non-stationarity, CatGWR model, simulation experiments, preprocessing modules, zoom-in modules, regression modules.
+- **Published Journal:** International Journal of Geographical Information Science, 2025.02
+- **Paper Link:** [Using an attention-based architecture to incorporate context similarity into spatial non-stationarity estimation](https://doi.org/10.1080/13658816.2025.2456556)
+
+### **25. [World's first VR exercise intervention system REVERIE reshapes youth brain-body-mind health](https://hyper.ai/news/41266)**
+
+- **Research highlight:** [https://hyper.ai/news/41266](https://hyper.ai/news/41266)
+- **Research Team:** Prof. Huating Li's Team (Shanghai Sixth People's Hospital / Institute of Active Health), Prof. Bin Sheng's Team (SJTU / MOE Key Lab of AI), Researcher Jihong Wang's Team (Shanghai University of Sport), Prof. Rong Zeng's Team (ShanghaiTech / Shanghai Clinical Research Center), Prof. Shuide Lin's Team (NUS).
+- **Related Research:** Physical exercise, virtual world (metaverse) VR sports, virtual reality exercise system REVERIE, youth obesity, Transformer architectures, iterative user interactions.
+- **Published Journal:** Nature Medicine, 2025.06
+- **Paper Link:** [Adaptive AI-based virtual reality sports system for adolescents with excess body weight: a randomized controlled trial](https://www.nature.com/articles/s41591-025-03724-5)
+
+### **26. [Based on over 176k inscription data, Aeneas achieves arbitrary-length restoration of ancient Roman inscriptions for the first time](https://hyper.ai/news/42141)**
+
+- **Research highlight:** [https://hyper.ai/news/42141](https://hyper.ai/news/42141)
+- **Research Team:** Google DeepMind researchers, University of Nottingham, University of Warwick, etc.
+- **Related Research:** Multimodal generative neural network Aeneas, Transformer decoders, Latin inscription datasets, LED dataset, inscription restoration.
+- **Published Journal:** Nature, 2025.07
+- **Paper Link:** [Contextualizing ancient texts with generative neural networks](https://www.nature.com/articles/s41586-025-09292-5)
+
+### **27. [Panoramic video generation framework PanoWan also handles zero-shot video editing](https://hyper.ai/news/42205)**
+
+- **Research highlight:** [https://hyper.ai/news/42205](https://hyper.ai/news/42205)
+- **Research Team:** Camera Intelligence Lab @ PKU (Boxin Shi's Team), OpenBayes
+- **Related Research:** Panoramic video, PanoVid panoramic video dataset, zero-shot video editing, latitude-aware sampling, rotational semantic denoising, boundary-padded pixel-wise decoding.
+- **Published Journal:** arXiv, 2025.06
+- **Paper Link:** [PanoWan: Lifting Diffusion Video Generation Models to 360° with Latitude/Longitude-aware Mechanisms](https://arxiv.org/abs/2505.22016)
+
+### **28. [YOLOv11-based ceramic classification intelligent framework integrates visual modeling and economic analysis, achieving artifact classification and value estimation](https://hyper.ai/news/42268)**
+
+- **Research highlight:** [https://hyper.ai/news/42268](https://hyper.ai/news/42268)
+- **Research Team:** Universiti Putra Malaysia, UNSW Sydney
+- **Related Research:** Ceramic classification, CNNs, transfer learning, capsule networks, YOLOv11, ceramic image datasets, hybrid data acquisition methods, Random Forest regression models.
+- **Published Journal:** Nature Partner Journals, 2025.06
+- **Paper Link:** [Integrating deep learning and machine learning for ceramic artifact classification and market value prediction](https://www.nature.com/articles/s40494-025-01886-6)
+
+### **29. ["Microwave Brain" chip born, simultaneously processing ultra-high-speed data and wireless signals with 75% accuracy at 176 milliwatts power](https://hyper.ai/news/43093)**
+
+- **Research highlight:** [https://hyper.ai/news/43093](https://hyper.ai/news/43093)
+- **Research Team:** Cornell University
+- **Related Research:** High-bandwidth applications, microwave neural networks, linear regression models, RadioML2016.10A dataset, deep learning, analog computing.
+- **Published Journal:** Nature Electronics, 2025.08
+- **Paper Link:** [An integrated microwave neural network for broadband computation and communication](https://go.hyper.ai/rMZ2K)
+
+### **30. [Spatiotemporal imputation and prediction model STIMP released, realizing precise predictions of coastal Chlorophyll-a distribution](https://hyper.ai/news/43613)**
+
+- **Research highlight:** [https://hyper.ai/news/43613](https://hyper.ai/news/43613)
+- **Research Team:** HKUST Research Team
+- **Related Research:** Chlorophyll-a prediction, MODIS in-situ Chl-a datasets, Himawari satellite remote sensing reflectance datasets, deep learning, STIMP architecture, water body health diagnosis.
+- **Published Journal:** Nature Communications, 2025.08
+- **Paper Link:** [Spatiotemporal Imputation and Prediction Model](https://go.hyper.ai/BjOR5)
+
+### **31. [MIT and others achieve high-precision prediction of plasma dynamics under few-shot conditions based on machine learning](https://hyper.ai/news/45260)**
+
+- **Research highlight:** [https://hyper.ai/news/45260](https://hyper.ai/news/45260)
+- **Research Team:** Research team led by MIT
+- **Related Research:** Tokamaks, Scientific Machine Learning (SciML), Neural State-Space Models (NSSM), control-error sensitivity robustness validation, predict-first extrapolation testing.
+- **Published Journal:** Nature Communications, 2025.10
+- **Paper Link:** [Learning plasma dynamics and robust rampdown trajectories with predict-first experiments at TCV](https://www.nature.com/articles/s41467-025-63917-x)
+
+### **32. [Reac-Discovery fuses mathematical modeling, machine learning, and automated experiments to solve the universality challenge of self-driving laboratory systems](https://hyper.ai/news/45626)**
+
+- **Research highlight:** [https://hyper.ai/news/45626](https://hyper.ai/news/45626)
+- **Research Team:** IMDEA Materials Institute (Spain)
+- **Related Research:** Self-Driving Laboratories (SDL), Reac-Discovery semi-autonomous digital platforms, closed-loop systems integrating design/manufacturing/optimization modules, real-time NMR monitoring, ML process parameter optimization, topological descriptors, structural parameterization datasets, printability datasets, reaction performance datasets.
+- **Published Journal:** Nature Communications, 2025.10
+- **Paper Link:** [Reac-Discovery: an artificial intelligence–driven platform for continuous-flow catalytic reactor discovery and optimization](https://go.hyper.ai/ueB79)
+
+### **33. [The first neuron modeling framework NOBLE validated by human cortical data is introduced](https://hyper.ai/news/45806)**
+
+- **Research highlight:** [https://hyper.ai/news/45806](https://hyper.ai/news/45806)
+- **Research Team:** ETH Zurich, Caltech, University of Alberta
+- **Related Research:** Deep learning, neuron features embedding, current injection embedding, NOBLE neuron modeling framework.
+- **Published Journal:** NeurIPS 2025, 2025.09
+- **Paper Link:** [NOBLE – Neural Operator with Biologically-informed Latent Embeddings to Capture Experimental Variability in Biological Neuron Models](https://go.hyper.ai/Ramfp)
+
+### **34. [Image geolocation framework LocDiff goes online, enabling grid-free and reference-library-free global precision positioning](https://hyper.ai/news/46687)**
+
+- **Research highlight:** [https://hyper.ai/news/46687](https://hyper.ai/news/46687)
+- **Research Team:** UMaine, UT Austin, UGA, UMD, Google, OpenAI, Harvard
+- **Related Research:** Spherical Harmonics Dirac distributions, LocDiff ensemble framework, MP16 dataset, Im2GPS3k dataset, YFCC26k dataset, GWS15k dataset, Conditional Siren-UNet (CS-UNet) architecture, efficient computation strategies, SHDD coding schemes, image geolocation.
+- **Published Journal:** NeurIPS 2025, 2025.10
+- **Paper Link:** [LocDiff: Identifying Locations on Earth by Diffusing in the Hilbert Space](https://openreview.net/forum?id=ghybX0Qlls)
+
+### **35. [Machine learning combined with py-GC-MS precisely identifies evidence of life in Archean rocks](https://hyper.ai/news/47543)**
+
+- **Research highlight:** [https://hyper.ai/news/47543](https://hyper.ai/news/47543)
+- **Research Team:** Earth and Planets Laboratory at the Carnegie Institution for Science, alongside multiple global institutions
+- **Related Research:** Pyrolysis gas chromatography-mass spectrometry (py-GC-MS), supervised machine learning.
+- **Published Journal:** PNAS
+- **Paper Link:** [Organic geochemical evidence for life in Archean rocks identified by pyrolysis–GC–MS and supervised machine learning](https://www.pnas.org/doi/10.1073/pnas.2514534122)
+
+### **36. [Tsinghua University team proposes neuro-symbolic regression method ND² to automatically derive complex network dynamics formulas](https://hyper.ai/news/47950)**
+
+- **Research highlight:** [https://hyper.ai/news/47950](https://hyper.ai/news/47950)
+- **Research Team:** Tsinghua University
+- **Related Research:** Network dynamics, symbolic regression, ND², equation derivation, scientific machine learning.
+- **Published Journal:** Nature Communications
+- **Paper Link:** *(Link points to the Archean rocks paper in original Chinese, but kept numbering and reference translation as provided)*
+
+*(Note: The provided source had a duplicate item 35 and 36 linking to PNAS Archean rocks, while the TOC indicated ND2. Translated directly based on the provided text block items 35/36)*
+
+### **37. [Zhejiang University team proposes geologically constrained mineral prospectivity prediction method, explicitly depicting mineralization anisotropy](https://hyper.ai/news/48396)**
+
+- **Research highlight:** [https://hyper.ai/news/48396](https://hyper.ai/news/48396)
+- **Research Team:** Zhejiang University Research Team
+- **Related Research:** Mineral Prospectivity Mapping (MPM), anisotropic spatial proximity neural networks, intelligent prospecting.
+- **Published Journal:** Geology
+- **Paper Link:** [Geologically constrained data-driven modeling for mineral prospectivity mapping](https://go.hyper.ai/vbUpa)
+
+### **38. [Tsinghua and UChicago team publishes in Nature: AI tools expand scientists' impact but contract science's focus](https://hyper.ai/news/48748)**
+
+- **Research highlight:** [https://hyper.ai/news/48748](https://hyper.ai/news/48748)
+- **Research Team:** Joint Team from Tsinghua University and the University of Chicago
+- **Related Research:** AI for Science, research productivity, scientific citation patterns, research ecosystems, scientometrics.
+- **Published Journal:** Nature
+- **Paper Link:** [Artificial intelligence tools expand scientists’ impact but contract science’s focus](https://www.nature.com/articles/s41586-025-09922-y)
+
+### **39. [UC team proposes AI-augmented chip-scale spectrometer, achieving high spectral fidelity in an ultra-small volume](https://hyper.ai/news/48905)**
+
+- **Research highlight:** [https://hyper.ai/news/48905](https://hyper.ai/news/48905)
+- **Research Team:** University of California Research Team
+- **Related Research:** Chip-scale spectrometers, Photon-Trapping Surface Textures (PTST), fully connected neural networks, hyperspectral imaging.
+- **Published Journal:** Advanced Photonics
+- **Paper Link:** [AI-augmented photon-trapping spectrometer-on-a-chip on silicon platform with extended near-infrared sensitivity](https://doi.org/10.1117/1.AP.8.1.016008)
+
+### **40. [US DOE Oak Ridge National Lab proposes D-CHAG method, significantly reducing memory footprint for multi-channel foundation models](https://hyper.ai/news/49330)**
+
+- **Research highlight:** [https://hyper.ai/news/49330](https://hyper.ai/news/49330)
+- **Research Team:** Researchers at US DOE Oak Ridge National Laboratory
+- **Related Research:** Vision science foundation models, Distributed Cross-Channel Hierarchical Aggregation (D-CHAG), Tensor Parallelism (TP), hierarchical channel aggregation.
+- **Published Journal:** SC25
+- **Paper Link:** [Distributed Cross-Channel Hierarchical Aggregation for Foundation Models](https://dl.acm.org/doi/10.1145/3712285.3759870)
+
+### **41. [Polymathic AI team proposes continuum foundation model Walrus, setting records in cross-domain simulation performance](https://hyper.ai/news/49076)**
+
+- **Research highlight:** [https://hyper.ai/news/49076](https://hyper.ai/news/49076)
+- **Research Team:** Polymathic AI Collaborative Research Team
+- **Related Research:** Continuum dynamics, physics simulation foundation models, Walrus model, adaptive computational tokenization.
+- **Published Journal:** arXiv
+- **Paper Link:** [Walrus: A Cross-Domain Foundation Model for Continuum Dynamics](https://arxiv.org/abs/2511.15684)
+
+### **42. [EPFL proposes novel architecture DYNAMI-CAL GraphNet, a physics-informed GNN accurately modeling multi-body dynamics](https://hyper.ai/news/49808)**
+
+- **Research highlight:** [https://hyper.ai/news/49808](https://hyper.ai/news/49808)
+- **Research Team:** EPFL Research Team
+- **Related Research:** Physics-informed GNN, multi-body dynamical systems, DYNAMI-CAL GraphNet, conservation of linear and angular momentum.
+- **Published Journal:** Nature Communications
+- **Paper Link:** [A physics-informed graph neural network conserving linear and angular momentum for dynamical systems](https://www.nature.com/articles/s41467-025-67802-5)
+
+### **43. [MIT proposes novel method Wave-Former, achieving high-precision 3D reconstruction of completely occluded objects](https://hyper.ai/news/50018)**
+
+- **Research highlight:** [https://hyper.ai/news/50018](https://hyper.ai/news/50018)
+- **Research Team:** MIT Research Team
+- **Related Research:** Computer vision, through-occlusion 3D reconstruction, mmWave sensing, Wave-Former, wireless shape completion.
+- **Published Journal:** arXiv
+- **Paper Link:** [Wave-Former: Through-Occlusion 3D Reconstruction via Wireless Shape Completion](https://arxiv.org/abs/2511.14152)
+
+### **44. [MIT proposes DRiffusion draft-and-refine parallel framework, realizing lossless acceleration for diffusion model inference](https://hyper.ai/news/50209)**
+
+- **Research highlight:** [https://hyper.ai/news/50209](https://hyper.ai/news/50209)
+- **Research Team:** MIT Research Team
+- **Related Research:** Diffusion Models, inference acceleration, parallelization techniques, DRiffusion, draft-and-refine.
+- **Published Journal:** arXiv
+- **Paper Link:** [DRiffusion: Draft-and-Refine Process Parallelizes Diffusion Models with Ease](https://arxiv.org/abs/2603.25872)
+
+### **45. [Technion - Israel Institute of Technology proposes Task Tokens, allowing behavior foundation models to flexibly adapt to specific tasks](https://hyper.ai/news/50788)**
+
+- **Research highlight:** [https://hyper.ai/news/50788](https://hyper.ai/news/50788)
+- **Research Team:** Technion Research Team
+- **Related Research:** Robotic control, imitation learning, Behavior Foundation Models (BFMs), Task Tokens, task-specific adaptation.
+- **Published Conference:** ICLR 2026
+- **Paper Link:** [Task Tokens: A Flexible Approach to Adapting Behavior Foundation Models](https://hyper.ai/papers/2503.22886)
+
+### **46. [MIT and others propose EnergAIzer framework, achieving fast and accurate GPU power estimation for AI workloads](https://hyper.ai/news/51038)**
+
+- **Research highlight:** [https://hyper.ai/news/51038](https://hyper.ai/news/51038)
+- **Research Team:** MIT and MIT-IBM Watson AI Lab
+- **Related Research:** GPU power estimation, AI workloads, data center energy efficiency, EnergAIzer framework, hardware performance profiling.
+- **Published Journal:** arXiv
+- **Paper Link:** [EnergAIzer: Fast and Accurate GPU Power Estimation Framework for AI Workloads](https://arxiv.org/abs/2604.20105)
+
+### **47. [UIUC proposes heterogeneous agent framework Eywa, breaking through the limits of language-centric large models](https://hyper.ai/news/51222)**
+
+- **Research highlight:** [https://hyper.ai/news/51222](https://hyper.ai/news/51222)
+- **Research Team:** UIUC Research Team
+- **Related Research:** Agentic AI, heterogeneous agent framework Eywa, domain-specific foundation models, multi-agent systems, Large Language Models (LLM).
+- **Published Journal:** arXiv
+- **Paper Link:** [Heterogeneous Scientific Foundation Model Collaboration](https://hyper.ai/papers/2604.27351)
+
+### **48. [Stanford University and others use LSTM surrogate models to achieve 252x accelerated simulation of second-order nonlinear optics](https://hyper.ai/news/51410)**
+
+- **Research highlight:** [https://hyper.ai/news/51410](https://hyper.ai/news/51410)
+- **Research Team:** Stanford University, UCLA, and SLAC National Accelerator Laboratory
+- **Related Research:** Second-order nonlinear optics, Sum-Frequency Generation (SFG), Long Short-Term Memory networks (LSTM), Surrogate Model, Split-Step Fourier Method (SSFM).
+- **Published Journal:** Advanced Photonics
+- **Paper Link:** [Deep learning-assisted modeling for χ⁽²⁾ nonlinear optics](https://go.hyper.ai/5bLoA)
