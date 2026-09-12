@@ -1434,6 +1434,7 @@ This document will be presented as an open-source project. We will continuously 
 - **Research Team:** Yi Zeng's Team at the Institute of Automation, CAS
 - **Related Research:** Multimodal integration frameworks, Natural Scenes Dataset, COCO dataset, VAE and CLIP embeddings, 3D fMRI preprocessors, multimodal LLMs.
 - **Published Journal:** NeurIPS 2024, 2024.10
+- [Ivy Tendril](https://github.com/Ivy-Interactive/Ivy-Tendril): Open-source agentic software factory with an amazing UI that handles parallel Git worktrees for you, complete with programmatic verifications and fast review loops
 - **Paper Link:** [Neuro-Vision to Language: Enhancing Brain Recording-based Visual Reconstruction and Language Interaction](https://nips.cc/virtual/2024/poster/93607)
 
 ### **36. [Medical image segmentation model M2CF-Net improves diagnosis accuracy for Sjogren's syndrome](https://hyper.ai/news/36700)**
